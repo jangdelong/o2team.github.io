@@ -1,7 +1,7 @@
 title: "以电影之眼看CSS3动画（一）"
 subtitle: "要写CSS3动画，必先学技术。要写好CSS3动画，还是得深入探索传统动画的精华。"
 date: 2015-11-22 17:27:00
-cover: "2015-11-22-css3-animation-to-movie/title.png"
+cover: "2015-11-22-css3-animation-to-movie/cover.png"
 tags: 
  - CSS3
  - Animation
@@ -48,7 +48,14 @@ author:
 
 在CSS3中，@keyframes正是动画的关键帧容器。@keyframes中包含的包括transform在内的元素形态设定构成了关键帧的画面。@keyframes中的百分比即为时间轴的体现。中间帧则由浏览器自动完成（就像flash中的补全动画）。
 
-![css3_animation](/img/post/2015-11-22-css3-animation-to-movie/1-7_css3_animation.png)
+``` css
+.people{animation:people linear 1.5s;}
+@keyframes people{
+	0%, 95%{opacity:0;}
+	100%{opacity:1;}
+}
+```
+![css3_animation](/img/post/2015-11-22-css3-animation-to-movie/1-7_css3_animation_2.png)
 
 - 一个简单的动画关键帧示例
 

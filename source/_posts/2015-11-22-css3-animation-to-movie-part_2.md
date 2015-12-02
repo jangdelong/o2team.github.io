@@ -1,7 +1,7 @@
 title: "以电影之眼看CSS3动画（二）"
 subtitle: "CSS3动画和电影到底有啥关系？讲了一篇都没讲到，不会是在骗我吧？你这个骗子。"
 date: 2015-11-22 17:27:00
-cover: "2015-11-22-css3-animation-to-movie/title.png"
+cover: "2015-11-22-css3-animation-to-movie/cover.png"
 tags: 
  - CSS3
  - Animation
@@ -32,7 +32,15 @@ author:
 
 - 视觉设计：吴丹枫
 
-![frames_of_animation](/img/post/2015-11-22-css3-animation-to-movie/2-3_frames_of_animation.png)
+```css
+@keyframes peoInner{
+	0%, 12.5%, 16.5%, 20.5%{background:none;}
+	10%, 12%{background:url(../img_bg/casts_adv_green_red.jpg) no-repeat 0 0;}
+	14%, 16%{background:url(../img_bg/casts_adv_green_red.jpg) no-repeat 0 -725px;}
+	18%, 20%{background:url(../img_bg/casts_adv_green_red.jpg) no-repeat 0 -725px;}
+	13%, 17%, 21%, 100%{background:url(../img_bg/cast_adv_01.jpg) no-repeat top center;}
+}
+```
  
 - 简单的几个不同色调的图片进行替换就能做出类似效果。（[demo地址](http://labs.qiang.it/labs/EC_demo/Doing_Movie_by_CSS3.html)）
 
