@@ -69,22 +69,30 @@ flash可以导出canvas动画，大大缩短制作动画所需要的时间。它
 
 如果我们希望动画可以连续从头再播放，可以在动画的最后一帧插入一个空白关键帧，打开动作面板，然后写上
 
-	this.gotoAndPlay(0)
+```
+this.gotoAndPlay(0)
+```
 
 {% pimg youing/7.png %}
 
 
 即可回到第一帧重新播放，如果希望停止动画，则
 
-	this.stop();
+```
+this.stop();
+```
 
 如果希望跳到某帧去播放
 
-	this.gotoAndPlay(n)
+```
+this.gotoAndPlay(n)
+```
 
 如果希望跳到某帧并停止
 
-	this.gotoAndStop(n)
+```
+this.gotoAndStop(n)
+```
 
 
 ## 发布
