@@ -12,7 +12,8 @@ author:
 # 以电影之眼看CSS3动画（一）
 ----------
 
-	注：此文非干货聚集地，来找干货的对不住了。
+	注：此文非干货聚集地，来找干货的对不住了。	
+	注注：又多又大的图预警！！！
 
 
 [CSS3动画](http://isux.tencent.com/css3/index.html)的变形基础（transform）包含4种变形方式（translate、rotate、scale、skew），同时还可设置2D、3D、变形原点（transform-origin）、透视（perspective）、透视原点（perspective-origin）等等特性；动画时间频率包含9种基本模式（ease、linear、ease-in、ease-out、ease-in-out、step-start、step-end、steps），甚至还可以使用cubic-bezier写出任何你想要的模式；再加上动画持续时间（animation-duration）等设定，各种排列组合，CSS3动画简直拥有了整个世界！
