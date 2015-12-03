@@ -6,6 +6,7 @@ tags: three.js
 author: 
 	nick: Littly
 	github_name: Littly
+sticky: true
 ---
 这是一篇介绍如何在浏览器中展示<del style="background-color: #333!important;color: #333 !important;">洗面奶</del>3D物件的文章。
 <!-- more --> 
