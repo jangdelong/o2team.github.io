@@ -1,0 +1,32 @@
+- name: hexo-theme-o2
+  description: 凹凸实验室为aotu.io官方网站量身定制的一套简洁扁平风格的HEXO主题.
+  link: https://github.com/o2team/hexo-theme-o2
+  preview: http://aotu.io
+  tags:
+    - hexo
+    - theme
+- name: MAC全栈开发环境搭建指引
+  description: MAC全栈开发环境搭建指引可以让你快速将你的MAC搭建成强悍的全栈开发利器.
+  link: https://github.com/o2team/mac
+  preview: http://aotu.io/mac
+  tags:
+    - mac
+    - guide
+- name: 凹凸前端规范
+  description: 凹凸实验室整理的前端开发规范，与最新前端技术同步修正.
+  link: https://github.com/o2team/guide
+  preview: http://aotu.io/guide
+  tags:
+    - guide
+    - frontend
+    - specification
+    - 前端规范
+    - JS编码规范
+    - CSS编码规范
+- name: 邮件签名生成器
+  description: 一款使用expressjs和nodejs开发的邮件签名生成器，开源且适用于所有行业。
+  link: https://github.com/o2team/sign
+  preview: http://aotu.io/sign
+  tags:
+    - 工具
+    - 邮件签名
