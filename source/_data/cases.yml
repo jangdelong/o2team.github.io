@@ -1,21 +1,24 @@
 - name: hexo-theme-o2
-  description: 凹凸实验室为aotu.io官方网站量身定制的一套简洁扁平风格的HEXO主题.
+  desc: 凹凸实验室为aotu.io官方网站量身定制的一套简洁扁平风格的HEXO主题.
   link: https://github.com/o2team/hexo-theme-o2
   preview: http://aotu.io
+  cover: http://tympanus.net/Tutorials/CaptionHoverEffects/images/2.png
   tags:
     - hexo
     - theme
 - name: MAC全栈开发环境搭建指引
-  description: MAC全栈开发环境搭建指引可以让你快速将你的MAC搭建成强悍的全栈开发利器.
+  desc: MAC全栈开发环境搭建指引可以让你快速将你的MAC搭建成强悍的全栈开发利器.
   link: https://github.com/o2team/mac
   preview: http://aotu.io/mac
+  cover: http://tympanus.net/Tutorials/CaptionHoverEffects/images/3.png
   tags:
     - mac
     - guide
 - name: 凹凸前端规范
-  description: 凹凸实验室整理的前端开发规范，与最新前端技术同步修正.
+  desc: 凹凸实验室整理的前端开发规范，与最新前端技术同步修正.
   link: https://github.com/o2team/guide
   preview: http://aotu.io/guide
+  cover: http://tympanus.net/Tutorials/CaptionHoverEffects/images/4.png
   tags:
     - guide
     - frontend
@@ -24,9 +27,26 @@
     - JS编码规范
     - CSS编码规范
 - name: 邮件签名生成器
-  description: 一款使用expressjs和nodejs开发的邮件签名生成器，开源且适用于所有行业。
+  desc: 一款使用expressjs和nodejs开发的邮件签名生成器，开源且适用于所有行业。
   link: https://github.com/o2team/sign
   preview: http://aotu.io/sign
+  cover: http://tympanus.net/Tutorials/CaptionHoverEffects/images/5.png
   tags:
     - 工具
     - 邮件签名
+- name: H5期刊
+  desc: 由凹凸实验室3个美少女精心整理的HTML5案例期刊，每个案例附带创意、技术分析，开阔你的专业视界。
+  link: https://github.com/o2team/case
+  preview: http://aotu.io/case
+  cover: http://tympanus.net/Tutorials/CaptionHoverEffects/images/6.png
+  tags:
+    - 期刊
+    - HTML5
+- name: JD.COM
+  desc: 京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!
+  link:
+  preview: http://jd.com/
+  cover: http://tympanus.net/Tutorials/CaptionHoverEffects/images/1.png
+  tags:
+    - 产品
+    - 网站
