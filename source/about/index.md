@@ -1,5 +1,5 @@
 title: 关于凹凸实验室
-hideAbout: true
+type: about
 ---
 
 ## About

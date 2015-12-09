@@ -1,7 +1,7 @@
 title: "以电影之眼看CSS3动画（二）"
 subtitle: "CSS3动画和电影到底有啥关系？讲了一篇都没讲到，不会是在骗我吧？你这个骗子。"
 date: 2015-11-22 17:27:00
-cover: "2015-11-22-css3-animation-to-movie/cover.png"
+cover: "lyxuncle/cover.png"
 tags: 
  - CSS3
  - Animation
@@ -25,11 +25,11 @@ author:
 
 小tip：在做影视题材的专题页时，我会首先根据相关影视的预告片确定入场动画的风格与基调，观看预告片不仅能够了解影片的风格，同时还能学习其字幕出现、消失以及转场的方式，获得一种节奏感，也就是上面所说的时间掌控。在看电影正片时也可留意影片开头与结尾字幕出现的形式，尤其是科幻片，电影字幕的设计与电影风格相辅相成，常常能让你脑洞大开——原来还能这么玩。
 
-![preview_of_overheard_3](/img/post/2015-11-22-css3-animation-to-movie/2-1_preview_of_overheard_3.gif)
+![preview_of_overheard_3](/img/post/lyxuncle/2-1_preview_of_overheard_3.gif)
  
 - [[窃听风云3]预告片](http://movie.douban.com/trailer/156598/#content)中字幕出现的方式表现出信号干扰的效果，由此可以将影片相关专题作出这样的开场动画——
 
-![animation_design_of_overheard_3_broadcast](/img/post/2015-11-22-css3-animation-to-movie/2-2_animation_design_of_overheard_3_broadcast.gif)
+![animation_design_of_overheard_3_broadcast](/img/post/lyxuncle/2-2_animation_design_of_overheard_3_broadcast.gif)
 
 - 视觉设计：吴丹枫
 
@@ -55,19 +55,19 @@ author:
 
 - （视频 [http://player.ku6.com/refer/TH-adgFO0MjSKh3i/v.swf](http://player.ku6.com/refer/TH-adgFO0MjSKh3i/v.swf) ）
 
-![sidelights_of_snow_white](/img/post/2015-11-22-css3-animation-to-movie/2-4_sidelights_of_snow_white.gif)
+![sidelights_of_snow_white](/img/post/lyxuncle/2-4_sidelights_of_snow_white.gif)
 
 - 视频：[白雪公主与七个小矮人]（1974）幕后花絮
 
 视频中有一个细节，迪士尼爷爷让动画师注意那位大叔在跳踢踏舞时重力对裤腿的作用（19分15秒）。是的，迪士尼爷爷强调的就是动画与物理学的关系。其实即使是网页中的动画也能用到牛顿运动定律，将网页元素看作一个有重量、有结构、有柔韧性的物体进行动画设计，会得到意想不到的效果。事实上已经有人这么做了——
 
-![dribbble_form_animation](/img/post/2015-11-22-css3-animation-to-movie/2-5_dribbble_form_animation.gif)
+![dribbble_form_animation](/img/post/lyxuncle/2-5_dribbble_form_animation.gif)
  
 - dribbble's stripe checkout（图片来源：[The Art of Animation](http://markgeyer.com/pres/the-art-of-ui-animations/#/2/9)）
 
 Adds a bit of realism to an otherwise static interface. ——[The 12 basic principles of animation - The Art of Animation](http://markgeyer.com/pres/the-art-of-ui-animations/#/2/5)
 
-![bouncejs_example](/img/post/2015-11-22-css3-animation-to-movie/2-6_bouncejs_example.gif)
+![bouncejs_example](/img/post/lyxuncle/2-6_bouncejs_example.gif)
  
 - 图片来源：[Giving Animations Life](https://medium.com/tictail-makers/giving-animations-life-8b20165224c5)
 
@@ -89,7 +89,7 @@ Using Bounce.js and classical animation concepts to bring life to user interface
 
 说了这么多，一切都显得辣么抽象，下面就上栗子。
 
-![animation_of_an_eye](/img/post/2015-11-22-css3-animation-to-movie/2-7_animation_of_an_eye.gif)
+![animation_of_an_eye](/img/post/lyxuncle/2-7_animation_of_an_eye.gif)
 
 - 动画来源：[Pseudo-Elements Animations and Transitions](http://tympanus.net/Development/PseudoElementsAnimationsTransitions/index4.html)
 
@@ -101,9 +101,9 @@ Using Bounce.js and classical animation concepts to bring life to user interface
 
 最后，我想将我一直以来没能找到合适实现方法的动画效果放上来，希望能够抛砖引玉、集思广益：
 
-![frames_of_flame_1](/img/post/2015-11-22-css3-animation-to-movie/2-8_frames_of_flame_1.jpg)
+![frames_of_flame_1](/img/post/lyxuncle/2-8_frames_of_flame_1.jpg)
 
-![frames_of_flame_2](/img/post/2015-11-22-css3-animation-to-movie/2-9_frames_of_flame_2.jpg )
+![frames_of_flame_2](/img/post/lyxuncle/2-9_frames_of_flame_2.jpg )
 
 - A 冷空气从火的底部冲入，受热后上升。 B 一套火的循环①-⑧，标以×的漩涡一个接一个地向上升起。升得越高，速度越慢。
 
