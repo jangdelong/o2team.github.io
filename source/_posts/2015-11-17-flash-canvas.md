@@ -69,22 +69,30 @@ flash可以导出canvas动画，大大缩短制作动画所需要的时间。它
 
 如果我们希望动画可以连续从头再播放，可以在动画的最后一帧插入一个空白关键帧，打开动作面板，然后写上
 
-	this.gotoAndPlay(0)
+```
+this.gotoAndPlay(0)
+```
 
 {% pimg youing/7.png %}
 
 
 即可回到第一帧重新播放，如果希望停止动画，则
 
-	this.stop();
+```
+this.stop();
+```
 
 如果希望跳到某帧去播放
 
-	this.gotoAndPlay(n)
+```
+this.gotoAndPlay(n)
+```
 
 如果希望跳到某帧并停止
 
-	this.gotoAndStop(n)
+```
+this.gotoAndStop(n)
+```
 
 
 ## 发布
@@ -106,7 +114,7 @@ flash可以导出canvas动画，大大缩短制作动画所需要的时间。它
 
 
 
-### 生成html
+## 生成html
 
 最终会生成一个html文件和一个js文件
 
@@ -114,13 +122,167 @@ flash可以导出canvas动画，大大缩短制作动画所需要的时间。它
 
 * 框架自带的preloadjs,可以轻松管理资源预加载，它提供了相关api可以进行loading等操作。
 
-{% pimg youing/9.png %}
+
+``` html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>people</title>
+
+<script src="http://code.createjs.com/easeljs-0.8.1.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.8.1.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.6.1.min.js"></script>
+<script src="people.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib.people();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="600" height="620" style="background-color:#FFFFFF"></canvas>
+</body>
+</html>
+```
 
 ### 生成的js文件
 
 * 生成的动画配置及脚本都在这个js文件里面，如果需要，可以手动修改相关数据。
 
-{% pimg youing/10.png %}
+``` javascript
+(function (lib, img, cjs, ss) {
+
+var p; // shortcut to reference prototypes
+
+// library properties:
+lib.properties = {
+	width: 600,
+	height: 620,
+	fps: 36,
+	color: "#FFFFFF",
+	manifest: [
+		{src:"images/bigband.png", id:"bigband"},
+		{src:"images/Bitmap1.png", id:"Bitmap1"},
+		{src:"images/body.png", id:"body"},
+		{src:"images/eye1.png", id:"eye1"},
+		{src:"images/eye2.png", id:"eye2"},
+		{src:"images/face1.png", id:"face1"},
+		{src:"images/face2.png", id:"face2"},
+		{src:"images/face3.png", id:"face3"},
+		{src:"images/hair.png", id:"hair"},
+		{src:"images/hand2.png", id:"hand2"},
+		{src:"images/hand3.png", id:"hand3"},
+		{src:"images/hand4.png", id:"hand4"},
+		{src:"images/index30.png", id:"index30"},
+		{src:"images/index302.png", id:"index302"},
+		{src:"images/index40.png", id:"index40"},
+		{src:"images/index5.png", id:"index5"},
+		{src:"images/shadow.png", id:"shadow"}
+	]
+};
+
+
+
+// symbols:
+
+
+
+(lib.bigband = function() {
+	this.initialize(img.bigband);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,295,538);
+
+
+(lib.Bitmap1 = function() {
+	this.initialize(img.Bitmap1);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,543,577);
+
+
+(lib.body = function() {
+	this.initialize(img.body);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,521,242);
+
+
+(lib.eye1 = function() {
+	this.initialize(img.eye1);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,73,58);
+
+
+(lib.eye2 = function() {
+	this.initialize(img.eye2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,72,35);
+
+
+(lib.face1 = function() {
+	this.initialize(img.face1);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,297,368);
+
+
+
+...
+
+// stage content:
+
+
+
+(lib.people = function() {
+	this.initialize();
+
+	// people
+	this.instance = new lib.peoplemc();
+	this.instance.setTransform(295,312.5);
+
+	// qpmask (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("EgpUgqAMBU1AAAMAAABaIMhU1AAAg");
+	mask.setTransform(278.5,308.1);
+
+	// qp
+	this.instance_1 = new lib.qpmc();
+	this.instance_1.setTransform(291.5,263.5);
+
+	this.instance_1.mask = mask;
+
+	this.addChild(this.instance_1,this.instance);
+}).prototype = p = new cjs.Container();
+p.nominalBounds = new cjs.Rectangle(263,31.5,617,905.5);
+
+})(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
+var lib, images, createjs, ss;
+```
 
 
 ## 附上最终效果
