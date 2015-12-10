@@ -23,4 +23,3 @@ module.exports = function(){
             use:[pngquant()]
         }));
 };
-module.exports.dependencies = ['rev:media'];

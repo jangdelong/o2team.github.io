@@ -18,4 +18,4 @@ module.exports = function(){
     echo('------ Cleanup done by O2!      ------');
 };
 
-module.exports.dependencies = ['replace'];
+module.exports.dependencies = ['replace', 'copy'];

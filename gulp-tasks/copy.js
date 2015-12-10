@@ -9,3 +9,4 @@ module.exports = function(){
         .pipe(gulp.dest(dirs.assetsDir));
      
 };
+module.exports.dependencies = ['imgmin'];

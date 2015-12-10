@@ -33,4 +33,4 @@ require('gulp-task-loader')({
 });
 
 gulp.task('rev', ['rev:replace']);
-gulp.task('default', ['rev', 'replace', 'imgmin', 'cleanup']);
+gulp.task('default', ['rev', 'replace', 'copy', 'cleanup']);
