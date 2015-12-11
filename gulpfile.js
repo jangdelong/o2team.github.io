@@ -22,6 +22,7 @@ var gulp    = require('gulp'),
 		css: 'public/css',
 		js: 'public/js',
         temp: 'temp',
+        hidden: '.o2',
 		assetsDir:'public/assets'
 	};
 

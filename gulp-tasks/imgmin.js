@@ -17,9 +17,14 @@ module.exports = function(){
         .pipe($.ignore.include(function(file){
             return imgRegx.test(file.path);    
         }))
+        .pipe($.newer(dirs.hidden))
         .pipe($.imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox:false}],
             use:[pngquant()]
-        }));
+        }))
+        // in order to make newer work, we need to put a copy to the hidden folder
+        .pipe(gulp.dest(dirs.hidden))
+        // override the raw files
+        .pipe(gulp.dest(dirs.public));
 };
