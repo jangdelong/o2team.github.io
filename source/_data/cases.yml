@@ -2,7 +2,7 @@
   desc: 凹凸实验室为aotu.io官方网站量身定制的一套简洁扁平风格的HEXO主题.
   link: https://github.com/o2team/hexo-theme-o2
   preview: http://aotu.io
-  cover: img/home/hexo-theme-o2.jpg
+  cover: /img/home/hexo-theme-o2.jpg
   tags:
     - hexo
     - theme
@@ -10,7 +10,7 @@
   desc: MAC全栈开发环境搭建指引可以让你快速将你的MAC搭建成强悍的全栈开发利器.
   link: https://github.com/o2team/mac
   preview: http://aotu.io/mac
-  cover: img/home/mac-guide.jpg
+  cover: /img/home/mac-guide.jpg
   tags:
     - mac
     - guide
