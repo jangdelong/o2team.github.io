@@ -6,19 +6,21 @@
   tags:
     - hexo
     - theme
-- name: MAC全栈开发环境搭建指引
+- name: MAC全栈开发环境
   desc: MAC全栈开发环境搭建指引可以让你快速将你的MAC搭建成强悍的全栈开发利器.
   link: https://github.com/o2team/mac
   preview: http://aotu.io/mac
-  cover: /img/home/mac-guide.jpg
+  logo: /img/home/mac-guide.png
+  bgc: 23232e
   tags:
     - mac
     - guide
-- name: 凹凸前端规范
+- name: 前端代码规范
   desc: 凹凸实验室整理的前端开发规范，与最新前端技术同步修正.
   link: https://github.com/o2team/guide
   preview: http://aotu.io/guide
-  cover: http://tympanus.net/Tutorials/CaptionHoverEffects/images/4.png
+  logo: /img/home/O2-Guide.jpg
+  bgc: 0e83cd
   tags:
     - guide
     - frontend
