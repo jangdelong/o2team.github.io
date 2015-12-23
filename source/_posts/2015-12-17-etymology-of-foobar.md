@@ -37,7 +37,7 @@ author:
 
 而该词在常用的习语里面出现的时间远比在计算机或计算机编程里面出现的早，“foo” 和 “bar” 成对出现则起源于口语 “FUBAR” 一词（发音和 Foo-bar 一样）。
 
-来自军事世界的传说中，“FooBar” 的含义则是 “Fucked Up Beyond All Recognition，全句意思即係 “糟糕糟到面目全非” ？
+来自军事世界的传说中，“FooBar” 的含义则是 “Fucked Up Beyond All Recognition，全句意思是 “糟糕糟到面目全非/真是混乱不堪” ？
 
 看完 *Thom Parkin* 的解释，隐隐约约觉得此词来头不小，但是啊 *Thom* 的介绍又不够详细，然后继续 search 一下，发现万能 Wiki Sir 对此有更详细的描述。
 
@@ -81,9 +81,9 @@ Wiki 对 “Foobar” 一词的定义是这样的：
 
 > Multiflush: stop-all-trains-button. Next best thing to the red door button. Also called FOO. Displays "FOO" on the clock when used.
 
-Multiflush（冇知叫乜水）：停下所有列车按钮，门边的红色按钮，也叫做 “FOO”，当使用后，时钟上会显示 "FOO"。
+Multiflush（不知道叫啥）：停下所有列车按钮，门边的红色按钮，也叫做 “FOO”，当使用后，时钟上会显示 "FOO"。
 
-好了，现在终于知道呢两条粉肠 *foo*、*bar* 系乜水了，简单总结下就是：
+好了，现在终于知道 *foo*、*bar* 是什么了，简单总结下就是：
 
 1. 20 世纪 30 年代，一位美国漫画达人在一尊中国玉雕像上看到一个中国字 -- “福” ，然后就将其音译成 “foo”，并应用到他自己的漫画上
 
