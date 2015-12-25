@@ -22,7 +22,7 @@
   link: https://github.com/o2team/guide
   preview: http://aotu.io/guide
   logo: /img/home/guide.png
-  bgc: 0e83cd
+  bgc: 6190e8
   tags:
     - guide
     - frontend
@@ -48,3 +48,12 @@
   tags:
     - 期刊
     - HTML5
+- name: Athena
+  desc: 不仅仅是前端自动化流程构建工具，Athena还可以将构建流程数据化、可视化。
+  link: https://github.com/o2team/athena
+  preview: http://aotu.io/athena
+  logo: http://aotu.io/athena/logo.png
+  bgc: efdb4f
+  tags:
+    - ATHENA
+    - 前端自动化
