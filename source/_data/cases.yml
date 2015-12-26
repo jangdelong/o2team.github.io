@@ -41,8 +41,8 @@
     - 邮件签名
 - name: H5期刊
   desc: 由凹凸实验室3个美少女精心整理的HTML5案例期刊，每个案例附带创意、技术分析，开阔你的专业视界。
-  link: https://github.com/o2team/case
-  preview: http://aotu.io/case/mobi/maga.html
+  link: https://github.com/o2team/cases
+  preview: http://aotu.io/cases/mobi/maga.html
   logo: /img/home/h5.jpg
   bgc: fa4e4e
   tags:
