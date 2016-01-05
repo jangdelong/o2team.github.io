@@ -3,7 +3,8 @@ subtitle: 总结CSS3动画实现的方法，并进一步提出润色与优化的
 date: 2016-01-04 15:58:00
 cover: "Yettyzyt/css3-animation/840.png"
 tags:
-  - CSS
+  - CSS3
+  - animation
 author:
   nick: 燕婷 
   github_name: Yettyzyt
@@ -171,10 +172,6 @@ author:
 
 ### 四、切图
 - PS CC 2015修改组/图层名为“***.png”，生成图像资源
-- cssgaga预设格式，合并雪碧图
-
-{% pimg Yettyzyt/css3-animation/3-6.png [切图] %}
-（PS CSS 2015 与 cssgaga）
 {% pimg Yettyzyt/css3-animation/3-5.png [切图] %}
 （使用PS CSS 2015切图步骤）
 
