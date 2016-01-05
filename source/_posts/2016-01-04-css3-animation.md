@@ -9,7 +9,7 @@ author:
   nick: 燕婷 
   github_name: Yettyzyt
 ---
-## 需求中常见的css3动画：
+## 需求中常见的css3动画
 ---
 ### 一、补间动画/关键帧动画
 常用于实现位移、颜色（透明度）、大小、旋转、倾斜等变化。
@@ -83,9 +83,10 @@ author:
 > `step-end`等同于`steps(1,end)`：动画执行时以结尾端点为开始，默认值为end
 
 - **工具：**
-[CSS3动画帧数计算器](http://tid.tenpay.com/labs/css3_keyframes_calculator.html)
 
-## CSS动画优缺点：
+  [CSS3动画帧数计算器](http://tid.tenpay.com/labs/css3_keyframes_calculator.html)
+
+## CSS动画的优缺点
 ---
 ### 一、优点：
 > 简单、高效
@@ -290,8 +291,7 @@ author:
 	{% pimg Yettyzyt/css3-animation/4-17.png [跟随] %}
 	{% pimg Yettyzyt/css3-animation/4-18.gif [跟随] %}
 
-
-## 优化：
+## 优化
 ---
 - 不用left/right/width/height/margin-top等
 - 少用color/background等
@@ -300,7 +300,7 @@ author:
 - 适当使用will-change
 
 
-## 参考文章：
+## 参考文章
 ---
 1. [CSS3 transition 属性过渡效果 详解,Techzero ,2014-04-1](http://www.itechzero.com/css3-transition-property-transition-effect-explain.html)
 2. [深入理解CSS3 Animation 帧动画,Aaron,2015-07-13](http://www.cnblogs.com/aaronjs/p/4642015.html)
