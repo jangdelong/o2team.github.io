@@ -171,10 +171,6 @@ author:
 
 ### 四、切图
 - PS CC 2015修改组/图层名为“***.png”，生成图像资源
-- cssgaga预设格式，合并雪碧图
-
-{% pimg Yettyzyt/css3-animation/3-6.png [切图] %}
-（PS CSS 2015 与 cssgaga）
 {% pimg Yettyzyt/css3-animation/3-5.png [切图] %}
 （使用PS CSS 2015切图步骤）
 
