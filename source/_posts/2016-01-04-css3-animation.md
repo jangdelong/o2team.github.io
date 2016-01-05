@@ -3,7 +3,8 @@ subtitle: 总结CSS3动画实现的方法，并进一步提出润色与优化的
 date: 2016-01-04 15:58:00
 cover: "Yettyzyt/css3-animation/840.png"
 tags:
-  - CSS
+  - CSS3
+  - animation
 author:
   nick: 燕婷 
   github_name: Yettyzyt
