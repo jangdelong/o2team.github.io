@@ -1,13 +1,13 @@
 title: 使用Github的webhooks进行网站自动化部署
 subtitle: 本文介绍Github的高级功能webhooks，并通过实例帮助我们如何使用它进行网站的自动化部署
 cover: cnt1992/webhooks-cover.jpg
+date: 2016-01-06 17:05:05
 tags:
   - Github
   - webhooks
 author:
   nick: SkyCai
   github_name: cnt1992
-date: 2016-01-05 17:05:05
 ---
 
 相信很多码农都玩过了`Git`，如果对`Git`只是一知半解，可以移步`LV`写的 [GIT常用操作总结](http://aotu.io/notes/2015/11/17/Git-Commands/)，下面介绍到的一些关于 `Git` 的概念就不再赘述。
