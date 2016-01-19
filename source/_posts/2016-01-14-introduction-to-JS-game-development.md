@@ -1,5 +1,5 @@
 title: js游戏开发初级入门
-subtitle: 五子棋游戏
+subtitle: 凹凸实验室水灵通透软妹子－暖暖，手把手教你用js开发五子棋游戏！
 cover: wangcainuan/2016-01-14-introduction-to-JS-game-development/gobang_cover.jpg
 tags:
   - js
