@@ -117,5 +117,5 @@
 
 ## 其他
 
-- [版本日志](change-logs)
-- [文章运营](文章运营)
+- [版本日志](https://github.com/o2team/o2team.github.io/wiki/change-logs)
+- [文章运营](https://github.com/o2team/o2team.github.io/wiki/文章运营)
