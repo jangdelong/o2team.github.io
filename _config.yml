@@ -122,5 +122,9 @@ github:
   user: o2team
   repo: o2team.github.io
 
+# baidu sitemap
+baidusitemap:
+  url: http://o2team.com/
+
 # O2 Theme Customation
 logo_url: img/logo_186x65.png
