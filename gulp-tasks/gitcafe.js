@@ -13,6 +13,7 @@ module.exports = function(){
     cd(gcPath);
 	rm('CNAME');
 	rm('baidu*.html');
+    exec('git add -A');
 	if (exec('git commit -am "Super 凹凸MAN"').code !== 0) {
 		echo('Error: Git commit failed for gitcafe');
 		exit(1);
