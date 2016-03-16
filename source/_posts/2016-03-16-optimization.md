@@ -4,7 +4,6 @@ cover: wangcainuan/2016-03-16-optimization/optimization_cover.png
 tags:
   - 工作效率
   - 速度性能
-  - 稳定性
   - 安全性
   - 响应式
   - 兼容性
@@ -101,7 +100,7 @@ sublime目前还是不错的选择，可以安装插件，比如BracketHighlight
 我们一般通过三种方式来检验我们的网页性能：
 * 通过浏览器开发者工具或浏览器插件、Fiddler、Charles等查看页面加载情况。原理是通过追踪HTTP请求与响应的时间，以图形的方式列出所有资源的下载情况。缺点是人为操作，难以实现批量测试与统计。
 * 在页面中引入额外的代码钩子来记录时间等相关数据。缺点是加重了开发者与测试人员的负担，还有可能因为检测代码本身的潜在问题影响页面的性能。如果好一点的话，会接入一个性能数据收集系统，采取并分析数据。
-* 使用第三方的工具如Page Speed和WebPagetest，能够选择在不同浏览器和不同地域进行测试，并且给出各方面的评分以及提供一些优化建议。但某些服务需要排队等待，并且难以实现批量测试与统计。下面是使用WebPagetest测试京东首页的情况：<br>{% pimg wangcainuan/2016-03-16-optimization/webpagetest.jpg "webpagetest" '{"title":"webpagetest","class":"webpagetest"}' %}
+* 使用第三方的工具如Page Speed、YSlow和WebPagetest，能够选择在不同浏览器和不同地域进行测试，并且给出各方面的评分以及提供一些优化建议。但某些服务需要排队等待，并且难以实现批量测试与统计。下面是使用WebPagetest测试京东首页的情况：<br>{% pimg wangcainuan/2016-03-16-optimization/webpagetest.jpg "webpagetest" '{"title":"webpagetest","class":"webpagetest"}' %}
 
 可喜可贺，W3C推出了一套[性能API标准](https://www.w3.org/wiki/Web_Performance/Publications)，目的是简化开发者对网站性能进行精确分析与控制的过程，最终实现性能的提高。比如通过Navigation Timing记录的关键时间点来统计页面完成所用的时间，部分使用方法：    
 
@@ -392,7 +391,7 @@ iPad：
 requireJs框架特性：
 * 前端设计及开发人员统一代码规范。
 * 按需加载。
-* AMD规范：以简单而优雅的方式统一了JavaScript的模块定义和加载机制，降低了学习和使用各种框架的门槛，能够以一种统一的方式去定义和使用模块，提高开发效率，降低了应用维护成本。腾讯系一般使用AMD
+* AMD规范：以简单而优雅的方式统一了JavaScript的模块定义和加载机制，降低了学习和使用各种框架的门槛，能够以一种统一的方式去定义和使用模块，提高开发效率，降低了应用维护成本。
 * 与Grunt结合可实现一站式工作流。
 
 ### 7.4 多标签状态同步
