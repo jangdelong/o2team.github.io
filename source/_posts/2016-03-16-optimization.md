@@ -1,6 +1,6 @@
-title:  暖妹子教你做前端优化～
-subtitle: 暖妹子&前端优化来袭,救赎众生啦～～快来瞧瞧～
-cover: wangcainuan/2016-03-16-optimization/optimization_cover.jpg
+title:  暖妹子の前端优化指南
+subtitle: 暖妹子の前端优化指南来袭,救赎众生啦～～快来瞧瞧～
+cover: wangcainuan/2016-03-16-optimization/optimization_cover.png
 tags:
   - 工作效率
   - 速度性能
