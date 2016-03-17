@@ -397,11 +397,14 @@ requireJs框架特性：
 * 与Grunt结合可实现一站式工作流。
 
 ### 7.4 多标签状态同步
-场景：
+场景如下：
 页面一：去一个网站买东西，未登录状态下，进入首页；
 页面二：然后新窗口打开任意页面，登录并成功返回。
 再次访问页面一，发现页面还是未登录状态，实际上用户已经登录了，这种体验是很差的。我们是不是有什么办法可以实现多标签状态同步呢？有的，利用Page Visibility：
-* 页面可见性API就是表示网页可见还是不可见的，其有两个常用属性值：hidden与visible。
+* 页面可见性API就是表示网页可见还是不可见的。页面可见性API有两个属性，一个事件，如下：
+	* document.hidden: Boolean值，表示当前页面可见还是不可见
+	* document.visibilityState: 返回当前页面的可见状态，状态值有hidden、visible、prerender、preview。
+	* visibilitychange: 当可见状态改变时候触发的事件。
 * 浏览器支持：IE10+、Chrome、FireFox。
 * 多标签状态同步demo: [网页可见性API与登录同步](http://www.zhangxinxu.com/study/201211/page-visibility-api-login-same-step-1.html)
 
