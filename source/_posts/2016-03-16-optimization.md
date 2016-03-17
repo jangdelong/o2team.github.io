@@ -425,6 +425,7 @@ requireJs框架特性：
 [Web客户端安全性最佳实践](https://segmentfault.com/a/1190000000382944)
 [HTML5 安全问题解析](https://segmentfault.com/a/1190000003756563)
 [10步大幅提升网站可访问性](https://isux.tencent.com/ten-steps-enhance-web-accessibility.html)
+[Page Visibility(页面可见性)API介绍、微拓展](http://www.zhangxinxu.com/wordpress/2012/11/page-visibility-api-introduction-extend/)
 
 
 
