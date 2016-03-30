@@ -1,4 +1,347 @@
-<!DOCTYPE html><html lang="zh-cn" class="theme-o2 page-post-detail"><head prefix="og: http://ogp.me/ns#"><meta charset="utf-8"><title>让图片加载这件事儿变得更美好 | Aotu.io「凹凸实验室」</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="Mobile,optimize,Load,Images,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"><link rel="canonical" href="http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/index.html"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="/assets/img/favicon-230x230.png" sizes="230x230"><link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#2f83cd"><meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png"><link rel="stylesheet" href="/assets/css/dist-c41d9f085d.o2.css"><link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css"><link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」"><meta name="description" content="如果你问我构建触屏页面的过程中有什么困难的？我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。"><meta property="og:type" content="article"><meta property="og:title" content="让图片加载这件事儿变得更美好"><meta property="og:url" content="http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/index.html"><meta property="og:site_name" content="Aotu.io「凹凸实验室」"><meta property="og:description" content="如果你问我构建触屏页面的过程中有什么困难的？我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/yeshou.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/paper.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/rose.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/drose6.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/drose6-code.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/ahui.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/hui-loading.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/oulaiya.png"><meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/head-loading.png"><meta property="og:updated_time" content="2016-03-24T05:02:12.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="让图片加载这件事儿变得更美好"><meta name="twitter:description" content="如果你问我构建触屏页面的过程中有什么困难的？我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。"><meta name="twitter:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/yeshou.png"><meta name="twitter:site" content="o2circle"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>var App={root:"/"}</script><body itemscope itemtype="http://schema.org/WebPage"><div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader"><div class="container"><div class="navbar-header"><a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand"><img src="/assets/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"></a><div onclick="" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div></div><div class="navbar-collapse collapse" id="navbar-main"><ul class="nav navbar-nav header-links header-links-main"><li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></ul><ul class="nav navbar-nav navbar-right header-links header-links-extra"><li class="search-wrap"><a class="fa fa-search search-icon" href="#search" title="搜索"></a><form id="search" method="get" class="search-form"><input type="text" name="query" class="search-form-ipt" placeholder="搜索"></form><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a><ul id="theme-list" class="dropdown-menu" aria-labelledby="themes"><li data-v="light"><a href="javascript:;">曙光女神</a><li data-v="dark"><a href="javascript:;">暗影猎手</a></ul></ul></div></div></div><div class="container post-wrap"><article class="post" itemscope itemtype="http://schema.org/Article"><header class="post-header"><div class="post-title"><h2><a href="/notes/2016/03/09/img-loading-optimization-in-mobile/" itemprop="name">让图片加载这件事儿变得更美好</a></h2><ul class="post-stats"><li><a href="/tags/Images/" class="meta-tag">Images</a><li><a href="/tags/Load/" class="meta-tag">Load</a><li><a href="/tags/optimize/" class="meta-tag">optimize</a><li><a href="/tags/Mobile/" class="meta-tag">Mobile</a><li title="字数"><span class="icon fa-font">3,140</span><li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span><li><a href="/notes/2016/03/09/img-loading-optimization-in-mobile/#comments" itemprop="discussionUrl" class="lnk-comments"><span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMy8wOS9pbWctbG9hZGluZy1vcHRpbWl6YXRpb24taW4tbW9iaWxlLw==" data-count-type="comments" itemprop="commentsCount">0</span></a></ul><p>图片是触屏页面让人赏心悦目的重要元素之一。而对图片资源的加载渲染将影响页面呈现，处理好图片加载才能给用户更好的体验。</div><div class="post-meta"><time class="published" datetime="2016-03-08T17:38:02.000Z" itempro="datePublished">星期二, 3月8日 2016</time> <a target="_blank" href="https://github.com/Tingglelaoo" class="author"><span class="name">Ting</span><img src="https://avatars.githubusercontent.com/Tingglelaoo?v=3&s=80" alt="Tingglelaoo"></a></div></header><a href="/notes/2016/03/09/img-loading-optimization-in-mobile/" class="image featured post-cover"><img src="/assets/img/post/Tingglelaoo/20160302/load_cover_840x340.png" alt="让图片加载这件事儿变得更美好"></a><div class="post-content" itemprop="articleBody" data-swiftype-index="true"><p>如果你问我构建触屏页面的过程中有什么困难的？<br>我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。<br>尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。<br>一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。<br><a id="more"></a><h2 id="图片优化的一般方法" class="post-heading"><a href="#图片优化的一般方法" class="headerlink" title="图片优化的一般方法"></a>图片优化的一般方法<a class="post-anchor" href="#图片优化的一般方法" aria-hidden="true"></a></h2><p>在本文正式开始之前，笔者先提提图片优化的一般方法，了解图片优化的方法有助于理解后面图片加载实现形式的多样化。<br>一般常见的图片优化方法有：<ul><li>减少文件体积大小<li>减少图片资源请求数(合并HTTP请求)</ul><h3 id="减少图片文件体积大小" class="post-heading"><a href="#减少图片文件体积大小" class="headerlink" title="减少图片文件体积大小"></a>减少图片文件体积大小<a class="post-anchor" href="#减少图片文件体积大小" aria-hidden="true"></a></h3><p>可以从<ul><li>压缩优化图片大小<li>采用合适的图片格式</ul><p>两个途径来进行对体积大小的优化。<br>这里推荐阅读<a href="http://cabbit.me/web-image-optimization/" target="_blank" rel="external">《Web性能优化：图片优化》</a>，博主在文中讨论如何更优地选择图片的恰当格式以及推荐了优化图片大小的工具。<h3 id="减少图片资源请求数-合并HTTP请求" class="post-heading"><a href="#减少图片资源请求数-合并HTTP请求" class="headerlink" title="减少图片资源请求数(合并HTTP请求)"></a>减少图片资源请求数(合并HTTP请求)<a class="post-anchor" href="#减少图片资源请求数-合并HTTP请求" aria-hidden="true"></a></h3><p>减少图片资源请求数(合并HTTP请求)的途径除了最为普遍的<ul><li>合成雪碧图</ul><p>还有<ul><li>使用DataURL</ul><p>这里特别提下，采用DataURL这种方式将图片被转换成base64编码的字符串形式的，如果单纯地“嵌”入HTML中是不会被缓存的，但是加在CSS或JS文件中，通过缓存CSS或JS则达到了间接缓存以base64编码的图片。<br>这里推荐一个将图片转换成Base64编码的字符串的在线工具： <a href="http://dataurl.net/#dataurlmaker" target="_blank" rel="external">DataURLMaker在线工具</a><br>因为本文的重点不在于讨论图片优化的内容，所以这里就简单总结下对图片进行优化的方法，对于更详细的内容，笔者则按下不表了。<br>对于触屏页面中常见的的图片资源加载方式，笔者归纳为三类：正常加载、预加载、懒加载。<h2 id="正常加载" class="post-heading"><a href="#正常加载" class="headerlink" title="正常加载"></a>正常加载<a class="post-anchor" href="#正常加载" aria-hidden="true"></a></h2><p>所谓正常加载，则是开发者不采用人为地方式去干扰，按照浏览器正常加载的方式去加载渲染页面。<br>适合采用正常加载的方式的情景是图片数量较少以及图片体积较小，对触屏页面呈现的用户体验不影响或影响较少。<br>但是在现有的大环境中，限制于网络宽带等客观的因素，而且触屏页面的华丽炫目的设计都需要依靠图片，单纯的CSS是无法满足要求的，对图片的应用还是有一定量。<br>所以，能够毫无顾忌地采用正常加载的方式的案例还是比较少的，目前笔者暂时是没有见过。<h2 id="预加载" class="post-heading"><a href="#预加载" class="headerlink" title="预加载"></a>预加载<a class="post-anchor" href="#预加载" aria-hidden="true"></a></h2><p>在触屏页面处理中最为常见的可以是说预加载，几乎每个触屏页面的案例都使用到了这种方式。<br>为了完整地呈现页面给用户，开发者会通过一定的技术预先加载图片资源（以及页面其它资源），等加载渲染完毕再把页面呈现给用户。<br>而根据这个预加载的过程是否有明显的进度提示，笔者把常见的预加载方式划分为两种形式：<ul><li>显性预加载<li>隐性预加载</ul><h3 id="显性预加载" class="post-heading"><a href="#显性预加载" class="headerlink" title="显性预加载"></a>显性预加载<a class="post-anchor" href="#显性预加载" aria-hidden="true"></a></h3><p>显性预加载指的则是处于预加载过程时页面有明确的加载提示，比如进度条或者是Loading图标。<br>譬如，我厂的触屏页面案例《点燃你心中的野兽》，在预加载过程提示加载的进度，让用户有个心理预期，减少等待的烦躁感。<blockquote><p>以下截图来源自京东的<a href="http://wqs.jd.com/promote/CH77/2015/paper/index.html" target="_blank" rel="external">《点燃你心中的野兽》</a><br><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%" src="/assets/img/post/Tingglelaoo/20160302/yeshou.png" alt="示例图片"><p></blockquote><p class="user_img"><img style="display:block;width:100%;max-width:320px;margin:0 auto" src="/assets/img/post/Tingglelaoo/20160302/paper.png" alt="示例图片"><p>这个案例下的预加载处理技术是，先把页面DOM结构放入JS模版中，预加载完成后再把页面从JS模版拎出来，页面渲染完后能够完整地呈现页面给用户。<br>其中，图片资源相关预加载处理代码段为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line">PreLoad.prototype.image = <span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">var</span> b = <span class="built_in">document</span>.createElement(<span class="string">"img"</span>);</span><br><span class="line">       b.src = a</span><br><span class="line">       ...</span><br><span class="line">   &#125;</span><br></pre></table></figure><p><p>通过创建image元素，设置其src，就简单方便可以预先发起HTTP请求，实现预加载图片。<br>除了对png/jpg等格式图片能够利用以上方法实现预加载，对于DataURL转换图片为base64编码的字符串也能够实现预加载。<br>在Adidas的《罗斯·决不凋谢》中，利用DataURL协议将图片转换成base64编码的字符串写入JS中，预加载JS文件完成后通过JS来进行内联在DOM元素中。<blockquote><p>以下截图来自案例<a href="http://drose6.adidasevent.com/]" target="_blank" rel="external">《Adidas：罗斯·决不凋谢》</a><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%" src="/assets/img/post/Tingglelaoo/20160302/rose.png" alt="示例图片"><p></blockquote><p class="user_img"><img style="display:block;width:100%;max-width:320px;margin:0 auto" src="/assets/img/post/Tingglelaoo/20160302/drose6.png" alt="示例图片"><p>这里贴出该案例中部分预加载处理代码代码，有兴趣的可以详见0.main.js、2.main.js、3.main.js处深入研究。<blockquote><p>以下为Chrome Dev Tool 对案例资源查看的界面截图</blockquote><p class="user_img"><img style="display:block;width:100%" src="/assets/img/post/Tingglelaoo/20160302/drose6-code.png" alt="示例图片"><p>虽然，业界有一种说法是不建议在移动端开发中使用DataURL转换图片为base64编码的做法，因为对大量的base64图片解码比较损耗内存和性能，但是使用base64在一定条件下是有助于页面加载速度提升，具体的原由可以前往<a href="http://aotu.io/notes/2016/03/04/can-we-use-base64-in-h5-webapps/">《图片资源Base64化在H5页面里有用武之地吗？》</a>阅读。<h3 id="隐性预加载" class="post-heading"><a href="#隐性预加载" class="headerlink" title="隐性预加载"></a>隐性预加载<a class="post-anchor" href="#隐性预加载" aria-hidden="true"></a></h3><p>除了明确的预加载提示，还有一种是通过推进触屏页面进度的趣味互动的方式，笔者称之此种类似的情况为隐性预加载。<blockquote><p>截图来自案例<a href="http://evt.dianping.com/market/20151207/" target="_blank" rel="external">《大众点评：阿惠故事1 - 吃饭别带姥爷》</a><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%" src="/assets/img/post/Tingglelaoo/20160302/ahui.png" alt="示例图片"><p></blockquote><p class="user_img"><img style="display:block;width:100%;max-width:640px;margin:0 auto" src="/assets/img/post/Tingglelaoo/20160302/hui-loading.png" alt="示例图片"><p>在大众点评的《阿惠故事1 - 吃饭别带姥爷》的预加载中，先是显性预加载(钱币小图标Loding)快速地呈现部分画面(截图右部分)给用户，再通过互动(向上滑动数钱)来继续分段加载资源。这样的做法一改用户往日沉闷的等待，能够给予用户更好的体验。<p>还有一个比较特别的案例是大众点评和欧莱雅合作的《好年从头开始》，笔者也将之归纳为隐性预加载。<blockquote><p>截图来源于案例<a href="http://evt.dianping.com/midas/160108-loreal/index.html" target="_blank" rel="external">《大众点评：好年从头开始》</a><br><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%" src="/assets/img/post/Tingglelaoo/20160302/oulaiya.png" alt="示例图片"><p></blockquote><p class="user_img"><img style="display:block;width:100%;max-width:640px;margin:0 auto" src="/assets/img/post/Tingglelaoo/20160302/head-loading.png" alt="示例图片"><p>在这里，开发者先预加载了部分图片以呈现首屏画面给用户，同时图片预加载依然在进行，当用户触发的页面内的图片资源还未加载完时则会显示进度条，加载完毕则可以进入下一个画面。<p>笔者觉得采用这种方式的原因有二，第一，页面内容需要加载的资源过多，若等待全部加载完毕所需时间耗费过长，容易导致流失用户；第二，页面内容足够吸引，即时在交互过程中插入等待过程，用户也愿意去等待。<h2 id="懒加载" class="post-heading"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载<a class="post-anchor" href="#懒加载" aria-hidden="true"></a></h2><p>懒加载，又称为延迟加载、按需加载。指的是图片在页面渲染的时候先不加载，页面渲染完成后在指定动作触发后再加载图片。<br>这种方式通常比较合适于篇幅较长的页面，并且图片内容的重要性低于页面信息内容，能够快速地先将重要的页面信息呈现给用户。<br>譬如，这种方式则应用于电商商品信息集合页面，同时也常用于文章阅读的情景下。除了在移动端的应用场景之外，在PC端懒加载也是应用最广泛的一种图片加载优化方式。<br>最为常见的一种懒加载技术是以可见距离作为触发点。当页面滑动到屏幕可见区域时，则进行加载图片。实现的原理是：<ul><li>先将图片的实际src，记录在data-set属性中。<li>监听屏幕滚动，计算图片的Y坐标，并计算可视区域的高度height，当Y小于等于(height+scrollTop)时，图片的src的值用data-src的来替换，从而来实现图片的懒加载。</ul><p>具体可以前往<a href="http://jdc.jd.com/h5/case/maga.html" target="_blank" rel="external">拇指期刊</a>点击文章阅读体验喔。<h2 id="写在最后" class="post-heading"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后<a class="post-anchor" href="#写在最后" aria-hidden="true"></a></h2><p>希望这篇文章能够带给读者一些启发。并不是某一种案例只使用一种加载方式。同时，也不是触屏页面的加载方式仅限于以上方法之一。<br>这里仅是列举并讨论常见的加载方式，凡事讲究实践出真知，在实践的时候必然会有更加切合具体案例的好方法。<br>Keep Moving，在触屏页面的开发中，兴许还有更多更优秀的图片资源加载方式等着我们去发掘。<blockquote><p>文中案例搜集均来源于<a href="http://www.digitaling.com/projects" target="_blank" rel="external">数英网</a>:)</blockquote></div><div class="post-revision"><i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-24T05:02:12.000Z" itemprop="dateModified">上次更新：星期四, 3月24日 2016 05:02:12</time></div><div class="actions pagination pagination-post"><div class="pagination-post-prev"><a href="/notes/2016/03/16/jcloud-sum/" class="button big" title="某超长文档的探索之路"><i class="fa fa-chevron-left"></i> 某超长文档的探索之路</a></div><div class="pagination-post-next"><a href="/notes/2016/03/04/can-we-use-base64-in-h5-webapps/" class="button big" title="图片资源Base64化在H5页面里有用武之地吗？">图片资源Base64化在H5页面里有用武之地吗？ <i class="fa fa-chevron-right"></i></a></div></div><div class="post-comments" id="comments"><div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMy8wOS9pbWctbG9hZGluZy1vcHRpbWl6YXRpb24taW4tbW9iaWxlLw==" data-title="让图片加载这件事儿变得更美好" data-url="http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/index.html"></div><script>var duoshuoQuery={short_name:"aotu"};!function(){var t=document.createElement("script");t.id="duoshuo-script",t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//static.duoshuo.com/embed.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script></div></article></div><div class="sec sec-follow-lite"><div class="container"><div class="sec-heading"><p class="follow-pic"><img src="/assets/img/qrcode.png" alt="关注我们"><p class="follow-desc">海海人生，无折腾不为乐。<p class="sec-heading-sub follow-acount"><img class="follow-icon" src="/assets/img/logo-circle-120.png" alt="AOTULabs"> 微信号：AOTULabs</div></div></div><div class="sec sec-footer"><div class="container"><footer id="footer" class="sec-heading footer"><ul class="icons"><li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a><li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a><li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></ul><div class="footer-sec copyright">&copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</div><div class="footer-sec words">" A friend in need is a friend indeed. "</div><div class="footer-sec site-stats" style="display:none"><span id="busuanzi_container_site_pv" class="site-pv">总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次 </span><span id="busuanzi_container_site_uv" class="site-uv">总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人</span></div></footer></div></div><section id="smSearch" class="slide-search"><section><form class="search" method="get"><input type="text" name="query" placeholder="搜索"></form></section><section><h3>搜索结果</h3><ul class="links" id="searchResults">Loading...</ul></section></section><script id="tplSearch" type="text/hogan-tpl">{{#items}}
+<!DOCTYPE html>
+<html lang="zh-cn" class="theme-o2 page-post-detail">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8"/>
+	<title>让图片加载这件事儿变得更美好 | Aotu.io「凹凸实验室」</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <!-- keywords -->
+<meta name="keywords" content="Mobile,optimize,Load,Images,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"/>
+<!-- Canonical links -->
+<link rel="canonical" href="http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/index.html">
+<!-- Alternative links -->
+
+<!-- Icon -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/img/favicon-230x230.png" sizes="230x230">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2f83cd">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<!-- CSS -->
+<!-- build:css css/dist.o2.css -->
+<link rel="stylesheet" href="/css/o2.css">
+<!-- endbuild -->
+
+<link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」">
+<!-- Open Graph -->
+<meta name="description" content="如果你问我构建触屏页面的过程中有什么困难的？我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让图片加载这件事儿变得更美好">
+<meta property="og:url" content="http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/index.html">
+<meta property="og:site_name" content="Aotu.io「凹凸实验室」">
+<meta property="og:description" content="如果你问我构建触屏页面的过程中有什么困难的？我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/yeshou.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/paper.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/rose.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/drose6.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/drose6-code.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/ahui.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/hui-loading.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/oulaiya.png">
+<meta property="og:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/head-loading.png">
+<meta property="og:updated_time" content="2016-03-30T10:16:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="让图片加载这件事儿变得更美好">
+<meta name="twitter:description" content="如果你问我构建触屏页面的过程中有什么困难的？我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。">
+<meta name="twitter:image" content="http://aotu.io/img/post/Tingglelaoo/20160302/yeshou.png">
+<meta name="twitter:site" content="o2circle">
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script>
+var App = {
+    root:'/'    
+};
+</script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand">
+                <img src="/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"/>
+            </a>
+            <div onclick="javascript:void(0)" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav header-links header-links-main">
+                <li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a></li><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a></li><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a></li><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a></li><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right header-links header-links-extra">
+                <li class="search-wrap">
+                    <a class="fa fa-search search-icon" href="#search" title="搜索"></a>
+                    <form id="search" method="get" class="search-form">
+                        <input type="text" name="query" class="search-form-ipt" placeholder="搜索" />
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a>
+                    <ul id="theme-list" class="dropdown-menu" aria-labelledby="themes">
+                        <li data-v="light"><a href="javascript:;">曙光女神</a></li>
+                        <li data-v="dark"><a href="javascript:;">暗影猎手</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+	
+<div class="container post-wrap">
+    
+    <!-- Post -->
+<article class="post" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <div class="post-title">
+            <h2><a href="/notes/2016/03/09/img-loading-optimization-in-mobile/" itemprop="name">让图片加载这件事儿变得更美好</a></h2>
+            <ul class="post-stats">
+                
+                
+                <li><a href='/tags/Images/' class='meta-tag'>Images</a></li>
+                
+                <li><a href='/tags/Load/' class='meta-tag'>Load</a></li>
+                
+                <li><a href='/tags/optimize/' class='meta-tag'>optimize</a></li>
+                
+                <li><a href='/tags/Mobile/' class='meta-tag'>Mobile</a></li>
+                 
+                
+                <li title="字数"><span class="icon fa-font">3,140</span></li>
+                
+                <li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span></li>
+                
+                
+                <li>
+                    <a href="/notes/2016/03/09/img-loading-optimization-in-mobile/#comments" itemprop="discussionUrl" class="lnk-comments">
+                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMy8wOS9pbWctbG9hZGluZy1vcHRpbWl6YXRpb24taW4tbW9iaWxlLw==" data-count-type="comments" itemprop="commentsCount">0</span>
+                    </a>
+                </li>
+                 
+            </ul>
+            
+            <p>图片是触屏页面让人赏心悦目的重要元素之一。而对图片资源的加载渲染将影响页面呈现，处理好图片加载才能给用户更好的体验。</p>
+            
+        </div>
+        <div class="post-meta">
+            <time class="published" datetime="2016-03-08T17:38:02.000Z" itempro="datePublished">星期二, 3月8日 2016</time>
+            <a target="_blank" href="https://github.com/Tingglelaoo" class="author"><span class="name">Ting</span><img src="https://avatars.githubusercontent.com/Tingglelaoo?v=3&s=80" alt="Tingglelaoo" /></a>
+        </div>
+    </header>
+    <a href="/notes/2016/03/09/img-loading-optimization-in-mobile/" class="image featured post-cover"><img src="/img/post/Tingglelaoo/20160302/load_cover_840x340.png" alt="让图片加载这件事儿变得更美好" /></a>
+    <div class="post-content" itemprop="articleBody" data-swiftype-index="true">
+        <p>如果你问我构建触屏页面的过程中有什么困难的？<br>我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。<br>尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。<br>一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。<br><a id="more"></a></p>
+<h2 id="图片优化的一般方法" class="post-heading"><a href="#图片优化的一般方法" class="headerlink" title="图片优化的一般方法"></a>图片优化的一般方法<a class="post-anchor" href="#图片优化的一般方法" aria-hidden="true"></a></h2><p> 在本文正式开始之前，笔者先提提图片优化的一般方法，了解图片优化的方法有助于理解后面图片加载实现形式的多样化。<br> 一般常见的图片优化方法有：</p>
+<ul>
+<li>减少文件体积大小</li>
+<li>减少图片资源请求数(合并HTTP请求)</li>
+</ul>
+<h3 id="减少图片文件体积大小" class="post-heading"><a href="#减少图片文件体积大小" class="headerlink" title="减少图片文件体积大小"></a>减少图片文件体积大小<a class="post-anchor" href="#减少图片文件体积大小" aria-hidden="true"></a></h3><p>可以从</p>
+<ul>
+<li>压缩优化图片大小</li>
+<li>采用合适的图片格式</li>
+</ul>
+<p>两个途径来进行对体积大小的优化。<br>这里推荐阅读<a href="http://cabbit.me/web-image-optimization/" target="_blank" rel="external">《Web性能优化：图片优化》</a>，博主在文中讨论如何更优地选择图片的恰当格式以及推荐了优化图片大小的工具。</p>
+<h3 id="减少图片资源请求数-合并HTTP请求" class="post-heading"><a href="#减少图片资源请求数-合并HTTP请求" class="headerlink" title="减少图片资源请求数(合并HTTP请求)"></a>减少图片资源请求数(合并HTTP请求)<a class="post-anchor" href="#减少图片资源请求数-合并HTTP请求" aria-hidden="true"></a></h3><p>减少图片资源请求数(合并HTTP请求)的途径除了最为普遍的</p>
+<ul>
+<li>合成雪碧图</li>
+</ul>
+<p>还有</p>
+<ul>
+<li>使用DataURL</li>
+</ul>
+<p>这里特别提下，采用DataURL这种方式将图片被转换成base64编码的字符串形式的，如果单纯地“嵌”入HTML中是不会被缓存的，但是加在CSS或JS文件中，通过缓存CSS或JS则达到了间接缓存以base64编码的图片。<br>这里推荐一个将图片转换成Base64编码的字符串的在线工具： <a href="http://dataurl.net/#dataurlmaker" target="_blank" rel="external">DataURLMaker在线工具</a><br>因为本文的重点不在于讨论图片优化的内容，所以这里就简单总结下对图片进行优化的方法，对于更详细的内容，笔者则按下不表了。<br>对于触屏页面中常见的的图片资源加载方式，笔者归纳为三类：正常加载、预加载、懒加载。</p>
+<h2 id="正常加载" class="post-heading"><a href="#正常加载" class="headerlink" title="正常加载"></a>正常加载<a class="post-anchor" href="#正常加载" aria-hidden="true"></a></h2><p>所谓正常加载，则是开发者不采用人为地方式去干扰，按照浏览器正常加载的方式去加载渲染页面。<br>适合采用正常加载的方式的情景是图片数量较少以及图片体积较小，对触屏页面呈现的用户体验不影响或影响较少。<br>但是在现有的大环境中，限制于网络宽带等客观的因素，而且触屏页面的华丽炫目的设计都需要依靠图片，单纯的CSS是无法满足要求的，对图片的应用还是有一定量。<br>所以，能够毫无顾忌地采用正常加载的方式的案例还是比较少的，目前笔者暂时是没有见过。</p>
+<h2 id="预加载" class="post-heading"><a href="#预加载" class="headerlink" title="预加载"></a>预加载<a class="post-anchor" href="#预加载" aria-hidden="true"></a></h2><p>在触屏页面处理中最为常见的可以是说预加载，几乎每个触屏页面的案例都使用到了这种方式。<br>为了完整地呈现页面给用户，开发者会通过一定的技术预先加载图片资源（以及页面其它资源），等加载渲染完毕再把页面呈现给用户。<br>而根据这个预加载的过程是否有明显的进度提示，笔者把常见的预加载方式划分为两种形式：</p>
+<ul>
+<li>显性预加载</li>
+<li>隐性预加载</li>
+</ul>
+<h3 id="显性预加载" class="post-heading"><a href="#显性预加载" class="headerlink" title="显性预加载"></a>显性预加载<a class="post-anchor" href="#显性预加载" aria-hidden="true"></a></h3><p>显性预加载指的则是处于预加载过程时页面有明确的加载提示，比如进度条或者是Loading图标。<br>譬如，我厂的触屏页面案例《点燃你心中的野兽》，在预加载过程提示加载的进度，让用户有个心理预期，减少等待的烦躁感。</p>
+<blockquote>
+<p>以下截图来源自京东的<a href="http://wqs.jd.com/promote/CH77/2015/paper/index.html" target="_blank" rel="external">《点燃你心中的野兽》</a><br></p><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%;" src="/img/post/Tingglelaoo/20160302/yeshou.png" alt="示例图片"></p><p></p>
+</blockquote>
+<p class="user_img"><img style="display:block;width:100%;max-width:320px;margin:0 auto;" src="/img/post/Tingglelaoo/20160302/paper.png" alt="示例图片"></p>
+<p>这个案例下的预加载处理技术是，先把页面DOM结构放入JS模版中，预加载完成后再把页面从JS模版拎出来，页面渲染完后能够完整地呈现页面给用户。<br>其中，图片资源相关预加载处理代码段为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PreLoad.prototype.image = <span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">var</span> b = <span class="built_in">document</span>.createElement(<span class="string">"img"</span>);</span><br><span class="line">       b.src = a</span><br><span class="line">       ...</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过创建image元素，设置其src，就简单方便可以预先发起HTTP请求，实现预加载图片。<br>除了对png/jpg等格式图片能够利用以上方法实现预加载，对于DataURL转换图片为base64编码的字符串也能够实现预加载。<br>  在Adidas的《罗斯·决不凋谢》中，利用DataURL协议将图片转换成base64编码的字符串写入JS中，预加载JS文件完成后通过JS来进行内联在DOM元素中。</p>
+<blockquote>
+<p>以下截图来自案例<a href="http://drose6.adidasevent.com/]" target="_blank" rel="external">《Adidas：罗斯·决不凋谢》</a></p><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%;" src="/img/post/Tingglelaoo/20160302/rose.png" alt="示例图片"></p><p></p>
+</blockquote>
+<p class="user_img"><img style="display:block;width:100%;max-width:320px;margin:0 auto;" src="/img/post/Tingglelaoo/20160302/drose6.png" alt="示例图片"></p>
+<p>这里贴出该案例中部分预加载处理代码代码，有兴趣的可以详见0.main.js、2.main.js、3.main.js处深入研究。</p>
+<blockquote>
+<p>以下为Chrome Dev Tool 对案例资源查看的界面截图</p>
+</blockquote>
+<p class="user_img"><img style="display:block;width:100%;" src="/img/post/Tingglelaoo/20160302/drose6-code.png" alt="示例图片"></p>
+<p>虽然，业界有一种说法是不建议在移动端开发中使用DataURL转换图片为base64编码的做法，因为对大量的base64图片解码比较损耗内存和性能，但是使用base64在一定条件下是有助于页面加载速度提升，具体的原由可以前往<a href="http://aotu.io/notes/2016/03/04/can-we-use-base64-in-h5-webapps/">《图片资源Base64化在H5页面里有用武之地吗？》</a>阅读。</p>
+<h3 id="隐性预加载" class="post-heading"><a href="#隐性预加载" class="headerlink" title="隐性预加载"></a>隐性预加载<a class="post-anchor" href="#隐性预加载" aria-hidden="true"></a></h3><p>除了明确的预加载提示，还有一种是通过推进触屏页面进度的趣味互动的方式，笔者称之此种类似的情况为隐性预加载。</p>
+<blockquote>
+<p>截图来自案例<a href="http://evt.dianping.com/market/20151207/" target="_blank" rel="external">《大众点评：阿惠故事1 - 吃饭别带姥爷》</a></p><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%;" src="/img/post/Tingglelaoo/20160302/ahui.png" alt="示例图片"></p><p></p>
+</blockquote>
+<p class="user_img"><img style="display:block;width:100%;max-width:640px;margin:0 auto;" src="/img/post/Tingglelaoo/20160302/hui-loading.png" alt="示例图片"></p>
+<p>在大众点评的《阿惠故事1 - 吃饭别带姥爷》的预加载中，先是显性预加载(钱币小图标Loding)快速地呈现部分画面(截图右部分)给用户，再通过互动(向上滑动数钱)来继续分段加载资源。这样的做法一改用户往日沉闷的等待，能够给予用户更好的体验。</p>
+<p>还有一个比较特别的案例是大众点评和欧莱雅合作的《好年从头开始》，笔者也将之归纳为隐性预加载。</p>
+<blockquote>
+<p>截图来源于案例<a href="http://evt.dianping.com/midas/160108-loreal/index.html" target="_blank" rel="external">《大众点评：好年从头开始》</a><br></p><p class="user_img"><img style="display:inline-block;max-width:200px;max-height:200px;width:100%;" src="/img/post/Tingglelaoo/20160302/oulaiya.png" alt="示例图片"></p><p></p>
+</blockquote>
+<p class="user_img"><img style="display:block;width:100%;max-width:640px;margin:0 auto;" src="/img/post/Tingglelaoo/20160302/head-loading.png" alt="示例图片"></p>
+<p>在这里，开发者先预加载了部分图片以呈现首屏画面给用户，同时图片预加载依然在进行，当用户触发的页面内的图片资源还未加载完时则会显示进度条，加载完毕则可以进入下一个画面。</p>
+<p>笔者觉得采用这种方式的原因有二，第一，页面内容需要加载的资源过多，若等待全部加载完毕所需时间耗费过长，容易导致流失用户；第二，页面内容足够吸引，即时在交互过程中插入等待过程，用户也愿意去等待。</p>
+<h2 id="懒加载" class="post-heading"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载<a class="post-anchor" href="#懒加载" aria-hidden="true"></a></h2><p>懒加载，又称为延迟加载、按需加载。指的是图片在页面渲染的时候先不加载，页面渲染完成后在指定动作触发后再加载图片。<br>这种方式通常比较合适于篇幅较长的页面，并且图片内容的重要性低于页面信息内容，能够快速地先将重要的页面信息呈现给用户。<br>譬如，这种方式则应用于电商商品信息集合页面，同时也常用于文章阅读的情景下。除了在移动端的应用场景之外，在PC端懒加载也是应用最广泛的一种图片加载优化方式。<br>最为常见的一种懒加载技术是以可见距离作为触发点。当页面滑动到屏幕可见区域时，则进行加载图片。实现的原理是：</p>
+<ul>
+<li>先将图片的实际src，记录在data-set属性中。</li>
+<li>监听屏幕滚动，计算图片的Y坐标，并计算可视区域的高度height，当Y小于等于(height+scrollTop)时，图片的src的值用data-src的来替换，从而来实现图片的懒加载。</li>
+</ul>
+<p>具体可以前往<a href="http://jdc.jd.com/h5/case/maga.html" target="_blank" rel="external">拇指期刊</a>点击文章阅读体验喔。</p>
+<h2 id="写在最后" class="post-heading"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后<a class="post-anchor" href="#写在最后" aria-hidden="true"></a></h2><p>  希望这篇文章能够带给读者一些启发。并不是某一种案例只使用一种加载方式。同时，也不是触屏页面的加载方式仅限于以上方法之一。<br>  这里仅是列举并讨论常见的加载方式，凡事讲究实践出真知，在实践的时候必然会有更加切合具体案例的好方法。<br>  Keep Moving，在触屏页面的开发中，兴许还有更多更优秀的图片资源加载方式等着我们去发掘。</p>
+<blockquote>
+<p> 文中案例搜集均来源于<a href="http://www.digitaling.com/projects" target="_blank" rel="external">数英网</a>:)</p>
+</blockquote>
+
+    </div>
+    <div class="post-revision">
+        <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-30T10:16:14.000Z" itemprop="dateModified">上次更新：星期三, 3月30日 2016 10:16:14</time>
+    </div>
+    
+<div class="actions pagination pagination-post">
+    
+    <div class="pagination-post-prev"><a href="/notes/2016/03/16/jcloud-sum/" class="button big" title="某超长文档的探索之路"><i class="fa fa-chevron-left"></i> 某超长文档的探索之路</a></div>
+    
+    
+    <div class="pagination-post-next"><a href="/notes/2016/03/04/can-we-use-base64-in-h5-webapps/" class="button big" title="图片资源Base64化在H5页面里有用武之地吗？">图片资源Base64化在H5页面里有用武之地吗？ <i class="fa fa-chevron-right"></i></a></div>
+    
+</div>
+
+
+    
+
+
+<div class="post-comments" id="comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMy8wOS9pbWctbG9hZGluZy1vcHRpbWl6YXRpb24taW4tbW9iaWxlLw==" data-title="让图片加载这件事儿变得更美好" data-url="http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/index.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"aotu"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.id = "duoshuo-script";
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+</div>
+
+
+</article>
+
+</div>
+<div class="sec sec-follow-lite">
+    <div class="container">
+        <div class="sec-heading">
+            <p class="follow-pic"><img src="/img/qrcode.png" alt="关注我们"/></p>
+            <p class="follow-desc">海海人生，无折腾不为乐。</p>
+            <p class="sec-heading-sub follow-acount">
+                <img class="follow-icon" src="/img/logo-circle-120.png" alt="AOTULabs"/> 微信号：AOTULabs
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="sec sec-footer">
+    <div class="container">
+        <footer id="footer" class="sec-heading footer">
+            <ul class="icons">
+                <li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+            </ul>
+            <div class="footer-sec copyright">
+            &copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>
+            Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+            </div>
+            <div class="footer-sec words">
+            "
+            
+            
+            
+            Where there is a will, there is a way.
+            
+            "
+            </div>
+            
+            <div class="footer-sec site-stats" style="display:none">
+                <span id="busuanzi_container_site_pv" class="site-pv">
+                    总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次
+                </span>
+                <span id="busuanzi_container_site_uv" class="site-uv">
+                    总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人
+                </span>
+            </div>
+            
+        </footer>
+    </div>
+</div>
+
+
+    
+    <section id="smSearch" class="slide-search">
+
+<!-- Search -->
+    <section>
+        <form class="search" method="get">
+            <input type="text" name="query" placeholder="搜索" />
+        </form>
+    </section>
+
+<!-- Links -->
+    <section>
+		<h3>搜索结果</h3>
+        <ul class="links" id="searchResults">Loading...</ul>
+    </section>
+
+</section>
+
+<script id="tplSearch" type="text/hogan-tpl">
+    {{#items}}
     <li>
         <a href="{{ url }}" target="_blank">
             <h3>{{ title }}</h3>
@@ -7,4 +350,58 @@
 			{{/desc}}
         </a>
     </li>
-    {{/items}}</script><div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div><script src="/assets/js/dist-2a84b65682.o2.js"></script><script src="/assets/js/dist-bb2f97f6a9.duoshuo.js"></script><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var e=document.createElement("script");e.src="//push.zhanzhang.baidu.com/push.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+    {{/items}}
+</script>
+
+
+    
+	
+	<div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div>
+	
+    
+    <!-- Scripts -->
+<!-- build:js js/dist.o2.js -->
+<script src="/js/lunr.js"></script>
+<script src="/js/debounce.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/xhogan.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+<script src="/assets/fancybox/jquery.fancybox.js"></script>
+<script src="/js/fancybox.js"></script>
+
+<!-- endbuild -->
+
+
+<!-- build:js js/dist.duoshuo.js -->
+<script src="/js/ua-parser.min.js"></script>
+<script src="/js/duoshuo.js"></script>
+<!-- endbuild -->
+
+
+
+<!--busuanzi-->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+</body>
+</html>

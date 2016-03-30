@@ -1,10 +1,362 @@
-<!DOCTYPE html><html lang="zh-cn" class="theme-o2 page-post-detail"><head prefix="og: http://ogp.me/ns#"><meta charset="utf-8"><title>如何创建私有 CocoaPods 仓库 | Aotu.io「凹凸实验室」</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="Swift,CocoaPods,iOS,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"><link rel="canonical" href="http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/index.html"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="/assets/img/favicon-230x230.png" sizes="230x230"><link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#2f83cd"><meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png"><link rel="stylesheet" href="/assets/css/dist-c41d9f085d.o2.css"><link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css"><link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」"><meta name="description" content="公共 CocoaPods打开隐藏目录，可以使用命令: 
+<!DOCTYPE html>
+<html lang="zh-cn" class="theme-o2 page-post-detail">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8"/>
+	<title>如何创建私有 CocoaPods 仓库 | Aotu.io「凹凸实验室」</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <!-- keywords -->
+<meta name="keywords" content="Swift,CocoaPods,iOS,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"/>
+<!-- Canonical links -->
+<link rel="canonical" href="http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/index.html">
+<!-- Alternative links -->
+
+<!-- Icon -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/img/favicon-230x230.png" sizes="230x230">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2f83cd">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<!-- CSS -->
+<!-- build:css css/dist.o2.css -->
+<link rel="stylesheet" href="/css/o2.css">
+<!-- endbuild -->
+
+<link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」">
+<!-- Open Graph -->
+<meta name="description" content="公共 CocoaPods打开隐藏目录，可以使用命令: 
 1234//打开隐藏的命令:defaults write com.apple.finder AppleShowAllFiles -bool true//关闭隐藏的命令:defaults write com.apple.finder AppleShowAllFiles -bool false
-接着需要重启一下 Finder， 可以按住 opti"><meta property="og:type" content="article"><meta property="og:title" content="如何创建私有 CocoaPods 仓库"><meta property="og:url" content="http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/index.html"><meta property="og:site_name" content="Aotu.io「凹凸实验室」"><meta property="og:description" content="公共 CocoaPods打开隐藏目录，可以使用命令: 
+接着需要重启一下 Finder， 可以按住 opti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何创建私有 CocoaPods 仓库">
+<meta property="og:url" content="http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/index.html">
+<meta property="og:site_name" content="Aotu.io「凹凸实验室」">
+<meta property="og:description" content="公共 CocoaPods打开隐藏目录，可以使用命令: 
 1234//打开隐藏的命令:defaults write com.apple.finder AppleShowAllFiles -bool true//关闭隐藏的命令:defaults write com.apple.finder AppleShowAllFiles -bool false
-接着需要重启一下 Finder， 可以按住 opti"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-2repoSpecs.png"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-3createGithub.png"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-4o2specsRepos.png"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-5O2ViewDoc.jpeg"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-6O2SpecsRepoO2View.png"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-7O2SpecPushed.png"><meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-8githubTags.png"><meta property="og:updated_time" content="2016-03-24T05:02:12.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="如何创建私有 CocoaPods 仓库"><meta name="twitter:description" content="公共 CocoaPods打开隐藏目录，可以使用命令: 
+接着需要重启一下 Finder， 可以按住 opti">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-2repoSpecs.png">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-3createGithub.png">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-4o2specsRepos.png">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-5O2ViewDoc.jpeg">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-6O2SpecsRepoO2View.png">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-7O2SpecPushed.png">
+<meta property="og:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-8githubTags.png">
+<meta property="og:updated_time" content="2016-03-30T10:16:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何创建私有 CocoaPods 仓库">
+<meta name="twitter:description" content="公共 CocoaPods打开隐藏目录，可以使用命令: 
 1234//打开隐藏的命令:defaults write com.apple.finder AppleShowAllFiles -bool true//关闭隐藏的命令:defaults write com.apple.finder AppleShowAllFiles -bool false
-接着需要重启一下 Finder， 可以按住 opti"><meta name="twitter:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png"><meta name="twitter:site" content="o2circle"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>var App={root:"/"}</script><body itemscope itemtype="http://schema.org/WebPage"><div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader"><div class="container"><div class="navbar-header"><a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand"><img src="/assets/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"></a><div onclick="" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div></div><div class="navbar-collapse collapse" id="navbar-main"><ul class="nav navbar-nav header-links header-links-main"><li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></ul><ul class="nav navbar-nav navbar-right header-links header-links-extra"><li class="search-wrap"><a class="fa fa-search search-icon" href="#search" title="搜索"></a><form id="search" method="get" class="search-form"><input type="text" name="query" class="search-form-ipt" placeholder="搜索"></form><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a><ul id="theme-list" class="dropdown-menu" aria-labelledby="themes"><li data-v="light"><a href="javascript:;">曙光女神</a><li data-v="dark"><a href="javascript:;">暗影猎手</a></ul></ul></div></div></div><div class="container post-wrap"><article class="post" itemscope itemtype="http://schema.org/Article"><header class="post-header"><div class="post-title"><h2><a href="/notes/2016/01/26/Private-CocoaPods-Specs-Repo/" itemprop="name">如何创建私有 CocoaPods 仓库</a></h2><ul class="post-stats"><li><a href="/tags/iOS/" class="meta-tag">iOS</a><li><a href="/tags/CocoaPods/" class="meta-tag">CocoaPods</a><li><a href="/tags/Swift/" class="meta-tag">Swift</a><li title="字数"><span class="icon fa-font">5,352</span><li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span><li><a href="/notes/2016/01/26/Private-CocoaPods-Specs-Repo/#comments" itemprop="discussionUrl" class="lnk-comments"><span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMS8yNi9Qcml2YXRlLUNvY29hUG9kcy1TcGVjcy1SZXBvLw==" data-count-type="comments" itemprop="commentsCount">0</span></a></ul><p>本文介绍如何创建私有的 CocoaPods 仓库</div><div class="post-meta"><time class="published" datetime="2016-01-26T11:35:15.000Z" itempro="datePublished">星期二, 1月26日 2016</time> <a target="_blank" href="https://github.com/marklin2012" class="author"><span class="name">MarkLin</span><img src="https://avatars.githubusercontent.com/marklin2012?v=3&s=80" alt="marklin2012"></a></div></header><a href="/notes/2016/01/26/Private-CocoaPods-Specs-Repo/" class="image featured post-cover"><img src="/assets/img/post/MarkLin/privateCocoaPods/PrivateCocoaPods.png" alt="如何创建私有 CocoaPods 仓库"></a><div class="post-content" itemprop="articleBody" data-swiftype-index="true"><h3 id="公共-CocoaPods" class="post-heading"><a href="#公共-CocoaPods" class="headerlink" title="公共 CocoaPods"></a>公共 CocoaPods<a class="post-anchor" href="#公共-CocoaPods" aria-hidden="true"></a></h3><p>打开隐藏目录，可以使用命令:<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre><td class="code"><pre><span class="line"><span class="comment">//打开隐藏的命令:</span></span><br><span class="line">defaults write com<span class="selector-class">.apple</span><span class="selector-class">.finder</span> AppleShowAllFiles -bool true</span><br><span class="line"><span class="comment">//关闭隐藏的命令:</span></span><br><span class="line">defaults write com<span class="selector-class">.apple</span><span class="selector-class">.finder</span> AppleShowAllFiles -bool false</span><br></pre></table></figure><p>接着需要重启一下 <strong>Finder</strong>， 可以按住 <strong>option</strong> + 右键 <strong>Finder</strong> 图标选择重启。然后打开隐藏目录 <strong>.cocoapods</strong> (这个目录在你的个人目录底下, <code>~/.cocoapods</code> 或 <code>/Users/[username]/.cocoapods</code>)</p><a id="more"></a><p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png"><p>可以看到上图， <strong>.cocoapods</strong> 目录下的 <strong>repos</strong> 其实是 <strong>repository</strong> （仓库）的缩写。 <strong>repos</strong> 中存放的时仓库的集合。这里的 <strong>master</strong> 就是 <strong>CocoaPods</strong> 官方建立的仓库，也就是我们所谓的公共库。<p><strong>specs</strong> 目录下存放的就是所有提交到 <strong>CocoaPods</strong> 的开源库的 <strong>podspec</strong> 文件的集合。<br>其结构如下图所示：<p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-2repoSpecs.png"><p>其组成方式：<p>specName – version – specName.podspec<p>( <strong>master</strong> 里现在是 <strong>specName.podspec.json</strong>，这个 <strong>.json</strong> 文件就是 <strong>podspec</strong> 文件加了个后缀。我们可以采用 <code>pod ipc spec</code> 这个命令来将 <strong>spec</strong> 文件转换成 <strong>.json</strong>)<p>那这个文件夹是如何来得呢？其实，这个文件夹是在你安装了 <strong>CocoaPods</strong> 后，第一次执行 <code>pod install</code> 时， <strong>CocoaPods</strong> 通过命令 <code>pod setup</code> 来建立的（这条命令会自动执行）。<blockquote><p>上述是官方的 <strong>repo</strong> ，私有库的话可以看下我们前面的翻译或者查看<a href="https://guides.cocoapods.org/making/private-cocoapods.html" target="_blank" rel="external">官方文档</a>，但是官方文档有一些过程写的不是特别详细，自己实现的时候遇到了一些坑，特此梳理一下过程，按照官方文档内容实现一个私有的 <strong>spec repo</strong> 。根据官方的原理，我们只需要创建一个和 <strong>master</strong> 相类似结构的目录就可以实现私有的 <strong>spec repo</strong>，当然你可以 <strong>fork</strong> 一个官方的 <strong>repo</strong>，但是它包含了太多没有必要地库在里面，这在编译仓库的时候需要浪费大量的时间，所以我们只要自己重新创建一个就可以了。</blockquote><h3 id="1-创建一个私有的-Spec-Repo" class="post-heading"><a href="#1-创建一个私有的-Spec-Repo" class="headerlink" title="1.创建一个私有的 Spec Repo"></a>1.创建一个私有的 <strong>Spec Repo</strong><a class="post-anchor" href="#1-创建一个私有的-Spec-Repo" aria-hidden="true"></a></h3><p>在你的 git 服务器上创建一个 <strong>repo</strong>。这里你可以在 <strong>github</strong> 或者你自己的 git 服务器上实现。公司内部使用的话这里推荐大家使用私有的仓库,但是 <strong>github</strong> 的私有仓库是要收费的 <strong>$7/month</strong> （壕请无视 - -！）。大部分公司都是有自己的git服务器，不过一般只能在公司内网使用，或者可以选择<a href="https://gitlab.com" target="_blank" rel="external">Gitlab</a>,<a href="https://coding.net" target="_blank" rel="external">Coding</a>, <a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a>任意一种。我们以在 <strong>github</strong> 上创建为例：<p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-3createGithub.png"><p>如图所示，我们在 <strong>github</strong> 上创建一个空的仓库，命名为 <strong>O2Specs</strong> ，这个仓库是用来存放我们自己所有的私有库的 <strong>spec</strong> 文件，就如同官方的 <a href="https://github.com/CocoaPods/Specs" target="_blank" rel="external"><strong>https://github.com/CocoaPods/Specs</strong></a> 是用来存放所有官方的 <strong>specs</strong> 文件一样。<p>然后我们就可以执行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod repo add REPO_NAME SOURCE_URL</span><br></pre></table></figure><p>其中的 REPO_NAME 是我们要添加的私有 <strong>repo</strong> 的名称（这里我们待会填的是: <strong>O2Specs</strong>），后面是仓库的 git 地址。这里做的其实是创建的工作，也就是在 <code>~/.cocoapods/repo</code> 目录下添加了一个以你的私有 <strong>repo</strong> 为名的文件夹，但是并没有添加 <strong>spec</strong> 文件。<p>在终端执行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod repo add O2Specs https://github.com/marklin2012/O2Specs.git</span><br></pre></table></figure><p><p>这里用的是 <strong>https</strong> 地址，当然你也可以用 <strong>git</strong> 地址，不过这样有可能失败。如果失败，很大因素是你 <strong>github</strong> 的 <strong>ssh</strong> 在本地没有配置好，配置方法可以看这里：<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external"><strong>Generating SSH keys</strong></a>，成功后可以看得到 <strong>.cocoapods</strong> 目录如下图所示：<p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-4o2specsRepos.png"><p>至此，我们已经在本地得到我们自己的私有仓库 <strong>O2Specs</strong> ，这是一个空的仓库。<h3 id="2-添加私有的-Repo-安装到你的-CocoaPods-中" class="post-heading"><a href="#2-添加私有的-Repo-安装到你的-CocoaPods-中" class="headerlink" title="2.添加私有的 Repo 安装到你的 CocoaPods 中"></a>2.添加私有的 <strong>Repo</strong> 安装到你的 <strong>CocoaPods</strong> 中<a class="post-anchor" href="#2-添加私有的-Repo-安装到你的-CocoaPods-中" aria-hidden="true"></a></h3><p>这个步骤需要我们事先完成 <strong>CocoaPods</strong> 依赖库的搭建，具体可以查看我们另外一篇教程：<a href="http://www.jianshu.com/p/7a82e977281c" target="_blank" rel="external">制作 <strong>CocoaPods</strong> 依赖库</a>。如果这里你想先看看效果，也可以直接从 <strong>github</strong> 上 clone <a href="https://github.com/marklin2012/O2View" target="_blank" rel="external">示例工程</a>继续下面的操作。<p>让我们进入到上面 clone 的示例工程目录中（或者你自己搭建的依赖库目录中）：<p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-5O2ViewDoc.jpeg"><p>打开工程的 <strong>podspec</strong> 文件：<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre><td class="code"><pre><span class="line"><span class="symbol">Pod:</span><span class="symbol">:Spec</span>.new <span class="keyword">do</span> |s|</span><br><span class="line">  s.name         = <span class="string">"O2View"</span>				<span class="comment">#名称</span></span><br><span class="line">  s.version      = <span class="string">"0.0.1"</span>				<span class="comment">#版本号</span></span><br><span class="line">  s.summary      = <span class="string">"Just testing"</span>		<span class="comment">#简短介绍</span></span><br><span class="line">  s.description  = &lt;&lt;-DESC</span><br><span class="line">  					私有Pods测试</span><br><span class="line">  					* Markdown 格式</span><br><span class="line">                   DESC</span><br><span class="line"></span><br><span class="line">  s.homepage     = <span class="string">"http://aotu.io/"</span></span><br><span class="line">  <span class="comment"># s.screenshots  = "www.example.com/screenshots_1.gif"</span></span><br><span class="line">  s.license      = <span class="string">"MIT"</span>				<span class="comment">#开源协议</span></span><br><span class="line">  s.author             = &#123; <span class="string">"linyi31"</span> =&gt; <span class="string">"linyi@jd.com"</span> &#125;</span><br><span class="line"></span><br><span class="line">  s.source       = &#123; <span class="symbol">:git</span> =&gt; <span class="string">"https://github.com/marklin2012/O2View.git"</span> &#125;</span><br><span class="line">  <span class="comment">## 这里不支持ssh的地址，只支持HTTP和HTTPS，最好使用HTTPS</span></span><br><span class="line">  <span class="comment">## 正常情况下我们会使用稳定的tag版本来访问，如果是在开发测试的时候，不需要发布release版本，直接指向git地址使用</span></span><br><span class="line">  <span class="comment">## 待测试通过完成后我们再发布指定release版本，使用如下方式</span></span><br><span class="line">  <span class="comment">#s.source       = &#123; :git =&gt; "http://EXAMPLE/O2View.git", :tag =&gt; s.version &#125;</span></span><br><span class="line">  </span><br><span class="line">  s.platform     = <span class="symbol">:ios</span>, <span class="string">"9.0"</span>			<span class="comment">#支持的平台及版本，这里我们呢用swift，直接上9.0</span></span><br><span class="line">  s.requires_arc = <span class="keyword">true</span>					<span class="comment">#是否使用ARC</span></span><br><span class="line"></span><br><span class="line">  s.source_files  = <span class="string">"O2View/*.swift"</span>	<span class="comment">#OC可以使用类似这样"Classes/**/*.&#123;h,m&#125;"</span></span><br><span class="line"></span><br><span class="line">  s.frameworks = <span class="string">'UIKit'</span>, <span class="string">'QuartzCore'</span>, <span class="string">'Foundation'</span>	<span class="comment">#所需的framework,多个用逗号隔开</span></span><br><span class="line">  s.module_name = <span class="string">'O2View'</span>				<span class="comment">#模块名称</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># s.dependency "JSONKit", "~&gt; 1.4"	#依赖关系，该项目所依赖的其他库，如果有多个可以写多个 s.dependency</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></table></figure><p>这个文件本质上是一个 <strong>ruby</strong> 文件，这是我们事先已经实现好的依赖库的 <strong>podspec</strong> 文件，如果前面步骤都正常的话，也就是说我们认为这个 <strong>podspec</strong> 是合法的话，就可以直接将这些内容 <strong>push</strong> 到我们本地的 <strong>repo</strong> 中。为了避免错误，我们可以再验证一下，命令行输入：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod lib lint</span><br></pre></table></figure><p>运行之后可能会得到下面的警告：<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line"> -&gt; O2View (<span class="number">0.0</span><span class="number">.1</span>)</span><br><span class="line">    - WARN  | source: Git sources should specify a tag.</span><br><span class="line"></span><br><span class="line">[!] O2View did not pass validation, due <span class="keyword">to</span> <span class="number">1</span> warning (but you can <span class="keyword">use</span> `--allow-warnings` <span class="keyword">to</span> ignore it) <span class="keyword">and</span> All results apply only <span class="keyword">to</span> <span class="keyword">public</span> specs, but you can <span class="keyword">use</span> `--<span class="keyword">private</span>` <span class="keyword">to</span> ignore them <span class="keyword">if</span> linting the specification <span class="keyword">for</span> a <span class="keyword">private</span> pod..</span><br><span class="line">You can <span class="keyword">use</span> the `--no-clean` option <span class="keyword">to</span> inspect any issue.</span><br></pre></table></figure><p>由于我们的示例工程还没有生成正式的 <strong>release</strong> 版本， <strong>github</strong> 上并没有任何 <strong>tag</strong>，所以我们刚才填写 <strong>.podspec</strong> 文件填写 <strong>git</strong> 地址的时候没有填写指定 <strong>tag</strong> （上面文件的注释中有提到），解决方法我们可以先执行忽略警告的命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod lib lint --allow-warnings</span><br></pre></table></figure><p>如果成功会出现如下输出：<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre><td class="code"><pre><span class="line"> -<span class="ruby">&gt; O2View (<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>)</span><br><span class="line"></span>    -<span class="ruby"> WARN  | <span class="symbol">source:</span> Git sources should specify a tag.</span><br><span class="line"></span></span><br><span class="line">O2View passed validation.</span><br></pre></table></figure><p>到此，我们的 <strong>O2View.podspec</strong> 就符合规范了。<h3 id="3-添加你的-Podspec-到你的-repo" class="post-heading"><a href="#3-添加你的-Podspec-到你的-repo" class="headerlink" title="3.添加你的 Podspec 到你的 repo"></a>3.添加你的 <strong>Podspec</strong> 到你的 <strong>repo</strong><a class="post-anchor" href="#3-添加你的-Podspec-到你的-repo" aria-hidden="true"></a></h3><p>在前面验证通过的基础上，我们接着执行命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod repo push O2Specs O2View.podspec</span><br></pre></table></figure><p>执行完，如果失败会有相对应的警告和错误提示，只要按照警告和错误的详细信息进行修改和完善即可。成功的情况应该可以在终端看到类似的输出：<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre><td class="code"><pre><span class="line">Validating <span class="keyword">spec</span></span><br><span class="line"> -&gt; O2View (<span class="number">0.0</span>.<span class="number">1</span>)</span><br><span class="line">    - WARN  | source: Git sources should specify a <span class="keyword">tag</span>.</span><br><span class="line"></span><br><span class="line">Updating the `O2Specs' repo</span><br><span class="line"></span><br><span class="line">Already up-to-<span class="keyword">date</span>.</span><br><span class="line"></span><br><span class="line">Adding the <span class="keyword">spec</span> to the `O2Specs' repo</span><br><span class="line"></span><br><span class="line"> - [Add] O2View (<span class="number">0.0</span>.<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">Pushing the `O2Specs' repo</span><br><span class="line"></span><br><span class="line">To https://github.com/marklin2012/O2Specs.git</span><br><span class="line">   <span class="number">9</span>f32092..<span class="number">8</span>d0ced5  <span class="keyword">master</span> <span class="title">-&gt; master</span></span><br></pre></table></figure><p>再进入到 <strong>.cocoapods</strong> 的目录中，可以看到已经发生了变化：<p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-6O2SpecsRepoO2View.png"><p>同时，我们还发现 <strong>O2Specs</strong> 的 <strong>github</strong> 仓库也已经发生了变化：<p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-7O2SpecPushed.png"><p>按照平时使用 <strong>CocoaPods</strong> 的习惯，我们添加依赖库之前会先搜索一下库，让我们执行一下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod search O2View</span><br></pre></table></figure><p>哈哈，可以看到已经建立成功了！<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre><td class="code"><pre><span class="line">-&gt; O2View (<span class="number">0.0</span><span class="number">.1</span>)</span><br><span class="line">   Just testing</span><br><span class="line">   pod <span class="string">'O2View'</span>, <span class="string">'~&gt; 0.0.1'</span></span><br><span class="line">   - <span class="string">Homepage:</span> <span class="string">http:</span><span class="comment">//aotu.io/</span></span><br><span class="line">   - <span class="string">Source:</span>   <span class="string">https:</span><span class="comment">//github.com/marklin2012/O2View.git</span></span><br><span class="line">   - <span class="string">Versions:</span> <span class="number">0.0</span><span class="number">.1</span> [O2Specs repo]</span><br></pre></table></figure><h3 id="4-测试私有-pod" class="post-heading"><a href="#4-测试私有-pod" class="headerlink" title="4.测试私有 pod"></a>4.测试私有 pod<a class="post-anchor" href="#4-测试私有-pod" aria-hidden="true"></a></h3><p>看到前面的搜索结果，小伙伴们是不是开始有点激动了？让我们建立一个普通的工程，命名为 <strong>TestPodDemo</strong>，然后在终端 <strong>cd</strong> 到其目录路径下，添加一个 <strong>Podfile</strong> 文件：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod init</span><br></pre></table></figure><p>建立后修改 <strong>Podfile</strong> 文件内容如下：<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre><td class="code"><pre><span class="line">use_frameworks!</span><br><span class="line"></span><br><span class="line">target <span class="string">'TestPodDemo'</span> <span class="built_in">do</span></span><br><span class="line"></span><br><span class="line">pod ‘O2View’</span><br><span class="line"></span><br><span class="line"><span class="built_in">end</span></span><br></pre></table></figure><p>执行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">pod install</span><br></pre></table></figure><p>我们得到如下提示：<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line">Updating local specs repositories</span><br><span class="line">Analyzing dependencies</span><br><span class="line">[!] Unable <span class="keyword">to</span> find a specification <span class="keyword">for</span> `O2View`</span><br><span class="line"></span><br><span class="line">[!] Your Podfile <span class="keyword">has</span> had smart quotes sanitised. <span class="keyword">To</span> avoid issues <span class="keyword">in</span> the <span class="keyword">future</span>, you should <span class="keyword">not</span> use TextEdit <span class="keyword">for</span> editing it. <span class="keyword">If</span> you are <span class="keyword">not</span> <span class="keyword">using</span> TextEdit, you should turn off smart quotes <span class="keyword">in</span> your editor <span class="keyword">of</span> choice.</span><br></pre></table></figure><p>找不到 <strong>O2View</strong> ？ 额- -！。。。刚才 <strong>search</strong> 明明可以找到这个依赖库的，为什么现在找不到了呢？<p>别着急!其实原因是你在 <strong>Podfile</strong> 中没有指定路径，当你执行 <code>pod install</code> 的时候，<strong>CocoaPods</strong> 默认只会在 <strong>master</strong> 下搜索，而我们的 <strong>spec</strong> 是存在我们私有的 <strong>O2Specs</strong> 目录下的。所以解决方式很简单，就是引入搜索地址即可，在 <strong>Podfile</strong> 的顶部添加如下两行代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre><td class="code"><pre><span class="line"><span class="built_in">source</span> <span class="string">'https://github.com/CocoaPods/Specs.git'</span>		<span class="comment">#官方仓库地址</span></span><br><span class="line"><span class="built_in">source</span> ‘https://github.com/marklin2012/O2Specs.git’		<span class="comment">#私有仓库地址</span></span><br></pre></table></figure><p>这里必须添加两个地址，默认情况下，你如果不添加 <strong>source</strong> ，系统会默认使用官方仓库地址，但是当你添加了 <strong>source</strong> 之后，系统就不会自动搜索官方地址，所以这两句都必须添加，否则其他基于官方的依赖库都不能使用了。<p>再次执行 <code>pod install</code> ，我们就可以看到很顺利的安装成功了：<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre><td class="code"><pre><span class="line">Updating local specs <span class="keyword">repositories</span></span><br><span class="line">Analyzing <span class="keyword">dependencies</span></span><br><span class="line">Downloading <span class="keyword">dependencies</span></span><br><span class="line">Using O2View (<span class="number">0.0</span>.<span class="number">1</span>)</span><br><span class="line">Generating Pods <span class="keyword">project</span></span><br><span class="line">Integrating client <span class="keyword">project</span></span><br><span class="line">Sending stats</span><br><span class="line">Pod installation complete! There is <span class="number">1</span> dependency <span class="keyword">from</span> the Podfile and <span class="number">1</span> total pod installed.</span><br></pre></table></figure><p>恭喜！这样一来我们就可以使用这个私有库了！<h3 id="发布稳定的依赖库版本" class="post-heading"><a href="#发布稳定的依赖库版本" class="headerlink" title="发布稳定的依赖库版本"></a>发布稳定的依赖库版本<a class="post-anchor" href="#发布稳定的依赖库版本" aria-hidden="true"></a></h3><p>前面我们提到过，我们的这个实例依赖库 <strong>O2View</strong> 没有生成稳定的 <strong>release</strong> 版本。当我们调试完内容之后，一般都是要发布稳定版本的，更新之后再继续发布新版本。我们可以使用命令行或者在 <strong>github</strong> 页面手动生成，这里为了方便我们使用命令行，首先在终端中 <strong>cd</strong> 到之前的依赖库 <strong>O2View</strong> 的目录中，然后输入如下命令：<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre><td class="code"><pre><span class="line">git <span class="keyword">tag</span> <span class="title">'0</span>.<span class="number">0.1</span>'</span><br><span class="line">git push --tags</span><br><span class="line">git push origin <span class="literal">master</span></span><br></pre></table></figure><p>这样我们就得到了一个稳定的 <strong>release</strong> 版本 <strong>0.0.1</strong>：<p class="user_img"><img src="/assets/img/post/MarkLin/privateCocoaPods/1-8githubTags.png"><blockquote><p>这里我用的版本号是 <strong>0.0.1</strong> 基于研发版本，关于版本号的一些规范可以参考：<a href="http://semver.org/lang/zh-CN/" target="_blank" rel="external">语义化版本 2.0.0</a></blockquote><p>对于我们的 <strong>podspec</strong> 文件，我们也需要将 <code>s.source</code> 做一下小小的改动:<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">s.source       = &#123; :git =&gt; <span class="string">"https://github.com/marklin2012/O2View.git"</span>, :<span class="keyword">tag</span> <span class="title">=&gt; version</span> &#125;</span><br></pre></table></figure><p>这样我们使用这个依赖库的时候就能对应上版本号，并且知道在 <strong>github</strong> 中使用稳定的 <strong>release</strong> 版本代码。太棒了！<p>最后只需要再重复 <code>push</code> 一下我们的 <strong>Podfile</strong> 就可以！<h3 id="接下来做什么？" class="post-heading"><a href="#接下来做什么？" class="headerlink" title="接下来做什么？"></a>接下来做什么？<a class="post-anchor" href="#接下来做什么？" aria-hidden="true"></a></h3><p>好了，到这里我们已经完全掌握如何创建一个本地私有的 <strong>CocoaPods</strong> 了！我们完全可以把我们项目中得代码拆出来封装成一些 <strong>pods</strong>， 好好使用这个黑魔法！<p>祝大家玩得愉快！</div><div class="post-revision"><i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-24T05:02:12.000Z" itemprop="dateModified">上次更新：星期四, 3月24日 2016 05:02:12</time></div><div class="actions pagination pagination-post"><div class="pagination-post-prev"><a href="/notes/2016/01/27/how-to-make-cocoapods/" class="button big" title="如何制作cocoaPods依赖库"><i class="fa fa-chevron-left"></i> 如何制作cocoaPods依赖库</a></div><div class="pagination-post-next"><a href="/notes/2016/01/16/UFT/" class="button big" title="UFT 需求提报平台回顾">UFT 需求提报平台回顾 <i class="fa fa-chevron-right"></i></a></div></div><div class="post-comments" id="comments"><div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMS8yNi9Qcml2YXRlLUNvY29hUG9kcy1TcGVjcy1SZXBvLw==" data-title="如何创建私有 CocoaPods 仓库" data-url="http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/index.html"></div><script>var duoshuoQuery={short_name:"aotu"};!function(){var t=document.createElement("script");t.id="duoshuo-script",t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//static.duoshuo.com/embed.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script></div></article></div><div class="sec sec-follow-lite"><div class="container"><div class="sec-heading"><p class="follow-pic"><img src="/assets/img/qrcode.png" alt="关注我们"><p class="follow-desc">海海人生，无折腾不为乐。<p class="sec-heading-sub follow-acount"><img class="follow-icon" src="/assets/img/logo-circle-120.png" alt="AOTULabs"> 微信号：AOTULabs</div></div></div><div class="sec sec-footer"><div class="container"><footer id="footer" class="sec-heading footer"><ul class="icons"><li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a><li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a><li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></ul><div class="footer-sec copyright">&copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</div><div class="footer-sec words">" It is never too late to mend. "</div><div class="footer-sec site-stats" style="display:none"><span id="busuanzi_container_site_pv" class="site-pv">总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次 </span><span id="busuanzi_container_site_uv" class="site-uv">总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人</span></div></footer></div></div><section id="smSearch" class="slide-search"><section><form class="search" method="get"><input type="text" name="query" placeholder="搜索"></form></section><section><h3>搜索结果</h3><ul class="links" id="searchResults">Loading...</ul></section></section><script id="tplSearch" type="text/hogan-tpl">{{#items}}
+接着需要重启一下 Finder， 可以按住 opti">
+<meta name="twitter:image" content="http://aotu.io/img/post/MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png">
+<meta name="twitter:site" content="o2circle">
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script>
+var App = {
+    root:'/'    
+};
+</script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand">
+                <img src="/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"/>
+            </a>
+            <div onclick="javascript:void(0)" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav header-links header-links-main">
+                <li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a></li><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a></li><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a></li><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a></li><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right header-links header-links-extra">
+                <li class="search-wrap">
+                    <a class="fa fa-search search-icon" href="#search" title="搜索"></a>
+                    <form id="search" method="get" class="search-form">
+                        <input type="text" name="query" class="search-form-ipt" placeholder="搜索" />
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a>
+                    <ul id="theme-list" class="dropdown-menu" aria-labelledby="themes">
+                        <li data-v="light"><a href="javascript:;">曙光女神</a></li>
+                        <li data-v="dark"><a href="javascript:;">暗影猎手</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+	
+<div class="container post-wrap">
+    
+    <!-- Post -->
+<article class="post" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <div class="post-title">
+            <h2><a href="/notes/2016/01/26/Private-CocoaPods-Specs-Repo/" itemprop="name">如何创建私有 CocoaPods 仓库</a></h2>
+            <ul class="post-stats">
+                
+                
+                <li><a href='/tags/iOS/' class='meta-tag'>iOS</a></li>
+                
+                <li><a href='/tags/CocoaPods/' class='meta-tag'>CocoaPods</a></li>
+                
+                <li><a href='/tags/Swift/' class='meta-tag'>Swift</a></li>
+                 
+                
+                <li title="字数"><span class="icon fa-font">5,352</span></li>
+                
+                <li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span></li>
+                
+                
+                <li>
+                    <a href="/notes/2016/01/26/Private-CocoaPods-Specs-Repo/#comments" itemprop="discussionUrl" class="lnk-comments">
+                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMS8yNi9Qcml2YXRlLUNvY29hUG9kcy1TcGVjcy1SZXBvLw==" data-count-type="comments" itemprop="commentsCount">0</span>
+                    </a>
+                </li>
+                 
+            </ul>
+            
+            <p>本文介绍如何创建私有的 CocoaPods 仓库</p>
+            
+        </div>
+        <div class="post-meta">
+            <time class="published" datetime="2016-01-26T11:35:15.000Z" itempro="datePublished">星期二, 1月26日 2016</time>
+            <a target="_blank" href="https://github.com/marklin2012" class="author"><span class="name">MarkLin</span><img src="https://avatars.githubusercontent.com/marklin2012?v=3&s=80" alt="marklin2012" /></a>
+        </div>
+    </header>
+    <a href="/notes/2016/01/26/Private-CocoaPods-Specs-Repo/" class="image featured post-cover"><img src="/img/post/MarkLin/privateCocoaPods/PrivateCocoaPods.png" alt="如何创建私有 CocoaPods 仓库" /></a>
+    <div class="post-content" itemprop="articleBody" data-swiftype-index="true">
+        <h3 id="公共-CocoaPods" class="post-heading"><a href="#公共-CocoaPods" class="headerlink" title="公共 CocoaPods"></a>公共 CocoaPods<a class="post-anchor" href="#公共-CocoaPods" aria-hidden="true"></a></h3><p>打开隐藏目录，可以使用命令: </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打开隐藏的命令:</span></span><br><span class="line">defaults write com<span class="selector-class">.apple</span><span class="selector-class">.finder</span> AppleShowAllFiles -bool true</span><br><span class="line"><span class="comment">//关闭隐藏的命令:</span></span><br><span class="line">defaults write com<span class="selector-class">.apple</span><span class="selector-class">.finder</span> AppleShowAllFiles -bool false</span><br></pre></td></tr></table></figure>
+<p>接着需要重启一下 <strong>Finder</strong>， 可以按住 <strong>option</strong> + 右键 <strong>Finder</strong> 图标选择重启。然后打开隐藏目录 <strong>.cocoapods</strong> (这个目录在你的个人目录底下, <code>~/.cocoapods</code> 或 <code>/Users/[username]/.cocoapods</code>)</p>
+<a id="more"></a>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png"></p>
+<p>可以看到上图， <strong>.cocoapods</strong> 目录下的 <strong>repos</strong> 其实是 <strong>repository</strong> （仓库）的缩写。 <strong>repos</strong> 中存放的时仓库的集合。这里的 <strong>master</strong> 就是 <strong>CocoaPods</strong> 官方建立的仓库，也就是我们所谓的公共库。</p>
+<p><strong>specs</strong> 目录下存放的就是所有提交到 <strong>CocoaPods</strong> 的开源库的 <strong>podspec</strong> 文件的集合。<br>其结构如下图所示：</p>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-2repoSpecs.png"></p>
+<p>其组成方式：</p>
+<p>specName – version – specName.podspec</p>
+<p>( <strong>master</strong> 里现在是 <strong>specName.podspec.json</strong>，这个 <strong>.json</strong> 文件就是 <strong>podspec</strong> 文件加了个后缀。我们可以采用 <code>pod ipc spec</code> 这个命令来将 <strong>spec</strong> 文件转换成 <strong>.json</strong>)</p>
+<p>那这个文件夹是如何来得呢？其实，这个文件夹是在你安装了 <strong>CocoaPods</strong> 后，第一次执行 <code>pod install</code> 时， <strong>CocoaPods</strong> 通过命令 <code>pod setup</code> 来建立的（这条命令会自动执行）。</p>
+<blockquote>
+<p>上述是官方的 <strong>repo</strong> ，私有库的话可以看下我们前面的翻译或者查看<a href="https://guides.cocoapods.org/making/private-cocoapods.html" target="_blank" rel="external">官方文档</a>，但是官方文档有一些过程写的不是特别详细，自己实现的时候遇到了一些坑，特此梳理一下过程，按照官方文档内容实现一个私有的 <strong>spec repo</strong> 。根据官方的原理，我们只需要创建一个和 <strong>master</strong> 相类似结构的目录就可以实现私有的 <strong>spec repo</strong>，当然你可以 <strong>fork</strong> 一个官方的 <strong>repo</strong>，但是它包含了太多没有必要地库在里面，这在编译仓库的时候需要浪费大量的时间，所以我们只要自己重新创建一个就可以了。</p>
+</blockquote>
+<h3 id="1-创建一个私有的-Spec-Repo" class="post-heading"><a href="#1-创建一个私有的-Spec-Repo" class="headerlink" title="1.创建一个私有的 Spec Repo"></a>1.创建一个私有的 <strong>Spec Repo</strong><a class="post-anchor" href="#1-创建一个私有的-Spec-Repo" aria-hidden="true"></a></h3><p>在你的 git 服务器上创建一个 <strong>repo</strong>。这里你可以在 <strong>github</strong> 或者你自己的 git 服务器上实现。公司内部使用的话这里推荐大家使用私有的仓库,但是 <strong>github</strong> 的私有仓库是要收费的 <strong>$7/month</strong> （壕请无视 - -！）。大部分公司都是有自己的git服务器，不过一般只能在公司内网使用，或者可以选择<a href="https://gitlab.com" target="_blank" rel="external">Gitlab</a>,<a href="https://coding.net" target="_blank" rel="external">Coding</a>, <a href="https://bitbucket.org/" target="_blank" rel="external">Bitbucket</a>任意一种。我们以在 <strong>github</strong> 上创建为例：</p>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-3createGithub.png"></p>
+<p>如图所示，我们在 <strong>github</strong> 上创建一个空的仓库，命名为 <strong>O2Specs</strong> ，这个仓库是用来存放我们自己所有的私有库的 <strong>spec</strong> 文件，就如同官方的 <a href="https://github.com/CocoaPods/Specs" target="_blank" rel="external"><strong>https://github.com/CocoaPods/Specs</strong></a> 是用来存放所有官方的 <strong>specs</strong> 文件一样。</p>
+<p>然后我们就可以执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo add REPO_NAME SOURCE_URL</span><br></pre></td></tr></table></figure>
+<p>其中的 REPO_NAME 是我们要添加的私有 <strong>repo</strong> 的名称（这里我们待会填的是: <strong>O2Specs</strong>），后面是仓库的 git 地址。这里做的其实是创建的工作，也就是在 <code>~/.cocoapods/repo</code> 目录下添加了一个以你的私有 <strong>repo</strong> 为名的文件夹，但是并没有添加 <strong>spec</strong> 文件。</p>
+<p>在终端执行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo add O2Specs https://github.com/marklin2012/O2Specs.git</span><br></pre></td></tr></table></figure></p>
+<p> 这里用的是 <strong>https</strong> 地址，当然你也可以用 <strong>git</strong> 地址，不过这样有可能失败。如果失败，很大因素是你 <strong>github</strong> 的 <strong>ssh</strong> 在本地没有配置好，配置方法可以看这里：<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external"><strong>Generating SSH keys</strong></a>，成功后可以看得到 <strong>.cocoapods</strong> 目录如下图所示：</p>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-4o2specsRepos.png"></p>
+<p>至此，我们已经在本地得到我们自己的私有仓库 <strong>O2Specs</strong> ，这是一个空的仓库。</p>
+<h3 id="2-添加私有的-Repo-安装到你的-CocoaPods-中" class="post-heading"><a href="#2-添加私有的-Repo-安装到你的-CocoaPods-中" class="headerlink" title="2.添加私有的 Repo 安装到你的 CocoaPods 中"></a>2.添加私有的 <strong>Repo</strong> 安装到你的 <strong>CocoaPods</strong> 中<a class="post-anchor" href="#2-添加私有的-Repo-安装到你的-CocoaPods-中" aria-hidden="true"></a></h3><p>这个步骤需要我们事先完成 <strong>CocoaPods</strong> 依赖库的搭建，具体可以查看我们另外一篇教程：<a href="http://www.jianshu.com/p/7a82e977281c" target="_blank" rel="external">制作 <strong>CocoaPods</strong> 依赖库</a>。如果这里你想先看看效果，也可以直接从 <strong>github</strong> 上 clone <a href="https://github.com/marklin2012/O2View" target="_blank" rel="external">示例工程</a>继续下面的操作。</p>
+<p>让我们进入到上面 clone 的示例工程目录中（或者你自己搭建的依赖库目录中）：</p>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-5O2ViewDoc.jpeg"></p>
+<p>打开工程的 <strong>podspec</strong> 文件：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Pod:</span><span class="symbol">:Spec</span>.new <span class="keyword">do</span> |s|</span><br><span class="line">  s.name         = <span class="string">"O2View"</span>				<span class="comment">#名称</span></span><br><span class="line">  s.version      = <span class="string">"0.0.1"</span>				<span class="comment">#版本号</span></span><br><span class="line">  s.summary      = <span class="string">"Just testing"</span>		<span class="comment">#简短介绍</span></span><br><span class="line">  s.description  = &lt;&lt;-DESC</span><br><span class="line">  					私有Pods测试</span><br><span class="line">  					* Markdown 格式</span><br><span class="line">                   DESC</span><br><span class="line"></span><br><span class="line">  s.homepage     = <span class="string">"http://aotu.io/"</span></span><br><span class="line">  <span class="comment"># s.screenshots  = "www.example.com/screenshots_1.gif"</span></span><br><span class="line">  s.license      = <span class="string">"MIT"</span>				<span class="comment">#开源协议</span></span><br><span class="line">  s.author             = &#123; <span class="string">"linyi31"</span> =&gt; <span class="string">"linyi@jd.com"</span> &#125;</span><br><span class="line"></span><br><span class="line">  s.source       = &#123; <span class="symbol">:git</span> =&gt; <span class="string">"https://github.com/marklin2012/O2View.git"</span> &#125;</span><br><span class="line">  <span class="comment">## 这里不支持ssh的地址，只支持HTTP和HTTPS，最好使用HTTPS</span></span><br><span class="line">  <span class="comment">## 正常情况下我们会使用稳定的tag版本来访问，如果是在开发测试的时候，不需要发布release版本，直接指向git地址使用</span></span><br><span class="line">  <span class="comment">## 待测试通过完成后我们再发布指定release版本，使用如下方式</span></span><br><span class="line">  <span class="comment">#s.source       = &#123; :git =&gt; "http://EXAMPLE/O2View.git", :tag =&gt; s.version &#125;</span></span><br><span class="line">  </span><br><span class="line">  s.platform     = <span class="symbol">:ios</span>, <span class="string">"9.0"</span>			<span class="comment">#支持的平台及版本，这里我们呢用swift，直接上9.0</span></span><br><span class="line">  s.requires_arc = <span class="keyword">true</span>					<span class="comment">#是否使用ARC</span></span><br><span class="line"></span><br><span class="line">  s.source_files  = <span class="string">"O2View/*.swift"</span>	<span class="comment">#OC可以使用类似这样"Classes/**/*.&#123;h,m&#125;"</span></span><br><span class="line"></span><br><span class="line">  s.frameworks = <span class="string">'UIKit'</span>, <span class="string">'QuartzCore'</span>, <span class="string">'Foundation'</span>	<span class="comment">#所需的framework,多个用逗号隔开</span></span><br><span class="line">  s.module_name = <span class="string">'O2View'</span>				<span class="comment">#模块名称</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># s.dependency "JSONKit", "~&gt; 1.4"	#依赖关系，该项目所依赖的其他库，如果有多个可以写多个 s.dependency</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>这个文件本质上是一个 <strong>ruby</strong> 文件，这是我们事先已经实现好的依赖库的 <strong>podspec</strong> 文件，如果前面步骤都正常的话，也就是说我们认为这个 <strong>podspec</strong> 是合法的话，就可以直接将这些内容 <strong>push</strong> 到我们本地的 <strong>repo</strong> 中。为了避免错误，我们可以再验证一下，命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib lint</span><br></pre></td></tr></table></figure>
+<p>运行之后可能会得到下面的警告：</p>
+<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> -&gt; O2View (<span class="number">0.0</span><span class="number">.1</span>)</span><br><span class="line">    - WARN  | source: Git sources should specify a tag.</span><br><span class="line"></span><br><span class="line">[!] O2View did not pass validation, due <span class="keyword">to</span> <span class="number">1</span> warning (but you can <span class="keyword">use</span> `--allow-warnings` <span class="keyword">to</span> ignore it) <span class="keyword">and</span> All results apply only <span class="keyword">to</span> <span class="keyword">public</span> specs, but you can <span class="keyword">use</span> `--<span class="keyword">private</span>` <span class="keyword">to</span> ignore them <span class="keyword">if</span> linting the specification <span class="keyword">for</span> a <span class="keyword">private</span> pod..</span><br><span class="line">You can <span class="keyword">use</span> the `--no-clean` option <span class="keyword">to</span> inspect any issue.</span><br></pre></td></tr></table></figure>
+<p>由于我们的示例工程还没有生成正式的 <strong>release</strong> 版本， <strong>github</strong> 上并没有任何 <strong>tag</strong>，所以我们刚才填写 <strong>.podspec</strong> 文件填写 <strong>git</strong> 地址的时候没有填写指定 <strong>tag</strong> （上面文件的注释中有提到），解决方法我们可以先执行忽略警告的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib lint --allow-warnings</span><br></pre></td></tr></table></figure>
+<p>如果成功会出现如下输出：</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> -<span class="ruby">&gt; O2View (<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>)</span><br><span class="line"></span>    -<span class="ruby"> WARN  | <span class="symbol">source:</span> Git sources should specify a tag.</span><br><span class="line"></span></span><br><span class="line">O2View passed validation.</span><br></pre></td></tr></table></figure>
+<p>到此，我们的 <strong>O2View.podspec</strong> 就符合规范了。</p>
+<h3 id="3-添加你的-Podspec-到你的-repo" class="post-heading"><a href="#3-添加你的-Podspec-到你的-repo" class="headerlink" title="3.添加你的 Podspec 到你的 repo"></a>3.添加你的 <strong>Podspec</strong> 到你的 <strong>repo</strong><a class="post-anchor" href="#3-添加你的-Podspec-到你的-repo" aria-hidden="true"></a></h3><p>在前面验证通过的基础上，我们接着执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo push O2Specs O2View.podspec</span><br></pre></td></tr></table></figure>
+<p>执行完，如果失败会有相对应的警告和错误提示，只要按照警告和错误的详细信息进行修改和完善即可。成功的情况应该可以在终端看到类似的输出：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Validating <span class="keyword">spec</span></span><br><span class="line"> -&gt; O2View (<span class="number">0.0</span>.<span class="number">1</span>)</span><br><span class="line">    - WARN  | source: Git sources should specify a <span class="keyword">tag</span>.</span><br><span class="line"></span><br><span class="line">Updating the `O2Specs' repo</span><br><span class="line"></span><br><span class="line">Already up-to-<span class="keyword">date</span>.</span><br><span class="line"></span><br><span class="line">Adding the <span class="keyword">spec</span> to the `O2Specs' repo</span><br><span class="line"></span><br><span class="line"> - [Add] O2View (<span class="number">0.0</span>.<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">Pushing the `O2Specs' repo</span><br><span class="line"></span><br><span class="line">To https://github.com/marklin2012/O2Specs.git</span><br><span class="line">   <span class="number">9</span>f32092..<span class="number">8</span>d0ced5  <span class="keyword">master</span> <span class="title">-&gt; master</span></span><br></pre></td></tr></table></figure>
+<p>再进入到 <strong>.cocoapods</strong> 的目录中，可以看到已经发生了变化：</p>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-6O2SpecsRepoO2View.png"></p>
+<p>同时，我们还发现 <strong>O2Specs</strong> 的 <strong>github</strong> 仓库也已经发生了变化：</p>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-7O2SpecPushed.png"></p>
+<p>按照平时使用 <strong>CocoaPods</strong> 的习惯，我们添加依赖库之前会先搜索一下库，让我们执行一下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod search O2View</span><br></pre></td></tr></table></figure>
+<p>哈哈，可以看到已经建立成功了！</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-&gt; O2View (<span class="number">0.0</span><span class="number">.1</span>)</span><br><span class="line">   Just testing</span><br><span class="line">   pod <span class="string">'O2View'</span>, <span class="string">'~&gt; 0.0.1'</span></span><br><span class="line">   - <span class="string">Homepage:</span> <span class="string">http:</span><span class="comment">//aotu.io/</span></span><br><span class="line">   - <span class="string">Source:</span>   <span class="string">https:</span><span class="comment">//github.com/marklin2012/O2View.git</span></span><br><span class="line">   - <span class="string">Versions:</span> <span class="number">0.0</span><span class="number">.1</span> [O2Specs repo]</span><br></pre></td></tr></table></figure>
+<h3 id="4-测试私有-pod" class="post-heading"><a href="#4-测试私有-pod" class="headerlink" title="4.测试私有 pod"></a>4.测试私有 pod<a class="post-anchor" href="#4-测试私有-pod" aria-hidden="true"></a></h3><p>看到前面的搜索结果，小伙伴们是不是开始有点激动了？让我们建立一个普通的工程，命名为 <strong>TestPodDemo</strong>，然后在终端 <strong>cd</strong> 到其目录路径下，添加一个 <strong>Podfile</strong> 文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod init</span><br></pre></td></tr></table></figure>
+<p>建立后修改 <strong>Podfile</strong> 文件内容如下：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">use_frameworks!</span><br><span class="line"></span><br><span class="line">target <span class="string">'TestPodDemo'</span> <span class="built_in">do</span></span><br><span class="line"></span><br><span class="line">pod ‘O2View’</span><br><span class="line"></span><br><span class="line"><span class="built_in">end</span></span><br></pre></td></tr></table></figure>
+<p>执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+<p>我们得到如下提示：</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Updating local specs repositories</span><br><span class="line">Analyzing dependencies</span><br><span class="line">[!] Unable <span class="keyword">to</span> find a specification <span class="keyword">for</span> `O2View`</span><br><span class="line"></span><br><span class="line">[!] Your Podfile <span class="keyword">has</span> had smart quotes sanitised. <span class="keyword">To</span> avoid issues <span class="keyword">in</span> the <span class="keyword">future</span>, you should <span class="keyword">not</span> use TextEdit <span class="keyword">for</span> editing it. <span class="keyword">If</span> you are <span class="keyword">not</span> <span class="keyword">using</span> TextEdit, you should turn off smart quotes <span class="keyword">in</span> your editor <span class="keyword">of</span> choice.</span><br></pre></td></tr></table></figure>
+<p>找不到 <strong>O2View</strong> ？ 额- -！。。。刚才 <strong>search</strong> 明明可以找到这个依赖库的，为什么现在找不到了呢？</p>
+<p>别着急!其实原因是你在 <strong>Podfile</strong> 中没有指定路径，当你执行 <code>pod install</code> 的时候，<strong>CocoaPods</strong> 默认只会在 <strong>master</strong> 下搜索，而我们的 <strong>spec</strong> 是存在我们私有的 <strong>O2Specs</strong> 目录下的。所以解决方式很简单，就是引入搜索地址即可，在 <strong>Podfile</strong> 的顶部添加如下两行代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> <span class="string">'https://github.com/CocoaPods/Specs.git'</span>		<span class="comment">#官方仓库地址</span></span><br><span class="line"><span class="built_in">source</span> ‘https://github.com/marklin2012/O2Specs.git’		<span class="comment">#私有仓库地址</span></span><br></pre></td></tr></table></figure>
+<p>这里必须添加两个地址，默认情况下，你如果不添加 <strong>source</strong> ，系统会默认使用官方仓库地址，但是当你添加了 <strong>source</strong> 之后，系统就不会自动搜索官方地址，所以这两句都必须添加，否则其他基于官方的依赖库都不能使用了。</p>
+<p>再次执行 <code>pod install</code> ，我们就可以看到很顺利的安装成功了：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Updating local specs <span class="keyword">repositories</span></span><br><span class="line">Analyzing <span class="keyword">dependencies</span></span><br><span class="line">Downloading <span class="keyword">dependencies</span></span><br><span class="line">Using O2View (<span class="number">0.0</span>.<span class="number">1</span>)</span><br><span class="line">Generating Pods <span class="keyword">project</span></span><br><span class="line">Integrating client <span class="keyword">project</span></span><br><span class="line">Sending stats</span><br><span class="line">Pod installation complete! There is <span class="number">1</span> dependency <span class="keyword">from</span> the Podfile and <span class="number">1</span> total pod installed.</span><br></pre></td></tr></table></figure>
+<p>恭喜！这样一来我们就可以使用这个私有库了！ </p>
+<h3 id="发布稳定的依赖库版本" class="post-heading"><a href="#发布稳定的依赖库版本" class="headerlink" title="发布稳定的依赖库版本"></a>发布稳定的依赖库版本<a class="post-anchor" href="#发布稳定的依赖库版本" aria-hidden="true"></a></h3><p>前面我们提到过，我们的这个实例依赖库 <strong>O2View</strong> 没有生成稳定的 <strong>release</strong> 版本。当我们调试完内容之后，一般都是要发布稳定版本的，更新之后再继续发布新版本。我们可以使用命令行或者在 <strong>github</strong> 页面手动生成，这里为了方便我们使用命令行，首先在终端中 <strong>cd</strong> 到之前的依赖库 <strong>O2View</strong> 的目录中，然后输入如下命令：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">tag</span> <span class="title">'0</span>.<span class="number">0.1</span>'</span><br><span class="line">git push --tags</span><br><span class="line">git push origin <span class="literal">master</span></span><br></pre></td></tr></table></figure>
+<p>这样我们就得到了一个稳定的 <strong>release</strong> 版本 <strong>0.0.1</strong>：</p>
+<p class="user_img"><img src="/img/post/MarkLin/privateCocoaPods/1-8githubTags.png"></p>
+<blockquote>
+<p>这里我用的版本号是 <strong>0.0.1</strong> 基于研发版本，关于版本号的一些规范可以参考：<a href="http://semver.org/lang/zh-CN/" target="_blank" rel="external">语义化版本 2.0.0</a></p>
+</blockquote>
+<p>对于我们的 <strong>podspec</strong> 文件，我们也需要将 <code>s.source</code> 做一下小小的改动:</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.source       = &#123; :git =&gt; <span class="string">"https://github.com/marklin2012/O2View.git"</span>, :<span class="keyword">tag</span> <span class="title">=&gt; version</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>这样我们使用这个依赖库的时候就能对应上版本号，并且知道在 <strong>github</strong> 中使用稳定的 <strong>release</strong> 版本代码。太棒了！</p>
+<p>最后只需要再重复 <code>push</code> 一下我们的 <strong>Podfile</strong> 就可以！</p>
+<h3 id="接下来做什么？" class="post-heading"><a href="#接下来做什么？" class="headerlink" title="接下来做什么？"></a>接下来做什么？<a class="post-anchor" href="#接下来做什么？" aria-hidden="true"></a></h3><p>好了，到这里我们已经完全掌握如何创建一个本地私有的 <strong>CocoaPods</strong> 了！我们完全可以把我们项目中得代码拆出来封装成一些 <strong>pods</strong>， 好好使用这个黑魔法！</p>
+<p>祝大家玩得愉快！</p>
+
+    </div>
+    <div class="post-revision">
+        <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-30T10:16:14.000Z" itemprop="dateModified">上次更新：星期三, 3月30日 2016 10:16:14</time>
+    </div>
+    
+<div class="actions pagination pagination-post">
+    
+    <div class="pagination-post-prev"><a href="/notes/2016/01/27/how-to-make-cocoapods/" class="button big" title="如何制作cocoaPods依赖库"><i class="fa fa-chevron-left"></i> 如何制作cocoaPods依赖库</a></div>
+    
+    
+    <div class="pagination-post-next"><a href="/notes/2016/01/16/UFT/" class="button big" title="UFT 需求提报平台回顾">UFT 需求提报平台回顾 <i class="fa fa-chevron-right"></i></a></div>
+    
+</div>
+
+
+    
+
+
+<div class="post-comments" id="comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMS8yNi9Qcml2YXRlLUNvY29hUG9kcy1TcGVjcy1SZXBvLw==" data-title="如何创建私有 CocoaPods 仓库" data-url="http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/index.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"aotu"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.id = "duoshuo-script";
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+</div>
+
+
+</article>
+
+</div>
+<div class="sec sec-follow-lite">
+    <div class="container">
+        <div class="sec-heading">
+            <p class="follow-pic"><img src="/img/qrcode.png" alt="关注我们"/></p>
+            <p class="follow-desc">海海人生，无折腾不为乐。</p>
+            <p class="sec-heading-sub follow-acount">
+                <img class="follow-icon" src="/img/logo-circle-120.png" alt="AOTULabs"/> 微信号：AOTULabs
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="sec sec-footer">
+    <div class="container">
+        <footer id="footer" class="sec-heading footer">
+            <ul class="icons">
+                <li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+            </ul>
+            <div class="footer-sec copyright">
+            &copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>
+            Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+            </div>
+            <div class="footer-sec words">
+            "
+            
+            
+            
+            After a storm comes a calm.
+            
+            "
+            </div>
+            
+            <div class="footer-sec site-stats" style="display:none">
+                <span id="busuanzi_container_site_pv" class="site-pv">
+                    总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次
+                </span>
+                <span id="busuanzi_container_site_uv" class="site-uv">
+                    总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人
+                </span>
+            </div>
+            
+        </footer>
+    </div>
+</div>
+
+
+    
+    <section id="smSearch" class="slide-search">
+
+<!-- Search -->
+    <section>
+        <form class="search" method="get">
+            <input type="text" name="query" placeholder="搜索" />
+        </form>
+    </section>
+
+<!-- Links -->
+    <section>
+		<h3>搜索结果</h3>
+        <ul class="links" id="searchResults">Loading...</ul>
+    </section>
+
+</section>
+
+<script id="tplSearch" type="text/hogan-tpl">
+    {{#items}}
     <li>
         <a href="{{ url }}" target="_blank">
             <h3>{{ title }}</h3>
@@ -13,4 +365,58 @@
 			{{/desc}}
         </a>
     </li>
-    {{/items}}</script><div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div><script src="/assets/js/dist-2a84b65682.o2.js"></script><script src="/assets/js/dist-bb2f97f6a9.duoshuo.js"></script><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var e=document.createElement("script");e.src="//push.zhanzhang.baidu.com/push.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+    {{/items}}
+</script>
+
+
+    
+	
+	<div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div>
+	
+    
+    <!-- Scripts -->
+<!-- build:js js/dist.o2.js -->
+<script src="/js/lunr.js"></script>
+<script src="/js/debounce.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/xhogan.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+<script src="/assets/fancybox/jquery.fancybox.js"></script>
+<script src="/js/fancybox.js"></script>
+
+<!-- endbuild -->
+
+
+<!-- build:js js/dist.duoshuo.js -->
+<script src="/js/ua-parser.min.js"></script>
+<script src="/js/duoshuo.js"></script>
+<!-- endbuild -->
+
+
+
+<!--busuanzi-->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+</body>
+</html>
