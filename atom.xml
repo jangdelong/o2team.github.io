@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aotu.io/"/>
-  <updated>2016-03-30T10:16:14.000Z</updated>
+  <updated>2016-03-31T02:31:36.000Z</updated>
   <id>http://aotu.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://aotu.io/notes/2016/03/30/cornerRadius-in-Storyboard/"/>
     <id>http://aotu.io/notes/2016/03/30/cornerRadius-in-Storyboard/</id>
     <published>2016-03-29T16:56:03.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;项目中经常遇到一些设计使用圆角，不得不说这样的设计经常能够为App的视图润色不少！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;通常做法&quot;&gt;&lt;a href=&quot;#通常做法&quot; class=&quot;headerlink&quot; title=&quot;通常做法&quot;&gt;&lt;/a&gt;通常做法&lt;/h3&gt;&lt;p&gt;对于代码党来说，很简单的加上一行代码就能够搞定：&lt;/p&gt;
@@ -78,7 +78,7 @@
     <link href="http://aotu.io/notes/2016/03/17/http2-char/"/>
     <id>http://aotu.io/notes/2016/03/17/http2-char/</id>
     <published>2016-03-16T16:54:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;HTTP/2 是万维网（WWW）基础协议 HTTP 16年来的首次重大升级。共经历了18版草案（00-17），于2015年2月18日正式定稿，2015年5月14日 HTTP/2 正式版发布，正式版 HTTP/2 规格标准叫做 RFC7540 。&lt;/p&gt;
@@ -227,7 +227,7 @@
     <link href="http://aotu.io/notes/2016/03/16/optimization/"/>
     <id>http://aotu.io/notes/2016/03/16/optimization/</id>
     <published>2016-03-16T15:26:12.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;篇幅可能有点长，我想先聊一聊阅读的方式，我希望你阅读的时候，能够把我当作你的竞争对手，你的梦想是超越我。你想超越我，就得了解我懂什么对吧，好，开始阅读~ ~ 哈哈哈 ~ ~ ~&lt;/p&gt;
 &lt;p&gt;历时144000000毫秒出山的前端优化篇，若你问我有什么感悟？&lt;br&gt;那我告诉你，看到毫秒啊，火箭啊，这些与优化相关的词，都有莫名的亲切感。&lt;br&gt;本文主要从&lt;strong&gt;工作效率&lt;/strong&gt;、&lt;strong&gt;速度性能&lt;/strong&gt;、&lt;strong&gt;稳定性&lt;/strong&gt;、&lt;strong&gt;响应式&lt;/strong&gt;、&lt;strong&gt;兼容性&lt;/strong&gt;、&lt;strong&gt;搜索SEO&lt;/strong&gt;、&lt;strong&gt;信息无障碍&lt;/strong&gt;等方面进行讲解。&lt;br&gt;前端优化是一个让人技术提升的point，希望你也能从这里学到一些东西。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -541,7 +541,7 @@
     <link href="http://aotu.io/notes/2016/03/16/jcloud-sum/"/>
     <id>http://aotu.io/notes/2016/03/16/jcloud-sum/</id>
     <published>2016-03-15T16:18:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;所谓的文档, 大概就是指那种洋洋洒洒写了不下几万字, 最后没有多少人会看完的东西. 对, 比技术不一定, 但比字数谁都赢不了我! &lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -603,7 +603,7 @@
     <link href="http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/"/>
     <id>http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/</id>
     <published>2016-03-08T17:38:02.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;如果你问我构建触屏页面的过程中有什么困难的？&lt;br&gt;我可以拍着胸口跟可以跟你讲，有三大问题！那就是图片、图片、图片。&lt;br&gt;尤其是面对活动运营侧的需求的时候，连妈妈都要问我为什么要跪着做需求。&lt;br&gt;一个萝卜一个坑，总有一个萝卜适合你的坑。今天就来让图片加载这件事儿变得更美好，让用户跪倒你的石榴裙(牛仔裤)下。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;图片优化的一般方法&quot;&gt;&lt;a href=&quot;#图片优化的一般方法&quot; class=&quot;headerlink&quot; title=&quot;图片优化的一般方法&quot;&gt;&lt;/a&gt;图片优化的一般方法&lt;/h2&gt;&lt;p&gt; 在本文正式开始之前，笔者先提提图片优化的一般方法，了解图片优化的方法有助于理解后面图片加载实现形式的多样化。&lt;br&gt; 一般常见的图片优化方法有：&lt;/p&gt;
@@ -696,7 +696,7 @@
     <link href="http://aotu.io/notes/2016/03/04/can-we-use-base64-in-h5-webapps/"/>
     <id>http://aotu.io/notes/2016/03/04/can-we-use-base64-in-h5-webapps/</id>
     <published>2016-03-03T17:45:03.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;将图片资源转至base64格式后可直接放入页面作为首屏直出，也可以放入css文件中，减少请求，以加快首屏的呈现速度。&lt;br&gt;不过图片base64化，将带来一个臃肿的html或css文件，是否会影响页面的渲染性能，浏览器又支持如何呢？&lt;/p&gt;
 &lt;h3 id=&quot;如何统计？&quot;&gt;&lt;a href=&quot;#如何统计？&quot; class=&quot;headerlink&quot; title=&quot;如何统计？&quot;&gt;&lt;/a&gt;如何统计？&lt;/h3&gt;&lt;blockquote&gt;
@@ -982,7 +982,7 @@
     <link href="http://aotu.io/notes/2016/03/01/createjs-get-started/"/>
     <id>http://aotu.io/notes/2016/03/01/createjs-get-started/</id>
     <published>2016-02-29T20:10:15.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;通过实例简单介绍createjs的使用方法&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;PRELOADJS&quot;&gt;&lt;a href=&quot;#PRELOADJS&quot; class=&quot;headerlink&quot; title=&quot;PRELOADJS&quot;&gt;&lt;/a&gt;PRELOADJS&lt;/h2&gt;&lt;p&gt;PreloadJS是一个用来管理和协调相关资源加载的类库，它可以方便的帮助你预先加载相关资源。&lt;/p&gt;
@@ -1021,10 +1021,10 @@
 &lt;ul&gt;
 &lt;li&gt;获取预加载资源&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.getResult&lt;/span&gt;(‘&lt;span class=&quot;selector-tag&quot;&gt;id&lt;/span&gt;’);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight applescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;preload.getResult(‘&lt;span class=&quot;built_in&quot;&gt;id&lt;/span&gt;’);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;通常进度条可以通过&lt;code&gt;fileload&lt;/code&gt;和&lt;code&gt;complete&lt;/code&gt;来实现。&lt;/p&gt;
 &lt;h2 id=&quot;SOUNDJS&quot;&gt;&lt;a href=&quot;#SOUNDJS&quot; class=&quot;headerlink&quot; title=&quot;SOUNDJS&quot;&gt;&lt;/a&gt;SOUNDJS&lt;/h2&gt;&lt;p&gt;一个音频播放引擎，能够根据浏览器性能选择音频播放方式。将音频文件作为模块，可随时加载和卸载。&lt;/p&gt;
-&lt;h3 id=&quot;单个音频基本用法&quot;&gt;&lt;a href=&quot;#单个音频基本用法&quot; class=&quot;headerlink&quot; title=&quot;单个音频基本用法&quot;&gt;&lt;/a&gt;单个音频基本用法&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; assetsPath = &lt;span class=&quot;string&quot;&gt;&quot;../_assets/audio/&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;src = assetsPath + &lt;span class=&quot;string&quot;&gt;&quot;M-GameBG.ogg&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.alternateExtensions = [&lt;span class=&quot;string&quot;&gt;&quot;mp3&quot;&lt;/span&gt;];	&lt;span class=&quot;comment&quot;&gt;// 源格式不支持时，用此格式替换&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.addEventListener(&lt;span class=&quot;string&quot;&gt;&quot;fileload&quot;&lt;/span&gt;, playSound); &lt;span class=&quot;comment&quot;&gt;// 加载完回调&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.registerSound(src);  &lt;span class=&quot;comment&quot;&gt;// 注册&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;playSound&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	soundInstance = createjs.Sound.play(event.src);  &lt;span class=&quot;comment&quot;&gt;// 播放实例&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;单个音频基本用法&quot;&gt;&lt;a href=&quot;#单个音频基本用法&quot; class=&quot;headerlink&quot; title=&quot;单个音频基本用法&quot;&gt;&lt;/a&gt;单个音频基本用法&lt;/h3&gt;&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; assetsPath = &lt;span class=&quot;string&quot;&gt;&quot;../_assets/audio/&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;src = assetsPath + &lt;span class=&quot;string&quot;&gt;&quot;M-GameBG.ogg&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.alternateExtensions = [&lt;span class=&quot;string&quot;&gt;&quot;mp3&quot;&lt;/span&gt;];	&lt;span class=&quot;comment&quot;&gt;// 源格式不支持时，用此格式替换&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.addEventListener(&lt;span class=&quot;string&quot;&gt;&quot;fileload&quot;&lt;/span&gt;, playSound); &lt;span class=&quot;comment&quot;&gt;// 加载完回调&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.registerSound(src);  &lt;span class=&quot;comment&quot;&gt;// 注册&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;playSound&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	soundInstance = createjs.Sound.play(event.src);  &lt;span class=&quot;comment&quot;&gt;// 播放实例&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;多个音频用法&quot;&gt;&lt;a href=&quot;#多个音频用法&quot; class=&quot;headerlink&quot; title=&quot;多个音频用法&quot;&gt;&lt;/a&gt;多个音频用法&lt;/h3&gt;&lt;p&gt;&lt;code&gt;registerSounds&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight qml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;var&lt;/span&gt; assetsPath = &lt;span class=&quot;string&quot;&gt;&quot;../_assets/audio/&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;var&lt;/span&gt; sounds = [&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Game-Break.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 1&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Game-Spawn.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 2&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Game-Shot.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 3&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;GU-StealDaisy.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 4&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Humm.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 5&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;R-Damage.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 6&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Thunder1.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 7&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;S-Damage.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 8&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;U-CabinBoy3.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 9&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;ToneWobble.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 10&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Game-Death.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 11&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;src&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Game-Break.ogg&quot;&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;id:&lt;/span&gt;&lt;span class=&quot;emphasis&quot;&gt; 12&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.alternateExtensions&lt;/span&gt; = [&lt;span class=&quot;string&quot;&gt;&quot;mp3&quot;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.addEventListener(&lt;span class=&quot;string&quot;&gt;&quot;fileload&quot;&lt;/span&gt;, createjs.proxy(soundLoaded, &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;)); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Sound.registerSounds(sounds, assetsPath);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;声音合成&quot;&gt;&lt;a href=&quot;#声音合成&quot; class=&quot;headerlink&quot; title=&quot;声音合成&quot;&gt;&lt;/a&gt;声音合成&lt;/h3&gt;&lt;ul&gt;
@@ -1039,11 +1039,11 @@
 &lt;li&gt;homebrew安装ffmpeg&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;FFmpeg and the ogg codecs on OSX using brew:&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew install ffmpeg --&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt;-theora --&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt;-libogg --&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt;-libvorbis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew install ffmpeg --&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt;-theora --&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt;-libogg --&lt;span class=&quot;keyword&quot;&gt;with&lt;/span&gt;-libvorbis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;生成音频文件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;audiosprite --autoplay &lt;span class=&quot;built_in&quot;&gt;bg&lt;/span&gt;_loop --output mygameaudio &lt;span class=&quot;built_in&quot;&gt;bg&lt;/span&gt;_loop.wav *.mp3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight armasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;symbol&quot;&gt;audiosprite&lt;/span&gt; --autoplay &lt;span class=&quot;keyword&quot;&gt;bg_loop &lt;/span&gt;--output mygameaudio &lt;span class=&quot;keyword&quot;&gt;bg_loop.wav &lt;/span&gt;*.mp3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;可选参数可以设置是否自动播放等，具体请参考&lt;a href=&quot;https://github.com/tonistiigi/audiosprite&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在线导出&lt;/li&gt;
@@ -1112,13 +1112,13 @@
 &lt;ol&gt;
 &lt;li&gt;让物体动起来&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;createjs.Ticker.setFPS(&lt;span class=&quot;number&quot;&gt;30&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Ticker.addEventListener(&lt;span class=&quot;string&quot;&gt;&quot;tick&quot;&lt;/span&gt;, handleTick);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;handleTick&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//物品移动逻辑&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    stage.update();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;createjs.Ticker.setFPS(&lt;span class=&quot;number&quot;&gt;30&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;createjs.Ticker.addEventListener(&lt;span class=&quot;string&quot;&gt;&quot;tick&quot;&lt;/span&gt;, handleTick);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;handleTick&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//物品移动逻辑&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    stage.update();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h2&gt;&lt;h3 id=&quot;开启鼠标检测&quot;&gt;&lt;a href=&quot;#开启鼠标检测&quot; class=&quot;headerlink&quot; title=&quot;开启鼠标检测&quot;&gt;&lt;/a&gt;开启鼠标检测&lt;/h3&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;stage&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.enableMouseOver&lt;/span&gt;(20);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;开启触摸&quot;&gt;&lt;a href=&quot;#开启触摸&quot; class=&quot;headerlink&quot; title=&quot;开启触摸&quot;&gt;&lt;/a&gt;开启触摸&lt;/h3&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;createjs&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.Touch&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.enable&lt;/span&gt;(&lt;span class=&quot;selector-tag&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.stage&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;Request-Animation-Frame&quot;&gt;&lt;a href=&quot;#Request-Animation-Frame&quot; class=&quot;headerlink&quot; title=&quot;Request Animation Frame&quot;&gt;&lt;/a&gt;Request Animation Frame&lt;/h3&gt;&lt;figure class=&quot;highlight dns&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;createjs.Ticker.timingMode = createjs.Ticker.RAF&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;缓存&quot;&gt;&lt;a href=&quot;#缓存&quot; class=&quot;headerlink&quot; title=&quot;缓存&quot;&gt;&lt;/a&gt;缓存&lt;/h3&gt;&lt;figure class=&quot;highlight processing&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;shape&lt;/span&gt;.cache(x,y,&lt;span class=&quot;built_in&quot;&gt;width&lt;/span&gt;,&lt;span class=&quot;built_in&quot;&gt;height&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;Mask&quot;&gt;&lt;a href=&quot;#Mask&quot; class=&quot;headerlink&quot; title=&quot;Mask&quot;&gt;&lt;/a&gt;Mask&lt;/h3&gt;&lt;figure class=&quot;highlight mipsasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;bmp.mask &lt;/span&gt;= star&lt;span class=&quot;comment&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;碰撞检测&quot;&gt;&lt;a href=&quot;#碰撞检测&quot; class=&quot;headerlink&quot; title=&quot;碰撞检测&quot;&gt;&lt;/a&gt;碰撞检测&lt;/h3&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;myShape&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.hitTest&lt;/span&gt;(&lt;span class=&quot;selector-tag&quot;&gt;x&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;y&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;碰撞检测&quot;&gt;&lt;a href=&quot;#碰撞检测&quot; class=&quot;headerlink&quot; title=&quot;碰撞检测&quot;&gt;&lt;/a&gt;碰撞检测&lt;/h3&gt;&lt;figure class=&quot;highlight cos&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;myShape.hitTest(&lt;span class=&quot;keyword&quot;&gt;x&lt;/span&gt;,y)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://createjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://createjs.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/CreateJS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/CreateJS&lt;/a&gt;&lt;/li&gt;
@@ -1152,7 +1152,7 @@
     <link href="http://aotu.io/notes/2016/02/27/docker/"/>
     <id>http://aotu.io/notes/2016/02/27/docker/</id>
     <published>2016-02-26T17:55:35.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1179,18 +1179,18 @@
 &lt;h3 id=&quot;获取基础镜像&quot;&gt;&lt;a href=&quot;#获取基础镜像&quot; class=&quot;headerlink&quot; title=&quot;获取基础镜像&quot;&gt;&lt;/a&gt;获取基础镜像&lt;/h3&gt;&lt;p&gt;&lt;em&gt;注：假定我需要部署一个基于&lt;code&gt;centos&lt;/code&gt;的应用，当然也可以换成别的，比如：&lt;code&gt;Redis&lt;/code&gt; 或者 &lt;code&gt;Ubuntu&lt;/code&gt;，可以是任何镜像来当做基础镜像，跟本机原有系统无关，只与所要部署的应用有关。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;首先搜索需要获取的 &lt;strong&gt;&lt;a href=&quot;https://hub.docker.com/explore/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;镜像&lt;/a&gt;&lt;/strong&gt;，这是官方&lt;code&gt;Docker Hub&lt;/code&gt;提供的镜像资源。 &lt;/p&gt;
 &lt;p&gt;比如，我选择获取 &lt;strong&gt;&lt;a href=&quot;https://hub.docker.com/_/centos/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;centos最新版本&lt;/a&gt;&lt;/strong&gt; &lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker pull centos &lt;span class=&quot;comment&quot;&gt;//获取centos最近版本的镜像&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight 1c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker pull centos &lt;span class=&quot;comment&quot;&gt;//获取centos最近版本的镜像&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/lizhi/docker/dockerimages.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;使用命令 &lt;code&gt;docker images&lt;/code&gt; 就能查到刚才获取的 &lt;code&gt;centos&lt;/code&gt; 的镜像，如上图。&lt;/p&gt;
 &lt;h3 id=&quot;配置新的镜像&quot;&gt;&lt;a href=&quot;#配置新的镜像&quot; class=&quot;headerlink&quot; title=&quot;配置新的镜像&quot;&gt;&lt;/a&gt;配置新的镜像&lt;/h3&gt;&lt;p&gt;&lt;em&gt;注：为了方便演示，假定我们的服务只需要安装一个&lt;code&gt;zip&lt;/code&gt;的&lt;code&gt;centos&lt;/code&gt;系统。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;将上面获取的 &lt;code&gt;centos&lt;/code&gt; 镜像，启动生成container，并在container中安装zip。&lt;/p&gt;
-&lt;figure class=&quot;highlight arduino&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@AY130809220512304015Z &lt;span class=&quot;built_in&quot;&gt;image&lt;/span&gt;]&lt;span class=&quot;meta&quot;&gt;# docker run -t -i centos /bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight coffeescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@AY130809220512304015Z image]&lt;span class=&quot;comment&quot;&gt;# docker run -t -i centos /bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;docker run&lt;/code&gt; 启动容器，&lt;code&gt;-t&lt;/code&gt;:为容器重新分配一个伪输入终端，通常与 -i 同时使用； &lt;code&gt;-i&lt;/code&gt;:以交互模式运行容器，通常与 -t 同时使用；&lt;code&gt;centos&lt;/code&gt; 为镜像名， 镜像名通常以 &lt;strong&gt;镜像名:版本&lt;/strong&gt; 来使用，因为centos没有版本所以省略, 后面 &lt;code&gt;/bin/bash&lt;/code&gt; 是启动container后运行的程序。&lt;br&gt;&lt;figure class=&quot;highlight stata&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@e44ea4258885 /]# &lt;span class=&quot;keyword&quot;&gt;zip&lt;/span&gt;  &lt;span class=&quot;comment&quot;&gt;//先运行zip，发现是没有安装的&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bash: &lt;span class=&quot;keyword&quot;&gt;zip&lt;/span&gt;: command not found&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@90934d1f4225 /]# yum install &lt;span class=&quot;keyword&quot;&gt;zip&lt;/span&gt;  &lt;span class=&quot;comment&quot;&gt;//安装zip&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@90934d1f4225 /]# &lt;span class=&quot;keyword&quot;&gt;zip&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//查看zip，安装成功&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;Copyright&lt;/span&gt; (c) 1990-2008 Info-&lt;span class=&quot;keyword&quot;&gt;ZIP&lt;/span&gt; - &lt;span class=&quot;keyword&quot;&gt;Type&lt;/span&gt; &#39;&lt;span class=&quot;keyword&quot;&gt;zip&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;-L&quot;&lt;/span&gt;&#39; &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; software license.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;Zip&lt;/span&gt; 3.0 (July 5th 2008). Usage:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;使用container命令行安装&lt;code&gt;zip&lt;/code&gt;成功。&lt;br&gt;&lt;figure class=&quot;highlight autoit&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root&lt;span class=&quot;symbol&quot;&gt;@90934d1f4225&lt;/span&gt; /]&lt;span class=&quot;meta&quot;&gt;# exit&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;退出容器命令行，因为不是后台运行，所以退出后，container也随即关闭了。&lt;code&gt;-d&lt;/code&gt; 可以让container在后台运行，并可以随时通过&lt;code&gt;docker attach&lt;/code&gt; 命令进入容器，具体例子可以看&lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/attach/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;,因为不是本文重点就不展开说明了。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker ps&lt;/code&gt; 命令可以查看当前启动的 container， &lt;code&gt;-a&lt;/code&gt; 启动和没启动的都会展示。&lt;/p&gt;
 &lt;figure class=&quot;highlight coffeescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@AY130809220512304015Z image]&lt;span class=&quot;comment&quot;&gt;# docker ps -a&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;f08b2b67380        centos              &lt;span class=&quot;string&quot;&gt;&quot;/bin/bash&quot;&lt;/span&gt;         &lt;span class=&quot;number&quot;&gt;21&lt;/span&gt; minutes ago      Exited (&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt; minutes ago                       lonely_euler&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;有一个id为 8f08b2b67380的container，这个就是我们刚才安装了zip，并退出的container。&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-attr&quot;&gt;[root@AY130809220512304015Z image]&lt;/span&gt;# &lt;span class=&quot;selector-tag&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;commit&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;-m&lt;/span&gt; &quot;&lt;span class=&quot;selector-tag&quot;&gt;Added&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;zip&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;install&lt;/span&gt;&quot; 8&lt;span class=&quot;selector-tag&quot;&gt;f08b2b67380&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;sha256&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:8f1d192a4ea2a80801e33cd5fadb5f37180bb718f729f77a404a347b977d753c&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;有一个id为 8f08b2b67380的container，这个就是我们刚才安装了zip，并退出的container。&lt;br&gt;&lt;figure class=&quot;highlight arduino&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@AY130809220512304015Z &lt;span class=&quot;built_in&quot;&gt;image&lt;/span&gt;]&lt;span class=&quot;meta&quot;&gt;# docker commit -m &lt;span class=&quot;string&quot;&gt;&quot;Added zip install&quot;&lt;/span&gt; 8f08b2b67380 test:1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sha256:&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;f1d192a4ea2a80801e33cd5fadb5f37180bb718f729f77a404a347b977d753c&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker commit&lt;/code&gt; 将container提交生成image， &lt;code&gt;-m&lt;/code&gt;：为描述, 后面紧接着的是container的id， &lt;code&gt;test:1&lt;/code&gt; 是提交的镜像名称和版本。&lt;/p&gt;
 &lt;figure class=&quot;highlight crmsh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@AY130809220512304015Z image]&lt;span class=&quot;comment&quot;&gt;# docker images&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REPOSITORY          &lt;span class=&quot;keyword&quot;&gt;TAG&lt;/span&gt;                 &lt;span class=&quot;title&quot;&gt;IMAGE&lt;/span&gt; ID            CREATED              SIZE&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;test                 &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;                   &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;f1d192a4ea2        About a minute ago   &lt;span class=&quot;number&quot;&gt;266.7&lt;/span&gt; MB&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;centos              latest              &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;f0be3675ebb        &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt; days ago           &lt;span class=&quot;number&quot;&gt;196.6&lt;/span&gt; MB&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;再查看的时候已经多了一个image了，这个image就是我们安装了zip的image，到此我们已经生成一个新的image。&lt;/p&gt;
@@ -1202,7 +1202,7 @@
 &lt;p&gt;接着我们创建&lt;code&gt;Dockerfile&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$ &lt;/span&gt;mkdir o2team&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$ &lt;/span&gt;cd o2team&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$ &lt;/span&gt;touch Dockerfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;下面是 &lt;code&gt;Dockerfile&lt;/code&gt; 中的内容&lt;br&gt;&lt;figure class=&quot;highlight dockerfile&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Dockerfile for o2team&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# http://aotu.io/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;FROM&lt;/span&gt; centos&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;MAINTAINER&lt;/span&gt; lizhi &amp;lt;fanlizhi@jd.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;RUN&lt;/span&gt; &lt;span class=&quot;bash&quot;&gt;yum -y install zip&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;#&lt;/code&gt;为注释，&lt;code&gt;FROM centos&lt;/code&gt; 为基础镜像来源，&lt;code&gt;MAINTAINER&lt;/code&gt;为作者信息, &lt;code&gt;RUN&lt;/code&gt; 则为 运行某些 命令，编辑完成后保存，然后我们就可以直接构建我们新的image，Dockerfile详细使用文档可以参看&lt;a href=&quot;https://docs.docker.com/engine/reference/builder/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-attr&quot;&gt;[root@AY130809220512304015Z o2team-test]&lt;/span&gt;# &lt;span class=&quot;selector-tag&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;build&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;-t&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;selector-pseudo&quot;&gt;:1&lt;/span&gt; .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight autoit&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root&lt;span class=&quot;symbol&quot;&gt;@AY130809220512304015Z&lt;/span&gt; o2team-test]&lt;span class=&quot;meta&quot;&gt;# docker build -t test:1 .&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;docker build&lt;/code&gt;就是通过Dockfile来创建一个新的Image，其中 &lt;code&gt;-t&lt;/code&gt;:为新image的名字这里命名为test:1， &lt;code&gt;&amp;quot;.&amp;quot;&lt;/code&gt; 则会在当前的目录下找 &lt;code&gt;Dockerfile&lt;/code&gt; 文件,当然这里也可以指定路径。&lt;/p&gt;
 &lt;figure class=&quot;highlight crmsh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@AY130809220512304015Z o2team-test]&lt;span class=&quot;comment&quot;&gt;# docker images&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REPOSITORY          &lt;span class=&quot;keyword&quot;&gt;TAG&lt;/span&gt;                 &lt;span class=&quot;title&quot;&gt;IMAGE&lt;/span&gt; ID            CREATED             SIZE&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;test                &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;                   &lt;span class=&quot;number&quot;&gt;8975&lt;/span&gt;f3fb142e        &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt; seconds ago       &lt;span class=&quot;number&quot;&gt;266.7&lt;/span&gt; MB&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;centos              latest              &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;f0be3675ebb        &lt;span class=&quot;number&quot;&gt;9&lt;/span&gt; days ago          &lt;span class=&quot;number&quot;&gt;196.6&lt;/span&gt; MB&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;就这样，通过&lt;code&gt;docker images&lt;/code&gt;也能生成一个新的镜像了，这种用Dockerfile的方式更加适合团队使用，环境配置更清晰。&lt;/p&gt;
@@ -1243,7 +1243,7 @@
     <link href="http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/"/>
     <id>http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/</id>
     <published>2016-02-25T16:06:24.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;为什么要用npm-scripts替代gulp&quot;&gt;&lt;a href=&quot;#为什么要用npm-scripts替代gulp&quot; class=&quot;headerlink&quot; title=&quot;为什么要用npm scripts替代gulp&quot;&gt;&lt;/a&gt;为什么要用&lt;code&gt;npm scripts&lt;/code&gt;替代&lt;code&gt;gulp&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;现在&lt;code&gt;前端自动化&lt;/code&gt;的配套工具估计都离不开&lt;code&gt;gulp&lt;/code&gt;或者是&lt;code&gt;grunt&lt;/code&gt;，有一些或许会用上&lt;code&gt;webpack&lt;/code&gt;辅助用上最新的&lt;code&gt;ES6&lt;/code&gt;语法等；但是不知道大家在使用&lt;code&gt;gulp&lt;/code&gt;众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下&lt;code&gt;gulp&lt;/code&gt;或者&lt;code&gt;grunt&lt;/code&gt;其实都会有以下问题：&lt;/p&gt;
@@ -1318,7 +1318,7 @@
     <link href="http://aotu.io/notes/2016/02/24/node-debug-in-production/"/>
     <id>http://aotu.io/notes/2016/02/24/node-debug-in-production/</id>
     <published>2016-02-24T12:25:35.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;本文以问答的形式，介绍生产环境中该如何去调试 Node 应用。&lt;br&gt;文章覆盖到了&lt;strong&gt;性能问题&lt;/strong&gt;、&lt;strong&gt;崩溃问题&lt;/strong&gt;、&lt;strong&gt;内存泄露&lt;/strong&gt;的检查和解决手段。&lt;/p&gt;
 &lt;h2 id=&quot;随着用户请求数越来越多，Node-请求越来越慢。怎么处理？&quot;&gt;&lt;a href=&quot;#随着用户请求数越来越多，Node-请求越来越慢。怎么处理？&quot; class=&quot;headerlink&quot; title=&quot;随着用户请求数越来越多，Node 请求越来越慢。怎么处理？&quot;&gt;&lt;/a&gt;随着用户请求数越来越多，Node 请求越来越慢。怎么处理？&lt;/h2&gt;&lt;p&gt;每个用户的请求，都会经过这几个阶段：&lt;/p&gt;
@@ -1442,7 +1442,7 @@
     <link href="http://aotu.io/notes/2016/02/19/ngrok/"/>
     <id>http://aotu.io/notes/2016/02/19/ngrok/</id>
     <published>2016-02-18T17:55:35.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;半年多没用ngrok，然后昨天发现它被墙了，艸～。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1556,7 +1556,7 @@
     <link href="http://aotu.io/notes/2016/01/28/3xx-of-http-status/"/>
     <id>http://aotu.io/notes/2016/01/28/3xx-of-http-status/</id>
     <published>2016-01-27T20:20:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;众所周知，我们都知道300-399这一系列的状态码代表的是重定向状态码。重定向状态码要么告知客户端使用替代位置来访问她们所感兴趣的资源，要么就提供一个替代的响应而不是资源的内容。如果资源已被移动，可发送一个重定向状态码和一个可选的Location首部来告知客户端已被移走，以及现在可以在哪里找到它。这样子，浏览器就可以在不打扰用户的情况下，透明地转到新的位置。&lt;/p&gt;
 &lt;p&gt;那么，接下来，我们从状态码出发，梳理一下3xx状态码（300-307），以及缓存一系列相关的东西。（注：HTTP/1.1版本的内容）&lt;/p&gt;
@@ -1615,7 +1615,7 @@
     <link href="http://aotu.io/notes/2016/01/27/how-to-make-cocoapods/"/>
     <id>http://aotu.io/notes/2016/01/27/how-to-make-cocoapods/</id>
     <published>2016-01-26T19:40:49.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;学会使用别人的 &lt;strong&gt;Pods&lt;/strong&gt; 依赖库以后， 你一定对创建自己的依赖库很有兴趣吧，现在我们就来尝试一下，以一个简单 &lt;strong&gt;O2View&lt;/strong&gt; 为例自己创建一个 &lt;strong&gt;Pods&lt;/strong&gt; 依赖库，这里我会使用 &lt;strong&gt;Swift 2.0&lt;/strong&gt; 来写这个例子。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1697,7 +1697,7 @@
     <link href="http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/"/>
     <id>http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/</id>
     <published>2016-01-26T11:35:15.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;公共-CocoaPods&quot;&gt;&lt;a href=&quot;#公共-CocoaPods&quot; class=&quot;headerlink&quot; title=&quot;公共 CocoaPods&quot;&gt;&lt;/a&gt;公共 CocoaPods&lt;/h3&gt;&lt;p&gt;打开隐藏目录，可以使用命令: &lt;/p&gt;
 &lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//打开隐藏的命令:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;defaults write com&lt;span class=&quot;selector-class&quot;&gt;.apple&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.finder&lt;/span&gt; AppleShowAllFiles -bool true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//关闭隐藏的命令:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;defaults write com&lt;span class=&quot;selector-class&quot;&gt;.apple&lt;/span&gt;&lt;span class=&quot;selector-class&quot;&gt;.finder&lt;/span&gt; AppleShowAllFiles -bool false&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -1802,7 +1802,7 @@
     <link href="http://aotu.io/notes/2016/01/16/UFT/"/>
     <id>http://aotu.io/notes/2016/01/16/UFT/</id>
     <published>2016-01-15T16:44:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;最初它的名字为 BugHound，主要功能是 bug 提交，EC 同学已经造出了它最初的样子，它最初的目标用户是移动用户，能在提 bug 的同时收集设备的相关信息。主要用到的技术点：&lt;/p&gt;
 &lt;ul&gt;
@@ -1916,7 +1916,7 @@
     <link href="http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/"/>
     <id>http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/</id>
     <published>2016-01-14T09:20:39.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-游戏开发方法&quot;&gt;&lt;a href=&quot;#1-游戏开发方法&quot; class=&quot;headerlink&quot; title=&quot;1 游戏开发方法&quot;&gt;&lt;/a&gt;1 游戏开发方法&lt;/h2&gt;&lt;h3 id=&quot;1-1-小规模游戏&quot;&gt;&lt;a href=&quot;#1-1-小规模游戏&quot; class=&quot;headerlink&quot; title=&quot;1.1 小规模游戏&quot;&gt;&lt;/a&gt;1.1 小规模游戏&lt;/h3&gt;&lt;p&gt;小规模游戏一般由一人或两人完成，不需要详细的产品说明等资料，直接进入代码的编写，然后在浏览器中解释并运行。有时候出现错误，重新编辑再回到浏览器解释运行，就是一个简单的编辑-解释-运行的重复工作模式。&lt;/p&gt;
@@ -2005,7 +2005,7 @@
     <link href="http://aotu.io/notes/2016/01/08/2016-01-06-promise/"/>
     <id>http://aotu.io/notes/2016/01/08/2016-01-06-promise/</id>
     <published>2016-01-07T17:05:05.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Promise-是什么&quot;&gt;&lt;a href=&quot;#Promise-是什么&quot; class=&quot;headerlink&quot; title=&quot;Promise 是什么&quot;&gt;&lt;/a&gt;Promise 是什么&lt;/h2&gt;&lt;p&gt;Promise 是抽象异步处理对象以及对其进行各种操作的组件。 通俗点讲，Promise能解决由于回调嵌套带来的流程控制与可读性问题。&lt;br&gt;promise 已经是成为我们解决回调炼狱的常用方案，而且已经得到官方标准支持，如果你刚刚开始使用Promise，本文将帮助你了解几个常见的Promise的使用场景。&lt;/p&gt;
 &lt;h2 id=&quot;Promise-的历史&quot;&gt;&lt;a href=&quot;#Promise-的历史&quot; class=&quot;headerlink&quot; title=&quot;Promise 的历史&quot;&gt;&lt;/a&gt;Promise 的历史&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Futures_and_promises&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;早在1976年就有人提出Promise 的概念&lt;/a&gt;。之后的计算机语言发展中，很多语言都提供了与 Promise 相关的特性。而对于Javascript语言来说，最早让大家广泛接触的 Promise 相关的库是由 &lt;code&gt;jQuery.Deferred()&lt;/code&gt; 对象实现的。随着 Promise/A+ 标准规定了一系列 API，实现该标准的库如雨后春笋版涌现了出来，在最新的ECMAScript 2015中已经提供了Promise的内置对象，成为了基础库。  &lt;/p&gt;
@@ -2063,7 +2063,7 @@
     <link href="http://aotu.io/notes/2016/01/07/debug-webapp-with-chrome-devtools/"/>
     <id>http://aotu.io/notes/2016/01/07/debug-webapp-with-chrome-devtools/</id>
     <published>2016-01-07T00:00:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;当我们写了一组炫(fu)酷(za)的H5动效后，发现在移动端上会卡顿，该怎么办？&lt;br&gt;目前市场上大多数设备的屏幕刷新频率是60Hz，想要用户滑动页面或者播放动画没有卡顿，浏览器的渲染速率就要和屏幕刷新的频率同步，达到60fps。&lt;/p&gt;
 &lt;p&gt;Chrome开发工具的Timeline面板监控了web应用运行时所有活动情况，不过它的功能很多，对于英文不好的童鞋，有点无从下手，下面直接上手来使用。&lt;/p&gt;
@@ -2150,7 +2150,7 @@
     <link href="http://aotu.io/notes/2016/01/07/auto-deploy-website-by-webhooks-of-github/"/>
     <id>http://aotu.io/notes/2016/01/07/auto-deploy-website-by-webhooks-of-github/</id>
     <published>2016-01-06T17:05:05.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;相信很多码农都玩过了&lt;code&gt;Git&lt;/code&gt;，如果对&lt;code&gt;Git&lt;/code&gt;只是一知半解，可以移步&lt;code&gt;LV&lt;/code&gt;写的 &lt;a href=&quot;http://aotu.io/notes/2015/11/17/Git-Commands/&quot;&gt;GIT常用操作总结&lt;/a&gt;，下面介绍到的一些关于 &lt;code&gt;Git&lt;/code&gt; 的概念就不再赘述。&lt;/p&gt;
 &lt;p&gt;为啥想写这篇文章？主要是因为部门服务器因为安全性原因不允许&lt;code&gt;SCP&lt;/code&gt;上传文件进行应用部署，然后有一些应用是放在Github上的，然后部署应用的步骤就变成：&lt;/p&gt;
@@ -2222,7 +2222,7 @@
     <link href="http://aotu.io/notes/2016/01/04/css3-animation/"/>
     <id>http://aotu.io/notes/2016/01/04/css3-animation/</id>
     <published>2016-01-04T15:58:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;需求中常见的css3动画&quot;&gt;&lt;a href=&quot;#需求中常见的css3动画&quot; class=&quot;headerlink&quot; title=&quot;需求中常见的css3动画&quot;&gt;&lt;/a&gt;需求中常见的css3动画&lt;/h2&gt;&lt;p&gt;需求中常见的css3动画一般有&lt;strong&gt;补间动画（又叫“关键帧动画”）&lt;/strong&gt;和&lt;strong&gt;逐帧动画&lt;/strong&gt;两种，下面分别介绍：&lt;/p&gt;
 &lt;ol&gt;
@@ -2382,7 +2382,7 @@
     <link href="http://aotu.io/notes/2016/01/02/3D-panorama/"/>
     <id>http://aotu.io/notes/2016/01/02/3D-panorama/</id>
     <published>2016-01-01T23:06:45.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;在浏览器中实现全景浏览, 听起来是很玄的事情. 但如果你清楚它的原理, 这事就简单多了.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在之前的一段时间, 朋友圈中出现了一批使用全景图浏览技术的H5页面. 比如探班吴亦凡系列, 或者是探访京东总部大楼找优惠券页面. 在当时, 这几个页面取得了不错的宣传效果. 那么, 这种新奇的全景效果到底是怎样实现的呢?&lt;/p&gt;
@@ -2434,7 +2434,7 @@
     <link href="http://aotu.io/notes/2015/12/29/ae/"/>
     <id>http://aotu.io/notes/2015/12/29/ae/</id>
     <published>2015-12-28T22:05:18.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;Adobe After Effects简称“AE”是Adobe公司推出的一款图形视频处理软件，用于高端视频特效系统的专业特效合成。随着h5页面动效的越来越复杂以及h5效果视频化趋势，AE这款软件也渐渐成为了我们制作绚丽动效的必备神器。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -2506,7 +2506,7 @@
     <link href="http://aotu.io/notes/2015/12/23/building-command-line-tools-with-node-js/"/>
     <id>http://aotu.io/notes/2015/12/23/building-command-line-tools-with-node-js/</id>
     <published>2015-12-23T13:19:07.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文译自 &lt;a href=&quot;https://developer.atlassian.com/blog/2015/11/scripting-with-node/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Building command line tools with Node.js&lt;/a&gt;，介绍了如何通过Node.js来创建命令行脚本工具，介绍了很多实用的&lt;code&gt;npm&lt;/code&gt;包等。翻译水平有限，敬请指正~&lt;/p&gt;
@@ -2615,7 +2615,7 @@
     <link href="http://aotu.io/notes/2015/12/23/new-safari-9/"/>
     <id>http://aotu.io/notes/2015/12/23/new-safari-9/</id>
     <published>2015-12-22T21:42:19.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;苹果的 OS 在不断发展，Safari 亦越变强大性感，在最新的 9.0 版本当中，Safari 增加了不少新的特性，这里主要介绍一下和 Web 前端密切相关的。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -3032,7 +3032,7 @@ nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
     <link href="http://aotu.io/notes/2015/12/18/etymology-of-foobar/"/>
     <id>http://aotu.io/notes/2015/12/18/etymology-of-foobar/</id>
     <published>2015-12-17T21:22:23.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;今天在 WebKit 看了 CSS 伪类的文章，其中对 &lt;code&gt;:matches()&lt;/code&gt; 的介绍出现了 &lt;code&gt;foo&lt;/code&gt; 和 &lt;code&gt;bar&lt;/code&gt;：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;:matches(.foo, .bar) {
@@ -3113,7 +3113,7 @@ nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
     <link href="http://aotu.io/notes/2015/12/09/an-introduction-to-sass-maps/"/>
     <id>http://aotu.io/notes/2015/12/09/an-introduction-to-sass-maps/</id>
     <published>2015-12-09T09:54:16.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文翻译自&lt;a href=&quot;http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;An Introduction to Sass Maps:Usage and Examples&lt;/a&gt;&lt;/p&gt;
@@ -3232,14 +3232,14 @@ nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
     <link href="http://aotu.io/notes/2015/12/04/edgeAnimate/"/>
     <id>http://aotu.io/notes/2015/12/04/edgeAnimate/</id>
     <published>2015-12-03T22:05:18.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;Edge Animate是Adobe出品的制作HTML5动画的可视化工具，简单的可以理解为HTML5版本的Flash Pro。Adobe Edge Animate的目的是帮助专业设计师制作网页动画乃至简单游戏。目前该工具的重点放在动画引擎上，将增加更多HTML5功能，比如Canvas、HTML5音频/视频标签等。支持Android、iOS、webOS、黑莓PlayBook、Firefox、Chrome、Safari和IE9等各个平台。&lt;/p&gt;
 &lt;p&gt;Edge Animate主要使用HTML5,CSS3和JavaScript。HTML5是其用于创建的doctype，2D的transform，translate，rotate，scale，skew等特效都是渲染为CSS3，如果是最新版本的浏览器，可以操作纯粹的CSS3，如果是主流大众浏览器，Edge Animate则会通过JavaScript库的配合来保证HTML和CSS的显示兼容性。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Adobe-edge-animate-CC功能&quot;&gt;&lt;a href=&quot;#Adobe-edge-animate-CC功能&quot; class=&quot;headerlink&quot; title=&quot;Adobe edge animate CC功能&quot;&gt;&lt;/a&gt;Adobe edge animate CC功能&lt;/h2&gt;&lt;p&gt;1.精确的动画。&lt;br&gt;2.直觉化的使用者界面。&lt;br&gt;3.绘图和文字工具。&lt;br&gt;4.移动路径。&lt;br&gt;5.可重复使用的符号。&lt;br&gt;6.兼容性比较不错，android机也表现良好。&lt;br&gt;单一使用做html5 css3动画，带来了巨大的福音。&lt;/p&gt;
 &lt;h2 id=&quot;Adobe-edge-animate-CC缺点&quot;&gt;&lt;a href=&quot;#Adobe-edge-animate-CC缺点&quot; class=&quot;headerlink&quot; title=&quot;Adobe edge animate CC缺点&quot;&gt;&lt;/a&gt;Adobe edge animate CC缺点&lt;/h2&gt;&lt;p&gt;1.不太适合，做复杂的动画与游戏，适用场景狭窄。&lt;br&gt;2.操作比较适合设计师，不适合程序员，操作效率不高，调节不是特别可控。&lt;br&gt;3.采用html5 css3相关的动画，频繁产生重排导致效率低下。&lt;br&gt;4.动画元素层级绝对定位，后期维护增加元素，层级覆盖影响较大。&lt;br&gt;5.比较适合pc端动画制作，移动端需要进行二次转换，scale进行缩放已达到多屏适配的问题。&lt;/p&gt;
 &lt;h2 id=&quot;Adobe-edge-animate下载地址&quot;&gt;&lt;a href=&quot;#Adobe-edge-animate下载地址&quot; class=&quot;headerlink&quot; title=&quot;Adobe edge animate下载地址&quot;&gt;&lt;/a&gt;Adobe edge animate下载地址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://example.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;mac 环境下下载&lt;/a&gt;  &amp;nbsp;&amp;nbsp;   &lt;a href=&quot;http://example.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;window 环境下下载&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;在开始玩Edge Animate前，你可能有个顾虑，就是Edge Animate如果要做交互动画，生成的内容是否会打破已有的HTML文件代码结构？答案是不会。通过Edge Animate生成的HTML代码少之又少，几乎都可以用下面的代码表达方式来概述：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div id=”Stage” &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;&lt;/span&gt;=”EDGE-xxxxxxxxxx”&amp;gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在开始玩Edge Animate前，你可能有个顾虑，就是Edge Animate如果要做交互动画，生成的内容是否会打破已有的HTML文件代码结构？答案是不会。通过Edge Animate生成的HTML代码少之又少，几乎都可以用下面的代码表达方式来概述：&lt;br&gt;&lt;figure class=&quot;highlight applescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;id&lt;/span&gt;=”Stage” &lt;span class=&quot;built_in&quot;&gt;class&lt;/span&gt;=”EDGE-xxxxxxxxxx”&amp;gt;&amp;lt;/&lt;span class=&quot;keyword&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Edge Animate使用JSON来存储元素的定义和属性。相关的动画内容则会全部以代码块的形式嵌入上面的div中，修改和删除都不会影响原有的HTML项目代码，对HTML中元素的操作都通过JSON对象和引入的JavaScript来完成。但是有一点，edge动画对html元素的动画操作，会导致浏览器频繁重排，降低效率。&lt;/p&gt;
 &lt;p&gt;创建edge animation 工程&lt;br&gt;启动Edge Animate，创建一个新项目ctrl＋N/command+N。&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/pfan/edge/1.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;设定Stage（舞台）宽度为640px, 高度为1136px。Ctrl+S保存为demo.html。打开我们保存的项目目录，一个标准的Edge Animate项目是由一系列html,css,js和相关资源文件组成的。如下图所示：&lt;br&gt;&lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/pfan/edge/2.jpg&quot;&gt;&lt;/p&gt;&lt;br&gt;1)Edge Animate的工程文件: .an 格式文件更像一个空壳文件或者索引文件，标明了项目的必要信息。你可以使用记事本打开.an文件了解其中具体内容。&lt;br&gt;2)edge_includes目录：该目录下是Edge制作的html5所依赖的JS类库：edge.6.0.0.min.js 115kb,还是蛮大的。(之前的版本有依赖jquery，再5.0之后就去掉了，产生了自有库，写法参展jquery)。&lt;br&gt;3)其他.js文件：诸如demo1_edgeActions.js，demo1_edge.js等js文件是专门针对当前动画所生成js文件。&lt;br&gt;4).html文件：主html文件。&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;Edge Animate的工具界面默认情况下包含了7个Window面板，均可以通过菜单的Window选项开启和关闭，分别是Tools工具，Properties属性，Stage场景，Elements元素，Library库，Timeline时间轴，代码管理和lessons课程。接下来，简单的让大家了解一下，edge animation的属性面包，元素面板，时间轴runtime，代码管理器，这些是我们经常会用到的。&lt;/p&gt;
@@ -3288,7 +3288,7 @@ Edge Animate Buttons&lt;br&gt;本例中，我们将启用Auto-Keyframe Mode，�
     <link href="http://aotu.io/notes/2015/11/24/3D-CleaningCream/"/>
     <id>http://aotu.io/notes/2015/11/24/3D-CleaningCream/</id>
     <published>2015-11-24T13:00:35.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;这是一篇介绍如何在浏览器中展示&lt;del style=&quot;background-color: #333!important;color: #333 !important;&quot;&gt;洗面奶&lt;/del&gt;3D物件的文章。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt; &lt;/p&gt;
 &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;这篇文章仅仅是向你介绍应对下面这种的场景的方法：如果有人突然跟你说，你的皮肤挺不错的耶，你用的什么洗面奶，我也想买一个，你会怎么回答呢？手头又没法拿出你的洗面奶给他看，光凭言语无法准确地形容出你的洗面奶到底长什么样。作为前端的程序猿，我会想，这种时候如果可以有一个链接让对方自己去看一下把玩一下，对方势必会对你的洗面奶&lt;del style=&quot;background-color: #333!important;color: #333 !important;&quot;&gt;高Bigger&lt;/del&gt;有更深刻的认识。本文的目的，就是向屏幕对面的程序猿介绍这种高效&lt;del style=&quot;background-color: #333!important;color: #333 !important;&quot;&gt;搞笑&lt;/del&gt;的方式。&lt;/p&gt;
@@ -3336,7 +3336,7 @@ Edge Animate Buttons&lt;br&gt;本例中，我们将启用Auto-Keyframe Mode，�
     <link href="http://aotu.io/notes/2015/11/24/project-summary/"/>
     <id>http://aotu.io/notes/2015/11/24/project-summary/</id>
     <published>2015-11-23T20:23:44.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;一-布局方式&quot;&gt;&lt;a href=&quot;#一-布局方式&quot; class=&quot;headerlink&quot; title=&quot;一 布局方式&quot;&gt;&lt;/a&gt;一 布局方式&lt;/h2&gt;&lt;p&gt;作为一个注重用户体验的 H5 页面，合适的页面布局方式很重要。&lt;br&gt;移动端页面常规布局基本分两种：&lt;/p&gt;
@@ -3444,72 +3444,11 @@ Edge Animate Buttons&lt;br&gt;本例中，我们将启用Auto-Keyframe Mode，�
   </entry>
   
   <entry>
-    <title>以电影之眼看CSS3动画（一）</title>
-    <link href="http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/"/>
-    <id>http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/</id>
-    <published>2015-11-22T17:27:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;注：此文非干货聚集地，来找干货的对不住了。    
-注注：又多又大的图预警！！！
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;http://isux.tencent.com/css3/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS3动画&lt;/a&gt;的变形基础（transform）包含4种变形方式（translate、rotate、scale、skew），同时还可设置2D、3D、变形原点（transform-origin）、透视（perspective）、透视原点（perspective-origin）等等特性；动画时间频率包含9种基本模式（ease、linear、ease-in、ease-out、ease-in-out、step-start、step-end、steps），甚至还可以使用cubic-bezier写出任何你想要的模式；再加上动画持续时间（animation-duration）等设定，各种排列组合，CSS3动画简直拥有了整个世界！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-1_trandition_animation.png&quot; alt=&quot;trandition_animation&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;图片来源《动画的时间掌握》&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;根据&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%8A%A8%E7%94%BB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;维基&lt;/a&gt;的释义，动画是指由许多帧静止的画面，以一定的速度（如每秒16张）连续播放时，肉眼因视觉残象产生错觉，而误以为画面活动的作品（gif图片正是运用这种原理）。因此最初的动画是通过几张快速翻动的连续画面制作而成，而后经历了电影摄影技术的出现、电脑科技的进步，逐渐转向数字化。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-2_bouncing_ball.gif&quot; alt=&quot;bouncing_ball&quot;&gt;&lt;br&gt;&lt;img src=&quot;/img/post/lyxuncle/1-3_boucing_ball_frames.png&quot; alt=&quot;boucing_ball_frames&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将gif拖入PS之后打开时间轴窗口即可看到每一帧的画面&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;无论是2D还是3D动画，关键帧，正如其名，是动画制作中最关键的部分，同时也是最难把握的部分。曾经有位设计师告诉我，在大学的第一节flash课的课后作业，老师要求大家上交一份小球动画，包含气球、石头球与皮球，并告诉大家，以相同的外观表现出不同的质感是在考验你对关键帧的悟性，而这一个作业就能体现你是否适合学习动画。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-4_quality_of_ball.png&quot; alt=&quot;quality_of_ball&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A 需要很大的力才能使一个炮弹移动。一旦它移动了，同样需要很大的力才能阻挡它前进。B 一只汽球只需要很小的力去移动它，但空气阻力使它很快停止动作。这两个例子都画了动作分格线，可以看出在银幕上表现物体的轻重，取决于对它们动作的时间掌握。（图片来源：《动画的时间掌握》）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在&lt;a href=&quot;http://cghappening.blogspot.com/2011/02/blog-post_23.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《動畫製作流程介紹》&lt;/a&gt;提供的视频中可以看到关键帧在动画制作中所起的地基般的作用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-5_story_board_of_Monster_Inc.gif&quot; alt=&quot;story_board_of_Monster_Inc&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;画面上方的手绘图即为[怪物公司]的关键帧&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;与关键帧紧密关联的即为时间轴（或摄制表），时间轴是补齐中间帧不可或缺的一项，在传统动画制作中，导演就是通过制定时间轴来掌控整部动画的节奏。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-6_continuity.jpg&quot; alt=&quot;continuity&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;摄制表（图片来源：《动画的时间掌握》）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在CSS3中，@keyframes正是动画的关键帧容器。@keyframes中包含的包括transform在内的元素形态设定构成了关键帧的画面。@keyframes中的百分比即为时间轴的体现。中间帧则由浏览器自动完成（就像flash中的补全动画）。&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.people&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;animation&lt;/span&gt;:people linear &lt;span class=&quot;number&quot;&gt;1.5s&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;keyframes&lt;/span&gt; people&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	0%, 95%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	100%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-7_css3_animation_2.png&quot; alt=&quot;css3_animation&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一个简单的动画关键帧示例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;现在我们知道了CSS3动画的结构与传统动画之间的关系，重点来了， CSS3动画可以做出一部动画电影吗？欲知详情，且听下回分解。&lt;/p&gt;
-&lt;h2 id=&quot;参考资料：&quot;&gt;&lt;a href=&quot;#参考资料：&quot; class=&quot;headerlink&quot; title=&quot;参考资料：&quot;&gt;&lt;/a&gt;参考资料：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.cn/%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1-%E5%93%88%E7%BD%97%E5%BE%B7%E2%80%A2%E5%A8%81%E7%89%B9%E5%85%8B/dp/B0094N5III/ref=sr_1_1?ie=UTF8&amp;amp;qid=1420369719&amp;amp;sr=8-1&amp;amp;keywords=%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《动画的时间掌握（修订版）》&lt;/a&gt;[英]哈罗德•威特克；[英]约翰•哈拉斯；[美]汤姆•赛图&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;注：此文非
-    
-    </summary>
-    
-    
-      <category term="CSS3" scheme="http://aotu.io/tags/CSS3/"/>
-    
-      <category term="Animation" scheme="http://aotu.io/tags/Animation/"/>
-    
-  </entry>
-  
-  <entry>
     <title>以电影之眼看CSS3动画（二）</title>
     <link href="http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_2/"/>
     <id>http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_2/</id>
     <published>2015-11-22T17:27:00.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;以电影之眼看CSS3动画（二）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（二）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（二）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（二）&lt;/h1&gt;&lt;hr&gt;
 &lt;pre&gt;&lt;code&gt;注：此文非干货聚集地，来找干货的对不住了。
@@ -3620,11 +3559,72 @@ Edge Animate Buttons&lt;br&gt;本例中，我们将启用Auto-Keyframe Mode，�
   </entry>
   
   <entry>
+    <title>以电影之眼看CSS3动画（一）</title>
+    <link href="http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/"/>
+    <id>http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/</id>
+    <published>2015-11-22T17:27:00.000Z</published>
+    <updated>2016-03-31T02:31:36.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;注：此文非干货聚集地，来找干货的对不住了。    
+注注：又多又大的图预警！！！
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;http://isux.tencent.com/css3/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS3动画&lt;/a&gt;的变形基础（transform）包含4种变形方式（translate、rotate、scale、skew），同时还可设置2D、3D、变形原点（transform-origin）、透视（perspective）、透视原点（perspective-origin）等等特性；动画时间频率包含9种基本模式（ease、linear、ease-in、ease-out、ease-in-out、step-start、step-end、steps），甚至还可以使用cubic-bezier写出任何你想要的模式；再加上动画持续时间（animation-duration）等设定，各种排列组合，CSS3动画简直拥有了整个世界！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-1_trandition_animation.png&quot; alt=&quot;trandition_animation&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;图片来源《动画的时间掌握》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根据&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%8A%A8%E7%94%BB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;维基&lt;/a&gt;的释义，动画是指由许多帧静止的画面，以一定的速度（如每秒16张）连续播放时，肉眼因视觉残象产生错觉，而误以为画面活动的作品（gif图片正是运用这种原理）。因此最初的动画是通过几张快速翻动的连续画面制作而成，而后经历了电影摄影技术的出现、电脑科技的进步，逐渐转向数字化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-2_bouncing_ball.gif&quot; alt=&quot;bouncing_ball&quot;&gt;&lt;br&gt;&lt;img src=&quot;/img/post/lyxuncle/1-3_boucing_ball_frames.png&quot; alt=&quot;boucing_ball_frames&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将gif拖入PS之后打开时间轴窗口即可看到每一帧的画面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无论是2D还是3D动画，关键帧，正如其名，是动画制作中最关键的部分，同时也是最难把握的部分。曾经有位设计师告诉我，在大学的第一节flash课的课后作业，老师要求大家上交一份小球动画，包含气球、石头球与皮球，并告诉大家，以相同的外观表现出不同的质感是在考验你对关键帧的悟性，而这一个作业就能体现你是否适合学习动画。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-4_quality_of_ball.png&quot; alt=&quot;quality_of_ball&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A 需要很大的力才能使一个炮弹移动。一旦它移动了，同样需要很大的力才能阻挡它前进。B 一只汽球只需要很小的力去移动它，但空气阻力使它很快停止动作。这两个例子都画了动作分格线，可以看出在银幕上表现物体的轻重，取决于对它们动作的时间掌握。（图片来源：《动画的时间掌握》）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在&lt;a href=&quot;http://cghappening.blogspot.com/2011/02/blog-post_23.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《動畫製作流程介紹》&lt;/a&gt;提供的视频中可以看到关键帧在动画制作中所起的地基般的作用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-5_story_board_of_Monster_Inc.gif&quot; alt=&quot;story_board_of_Monster_Inc&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;画面上方的手绘图即为[怪物公司]的关键帧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与关键帧紧密关联的即为时间轴（或摄制表），时间轴是补齐中间帧不可或缺的一项，在传统动画制作中，导演就是通过制定时间轴来掌控整部动画的节奏。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-6_continuity.jpg&quot; alt=&quot;continuity&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;摄制表（图片来源：《动画的时间掌握》）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在CSS3中，@keyframes正是动画的关键帧容器。@keyframes中包含的包括transform在内的元素形态设定构成了关键帧的画面。@keyframes中的百分比即为时间轴的体现。中间帧则由浏览器自动完成（就像flash中的补全动画）。&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.people&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;animation&lt;/span&gt;:people linear &lt;span class=&quot;number&quot;&gt;1.5s&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;keyframes&lt;/span&gt; people&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	0%, 95%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	100%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-7_css3_animation_2.png&quot; alt=&quot;css3_animation&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个简单的动画关键帧示例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在我们知道了CSS3动画的结构与传统动画之间的关系，重点来了， CSS3动画可以做出一部动画电影吗？欲知详情，且听下回分解。&lt;/p&gt;
+&lt;h2 id=&quot;参考资料：&quot;&gt;&lt;a href=&quot;#参考资料：&quot; class=&quot;headerlink&quot; title=&quot;参考资料：&quot;&gt;&lt;/a&gt;参考资料：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.amazon.cn/%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1-%E5%93%88%E7%BD%97%E5%BE%B7%E2%80%A2%E5%A8%81%E7%89%B9%E5%85%8B/dp/B0094N5III/ref=sr_1_1?ie=UTF8&amp;amp;qid=1420369719&amp;amp;sr=8-1&amp;amp;keywords=%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《动画的时间掌握（修订版）》&lt;/a&gt;[英]哈罗德•威特克；[英]约翰•哈拉斯；[美]汤姆•赛图&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;注：此文非
+    
+    </summary>
+    
+    
+      <category term="CSS3" scheme="http://aotu.io/tags/CSS3/"/>
+    
+      <category term="Animation" scheme="http://aotu.io/tags/Animation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SVG I Know</title>
     <link href="http://aotu.io/notes/2015/11/20/svg-I-know/"/>
     <id>http://aotu.io/notes/2015/11/20/svg-I-know/</id>
     <published>2015-11-20T11:30:45.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;第一章：SVG入门篇&quot;&gt;&lt;a href=&quot;#第一章：SVG入门篇&quot; class=&quot;headerlink&quot; title=&quot;第一章：SVG入门篇&quot;&gt;&lt;/a&gt;第一章：SVG入门篇&lt;/h2&gt;&lt;h3 id=&quot;SVG简介&quot;&gt;&lt;a href=&quot;#SVG简介&quot; class=&quot;headerlink&quot; title=&quot;SVG简介&quot;&gt;&lt;/a&gt;SVG简介&lt;/h3&gt;&lt;p&gt;SVG即Scalable Vector Graphics可缩放矢量图形，使用XML格式定义图形。&lt;br&gt;优点：&lt;/p&gt;
 &lt;ul&gt;
@@ -3659,7 +3659,7 @@ Edge Animate Buttons&lt;br&gt;本例中，我们将启用Auto-Keyframe Mode，�
 &lt;p&gt; 解释：points 属性定义多边形每个角的 x 和 y 坐标。为了可读性，建议x与y坐标用逗号分开，每个角之间的坐标用空格分开。&lt;/p&gt;
 &lt;h3 id=&quot;多边形-lt-polygon-gt&quot;&gt;&lt;a href=&quot;#多边形-lt-polygon-gt&quot; class=&quot;headerlink&quot; title=&quot;多边形&amp;lt;polygon&amp;gt;&quot;&gt;&lt;/a&gt;多边形&amp;lt;polygon&amp;gt;&lt;/h3&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;polygon&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;points&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;220,100 300,210 170,250&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;style&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;fill:#cccccc; stroke:#000000;stroke-width:1&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt; 解释：points 属性定义多边形每个角的 x 和 y 坐标。&lt;/p&gt;
-&lt;h3 id=&quot;路径-lt-path-gt&quot;&gt;&lt;a href=&quot;#路径-lt-path-gt&quot; class=&quot;headerlink&quot; title=&quot;路径&amp;lt;path&amp;gt;&quot;&gt;&lt;/a&gt;路径&amp;lt;path&amp;gt;&lt;/h3&gt;&lt;p&gt;直线指令：&lt;br&gt;M = moveto&lt;br&gt;L = lineto&lt;br&gt;H = horizontal lineto&lt;br&gt;V = vertical lineto&lt;br&gt;Z = closepath&lt;br&gt;注释：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;svg&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;d&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;M250 150 L150 350 L350 350 Z&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;svg&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;路径-lt-path-gt&quot;&gt;&lt;a href=&quot;#路径-lt-path-gt&quot; class=&quot;headerlink&quot; title=&quot;路径&amp;lt;path&amp;gt;&quot;&gt;&lt;/a&gt;路径&amp;lt;path&amp;gt;&lt;/h3&gt;&lt;p&gt;直线指令：&lt;br&gt;M = moveto&lt;br&gt;L = lineto&lt;br&gt;H = horizontal lineto&lt;br&gt;V = vertical lineto&lt;br&gt;Z = closepath&lt;br&gt;注释：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。&lt;br&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;svg&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;d&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;M250 150 L150 350 L350 350 Z&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;svg&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;解释：该路径开始于位置 250 150，到达位置 150 350，然后从那里开始到 350 350，最后在 250 150 关闭路径。&lt;br&gt;由于绘制路径的复杂性，建议使用 SVG 编辑器来创建复杂的图形。&lt;/p&gt;
 &lt;h4 id=&quot;svg的贝塞尔曲线&quot;&gt;&lt;a href=&quot;#svg的贝塞尔曲线&quot; class=&quot;headerlink&quot; title=&quot;svg的贝塞尔曲线&quot;&gt;&lt;/a&gt;svg的贝塞尔曲线&lt;/h4&gt;&lt;p&gt;贝塞尔曲线指令：&lt;br&gt;C = curveto&lt;br&gt;S = smooth curveto&lt;br&gt;Q = quadratic Belzier curve&lt;br&gt;T = smooth quadratic Belzier curveto&lt;br&gt;贝塞尔曲线控制小工具&lt;a href=&quot;http://dayu.pw/svgcontrol/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://dayu.pw/svgcontrol/&lt;/a&gt;，操控多次可加深对贝塞尔曲线的理解。&lt;/p&gt;
 &lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/Newcandy/svgImage2.png&quot; alt=&quot;三次贝塞尔曲线控制&quot;&gt;&lt;/p&gt;
@@ -3710,7 +3710,7 @@ Edge Animate Buttons&lt;br&gt;本例中，我们将启用Auto-Keyframe Mode，�
     <link href="http://aotu.io/notes/2015/11/17/Git-Commands/"/>
     <id>http://aotu.io/notes/2015/11/17/Git-Commands/</id>
     <published>2015-11-17T12:44:25.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;用Git比较久了，之前一直在Win用的TortoiseGit，现在命令行用的比较多，所以把一些指令总结一下，以便回顾和查询。&lt;br&gt;理解这些指令，觉得最重要的是理解Git的内部原理，比如Git的分布式版本控制，分清楚工作区、暂存区、版本库，还有就是理解Git跟踪并管理的是修改，而非文件。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -3788,7 +3788,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/11/16/101-percent/"/>
     <id>http://aotu.io/notes/2015/11/16/101-percent/</id>
     <published>2015-11-15T21:39:14.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;em&gt;100%还原设计稿，还原误差不超1像素&lt;/em&gt; 是重构工程师入行的最基本要求，而在实际工作中，这100%是远远不够的。&lt;/p&gt;
 &lt;p&gt; 记得曾经带我的师傅说过一句话：&lt;/p&gt;
@@ -3941,7 +3941,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/11/11/phantomJs-crawler/"/>
     <id>http://aotu.io/notes/2015/11/11/phantomJs-crawler/</id>
     <published>2015-11-11T09:59:33.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;基于phantomJs2-0的网络爬虫&quot;&gt;&lt;a href=&quot;#基于phantomJs2-0的网络爬虫&quot; class=&quot;headerlink&quot; title=&quot;基于phantomJs2.0的网络爬虫&quot;&gt;&lt;/a&gt;基于phantomJs2.0的网络爬虫&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;phantomJs&lt;/strong&gt;是一个基于WebKit的服务器端JavaScript API。它全面支持web而不需浏览器支持，其快速，原生支持各种Web标准： DOM 处理, CSS 选择器, JSON, Canvas, 和 SVG。PhantomJS可以用于页面自动化，网络监测，网页截屏，以及无界面测试等。&lt;/p&gt;
 &lt;h3 id=&quot;用途概述：&quot;&gt;&lt;a href=&quot;#用途概述：&quot; class=&quot;headerlink&quot; title=&quot;用途概述：&quot;&gt;&lt;/a&gt;用途概述：&lt;/h3&gt;&lt;ul&gt;
@@ -4008,7 +4008,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/11/08/css-stack-order/"/>
     <id>http://aotu.io/notes/2015/11/08/css-stack-order/</id>
     <published>2015-11-08T11:44:25.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;嗯~一个比较基础但容易混乱的知识点~&lt;br&gt;首先上一大段文绉绉的w3c规范以表明这是一篇严肃的学术文章（觉得太长可先跳过~）：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -4158,7 +4158,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/11/06/webp-responsive-image/"/>
     <id>http://aotu.io/notes/2015/11/06/webp-responsive-image/</id>
     <published>2015-11-05T18:44:25.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;译文地址：&lt;a href=&quot;http://deanhume.com/Home/BlogPost/service-workers--dynamic-responsive-images-using-webp-images/10132/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://deanhume.com/Home/BlogPost/service-workers--dynamic-responsive-images-using-webp-images/10132/&lt;/a&gt;&lt;/p&gt;
@@ -4212,7 +4212,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/11/02/flash-canvas/"/>
     <id>http://aotu.io/notes/2015/11/02/flash-canvas/</id>
     <published>2015-11-01T18:44:25.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -4237,14 +4237,14 @@ $ git push origin --tags
 &lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/youing/5.png&quot;&gt;&lt;/p&gt;
 &lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/youing/6.png&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;动作播放控制&quot;&gt;&lt;a href=&quot;#动作播放控制&quot; class=&quot;headerlink&quot; title=&quot;动作播放控制&quot;&gt;&lt;/a&gt;动作播放控制&lt;/h2&gt;&lt;p&gt;如果我们希望动画可以连续从头再播放，可以在动画的最后一帧插入一个空白关键帧，打开动作面板，然后写上&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndPlay(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndPlay(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/youing/7.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;即可回到第一帧重新播放，如果希望停止动画，则&lt;/p&gt;
 &lt;figure class=&quot;highlight arduino&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.&lt;span class=&quot;built_in&quot;&gt;stop&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果希望跳到某帧去播放&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndPlay(n)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndPlay(n)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果希望跳到某帧并停止&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndStop(n)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.gotoAndStop(n)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;发布&quot;&gt;&lt;a href=&quot;#发布&quot; class=&quot;headerlink&quot; title=&quot;发布&quot;&gt;&lt;/a&gt;发布&lt;/h2&gt;&lt;p&gt;文件 &amp;gt; 发布设置&lt;/p&gt;
 &lt;h3 id=&quot;文件输出&quot;&gt;&lt;a href=&quot;#文件输出&quot; class=&quot;headerlink&quot; title=&quot;文件输出&quot;&gt;&lt;/a&gt;文件输出&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;循环时间轴(&lt;em&gt;表示是否循环整个动画&lt;/em&gt;)&lt;/li&gt;
@@ -4285,7 +4285,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/10/26/zepto-cors/"/>
     <id>http://aotu.io/notes/2015/10/26/zepto-cors/</id>
     <published>2015-10-26T12:24:22.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;众所周知，现在移动 Web 开发中，&lt;code&gt;Zepto.js&lt;/code&gt; 是使用频率比较高的库之一。由于它的体积小，加载速度快，有着和 &lt;code&gt;jquery&lt;/code&gt; 类似的 API，而备受开发者喜爱。可随着时间的推移，我们遇到了不少 &lt;code&gt;Zepto&lt;/code&gt; 的坑，而且文件体积的大小跟代码的执行效率并没有什么关系，最后我们发现 &lt;code&gt;Zepto&lt;/code&gt; 并没有太大的卵用。&lt;/p&gt;
 &lt;p&gt;jsperf 上有个 &lt;code&gt;zepto&lt;/code&gt; 和 &lt;code&gt;jquery&lt;/code&gt; DOM 操作的对比测试，有兴趣可以看一下：&lt;a href=&quot;http://jsperf.com/zepto-vs-jquery-2013/25&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zepto vs jquery - selectors&lt;/a&gt;&lt;/p&gt;
@@ -4384,7 +4384,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/10/21/z-index-and-translate3d/"/>
     <id>http://aotu.io/notes/2015/10/21/z-index-and-translate3d/</id>
     <published>2015-10-21T00:24:35.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;z-index-和-translate3d&quot;&gt;&lt;a href=&quot;#z-index-和-translate3d&quot; class=&quot;headerlink&quot; title=&quot;z-index 和 translate3d&quot;&gt;&lt;/a&gt;z-index 和 translate3d&lt;/h2&gt;&lt;p&gt;在一次需求中，需要做出三张卡牌走马灯式滚动的效果，由于在前面的一张卡牌需要挡住后面的卡牌，自然而然地就用 z-index 使前面的卡牌显示在最上面，配以 transform 动画让“走马灯”滚起来，在开发过程中，在 PC 侧 Chrome 中表现良好，在本人手机浏览器中也表现良好，最后测试时却发现，在微信客户端或 QQ 客户端中打开页面出现问题，“走马灯”滚动时，卡牌先通过 transform 就位后，才把 z-index 设置较大的卡牌置于上面，感觉上非常的不流畅。&lt;/p&gt;
 &lt;p class=&quot;user_img&quot;&gt;&lt;img src=&quot;/img/post/Manjiz/2015/151116_card.png&quot;&gt;&lt;/p&gt;
@@ -4437,7 +4437,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/10/16/vim-list/"/>
     <id>http://aotu.io/notes/2015/10/16/vim-list/</id>
     <published>2015-10-16T10:24:35.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;选择你所喜欢的，爱你所选择的–列夫·托尔斯泰&lt;/p&gt;
@@ -4545,7 +4545,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/10/13/start-postcss/"/>
     <id>http://aotu.io/notes/2015/10/13/start-postcss/</id>
     <published>2015-10-13T09:34:25.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;初识PostCSS&quot;&gt;&lt;a href=&quot;#初识PostCSS&quot; class=&quot;headerlink&quot; title=&quot;初识PostCSS&quot;&gt;&lt;/a&gt;初识PostCSS&lt;/h2&gt;&lt;p&gt;如果你第一次听说&lt;code&gt;PostCSS&lt;/code&gt;这个东西，那么请看下面摘自官方&lt;code&gt;Github&lt;/code&gt;的介绍：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -4653,7 +4653,7 @@ $ git push origin --tags
     <link href="http://aotu.io/notes/2015/10/08/aotu-blog-v1/"/>
     <id>http://aotu.io/notes/2015/10/08/aotu-blog-v1/</id>
     <published>2015-10-08T00:24:35.000Z</published>
-    <updated>2016-03-30T10:16:14.000Z</updated>
+    <updated>2016-03-31T02:31:36.000Z</updated>
     
     <content type="html">&lt;p&gt;筹备了两周多，凹凸实验室博客 V1.0.0 正式发布啦，欢迎同学们体验并提供建议。&lt;br&gt;它是一个托管于Github的静态博客，基于HEXO搭建，主题的定做参考自&lt;a href=&quot;http://html5up.net/future-imperfect&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;future-imperfect&lt;/a&gt;的扁平简约，暂且命名为&lt;code&gt;o2&lt;/code&gt;。主题单独开源于 &lt;a href=&quot;o2team/hexo-theme-o2&quot;&gt;hexo-theme-o2&lt;/a&gt;，有兴趣的朋友可以自由下载使用。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
