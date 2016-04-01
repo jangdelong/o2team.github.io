@@ -1,5 +1,5 @@
 title: 如何优雅地在Storyboard中设置圆角
-subtitle: 用来一句话描述文章
+subtitle: 在Storyboard中设置圆角的正确打开方式~
 cover: MarkLin/cornerRadius/CornerRadius.png
 tags:
   - iOS
