@@ -1,4 +1,326 @@
-<!DOCTYPE html><html lang="zh-cn" class="theme-o2 page-post-detail"><head prefix="og: http://ogp.me/ns#"><meta charset="utf-8"><title>使用Adobe FLASH CC制作Canvas动画 | Aotu.io「凹凸实验室」</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="Canvas,Flash,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"><link rel="canonical" href="http://aotu.io/notes/2015/11/02/flash-canvas/index.html"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="/assets/img/favicon-230x230.png" sizes="230x230"><link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#2f83cd"><meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png"><link rel="stylesheet" href="/assets/css/dist-c41d9f085d.o2.css"><link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css"><link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」"><meta name="description" content="flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。"><meta property="og:type" content="article"><meta property="og:title" content="使用Adobe FLASH CC制作Canvas动画"><meta property="og:url" content="http://aotu.io/notes/2015/11/02/flash-canvas/index.html"><meta property="og:site_name" content="Aotu.io「凹凸实验室」"><meta property="og:description" content="flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。"><meta property="og:image" content="http://aotu.io/img/post/youing/1.png"><meta property="og:image" content="http://aotu.io/img/post/youing/2.png"><meta property="og:image" content="http://aotu.io/img/post/youing/3.png"><meta property="og:image" content="http://aotu.io/img/post/youing/4.png"><meta property="og:image" content="http://aotu.io/img/post/youing/5.png"><meta property="og:image" content="http://aotu.io/img/post/youing/6.png"><meta property="og:image" content="http://aotu.io/img/post/youing/7.png"><meta property="og:image" content="http://aotu.io/img/post/youing/8.png"><meta property="og:updated_time" content="2016-03-31T02:31:36.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="使用Adobe FLASH CC制作Canvas动画"><meta name="twitter:description" content="flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。"><meta name="twitter:image" content="http://aotu.io/img/post/youing/1.png"><meta name="twitter:site" content="o2circle"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>var App={root:"/"}</script><body itemscope itemtype="http://schema.org/WebPage"><div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader"><div class="container"><div class="navbar-header"><a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand"><img src="/assets/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"></a><div onclick="" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div></div><div class="navbar-collapse collapse" id="navbar-main"><ul class="nav navbar-nav header-links header-links-main"><li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></ul><ul class="nav navbar-nav navbar-right header-links header-links-extra"><li class="search-wrap"><a class="fa fa-search search-icon" href="#search" title="搜索"></a><form id="search" method="get" class="search-form"><input type="text" name="query" class="search-form-ipt" placeholder="搜索"></form><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a><ul id="theme-list" class="dropdown-menu" aria-labelledby="themes"><li data-v="light"><a href="javascript:;">曙光女神</a><li data-v="dark"><a href="javascript:;">暗影猎手</a></ul></ul></div></div></div><div class="container post-wrap"><article class="post" itemscope itemtype="http://schema.org/Article"><header class="post-header"><div class="post-title"><h2><a href="/notes/2015/11/02/flash-canvas/" itemprop="name">使用Adobe FLASH CC制作Canvas动画</a></h2><ul class="post-stats"><li><a href="/tags/Flash/" class="meta-tag">Flash</a><li><a href="/tags/Canvas/" class="meta-tag">Canvas</a><li title="字数"><span class="icon fa-font">4,871</span><li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span><li><a href="/notes/2015/11/02/flash-canvas/#comments" itemprop="discussionUrl" class="lnk-comments"><span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNS8xMS8wMi9mbGFzaC1jYW52YXMv" data-count-type="comments" itemprop="commentsCount">0</span></a></ul><p>flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。</div><div class="post-meta"><time class="published" datetime="2015-11-01T18:44:25.000Z" itempro="datePublished">星期日, 11月1日 2015</time> <a target="_blank" href="https://github.com/youing" class="author"><span class="name">圆姑娘她爹</span><img src="https://avatars.githubusercontent.com/youing?v=3&s=80" alt="youing"></a></div></header><a href="/notes/2015/11/02/flash-canvas/" class="image featured post-cover"><img src="/assets/img/post/youing/flash-canvas.png" alt="使用Adobe FLASH CC制作Canvas动画"></a><div class="post-content" itemprop="articleBody" data-swiftype-index="true"><p>flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。</p><a id="more"></a><h2 id="新建HTML5-Canvas项目" class="post-heading"><a href="#新建HTML5-Canvas项目" class="headerlink" title="新建HTML5 Canvas项目"></a>新建HTML5 Canvas项目<a class="post-anchor" href="#新建HTML5-Canvas项目" aria-hidden="true"></a></h2><p class="user_img"><img src="/assets/img/post/youing/1.png"><h3 id="舞台设置" class="post-heading"><a href="#舞台设置" class="headerlink" title="舞台设置"></a>舞台设置<a class="post-anchor" href="#舞台设置" aria-hidden="true"></a></h3><p>舞台大小修改为：600x600 (<em>这里可以根据设计稿调整所需要的舞台大小</em>)<h3 id="帧频" class="post-heading"><a href="#帧频" class="headerlink" title="帧频"></a>帧频<a class="post-anchor" href="#帧频" aria-hidden="true"></a></h3><p>是指每秒钟放映或显示的帧或图像的数量，这个数值设置越大，动画越快，但同时也是性能消耗大户。这里我们设置为36<p class="user_img"><img src="/assets/img/post/youing/2.png"><h2 id="导入资源" class="post-heading"><a href="#导入资源" class="headerlink" title="导入资源"></a>导入资源<a class="post-anchor" href="#导入资源" aria-hidden="true"></a></h2><p>文件 &gt; 导入 &gt; 导入到库<h2 id="布局" class="post-heading"><a href="#布局" class="headerlink" title="布局"></a>布局<a class="post-anchor" href="#布局" aria-hidden="true"></a></h2><p>快捷键Ctrl + L或者窗口菜单下 &gt; 库<p>从资源库中把资源拖到舞台进去,通过移动拖拽的形式进行布局<p class="user_img"><img src="/assets/img/post/youing/3.png"><h2 id="图形与影片剪辑" class="post-heading"><a href="#图形与影片剪辑" class="headerlink" title="图形与影片剪辑"></a>图形与影片剪辑<a class="post-anchor" href="#图形与影片剪辑" aria-hidden="true"></a></h2><p>我们可以将单独的动画，放到一个独立的影片剪辑里，这样可以更好的控制动画。几个独立的剪片剪辑，可以组成一个完整的动画。<p>当我们把图片从资源库拖到舞台时，它这个时候，只是普通的位图，并不能做补帧动画，所以我们必须把它转换成元件。<ul><li><strong>图形</strong>由矢量图或者是位图组成。<li><strong>影片剪辑</strong>包含在动画影片中的影片片段，有自己的时间轴和属性。具有交互性，是用途最广、功能最多的部分。</ul><p>下面制作以飘动的钱，做个例子说明<p>选择位图，右键 &gt; 转换为元件，这个时候，弹出一个对话窗口，我们首先选择“影片剪辑”，保存。双击进入刚才创始的影片剪辑，这个时候，由于刚才我们只是把位图转成了影片剪辑，但实际上，它里面，仍然是一个位图，所以并不能做动画操作。所以我们需要在影片剪辑里，把图片转换了“图形”。<p class="user_img"><img src="/assets/img/post/youing/4.png"><h2 id="时间轴" class="post-heading"><a href="#时间轴" class="headerlink" title="时间轴"></a>时间轴<a class="post-anchor" href="#时间轴" aria-hidden="true"></a></h2><p>上面已经把图片转成图形元件，所以我们现在需要时间轴某个地方中插入关键帧。这里我们在30,60帧处插入关键帧。然后在30帧处，移动元件的位置，然后在每个关键帧的中间右键，选择“创建传统补间”。速度可以通过删除或者增加两个关键帧的补间动画时间长度来控制。<p class="user_img"><img src="/assets/img/post/youing/5.png"><p class="user_img"><img src="/assets/img/post/youing/6.png"><h2 id="动作播放控制" class="post-heading"><a href="#动作播放控制" class="headerlink" title="动作播放控制"></a>动作播放控制<a class="post-anchor" href="#动作播放控制" aria-hidden="true"></a></h2><p>如果我们希望动画可以连续从头再播放，可以在动画的最后一帧插入一个空白关键帧，打开动作面板，然后写上<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">this</span>.gotoAndPlay(<span class="number">0</span>)</span><br></pre></table></figure><p class="user_img"><img src="/assets/img/post/youing/7.png"><p>即可回到第一帧重新播放，如果希望停止动画，则<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">this</span>.<span class="built_in">stop</span>();</span><br></pre></table></figure><p>如果希望跳到某帧去播放<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">this</span>.gotoAndPlay(n)</span><br></pre></table></figure><p>如果希望跳到某帧并停止<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">this</span>.gotoAndStop(n)</span><br></pre></table></figure><h2 id="发布" class="post-heading"><a href="#发布" class="headerlink" title="发布"></a>发布<a class="post-anchor" href="#发布" aria-hidden="true"></a></h2><p>文件 &gt; 发布设置<h3 id="文件输出" class="post-heading"><a href="#文件输出" class="headerlink" title="文件输出"></a>文件输出<a class="post-anchor" href="#文件输出" aria-hidden="true"></a></h3><ul><li>循环时间轴(<em>表示是否循环整个动画</em>)<li>覆盖HTML(<em>第一次发布时可以选上，如果对html有修改，记得把这个选项去掉,否则会对文件进行覆盖操作</em>)</ul><h3 id="资源导出选项" class="post-heading"><a href="#资源导出选项" class="headerlink" title="资源导出选项"></a>资源导出选项<a class="post-anchor" href="#资源导出选项" aria-hidden="true"></a></h3><ul><li>图像(<em>是否导出雪碧图</em>)<li>javascript命名空间(<em>基本上不需要修改</em>)，这几个属于全局变量，可以在发布后的js文件中再修改。</ul><p class="user_img"><img src="/assets/img/post/youing/8.png"><h2 id="生成html" class="post-heading"><a href="#生成html" class="headerlink" title="生成html"></a>生成html<a class="post-anchor" href="#生成html" aria-hidden="true"></a></h2><p>最终会生成一个html文件和一个js文件<h3 id="生成的html文件" class="post-heading"><a href="#生成的html文件" class="headerlink" title="生成的html文件"></a>生成的html文件<a class="post-anchor" href="#生成的html文件" aria-hidden="true"></a></h3><ul><li>框架自带的preloadjs,可以轻松管理资源预加载，它提供了相关api可以进行loading等操作。</ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>people<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/easeljs-0.8.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/tweenjs-0.6.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/movieclip-0.8.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/preloadjs-0.6.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"people.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">var</span> canvas, stage, exportRoot;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</span><br><span class="line">	images = images||&#123;&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> loader = <span class="keyword">new</span> createjs.LoadQueue(<span class="literal">false</span>);</span><br><span class="line">	loader.addEventListener(<span class="string">"fileload"</span>, handleFileLoad);</span><br><span class="line">	loader.addEventListener(<span class="string">"complete"</span>, handleComplete);</span><br><span class="line">	loader.loadManifest(lib.properties.manifest);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleFileLoad</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (evt.item.type == <span class="string">"image"</span>) &#123; images[evt.item.id] = evt.result; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleComplete</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">	exportRoot = <span class="keyword">new</span> lib.people();</span><br><span class="line"></span><br><span class="line">	stage = <span class="keyword">new</span> createjs.Stage(canvas);</span><br><span class="line">	stage.addChild(exportRoot);</span><br><span class="line">	stage.update();</span><br><span class="line"></span><br><span class="line">	createjs.Ticker.setFPS(lib.properties.fps);</span><br><span class="line">	createjs.Ticker.addEventListener(<span class="string">"tick"</span>, stage);</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"init();"</span> <span class="attr">style</span>=<span class="string">"background-color:#D4D4D4"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"620"</span> <span class="attr">style</span>=<span class="string">"background-color:#FFFFFF"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></table></figure><h3 id="生成的js文件" class="post-heading"><a href="#生成的js文件" class="headerlink" title="生成的js文件"></a>生成的js文件<a class="post-anchor" href="#生成的js文件" aria-hidden="true"></a></h3><ul><li>生成的动画配置及脚本都在这个js文件里面，如果需要，可以手动修改相关数据。</ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">lib, img, cjs, ss</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p; <span class="comment">// shortcut to reference prototypes</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// library properties:</span></span><br><span class="line">lib.properties = &#123;</span><br><span class="line">	width: <span class="number">600</span>,</span><br><span class="line">	height: <span class="number">620</span>,</span><br><span class="line">	fps: <span class="number">36</span>,</span><br><span class="line">	color: <span class="string">"#FFFFFF"</span>,</span><br><span class="line">	manifest: [</span><br><span class="line">		&#123;src:<span class="string">"images/bigband.png"</span>, id:<span class="string">"bigband"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/Bitmap1.png"</span>, id:<span class="string">"Bitmap1"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/body.png"</span>, id:<span class="string">"body"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/eye1.png"</span>, id:<span class="string">"eye1"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/eye2.png"</span>, id:<span class="string">"eye2"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/face1.png"</span>, id:<span class="string">"face1"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/face2.png"</span>, id:<span class="string">"face2"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/face3.png"</span>, id:<span class="string">"face3"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hair.png"</span>, id:<span class="string">"hair"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hand2.png"</span>, id:<span class="string">"hand2"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hand3.png"</span>, id:<span class="string">"hand3"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hand4.png"</span>, id:<span class="string">"hand4"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index30.png"</span>, id:<span class="string">"index30"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index302.png"</span>, id:<span class="string">"index302"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index40.png"</span>, id:<span class="string">"index40"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index5.png"</span>, id:<span class="string">"index5"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/shadow.png"</span>, id:<span class="string">"shadow"</span>&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// symbols:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.bigband = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.bigband);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">295</span>,<span class="number">538</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.Bitmap1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.Bitmap1);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">543</span>,<span class="number">577</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.body = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.body);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">521</span>,<span class="number">242</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.eye1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.eye1);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">73</span>,<span class="number">58</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.eye2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.eye2);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">72</span>,<span class="number">35</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.face1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.face1);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">297</span>,<span class="number">368</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">// stage content:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.people = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize();</span><br><span class="line"></span><br><span class="line">	<span class="comment">// people</span></span><br><span class="line">	<span class="keyword">this</span>.instance = <span class="keyword">new</span> lib.peoplemc();</span><br><span class="line">	<span class="keyword">this</span>.instance.setTransform(<span class="number">295</span>,<span class="number">312.5</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// qpmask (mask)</span></span><br><span class="line">	<span class="keyword">var</span> mask = <span class="keyword">new</span> cjs.Shape();</span><br><span class="line">	mask._off = <span class="literal">true</span>;</span><br><span class="line">	mask.graphics.p(<span class="string">"EgpUgqAMBU1AAAMAAABaIMhU1AAAg"</span>);</span><br><span class="line">	mask.setTransform(<span class="number">278.5</span>,<span class="number">308.1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// qp</span></span><br><span class="line">	<span class="keyword">this</span>.instance_1 = <span class="keyword">new</span> lib.qpmc();</span><br><span class="line">	<span class="keyword">this</span>.instance_1.setTransform(<span class="number">291.5</span>,<span class="number">263.5</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">this</span>.instance_1.mask = mask;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">this</span>.addChild(<span class="keyword">this</span>.instance_1,<span class="keyword">this</span>.instance);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Container();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">263</span>,<span class="number">31.5</span>,<span class="number">617</span>,<span class="number">905.5</span>);</span><br><span class="line"></span><br><span class="line">&#125;)(lib = lib||&#123;&#125;, images = images||&#123;&#125;, createjs = createjs||&#123;&#125;, ss = ss||&#123;&#125;);</span><br><span class="line"><span class="keyword">var</span> lib, images, createjs, ss;</span><br></pre></table></figure><h2 id="附上最终效果" class="post-heading"><a href="#附上最终效果" class="headerlink" title="附上最终效果"></a>附上最终效果<a class="post-anchor" href="#附上最终效果" aria-hidden="true"></a></h2><p><a href="http://b.gengshu.net/doc/flash/people.html" target="_blank" rel="external">点我看效果</a></div><div class="post-revision"><i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time></div><div class="actions pagination pagination-post"><div class="pagination-post-prev"><a href="/notes/2015/11/06/webp-responsive-image/" class="button big" title="Service Workers：采用WebP动态响应图片"><i class="fa fa-chevron-left"></i> Service Workers：采用WebP动态响应图片</a></div><div class="pagination-post-next"><a href="/notes/2015/10/26/zepto-cors/" class="button big" title="前方有坑，请绕道——Zepto 中使用 CORS">前方有坑，请绕道——Zepto 中使用 CORS <i class="fa fa-chevron-right"></i></a></div></div><div class="post-comments" id="comments"><div class="ds-thread" data-thread-key="bm90ZXMvMjAxNS8xMS8wMi9mbGFzaC1jYW52YXMv" data-title="使用Adobe FLASH CC制作Canvas动画" data-url="http://aotu.io/notes/2015/11/02/flash-canvas/index.html"></div><script>var duoshuoQuery={short_name:"aotu"};!function(){var t=document.createElement("script");t.id="duoshuo-script",t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//static.duoshuo.com/embed.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script></div></article></div><div class="sec sec-follow-lite"><div class="container"><div class="sec-heading"><p class="follow-pic"><img src="/assets/img/qrcode.png" alt="关注我们"><p class="follow-desc">海海人生，无折腾不为乐。<p class="sec-heading-sub follow-acount"><img class="follow-icon" src="/assets/img/logo-circle-120.png" alt="AOTULabs"> 微信号：AOTULabs</div></div></div><div class="sec sec-footer"><div class="container"><footer id="footer" class="sec-heading footer"><ul class="icons"><li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a><li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a><li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></ul><div class="footer-sec copyright">&copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</div><div class="footer-sec words">" Better late than never. "</div><div class="footer-sec site-stats" style="display:none"><span id="busuanzi_container_site_pv" class="site-pv">总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次 </span><span id="busuanzi_container_site_uv" class="site-uv">总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人</span></div></footer></div></div><section id="smSearch" class="slide-search"><section><form class="search" method="get"><input type="text" name="query" placeholder="搜索"></form></section><section><h3>搜索结果</h3><ul class="links" id="searchResults">Loading...</ul></section></section><script id="tplSearch" type="text/hogan-tpl">{{#items}}
+<!DOCTYPE html>
+<html lang="zh-cn" class="theme-o2 page-post-detail">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8"/>
+	<title>使用Adobe FLASH CC制作Canvas动画 | Aotu.io「凹凸实验室」</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <!-- keywords -->
+<meta name="keywords" content="Canvas,Flash,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"/>
+<!-- Canonical links -->
+<link rel="canonical" href="http://aotu.io/notes/2015/11/02/flash-canvas/index.html">
+<!-- Alternative links -->
+
+<!-- Icon -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/img/favicon-230x230.png" sizes="230x230">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2f83cd">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<!-- CSS -->
+<!-- build:css css/dist.o2.css -->
+<link rel="stylesheet" href="/css/o2.css">
+<!-- endbuild -->
+
+<link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」">
+<!-- Open Graph -->
+<meta name="description" content="flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Adobe FLASH CC制作Canvas动画">
+<meta property="og:url" content="http://aotu.io/notes/2015/11/02/flash-canvas/index.html">
+<meta property="og:site_name" content="Aotu.io「凹凸实验室」">
+<meta property="og:description" content="flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。">
+<meta property="og:image" content="http://aotu.io/img/post/youing/1.png">
+<meta property="og:image" content="http://aotu.io/img/post/youing/2.png">
+<meta property="og:image" content="http://aotu.io/img/post/youing/3.png">
+<meta property="og:image" content="http://aotu.io/img/post/youing/4.png">
+<meta property="og:image" content="http://aotu.io/img/post/youing/5.png">
+<meta property="og:image" content="http://aotu.io/img/post/youing/6.png">
+<meta property="og:image" content="http://aotu.io/img/post/youing/7.png">
+<meta property="og:image" content="http://aotu.io/img/post/youing/8.png">
+<meta property="og:updated_time" content="2016-03-31T02:31:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Adobe FLASH CC制作Canvas动画">
+<meta name="twitter:description" content="flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。">
+<meta name="twitter:image" content="http://aotu.io/img/post/youing/1.png">
+<meta name="twitter:site" content="o2circle">
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script>
+var App = {
+    root:'/'    
+};
+</script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand">
+                <img src="/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"/>
+            </a>
+            <div onclick="javascript:void(0)" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav header-links header-links-main">
+                <li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a></li><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a></li><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a></li><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a></li><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right header-links header-links-extra">
+                <li class="search-wrap">
+                    <a class="fa fa-search search-icon" href="#search" title="搜索"></a>
+                    <form id="search" method="get" class="search-form">
+                        <input type="text" name="query" class="search-form-ipt" placeholder="搜索" />
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a>
+                    <ul id="theme-list" class="dropdown-menu" aria-labelledby="themes">
+                        <li data-v="light"><a href="javascript:;">曙光女神</a></li>
+                        <li data-v="dark"><a href="javascript:;">暗影猎手</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+	
+<div class="container post-wrap">
+    
+    <!-- Post -->
+<article class="post" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <div class="post-title">
+            <h2><a href="/notes/2015/11/02/flash-canvas/" itemprop="name">使用Adobe FLASH CC制作Canvas动画</a></h2>
+            <ul class="post-stats">
+                
+                
+                <li><a href='/tags/Flash/' class='meta-tag'>Flash</a></li>
+                
+                <li><a href='/tags/Canvas/' class='meta-tag'>Canvas</a></li>
+                 
+                
+                <li title="字数"><span class="icon fa-font">4,871</span></li>
+                
+                <li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span></li>
+                
+                
+                <li>
+                    <a href="/notes/2015/11/02/flash-canvas/#comments" itemprop="discussionUrl" class="lnk-comments">
+                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNS8xMS8wMi9mbGFzaC1jYW52YXMv" data-count-type="comments" itemprop="commentsCount">0</span>
+                    </a>
+                </li>
+                 
+            </ul>
+            
+            <p>flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。</p>
+            
+        </div>
+        <div class="post-meta">
+            <time class="published" datetime="2015-11-01T18:44:25.000Z" itempro="datePublished">星期日, 11月1日 2015</time>
+            <a target="_blank" href="https://github.com/youing" class="author"><span class="name">圆姑娘她爹</span><img src="https://avatars.githubusercontent.com/youing?v=3&s=80" alt="youing" /></a>
+        </div>
+    </header>
+    <a href="/notes/2015/11/02/flash-canvas/" class="image featured post-cover"><img src="/img/post/youing/flash-canvas.png" alt="使用Adobe FLASH CC制作Canvas动画" /></a>
+    <div class="post-content" itemprop="articleBody" data-swiftype-index="true">
+        <p>flash可以导出canvas动画，大大缩短制作动画所需要的时间。它是一个可视化IDE，可以让我们写少很多代码。做出来的动画，可以更加精确。同时，可以通用使用帧脚本中的 Javascript，为资源添加交互性。</p>
+<a id="more"></a>
+<h2 id="新建HTML5-Canvas项目" class="post-heading"><a href="#新建HTML5-Canvas项目" class="headerlink" title="新建HTML5 Canvas项目"></a>新建HTML5 Canvas项目<a class="post-anchor" href="#新建HTML5-Canvas项目" aria-hidden="true"></a></h2><p class="user_img"><img src="/img/post/youing/1.png"></p>
+<h3 id="舞台设置" class="post-heading"><a href="#舞台设置" class="headerlink" title="舞台设置"></a>舞台设置<a class="post-anchor" href="#舞台设置" aria-hidden="true"></a></h3><p>舞台大小修改为：600x600 (<em>这里可以根据设计稿调整所需要的舞台大小</em>)</p>
+<h3 id="帧频" class="post-heading"><a href="#帧频" class="headerlink" title="帧频"></a>帧频<a class="post-anchor" href="#帧频" aria-hidden="true"></a></h3><p>是指每秒钟放映或显示的帧或图像的数量，这个数值设置越大，动画越快，但同时也是性能消耗大户。这里我们设置为36</p>
+<p class="user_img"><img src="/img/post/youing/2.png"></p>
+<h2 id="导入资源" class="post-heading"><a href="#导入资源" class="headerlink" title="导入资源"></a>导入资源<a class="post-anchor" href="#导入资源" aria-hidden="true"></a></h2><p>文件 &gt; 导入 &gt; 导入到库</p>
+<h2 id="布局" class="post-heading"><a href="#布局" class="headerlink" title="布局"></a>布局<a class="post-anchor" href="#布局" aria-hidden="true"></a></h2><p>快捷键Ctrl + L或者窗口菜单下 &gt; 库</p>
+<p>从资源库中把资源拖到舞台进去,通过移动拖拽的形式进行布局</p>
+<p class="user_img"><img src="/img/post/youing/3.png"></p>
+<h2 id="图形与影片剪辑" class="post-heading"><a href="#图形与影片剪辑" class="headerlink" title="图形与影片剪辑"></a>图形与影片剪辑<a class="post-anchor" href="#图形与影片剪辑" aria-hidden="true"></a></h2><p>我们可以将单独的动画，放到一个独立的影片剪辑里，这样可以更好的控制动画。几个独立的剪片剪辑，可以组成一个完整的动画。</p>
+<p>当我们把图片从资源库拖到舞台时，它这个时候，只是普通的位图，并不能做补帧动画，所以我们必须把它转换成元件。</p>
+<ul>
+<li><strong>图形</strong>由矢量图或者是位图组成。</li>
+<li><strong>影片剪辑</strong>包含在动画影片中的影片片段，有自己的时间轴和属性。具有交互性，是用途最广、功能最多的部分。</li>
+</ul>
+<p>下面制作以飘动的钱，做个例子说明</p>
+<p>选择位图，右键 &gt; 转换为元件，这个时候，弹出一个对话窗口，我们首先选择“影片剪辑”，保存。双击进入刚才创始的影片剪辑，这个时候，由于刚才我们只是把位图转成了影片剪辑，但实际上，它里面，仍然是一个位图，所以并不能做动画操作。所以我们需要在影片剪辑里，把图片转换了“图形”。</p>
+<p class="user_img"><img src="/img/post/youing/4.png"></p>
+<h2 id="时间轴" class="post-heading"><a href="#时间轴" class="headerlink" title="时间轴"></a>时间轴<a class="post-anchor" href="#时间轴" aria-hidden="true"></a></h2><p>上面已经把图片转成图形元件，所以我们现在需要时间轴某个地方中插入关键帧。这里我们在30,60帧处插入关键帧。然后在30帧处，移动元件的位置，然后在每个关键帧的中间右键，选择“创建传统补间”。速度可以通过删除或者增加两个关键帧的补间动画时间长度来控制。</p>
+<p class="user_img"><img src="/img/post/youing/5.png"></p>
+<p class="user_img"><img src="/img/post/youing/6.png"></p>
+<h2 id="动作播放控制" class="post-heading"><a href="#动作播放控制" class="headerlink" title="动作播放控制"></a>动作播放控制<a class="post-anchor" href="#动作播放控制" aria-hidden="true"></a></h2><p>如果我们希望动画可以连续从头再播放，可以在动画的最后一帧插入一个空白关键帧，打开动作面板，然后写上</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.gotoAndPlay(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p class="user_img"><img src="/img/post/youing/7.png"></p>
+<p>即可回到第一帧重新播放，如果希望停止动画，则</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.<span class="built_in">stop</span>();</span><br></pre></td></tr></table></figure>
+<p>如果希望跳到某帧去播放</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.gotoAndPlay(n)</span><br></pre></td></tr></table></figure>
+<p>如果希望跳到某帧并停止</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.gotoAndStop(n)</span><br></pre></td></tr></table></figure>
+<h2 id="发布" class="post-heading"><a href="#发布" class="headerlink" title="发布"></a>发布<a class="post-anchor" href="#发布" aria-hidden="true"></a></h2><p>文件 &gt; 发布设置</p>
+<h3 id="文件输出" class="post-heading"><a href="#文件输出" class="headerlink" title="文件输出"></a>文件输出<a class="post-anchor" href="#文件输出" aria-hidden="true"></a></h3><ul>
+<li>循环时间轴(<em>表示是否循环整个动画</em>)</li>
+<li>覆盖HTML(<em>第一次发布时可以选上，如果对html有修改，记得把这个选项去掉,否则会对文件进行覆盖操作</em>)</li>
+</ul>
+<h3 id="资源导出选项" class="post-heading"><a href="#资源导出选项" class="headerlink" title="资源导出选项"></a>资源导出选项<a class="post-anchor" href="#资源导出选项" aria-hidden="true"></a></h3><ul>
+<li>图像(<em>是否导出雪碧图</em>)</li>
+<li>javascript命名空间(<em>基本上不需要修改</em>)，这几个属于全局变量，可以在发布后的js文件中再修改。</li>
+</ul>
+<p class="user_img"><img src="/img/post/youing/8.png"></p>
+<h2 id="生成html" class="post-heading"><a href="#生成html" class="headerlink" title="生成html"></a>生成html<a class="post-anchor" href="#生成html" aria-hidden="true"></a></h2><p>最终会生成一个html文件和一个js文件</p>
+<h3 id="生成的html文件" class="post-heading"><a href="#生成的html文件" class="headerlink" title="生成的html文件"></a>生成的html文件<a class="post-anchor" href="#生成的html文件" aria-hidden="true"></a></h3><ul>
+<li>框架自带的preloadjs,可以轻松管理资源预加载，它提供了相关api可以进行loading等操作。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>people<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/easeljs-0.8.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/tweenjs-0.6.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/movieclip-0.8.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.createjs.com/preloadjs-0.6.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"people.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">var</span> canvas, stage, exportRoot;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</span><br><span class="line">	images = images||&#123;&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> loader = <span class="keyword">new</span> createjs.LoadQueue(<span class="literal">false</span>);</span><br><span class="line">	loader.addEventListener(<span class="string">"fileload"</span>, handleFileLoad);</span><br><span class="line">	loader.addEventListener(<span class="string">"complete"</span>, handleComplete);</span><br><span class="line">	loader.loadManifest(lib.properties.manifest);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleFileLoad</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (evt.item.type == <span class="string">"image"</span>) &#123; images[evt.item.id] = evt.result; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleComplete</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">	exportRoot = <span class="keyword">new</span> lib.people();</span><br><span class="line"></span><br><span class="line">	stage = <span class="keyword">new</span> createjs.Stage(canvas);</span><br><span class="line">	stage.addChild(exportRoot);</span><br><span class="line">	stage.update();</span><br><span class="line"></span><br><span class="line">	createjs.Ticker.setFPS(lib.properties.fps);</span><br><span class="line">	createjs.Ticker.addEventListener(<span class="string">"tick"</span>, stage);</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"init();"</span> <span class="attr">style</span>=<span class="string">"background-color:#D4D4D4"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"620"</span> <span class="attr">style</span>=<span class="string">"background-color:#FFFFFF"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="生成的js文件" class="post-heading"><a href="#生成的js文件" class="headerlink" title="生成的js文件"></a>生成的js文件<a class="post-anchor" href="#生成的js文件" aria-hidden="true"></a></h3><ul>
+<li>生成的动画配置及脚本都在这个js文件里面，如果需要，可以手动修改相关数据。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">lib, img, cjs, ss</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p; <span class="comment">// shortcut to reference prototypes</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// library properties:</span></span><br><span class="line">lib.properties = &#123;</span><br><span class="line">	width: <span class="number">600</span>,</span><br><span class="line">	height: <span class="number">620</span>,</span><br><span class="line">	fps: <span class="number">36</span>,</span><br><span class="line">	color: <span class="string">"#FFFFFF"</span>,</span><br><span class="line">	manifest: [</span><br><span class="line">		&#123;src:<span class="string">"images/bigband.png"</span>, id:<span class="string">"bigband"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/Bitmap1.png"</span>, id:<span class="string">"Bitmap1"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/body.png"</span>, id:<span class="string">"body"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/eye1.png"</span>, id:<span class="string">"eye1"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/eye2.png"</span>, id:<span class="string">"eye2"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/face1.png"</span>, id:<span class="string">"face1"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/face2.png"</span>, id:<span class="string">"face2"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/face3.png"</span>, id:<span class="string">"face3"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hair.png"</span>, id:<span class="string">"hair"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hand2.png"</span>, id:<span class="string">"hand2"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hand3.png"</span>, id:<span class="string">"hand3"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/hand4.png"</span>, id:<span class="string">"hand4"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index30.png"</span>, id:<span class="string">"index30"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index302.png"</span>, id:<span class="string">"index302"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index40.png"</span>, id:<span class="string">"index40"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/index5.png"</span>, id:<span class="string">"index5"</span>&#125;,</span><br><span class="line">		&#123;src:<span class="string">"images/shadow.png"</span>, id:<span class="string">"shadow"</span>&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// symbols:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.bigband = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.bigband);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">295</span>,<span class="number">538</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.Bitmap1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.Bitmap1);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">543</span>,<span class="number">577</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.body = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.body);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">521</span>,<span class="number">242</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.eye1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.eye1);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">73</span>,<span class="number">58</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.eye2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.eye2);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">72</span>,<span class="number">35</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.face1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize(img.face1);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Bitmap();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">0</span>,<span class="number">0</span>,<span class="number">297</span>,<span class="number">368</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">// stage content:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(lib.people = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.initialize();</span><br><span class="line"></span><br><span class="line">	<span class="comment">// people</span></span><br><span class="line">	<span class="keyword">this</span>.instance = <span class="keyword">new</span> lib.peoplemc();</span><br><span class="line">	<span class="keyword">this</span>.instance.setTransform(<span class="number">295</span>,<span class="number">312.5</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// qpmask (mask)</span></span><br><span class="line">	<span class="keyword">var</span> mask = <span class="keyword">new</span> cjs.Shape();</span><br><span class="line">	mask._off = <span class="literal">true</span>;</span><br><span class="line">	mask.graphics.p(<span class="string">"EgpUgqAMBU1AAAMAAABaIMhU1AAAg"</span>);</span><br><span class="line">	mask.setTransform(<span class="number">278.5</span>,<span class="number">308.1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// qp</span></span><br><span class="line">	<span class="keyword">this</span>.instance_1 = <span class="keyword">new</span> lib.qpmc();</span><br><span class="line">	<span class="keyword">this</span>.instance_1.setTransform(<span class="number">291.5</span>,<span class="number">263.5</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">this</span>.instance_1.mask = mask;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">this</span>.addChild(<span class="keyword">this</span>.instance_1,<span class="keyword">this</span>.instance);</span><br><span class="line">&#125;).prototype = p = <span class="keyword">new</span> cjs.Container();</span><br><span class="line">p.nominalBounds = <span class="keyword">new</span> cjs.Rectangle(<span class="number">263</span>,<span class="number">31.5</span>,<span class="number">617</span>,<span class="number">905.5</span>);</span><br><span class="line"></span><br><span class="line">&#125;)(lib = lib||&#123;&#125;, images = images||&#123;&#125;, createjs = createjs||&#123;&#125;, ss = ss||&#123;&#125;);</span><br><span class="line"><span class="keyword">var</span> lib, images, createjs, ss;</span><br></pre></td></tr></table></figure>
+<h2 id="附上最终效果" class="post-heading"><a href="#附上最终效果" class="headerlink" title="附上最终效果"></a>附上最终效果<a class="post-anchor" href="#附上最终效果" aria-hidden="true"></a></h2><p><a href="http://b.gengshu.net/doc/flash/people.html" target="_blank" rel="external">点我看效果</a></p>
+
+    </div>
+    <div class="post-revision">
+        <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time>
+    </div>
+    
+<div class="actions pagination pagination-post">
+    
+    <div class="pagination-post-prev"><a href="/notes/2015/11/06/webp-responsive-image/" class="button big" title="Service Workers：采用WebP动态响应图片"><i class="fa fa-chevron-left"></i> Service Workers：采用WebP动态响应图片</a></div>
+    
+    
+    <div class="pagination-post-next"><a href="/notes/2015/10/26/zepto-cors/" class="button big" title="前方有坑，请绕道——Zepto 中使用 CORS">前方有坑，请绕道——Zepto 中使用 CORS <i class="fa fa-chevron-right"></i></a></div>
+    
+</div>
+
+
+    
+
+
+<div class="post-comments" id="comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="bm90ZXMvMjAxNS8xMS8wMi9mbGFzaC1jYW52YXMv" data-title="使用Adobe FLASH CC制作Canvas动画" data-url="http://aotu.io/notes/2015/11/02/flash-canvas/index.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"aotu"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.id = "duoshuo-script";
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+</div>
+
+
+</article>
+
+</div>
+<div class="sec sec-follow-lite">
+    <div class="container">
+        <div class="sec-heading">
+            <p class="follow-pic"><img src="/img/qrcode.png" alt="关注我们"/></p>
+            <p class="follow-desc">海海人生，无折腾不为乐。</p>
+            <p class="sec-heading-sub follow-acount">
+                <img class="follow-icon" src="/img/logo-circle-120.png" alt="AOTULabs"/> 微信号：AOTULabs
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="sec sec-footer">
+    <div class="container">
+        <footer id="footer" class="sec-heading footer">
+            <ul class="icons">
+                <li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+            </ul>
+            <div class="footer-sec copyright">
+            &copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>
+            Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+            </div>
+            <div class="footer-sec words">
+            "
+            
+            
+            
+            Better late than never.
+            
+            "
+            </div>
+            
+            <div class="footer-sec site-stats" style="display:none">
+                <span id="busuanzi_container_site_pv" class="site-pv">
+                    总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次
+                </span>
+                <span id="busuanzi_container_site_uv" class="site-uv">
+                    总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人
+                </span>
+            </div>
+            
+        </footer>
+    </div>
+</div>
+
+
+    
+    <section id="smSearch" class="slide-search">
+
+<!-- Search -->
+    <section>
+        <form class="search" method="get">
+            <input type="text" name="query" placeholder="搜索" />
+        </form>
+    </section>
+
+<!-- Links -->
+    <section>
+		<h3>搜索结果</h3>
+        <ul class="links" id="searchResults">Loading...</ul>
+    </section>
+
+</section>
+
+<script id="tplSearch" type="text/hogan-tpl">
+    {{#items}}
     <li>
         <a href="{{ url }}" target="_blank">
             <h3>{{ title }}</h3>
@@ -7,4 +329,58 @@
 			{{/desc}}
         </a>
     </li>
-    {{/items}}</script><div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div><script src="/assets/js/dist-2a84b65682.o2.js"></script><script src="/assets/js/dist-bb2f97f6a9.duoshuo.js"></script><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var e=document.createElement("script");e.src="//push.zhanzhang.baidu.com/push.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+    {{/items}}
+</script>
+
+
+    
+	
+	<div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div>
+	
+    
+    <!-- Scripts -->
+<!-- build:js js/dist.o2.js -->
+<script src="/js/lunr.js"></script>
+<script src="/js/debounce.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/xhogan.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+<script src="/assets/fancybox/jquery.fancybox.js"></script>
+<script src="/js/fancybox.js"></script>
+
+<!-- endbuild -->
+
+
+<!-- build:js js/dist.duoshuo.js -->
+<script src="/js/ua-parser.min.js"></script>
+<script src="/js/duoshuo.js"></script>
+<!-- endbuild -->
+
+
+
+<!--busuanzi-->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+</body>
+</html>

@@ -1,4 +1,340 @@
-<!DOCTYPE html><html lang="zh-cn" class="theme-o2 page-post-detail"><head prefix="og: http://ogp.me/ns#"><meta charset="utf-8"><title>初探Docker | Aotu.io「凹凸实验室」</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="docker hub,部署,环境,docker,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"><link rel="canonical" href="http://aotu.io/notes/2016/02/27/docker/index.html"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="/assets/img/favicon-230x230.png" sizes="230x230"><link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#2f83cd"><meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png"><link rel="stylesheet" href="/assets/css/dist-c41d9f085d.o2.css"><link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css"><link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」"><meta name="description" content="本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。"><meta property="og:type" content="article"><meta property="og:title" content="初探Docker"><meta property="og:url" content="http://aotu.io/notes/2016/02/27/docker/index.html"><meta property="og:site_name" content="Aotu.io「凹凸实验室」"><meta property="og:description" content="本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。"><meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/docker-filesystems-multilayer3.png"><meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/dockerimages.png"><meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/a569171010-test.png"><meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/cmmd.png"><meta property="og:updated_time" content="2016-03-31T02:31:36.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="初探Docker"><meta name="twitter:description" content="本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。"><meta name="twitter:image" content="http://aotu.io/img/post/lizhi/docker/docker-filesystems-multilayer3.png"><meta name="twitter:site" content="o2circle"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>var App={root:"/"}</script><body itemscope itemtype="http://schema.org/WebPage"><div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader"><div class="container"><div class="navbar-header"><a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand"><img src="/assets/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"></a><div onclick="" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div></div><div class="navbar-collapse collapse" id="navbar-main"><ul class="nav navbar-nav header-links header-links-main"><li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></ul><ul class="nav navbar-nav navbar-right header-links header-links-extra"><li class="search-wrap"><a class="fa fa-search search-icon" href="#search" title="搜索"></a><form id="search" method="get" class="search-form"><input type="text" name="query" class="search-form-ipt" placeholder="搜索"></form><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a><ul id="theme-list" class="dropdown-menu" aria-labelledby="themes"><li data-v="light"><a href="javascript:;">曙光女神</a><li data-v="dark"><a href="javascript:;">暗影猎手</a></ul></ul></div></div></div><div class="container post-wrap"><article class="post" itemscope itemtype="http://schema.org/Article"><header class="post-header"><div class="post-title"><h2><a href="/notes/2016/02/27/docker/" itemprop="name">初探Docker</a></h2><ul class="post-stats"><li><a href="/tags/docker/" class="meta-tag">docker</a><li><a href="/tags/环境/" class="meta-tag">环境</a><li><a href="/tags/部署/" class="meta-tag">部署</a><li><a href="/tags/docker-hub/" class="meta-tag">docker hub</a><li title="字数"><span class="icon fa-font">5,005</span><li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span><li><a href="/notes/2016/02/27/docker/#comments" itemprop="discussionUrl" class="lnk-comments"><span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMi8yNy9kb2NrZXIv" data-count-type="comments" itemprop="commentsCount">0</span></a></ul><p>docker：一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器，能够快速部署你的应用</div><div class="post-meta"><time class="published" datetime="2016-02-26T17:55:35.000Z" itempro="datePublished">星期五, 2月26日 2016</time> <a target="_blank" href="https://github.com/l-zhi" class="author"><span class="name">lizhi</span><img src="https://avatars.githubusercontent.com/l-zhi?v=3&s=80" alt="l-zhi"></a></div></header><a href="/notes/2016/02/27/docker/" class="image featured post-cover"><img src="/assets/img/post/lizhi/docker/banner.png" alt="初探Docker"></a><div class="post-content" itemprop="articleBody" data-swiftype-index="true"><p>本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。</p><a id="more"></a><p>开启Docker学习之旅前，我们简单描述几个场景，应该很多人都有碰到过：<p>小凹同学开发了一个web应用，服务器环境是: <code>centos 7</code> + <code>nginx</code> + <code>node4.6</code> + <code>mongodb3.2.3</code> 最近要上线了。<p>【场景1】：刚好公司有一台服务器可以用，但是服务器上有一些其他服务，而且已经装了<code>node3.31</code>和<code>mongodb2.3</code>，小凹蒙了，到底是直接升级环境呢？还是改一个适配低版本的应用呢？<p>【场景2】：终于花了很久时间部署上了，慢慢的项目需求越来越多，小凹的同事小凸也准备一起迭代这个项目，小凸又要重新配置一遍应用环境到本地做测试，随着越来越多的同事参与进来，每个人都要配置一遍本地测试环境，重复工作，时间又白白浪费掉。<p>【场景3】：随着项目越做越大，现有服务器配置和带宽已经不能满足了，小凹需要把这个项目迁移出去并做水平扩展，然后又得重复配置环境到多台服务器，而且这些服务器有可能还是会重复前面的场景1。<p>【场景4】：运维要清理一些服务器，整理出来，把没有完全利用的服务器，分给新的项目用，要罗列出来每台服务器的服务，然后删除掉不需要的，这时候发现完全无从下手。<p>上面的场景经常发生，也许就发生在你我身边，而且无比头疼，但对Docker来说解决这些问题都易如反掌，下面我们就一步步来了解并使用Docker。<h2 id="什么是Docker？" class="post-heading"><a href="#什么是Docker？" class="headerlink" title="什么是Docker？"></a>什么是Docker？<a class="post-anchor" href="#什么是Docker？" aria-hidden="true"></a></h2><p><a href="https://www.docker.com/" target="_blank" rel="external">Docker</a>是一个<a href="https://github.com/docker/docker" target="_blank" rel="external">开源</a>的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（<a href="https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E6%A9%9F%E5%99%A8" target="_blank" rel="external">虚拟机</a>）、<a href="https://en.wikipedia.org/wiki/BareMetal" target="_blank" rel="external">bare metal</a>、<a href="https://zh.wikipedia.org/wiki/OpenStack" target="_blank" rel="external">OpenStack</a> 集群和其他的基础应用平台。<p>官方的描述是：Build, Ship, and Run Any App, Anywhere 在任何地方部署，传输，运行任何应用。<p>其实很像虚拟机，但是跟虚拟机比起来 更灵活,速度更快，CPU/内存消耗更低，关键是更方便管理。<p class="user_img"><img src="/assets/img/post/lizhi/docker/docker-filesystems-multilayer3.png"><p>上图就是一张Docker层级图， 最下面是核心系统，文件系统等构成Dokcer底层，上面的是镜像（image），分为基础镜像和普通镜像，所有镜像可以直接启动生成一个实例（container），container我们可以理解为一个可以直接运行的虚拟机了。<p>其中基础image 启动后生成container，然后添加一些应用如 <code>apache</code>，<code>emacs</code>，可以通过提交操作直接生成普通的image。 我们可以共享这个image到任何地方，并启动它。<h2 id="使用Docker" class="post-heading"><a href="#使用Docker" class="headerlink" title="使用Docker"></a>使用Docker<a class="post-anchor" href="#使用Docker" aria-hidden="true"></a></h2><h3 id="1-安装" class="post-heading"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装<a class="post-anchor" href="#1-安装" aria-hidden="true"></a></h3><p>Docker 可以安装在 <code>Linux</code>, <code>Mac OS</code>, <code>Windows</code> 上，详细安装步骤可以参考 <strong><a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">官方安装文档</a></strong> 。<p><em>注：本文就不一一举例所有的安装方法，就以操作系统 <strong><a href="https://zh.wikipedia.org/wiki/CentOS" target="_blank" rel="external">centos</a></strong> 为例。</em><p>由于docker 只支持 <code>centos6</code>以上，<code>64</code>位的版本操作系统，所以安装前可以用以下命令查看服务器系统。<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre><td class="code"><pre><span class="line">$ getconf LONG_BIT           <span class="comment">//查看操作系统是多少位</span></span><br><span class="line">&gt; <span class="number">64</span></span><br><span class="line">$ cat /etc/redhat-<span class="built_in">release</span>    <span class="comment">//查看操作系统版本</span></span><br><span class="line">&gt; CentOS Linux <span class="built_in">release</span> <span class="number">7.0</span><span class="number">.1406</span> (Core)</span><br></pre></table></figure><p><p>上面是我使用的机器 <code>centos7</code> <code>64</code>位系统，我就以这个为例讲下面的使用步骤。<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre><td class="code"><pre><span class="line">$ curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com/ | sh<span class="comment"> //安装</span></span><br><span class="line">$ docker <span class="built_in">version</span><span class="comment"> // 查看是否安装成功</span></span><br></pre></table></figure><p><p>如果 <strong>安装失败</strong> 可以尝试使用阿里云的代理安装。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line"><span class="variable">$ </span>curl -sSL <span class="symbol">http:</span>/<span class="regexp">/acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker</span>-engine/internet | sh -</span><br></pre></table></figure><p><p>其他更详细的阿里云Docker代理加速器文档，可以点击<a href="https://help.aliyun.com/knowledge_detail/5974865.html" target="_blank" rel="external">这里</a><p>安装成功后启动Docker，并设置开机启动。<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre><td class="code"><pre><span class="line">$ sudo service docker <span class="built_in">start</span> <span class="comment"> //开启Docker 服务</span></span><br><span class="line">$ sudo chkconfig docker <span class="keyword">on</span>   //开机启动</span><br></pre></table></figure><p><h3 id="获取基础镜像" class="post-heading"><a href="#获取基础镜像" class="headerlink" title="获取基础镜像"></a>获取基础镜像<a class="post-anchor" href="#获取基础镜像" aria-hidden="true"></a></h3><p><em>注：假定我需要部署一个基于<code>centos</code>的应用，当然也可以换成别的，比如：<code>Redis</code> 或者 <code>Ubuntu</code>，可以是任何镜像来当做基础镜像，跟本机原有系统无关，只与所要部署的应用有关。</em><p>首先搜索需要获取的 <strong><a href="https://hub.docker.com/explore/" target="_blank" rel="external">镜像</a></strong>，这是官方<code>Docker Hub</code>提供的镜像资源。<p>比如，我选择获取 <strong><a href="https://hub.docker.com/_/centos/" target="_blank" rel="external">centos最新版本</a></strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">$ docker pull centos <span class="comment">//获取centos最近版本的镜像</span></span><br></pre></table></figure><p class="user_img"><img src="/assets/img/post/lizhi/docker/dockerimages.png"><p>使用命令 <code>docker images</code> 就能查到刚才获取的 <code>centos</code> 的镜像，如上图。<h3 id="配置新的镜像" class="post-heading"><a href="#配置新的镜像" class="headerlink" title="配置新的镜像"></a>配置新的镜像<a class="post-anchor" href="#配置新的镜像" aria-hidden="true"></a></h3><p><em>注：为了方便演示，假定我们的服务只需要安装一个<code>zip</code>的<code>centos</code>系统。</em><p>将上面获取的 <code>centos</code> 镜像，启动生成container，并在container中安装zip。<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">[root@AY130809220512304015Z <span class="built_in">image</span>]<span class="meta"># docker run -t -i centos /bin/bash</span></span><br></pre></table></figure><p><code>docker run</code> 启动容器，<code>-t</code>:为容器重新分配一个伪输入终端，通常与 -i 同时使用； <code>-i</code>:以交互模式运行容器，通常与 -t 同时使用；<code>centos</code> 为镜像名， 镜像名通常以 <strong>镜像名:版本</strong> 来使用，因为centos没有版本所以省略, 后面 <code>/bin/bash</code> 是启动container后运行的程序。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre><td class="code"><pre><span class="line">[root@e44ea4258885 /]# <span class="keyword">zip</span>  <span class="comment">//先运行zip，发现是没有安装的</span></span><br><span class="line">bash: <span class="keyword">zip</span>: command not found</span><br><span class="line">[root@90934d1f4225 /]# yum install <span class="keyword">zip</span>  <span class="comment">//安装zip</span></span><br><span class="line">[root@90934d1f4225 /]# <span class="keyword">zip</span> <span class="comment">//查看zip，安装成功</span></span><br><span class="line"><span class="keyword">Copyright</span> (c) 1990-2008 Info-<span class="keyword">ZIP</span> - <span class="keyword">Type</span> '<span class="keyword">zip</span> <span class="string">"-L"</span>' <span class="keyword">for</span> software license.</span><br><span class="line"><span class="keyword">Zip</span> 3.0 (July 5th 2008). Usage:</span><br><span class="line">...</span><br></pre></table></figure><p><p>使用container命令行安装<code>zip</code>成功。<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">[root<span class="symbol">@90934d1f4225</span> /]<span class="meta"># exit</span></span><br></pre></table></figure><p><p>退出容器命令行，因为不是后台运行，所以退出后，container也随即关闭了。<code>-d</code> 可以让container在后台运行，并可以随时通过<code>docker attach</code> 命令进入容器，具体例子可以看<a href="https://docs.docker.com/engine/reference/commandline/attach/" target="_blank" rel="external">这里</a>,因为不是本文重点就不展开说明了。<p><code>docker ps</code> 命令可以查看当前启动的 container， <code>-a</code> 启动和没启动的都会展示。<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre><td class="code"><pre><span class="line">[root@AY130809220512304015Z image]<span class="comment"># docker ps -a</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES</span><br><span class="line"><span class="number">8</span>f08b2b67380        centos              <span class="string">"/bin/bash"</span>         <span class="number">21</span> minutes ago      Exited (<span class="number">0</span>) <span class="number">20</span> minutes ago                       lonely_euler</span><br></pre></table></figure><p>有一个id为 8f08b2b67380的container，这个就是我们刚才安装了zip，并退出的container。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre><td class="code"><pre><span class="line"><span class="selector-attr">[root@AY130809220512304015Z image]</span># <span class="selector-tag">docker</span> <span class="selector-tag">commit</span> <span class="selector-tag">-m</span> "<span class="selector-tag">Added</span> <span class="selector-tag">zip</span> <span class="selector-tag">install</span>" 8<span class="selector-tag">f08b2b67380</span> <span class="selector-tag">test</span><span class="selector-pseudo">:1</span></span><br><span class="line"><span class="selector-tag">sha256</span><span class="selector-pseudo">:8f1d192a4ea2a80801e33cd5fadb5f37180bb718f729f77a404a347b977d753c</span></span><br></pre></table></figure><p><p><code>docker commit</code> 将container提交生成image， <code>-m</code>：为描述, 后面紧接着的是container的id， <code>test:1</code> 是提交的镜像名称和版本。<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre><td class="code"><pre><span class="line">[root@AY130809220512304015Z image]<span class="comment"># docker images</span></span><br><span class="line">REPOSITORY          <span class="keyword">TAG</span>                 <span class="title">IMAGE</span> ID            CREATED              SIZE</span><br><span class="line">test                 <span class="number">1</span>                   <span class="number">8</span>f1d192a4ea2        About a minute ago   <span class="number">266.7</span> MB</span><br><span class="line">centos              latest              <span class="number">0</span>f0be3675ebb        <span class="number">7</span> days ago           <span class="number">196.6</span> MB</span><br></pre></table></figure><p>再查看的时候已经多了一个image了，这个image就是我们安装了zip的image，到此我们已经生成一个新的image。<p>我们可以直接通过这个新的镜像启动容器，还是前面介绍过的命令<code>docker run</code> 并测试下zip，如下：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line">[root@AY130809220512304015Z image]# sudo docker <span class="keyword">run</span> -t -i o2team-<span class="keyword">test</span>:2 /bin/bash</span><br><span class="line">[root@2f1f28be351c /]# <span class="keyword">zip</span></span><br><span class="line"><span class="keyword">Copyright</span> (c) 1990-2008 Info-<span class="keyword">ZIP</span> - <span class="keyword">Type</span> '<span class="keyword">zip</span> <span class="string">"-L"</span>' <span class="keyword">for</span> software license.</span><br><span class="line"><span class="keyword">Zip</span> 3.0 (July 5th 2008). Usage:</span><br><span class="line">...</span><br></pre></table></figure><p><p>好了这个镜像已经制作完成，当然实际情况下，安装的肯定不仅仅只有zip这么简单。<p>但是在一个团队里，仅仅给我们image，我们可能不知道这个镜像到底做了什么，所以还有一种方法使用 配置文件<code>Dockerfile</code>，build出来一个镜像，这样更易于团队协作,下面我将介绍一下这种方式。<h3 id="通过Dockerfile-配置新的image" class="post-heading"><a href="#通过Dockerfile-配置新的image" class="headerlink" title="通过Dockerfile 配置新的image"></a>通过Dockerfile 配置新的image<a class="post-anchor" href="#通过Dockerfile-配置新的image" aria-hidden="true"></a></h3><p>开始之前顺便介绍删除image和container的命令，它们分别是<code>docker rmi</code> 删除image 和 <code>docker rm</code> 删除container，后面都是跟对应的id或者名称，为了后面的操作我们这里通过命令 <code>docker rmi 8f1d192a4ea2</code> 删除掉刚才建的image。<p><em>注：如果发现删不掉image，可能被某些容器引用了，可以通过上面介绍的<code>docker ps -a</code>查看container，并用 <code>docker rm</code>删除掉这个container</em>。<p>接着我们创建<code>Dockerfile</code><br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre><td class="code"><pre><span class="line"><span class="variable">$ </span>mkdir o2team</span><br><span class="line"><span class="variable">$ </span>cd o2team</span><br><span class="line"><span class="variable">$ </span>touch Dockerfile</span><br></pre></table></figure><p><p>下面是 <code>Dockerfile</code> 中的内容<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line"><span class="comment"># Dockerfile for o2team</span></span><br><span class="line"><span class="comment"># http://aotu.io/</span></span><br><span class="line"><span class="keyword">FROM</span> centos</span><br><span class="line"><span class="keyword">MAINTAINER</span> lizhi &lt;fanlizhi@jd.com&gt;</span><br><span class="line"><span class="keyword">RUN</span> <span class="bash">yum -y install zip</span></span><br></pre></table></figure><p><p><code>#</code>为注释，<code>FROM centos</code> 为基础镜像来源，<code>MAINTAINER</code>为作者信息, <code>RUN</code> 则为 运行某些 命令，编辑完成后保存，然后我们就可以直接构建我们新的image，Dockerfile详细使用文档可以参看<a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="external">这里</a>。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line"><span class="selector-attr">[root@AY130809220512304015Z o2team-test]</span># <span class="selector-tag">docker</span> <span class="selector-tag">build</span> <span class="selector-tag">-t</span> <span class="selector-tag">test</span><span class="selector-pseudo">:1</span> .</span><br></pre></table></figure><p><code>docker build</code>就是通过Dockfile来创建一个新的Image，其中 <code>-t</code>:为新image的名字这里命名为test:1， <code>&quot;.&quot;</code> 则会在当前的目录下找 <code>Dockerfile</code> 文件,当然这里也可以指定路径。<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre><td class="code"><pre><span class="line">[root@AY130809220512304015Z o2team-test]<span class="comment"># docker images</span></span><br><span class="line">REPOSITORY          <span class="keyword">TAG</span>                 <span class="title">IMAGE</span> ID            CREATED             SIZE</span><br><span class="line">test                <span class="number">1</span>                   <span class="number">8975</span>f3fb142e        <span class="number">8</span> seconds ago       <span class="number">266.7</span> MB</span><br><span class="line">centos              latest              <span class="number">0</span>f0be3675ebb        <span class="number">9</span> days ago          <span class="number">196.6</span> MB</span><br></pre></table></figure><p>就这样，通过<code>docker images</code>也能生成一个新的镜像了，这种用Dockerfile的方式更加适合团队使用，环境配置更清晰。<p>到这里，我们只需要管理我们的镜像就好了，比如同步镜像给其他人，或者其他机器。<p>其实docker就给我们提供了这样一整套的解决方案，我们可以把我们的镜像提交到 <strong><a href="https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a></strong>，类似 <code>github</code>一样的远程仓库，当我们需要的时候只需要 pull下来启动就好了。<h3 id="提交" class="post-heading"><a href="#提交" class="headerlink" title="提交"></a>提交<a class="post-anchor" href="#提交" aria-hidden="true"></a></h3><p>我们就把这个test镜像提交到<code>Docker Hub</code><p>首先我们得先注册：<a href="https://hub.docker.com/" target="_blank" rel="external">https://hub.docker.com/</a><p>注册成功后就可以<code>docker login</code>登录了<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line">[root<span class="symbol">@AY130809220512304015Z</span> o2team-test]<span class="meta"># docker login</span></span><br><span class="line">&gt; Username: a569171010</span><br><span class="line">&gt; Password: xxx</span><br><span class="line">&gt; Email: fanlizhi<span class="symbol">@jd</span>.com</span><br><span class="line">Login Succeeded</span><br></pre></table></figure><p><p>填完登录后就可以push了，注意这里push之前得确保名称是 <code>youruser/xxx</code><br>比如我的用户名是 a569171010 所以我需要将刚才的image 重命名成 a569171010/test:1,这里可以用<code>docker tag</code>命令重命名。<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre><td class="code"><pre><span class="line">[root@AY130809220512304015Z o2team-<span class="keyword">test</span>]# docker tag <span class="keyword">test</span>:<span class="number">1</span> a569171010/<span class="keyword">test</span>:<span class="number">1</span></span><br><span class="line">[root@AY130809220512304015Z o2team-<span class="keyword">test</span>]# docker <span class="keyword">push</span> a569171010/<span class="keyword">test</span>:<span class="number">1</span></span><br></pre></table></figure><p>然后就发布出去了，在 <strong><a href="https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a></strong> 上就可以看到下面多了这一条记录，当我们要获取的时候就直接 <code>docker pull a569171010/test</code>就可以了，因为是公用库所以任何人都可以获取并使用。<br><p class="user_img"><img src="/assets/img/post/lizhi/docker/a569171010-test.png"><p><p>我们已经基本熟悉，了解了整个Docker使用的流程，回过头来看看开始我们抛出的那几个曾经很棘手的问题，是不是都能迎刃而解呢？因为image的可移植和隔离性，我们不仅可以轻松迁移扩展，还能轻松了解现在机器上各个服务运行情况。<p>下图为Docker整个使用流程：<br><p class="user_img"><img src="/assets/img/post/lizhi/docker/cmmd.png"><p><h3 id="本文参考资料" class="post-heading"><a href="#本文参考资料" class="headerlink" title="本文参考资料"></a>本文参考资料<a class="post-anchor" href="#本文参考资料" aria-hidden="true"></a></h3><p><a href="https://www.docker.com/" target="_blank" rel="external">Docker 官方文档</a><br><a href="http://www.widuu.com/docker/index.html" target="_blank" rel="external">Docker 中文指南</a><br><a href="http://dockone.io/article/101" target="_blank" rel="external">dockone.io 国内比较活跃的Docker论坛</a><br><a href="http://tech.meituan.com/docker_introduction.html" target="_blank" rel="external">Docker 入门介绍</a><br><a href="https://github.com/docker/docker-registry" target="_blank" rel="external">Docker github</a><br><a href="https://help.aliyun.com/knowledge_detail/5974865.html" target="_blank" rel="external">阿里镜像使用文档</a><br><a href="https://zh.wikipedia.org/zh/Docker_(%E8%BB%9F%E9%AB%94" target="_blank" rel="external">维基百科</a><h3 id="还想了解的" class="post-heading"><a href="#还想了解的" class="headerlink" title="还想了解的"></a>还想了解的<a class="post-anchor" href="#还想了解的" aria-hidden="true"></a></h3><p>这篇文章只是带领大家了解Docker的整个使用流程和体验，关于其他的一些细节问题比如：后台运行container，各container之间的通讯，端口映射，文件共享等都没有涉及到,最近<code>docker1.1.0</code>发布又有很多新的特性和性能优化，如果有兴趣的同学可以参考这些：<p><a href="http://tech.uc.cn/?p=2726" target="_blank" rel="external">利用Docker构建开发环境</a><br><a href="https://www.gitbook.com/book/yeasy/docker_practice/details" target="_blank" rel="external">Docker-从入门到实践</a><br><a href="https://github.com/veggiemonk/awesome-docker" target="_blank" rel="external">Docker-学习资料</a><br><a href="https://blog.docker.com/2016/02/docker-1-10/" target="_blank" rel="external">Docker 1.1.0新特性</a></div><div class="post-revision"><i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time></div><div class="actions pagination pagination-post"><div class="pagination-post-prev"><a href="/notes/2016/03/01/createjs-get-started/" class="button big" title="createjs开发入门"><i class="fa fa-chevron-left"></i> createjs开发入门</a></div><div class="pagination-post-next"><a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/" class="button big" title="使用npm scripts替代gulp">使用npm scripts替代gulp <i class="fa fa-chevron-right"></i></a></div></div><div class="post-comments" id="comments"><div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMi8yNy9kb2NrZXIv" data-title="初探Docker" data-url="http://aotu.io/notes/2016/02/27/docker/index.html"></div><script>var duoshuoQuery={short_name:"aotu"};!function(){var t=document.createElement("script");t.id="duoshuo-script",t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//static.duoshuo.com/embed.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script></div></article></div><div class="sec sec-follow-lite"><div class="container"><div class="sec-heading"><p class="follow-pic"><img src="/assets/img/qrcode.png" alt="关注我们"><p class="follow-desc">海海人生，无折腾不为乐。<p class="sec-heading-sub follow-acount"><img class="follow-icon" src="/assets/img/logo-circle-120.png" alt="AOTULabs"> 微信号：AOTULabs</div></div></div><div class="sec sec-footer"><div class="container"><footer id="footer" class="sec-heading footer"><ul class="icons"><li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a><li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a><li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></ul><div class="footer-sec copyright">&copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</div><div class="footer-sec words">" Great hopes make great man. "</div><div class="footer-sec site-stats" style="display:none"><span id="busuanzi_container_site_pv" class="site-pv">总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次 </span><span id="busuanzi_container_site_uv" class="site-uv">总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人</span></div></footer></div></div><section id="smSearch" class="slide-search"><section><form class="search" method="get"><input type="text" name="query" placeholder="搜索"></form></section><section><h3>搜索结果</h3><ul class="links" id="searchResults">Loading...</ul></section></section><script id="tplSearch" type="text/hogan-tpl">{{#items}}
+<!DOCTYPE html>
+<html lang="zh-cn" class="theme-o2 page-post-detail">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8"/>
+	<title>初探Docker | Aotu.io「凹凸实验室」</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <!-- keywords -->
+<meta name="keywords" content="docker hub,部署,环境,docker,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"/>
+<!-- Canonical links -->
+<link rel="canonical" href="http://aotu.io/notes/2016/02/27/docker/index.html">
+<!-- Alternative links -->
+
+<!-- Icon -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/img/favicon-230x230.png" sizes="230x230">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2f83cd">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<!-- CSS -->
+<!-- build:css css/dist.o2.css -->
+<link rel="stylesheet" href="/css/o2.css">
+<!-- endbuild -->
+
+<link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」">
+<!-- Open Graph -->
+<meta name="description" content="本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初探Docker">
+<meta property="og:url" content="http://aotu.io/notes/2016/02/27/docker/index.html">
+<meta property="og:site_name" content="Aotu.io「凹凸实验室」">
+<meta property="og:description" content="本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。">
+<meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/docker-filesystems-multilayer3.png">
+<meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/dockerimages.png">
+<meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/a569171010-test.png">
+<meta property="og:image" content="http://aotu.io/img/post/lizhi/docker/cmmd.png">
+<meta property="og:updated_time" content="2016-03-31T02:31:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初探Docker">
+<meta name="twitter:description" content="本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。">
+<meta name="twitter:image" content="http://aotu.io/img/post/lizhi/docker/docker-filesystems-multilayer3.png">
+<meta name="twitter:site" content="o2circle">
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script>
+var App = {
+    root:'/'    
+};
+</script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand">
+                <img src="/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"/>
+            </a>
+            <div onclick="javascript:void(0)" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav header-links header-links-main">
+                <li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a></li><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a></li><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a></li><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a></li><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right header-links header-links-extra">
+                <li class="search-wrap">
+                    <a class="fa fa-search search-icon" href="#search" title="搜索"></a>
+                    <form id="search" method="get" class="search-form">
+                        <input type="text" name="query" class="search-form-ipt" placeholder="搜索" />
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a>
+                    <ul id="theme-list" class="dropdown-menu" aria-labelledby="themes">
+                        <li data-v="light"><a href="javascript:;">曙光女神</a></li>
+                        <li data-v="dark"><a href="javascript:;">暗影猎手</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+	
+<div class="container post-wrap">
+    
+    <!-- Post -->
+<article class="post" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <div class="post-title">
+            <h2><a href="/notes/2016/02/27/docker/" itemprop="name">初探Docker</a></h2>
+            <ul class="post-stats">
+                
+                
+                <li><a href='/tags/docker/' class='meta-tag'>docker</a></li>
+                
+                <li><a href='/tags/环境/' class='meta-tag'>环境</a></li>
+                
+                <li><a href='/tags/部署/' class='meta-tag'>部署</a></li>
+                
+                <li><a href='/tags/docker-hub/' class='meta-tag'>docker hub</a></li>
+                 
+                
+                <li title="字数"><span class="icon fa-font">4,933</span></li>
+                
+                <li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span></li>
+                
+                
+                <li>
+                    <a href="/notes/2016/02/27/docker/#comments" itemprop="discussionUrl" class="lnk-comments">
+                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMi8yNy9kb2NrZXIv" data-count-type="comments" itemprop="commentsCount">0</span>
+                    </a>
+                </li>
+                 
+            </ul>
+            
+            <p>docker：一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器，能够快速部署你的应用</p>
+            
+        </div>
+        <div class="post-meta">
+            <time class="published" datetime="2016-02-26T17:55:35.000Z" itempro="datePublished">星期五, 2月26日 2016</time>
+            <a target="_blank" href="https://github.com/l-zhi" class="author"><span class="name">lizhi</span><img src="https://avatars.githubusercontent.com/l-zhi?v=3&s=80" alt="l-zhi" /></a>
+        </div>
+    </header>
+    <a href="/notes/2016/02/27/docker/" class="image featured post-cover"><img src="/img/post/lizhi/docker/banner.png" alt="初探Docker" /></a>
+    <div class="post-content" itemprop="articleBody" data-swiftype-index="true">
+        <p>本文旨在让大家了解什么是Docker，并带领大家体验Docker使用的整个流程。</p>
+<a id="more"></a>
+<p>开启Docker学习之旅前，我们简单描述几个场景，应该很多人都有碰到过：</p>
+<p>小凹同学开发了一个web应用，服务器环境是: <code>centos 7</code> + <code>nginx</code> + <code>node4.6</code> + <code>mongodb3.2.3</code> 最近要上线了。</p>
+<p>【场景1】：刚好公司有一台服务器可以用，但是服务器上有一些其他服务，而且已经装了<code>node3.31</code>和<code>mongodb2.3</code>，小凹蒙了，到底是直接升级环境呢？还是改一个适配低版本的应用呢？</p>
+<p>【场景2】：终于花了很久时间部署上了，慢慢的项目需求越来越多，小凹的同事小凸也准备一起迭代这个项目，小凸又要重新配置一遍应用环境到本地做测试，随着越来越多的同事参与进来，每个人都要配置一遍本地测试环境，重复工作，时间又白白浪费掉。</p>
+<p>【场景3】：随着项目越做越大，现有服务器配置和带宽已经不能满足了，小凹需要把这个项目迁移出去并做水平扩展，然后又得重复配置环境到多台服务器，而且这些服务器有可能还是会重复前面的场景1。</p>
+<p>【场景4】：运维要清理一些服务器，整理出来，把没有完全利用的服务器，分给新的项目用，要罗列出来每台服务器的服务，然后删除掉不需要的，这时候发现完全无从下手。</p>
+<p>上面的场景经常发生，也许就发生在你我身边，而且无比头疼，但对Docker来说解决这些问题都易如反掌，下面我们就一步步来了解并使用Docker。</p>
+<h2 id="什么是Docker？" class="post-heading"><a href="#什么是Docker？" class="headerlink" title="什么是Docker？"></a>什么是Docker？<a class="post-anchor" href="#什么是Docker？" aria-hidden="true"></a></h2><p><a href="https://www.docker.com/" target="_blank" rel="external">Docker</a>是一个<a href="https://github.com/docker/docker" target="_blank" rel="external">开源</a>的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（<a href="https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E6%A9%9F%E5%99%A8" target="_blank" rel="external">虚拟机</a>）、<a href="https://en.wikipedia.org/wiki/BareMetal" target="_blank" rel="external">bare metal</a>、<a href="https://zh.wikipedia.org/wiki/OpenStack" target="_blank" rel="external">OpenStack</a> 集群和其他的基础应用平台。</p>
+<p>官方的描述是：Build, Ship, and Run Any App, Anywhere 在任何地方部署，传输，运行任何应用。</p>
+<p>其实很像虚拟机，但是跟虚拟机比起来 更灵活,速度更快，CPU/内存消耗更低，关键是更方便管理。</p>
+<p class="user_img"><img src="/img/post/lizhi/docker/docker-filesystems-multilayer3.png"></p>
+<p>上图就是一张Docker层级图， 最下面是核心系统，文件系统等构成Dokcer底层，上面的是镜像（image），分为基础镜像和普通镜像，所有镜像可以直接启动生成一个实例（container），container我们可以理解为一个可以直接运行的虚拟机了。</p>
+<p>其中基础image 启动后生成container，然后添加一些应用如 <code>apache</code>，<code>emacs</code>，可以通过提交操作直接生成普通的image。 我们可以共享这个image到任何地方，并启动它。</p>
+<h2 id="使用Docker" class="post-heading"><a href="#使用Docker" class="headerlink" title="使用Docker"></a>使用Docker<a class="post-anchor" href="#使用Docker" aria-hidden="true"></a></h2><h3 id="1-安装" class="post-heading"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装<a class="post-anchor" href="#1-安装" aria-hidden="true"></a></h3><p>Docker 可以安装在 <code>Linux</code>, <code>Mac OS</code>, <code>Windows</code> 上，详细安装步骤可以参考 <strong><a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">官方安装文档</a></strong> 。</p>
+<p><em>注：本文就不一一举例所有的安装方法，就以操作系统 <strong><a href="https://zh.wikipedia.org/wiki/CentOS" target="_blank" rel="external">centos</a></strong> 为例。</em></p>
+<p>由于docker 只支持 <code>centos6</code>以上，<code>64</code>位的版本操作系统，所以安装前可以用以下命令查看服务器系统。<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ getconf LONG_BIT           <span class="comment">//查看操作系统是多少位</span></span><br><span class="line">&gt; <span class="number">64</span></span><br><span class="line">$ cat /etc/redhat-<span class="built_in">release</span>    <span class="comment">//查看操作系统版本</span></span><br><span class="line">&gt; CentOS Linux <span class="built_in">release</span> <span class="number">7.0</span><span class="number">.1406</span> (Core)</span><br></pre></td></tr></table></figure></p>
+<p>上面是我使用的机器 <code>centos7</code> <code>64</code>位系统，我就以这个为例讲下面的使用步骤。<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com/ | sh<span class="comment"> //安装</span></span><br><span class="line">$ docker <span class="built_in">version</span><span class="comment"> // 查看是否安装成功</span></span><br></pre></td></tr></table></figure></p>
+<p>如果 <strong>安装失败</strong> 可以尝试使用阿里云的代理安装。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>curl -sSL <span class="symbol">http:</span>/<span class="regexp">/acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker</span>-engine/internet | sh -</span><br></pre></td></tr></table></figure></p>
+<p>其他更详细的阿里云Docker代理加速器文档，可以点击<a href="https://help.aliyun.com/knowledge_detail/5974865.html" target="_blank" rel="external">这里</a></p>
+<p>安装成功后启动Docker，并设置开机启动。<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service docker <span class="built_in">start</span> <span class="comment"> //开启Docker 服务</span></span><br><span class="line">$ sudo chkconfig docker <span class="keyword">on</span>   //开机启动</span><br></pre></td></tr></table></figure></p>
+<h3 id="获取基础镜像" class="post-heading"><a href="#获取基础镜像" class="headerlink" title="获取基础镜像"></a>获取基础镜像<a class="post-anchor" href="#获取基础镜像" aria-hidden="true"></a></h3><p><em>注：假定我需要部署一个基于<code>centos</code>的应用，当然也可以换成别的，比如：<code>Redis</code> 或者 <code>Ubuntu</code>，可以是任何镜像来当做基础镜像，跟本机原有系统无关，只与所要部署的应用有关。</em></p>
+<p>首先搜索需要获取的 <strong><a href="https://hub.docker.com/explore/" target="_blank" rel="external">镜像</a></strong>，这是官方<code>Docker Hub</code>提供的镜像资源。 </p>
+<p>比如，我选择获取 <strong><a href="https://hub.docker.com/_/centos/" target="_blank" rel="external">centos最新版本</a></strong> </p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull centos <span class="comment">//获取centos最近版本的镜像</span></span><br></pre></td></tr></table></figure>
+<p class="user_img"><img src="/img/post/lizhi/docker/dockerimages.png"></p>
+<p>使用命令 <code>docker images</code> 就能查到刚才获取的 <code>centos</code> 的镜像，如上图。</p>
+<h3 id="配置新的镜像" class="post-heading"><a href="#配置新的镜像" class="headerlink" title="配置新的镜像"></a>配置新的镜像<a class="post-anchor" href="#配置新的镜像" aria-hidden="true"></a></h3><p><em>注：为了方便演示，假定我们的服务只需要安装一个<code>zip</code>的<code>centos</code>系统。</em></p>
+<p>将上面获取的 <code>centos</code> 镜像，启动生成container，并在container中安装zip。</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@AY130809220512304015Z image]<span class="comment"># docker run -t -i centos /bin/bash</span></span><br></pre></td></tr></table></figure>
+<p><code>docker run</code> 启动容器，<code>-t</code>:为容器重新分配一个伪输入终端，通常与 -i 同时使用； <code>-i</code>:以交互模式运行容器，通常与 -t 同时使用；<code>centos</code> 为镜像名， 镜像名通常以 <strong>镜像名:版本</strong> 来使用，因为centos没有版本所以省略, 后面 <code>/bin/bash</code> 是启动container后运行的程序。<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@e44ea4258885 /]# <span class="keyword">zip</span>  <span class="comment">//先运行zip，发现是没有安装的</span></span><br><span class="line">bash: <span class="keyword">zip</span>: command not found</span><br><span class="line">[root@90934d1f4225 /]# yum install <span class="keyword">zip</span>  <span class="comment">//安装zip</span></span><br><span class="line">[root@90934d1f4225 /]# <span class="keyword">zip</span> <span class="comment">//查看zip，安装成功</span></span><br><span class="line"><span class="keyword">Copyright</span> (c) 1990-2008 Info-<span class="keyword">ZIP</span> - <span class="keyword">Type</span> '<span class="keyword">zip</span> <span class="string">"-L"</span>' <span class="keyword">for</span> software license.</span><br><span class="line"><span class="keyword">Zip</span> 3.0 (July 5th 2008). Usage:</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>使用container命令行安装<code>zip</code>成功。<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@90934d1f4225</span> /]<span class="meta"># exit</span></span><br></pre></td></tr></table></figure></p>
+<p>退出容器命令行，因为不是后台运行，所以退出后，container也随即关闭了。<code>-d</code> 可以让container在后台运行，并可以随时通过<code>docker attach</code> 命令进入容器，具体例子可以看<a href="https://docs.docker.com/engine/reference/commandline/attach/" target="_blank" rel="external">这里</a>,因为不是本文重点就不展开说明了。</p>
+<p><code>docker ps</code> 命令可以查看当前启动的 container， <code>-a</code> 启动和没启动的都会展示。</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@AY130809220512304015Z image]<span class="comment"># docker ps -a</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS               NAMES</span><br><span class="line"><span class="number">8</span>f08b2b67380        centos              <span class="string">"/bin/bash"</span>         <span class="number">21</span> minutes ago      Exited (<span class="number">0</span>) <span class="number">20</span> minutes ago                       lonely_euler</span><br></pre></td></tr></table></figure>
+<p>有一个id为 8f08b2b67380的container，这个就是我们刚才安装了zip，并退出的container。<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@AY130809220512304015Z <span class="built_in">image</span>]<span class="meta"># docker commit -m <span class="string">"Added zip install"</span> 8f08b2b67380 test:1</span></span><br><span class="line">sha256:<span class="number">8</span>f1d192a4ea2a80801e33cd5fadb5f37180bb718f729f77a404a347b977d753c</span><br></pre></td></tr></table></figure></p>
+<p><code>docker commit</code> 将container提交生成image， <code>-m</code>：为描述, 后面紧接着的是container的id， <code>test:1</code> 是提交的镜像名称和版本。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@AY130809220512304015Z image]<span class="comment"># docker images</span></span><br><span class="line">REPOSITORY          <span class="keyword">TAG</span>                 <span class="title">IMAGE</span> ID            CREATED              SIZE</span><br><span class="line">test                 <span class="number">1</span>                   <span class="number">8</span>f1d192a4ea2        About a minute ago   <span class="number">266.7</span> MB</span><br><span class="line">centos              latest              <span class="number">0</span>f0be3675ebb        <span class="number">7</span> days ago           <span class="number">196.6</span> MB</span><br></pre></td></tr></table></figure>
+<p>再查看的时候已经多了一个image了，这个image就是我们安装了zip的image，到此我们已经生成一个新的image。</p>
+<p>我们可以直接通过这个新的镜像启动容器，还是前面介绍过的命令<code>docker run</code> 并测试下zip，如下：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@AY130809220512304015Z image]# sudo docker <span class="keyword">run</span> -t -i o2team-<span class="keyword">test</span>:2 /bin/bash</span><br><span class="line">[root@2f1f28be351c /]# <span class="keyword">zip</span></span><br><span class="line"><span class="keyword">Copyright</span> (c) 1990-2008 Info-<span class="keyword">ZIP</span> - <span class="keyword">Type</span> '<span class="keyword">zip</span> <span class="string">"-L"</span>' <span class="keyword">for</span> software license.</span><br><span class="line"><span class="keyword">Zip</span> 3.0 (July 5th 2008). Usage:</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>好了这个镜像已经制作完成，当然实际情况下，安装的肯定不仅仅只有zip这么简单。</p>
+<p>但是在一个团队里，仅仅给我们image，我们可能不知道这个镜像到底做了什么，所以还有一种方法使用 配置文件<code>Dockerfile</code>，build出来一个镜像，这样更易于团队协作,下面我将介绍一下这种方式。</p>
+<h3 id="通过Dockerfile-配置新的image" class="post-heading"><a href="#通过Dockerfile-配置新的image" class="headerlink" title="通过Dockerfile 配置新的image"></a>通过Dockerfile 配置新的image<a class="post-anchor" href="#通过Dockerfile-配置新的image" aria-hidden="true"></a></h3><p>开始之前顺便介绍删除image和container的命令，它们分别是<code>docker rmi</code> 删除image 和 <code>docker rm</code> 删除container，后面都是跟对应的id或者名称，为了后面的操作我们这里通过命令 <code>docker rmi 8f1d192a4ea2</code> 删除掉刚才建的image。</p>
+<p><em>注：如果发现删不掉image，可能被某些容器引用了，可以通过上面介绍的<code>docker ps -a</code>查看container，并用 <code>docker rm</code>删除掉这个container</em>。</p>
+<p>接着我们创建<code>Dockerfile</code><br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>mkdir o2team</span><br><span class="line"><span class="variable">$ </span>cd o2team</span><br><span class="line"><span class="variable">$ </span>touch Dockerfile</span><br></pre></td></tr></table></figure></p>
+<p>下面是 <code>Dockerfile</code> 中的内容<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dockerfile for o2team</span></span><br><span class="line"><span class="comment"># http://aotu.io/</span></span><br><span class="line"><span class="keyword">FROM</span> centos</span><br><span class="line"><span class="keyword">MAINTAINER</span> lizhi &lt;fanlizhi@jd.com&gt;</span><br><span class="line"><span class="keyword">RUN</span> <span class="bash">yum -y install zip</span></span><br></pre></td></tr></table></figure></p>
+<p><code>#</code>为注释，<code>FROM centos</code> 为基础镜像来源，<code>MAINTAINER</code>为作者信息, <code>RUN</code> 则为 运行某些 命令，编辑完成后保存，然后我们就可以直接构建我们新的image，Dockerfile详细使用文档可以参看<a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="external">这里</a>。</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@AY130809220512304015Z</span> o2team-test]<span class="meta"># docker build -t test:1 .</span></span><br></pre></td></tr></table></figure>
+<p><code>docker build</code>就是通过Dockfile来创建一个新的Image，其中 <code>-t</code>:为新image的名字这里命名为test:1， <code>&quot;.&quot;</code> 则会在当前的目录下找 <code>Dockerfile</code> 文件,当然这里也可以指定路径。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@AY130809220512304015Z o2team-test]<span class="comment"># docker images</span></span><br><span class="line">REPOSITORY          <span class="keyword">TAG</span>                 <span class="title">IMAGE</span> ID            CREATED             SIZE</span><br><span class="line">test                <span class="number">1</span>                   <span class="number">8975</span>f3fb142e        <span class="number">8</span> seconds ago       <span class="number">266.7</span> MB</span><br><span class="line">centos              latest              <span class="number">0</span>f0be3675ebb        <span class="number">9</span> days ago          <span class="number">196.6</span> MB</span><br></pre></td></tr></table></figure>
+<p>就这样，通过<code>docker images</code>也能生成一个新的镜像了，这种用Dockerfile的方式更加适合团队使用，环境配置更清晰。</p>
+<p>到这里，我们只需要管理我们的镜像就好了，比如同步镜像给其他人，或者其他机器。</p>
+<p>其实docker就给我们提供了这样一整套的解决方案，我们可以把我们的镜像提交到 <strong><a href="https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a></strong>，类似 <code>github</code>一样的远程仓库，当我们需要的时候只需要 pull下来启动就好了。</p>
+<h3 id="提交" class="post-heading"><a href="#提交" class="headerlink" title="提交"></a>提交<a class="post-anchor" href="#提交" aria-hidden="true"></a></h3><p>我们就把这个test镜像提交到<code>Docker Hub</code></p>
+<p>首先我们得先注册：<a href="https://hub.docker.com/" target="_blank" rel="external">https://hub.docker.com/</a></p>
+<p>注册成功后就可以<code>docker login</code>登录了<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="symbol">@AY130809220512304015Z</span> o2team-test]<span class="meta"># docker login</span></span><br><span class="line">&gt; Username: a569171010</span><br><span class="line">&gt; Password: xxx</span><br><span class="line">&gt; Email: fanlizhi<span class="symbol">@jd</span>.com</span><br><span class="line">Login Succeeded</span><br></pre></td></tr></table></figure></p>
+<p>填完登录后就可以push了，注意这里push之前得确保名称是 <code>youruser/xxx</code><br>比如我的用户名是 a569171010 所以我需要将刚才的image 重命名成 a569171010/test:1,这里可以用<code>docker tag</code>命令重命名。</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@AY130809220512304015Z o2team-<span class="keyword">test</span>]# docker tag <span class="keyword">test</span>:<span class="number">1</span> a569171010/<span class="keyword">test</span>:<span class="number">1</span></span><br><span class="line">[root@AY130809220512304015Z o2team-<span class="keyword">test</span>]# docker <span class="keyword">push</span> a569171010/<span class="keyword">test</span>:<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>然后就发布出去了，在 <strong><a href="https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a></strong> 上就可以看到下面多了这一条记录，当我们要获取的时候就直接 <code>docker pull a569171010/test</code>就可以了，因为是公用库所以任何人都可以获取并使用。<br></p><p class="user_img"><img src="/img/post/lizhi/docker/a569171010-test.png"></p><p></p>
+<p>我们已经基本熟悉，了解了整个Docker使用的流程，回过头来看看开始我们抛出的那几个曾经很棘手的问题，是不是都能迎刃而解呢？因为image的可移植和隔离性，我们不仅可以轻松迁移扩展，还能轻松了解现在机器上各个服务运行情况。</p>
+<p>下图为Docker整个使用流程：<br></p><p class="user_img"><img src="/img/post/lizhi/docker/cmmd.png"></p><p></p>
+<h3 id="本文参考资料" class="post-heading"><a href="#本文参考资料" class="headerlink" title="本文参考资料"></a>本文参考资料<a class="post-anchor" href="#本文参考资料" aria-hidden="true"></a></h3><p><a href="https://www.docker.com/" target="_blank" rel="external">Docker 官方文档</a><br><a href="http://www.widuu.com/docker/index.html" target="_blank" rel="external">Docker 中文指南</a><br><a href="http://dockone.io/article/101" target="_blank" rel="external">dockone.io 国内比较活跃的Docker论坛</a><br><a href="http://tech.meituan.com/docker_introduction.html" target="_blank" rel="external">Docker 入门介绍</a><br><a href="https://github.com/docker/docker-registry" target="_blank" rel="external">Docker github</a><br><a href="https://help.aliyun.com/knowledge_detail/5974865.html" target="_blank" rel="external">阿里镜像使用文档</a><br><a href="https://zh.wikipedia.org/zh/Docker_(%E8%BB%9F%E9%AB%94" target="_blank" rel="external">维基百科</a></p>
+<h3 id="还想了解的" class="post-heading"><a href="#还想了解的" class="headerlink" title="还想了解的"></a>还想了解的<a class="post-anchor" href="#还想了解的" aria-hidden="true"></a></h3><p>这篇文章只是带领大家了解Docker的整个使用流程和体验，关于其他的一些细节问题比如：后台运行container，各container之间的通讯，端口映射，文件共享等都没有涉及到,最近<code>docker1.1.0</code>发布又有很多新的特性和性能优化，如果有兴趣的同学可以参考这些：</p>
+<p><a href="http://tech.uc.cn/?p=2726" target="_blank" rel="external">利用Docker构建开发环境</a><br><a href="https://www.gitbook.com/book/yeasy/docker_practice/details" target="_blank" rel="external">Docker-从入门到实践</a><br><a href="https://github.com/veggiemonk/awesome-docker" target="_blank" rel="external">Docker-学习资料</a><br><a href="https://blog.docker.com/2016/02/docker-1-10/" target="_blank" rel="external">Docker 1.1.0新特性</a></p>
+
+    </div>
+    <div class="post-revision">
+        <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time>
+    </div>
+    
+<div class="actions pagination pagination-post">
+    
+    <div class="pagination-post-prev"><a href="/notes/2016/03/01/createjs-get-started/" class="button big" title="createjs开发入门"><i class="fa fa-chevron-left"></i> createjs开发入门</a></div>
+    
+    
+    <div class="pagination-post-next"><a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/" class="button big" title="使用npm scripts替代gulp">使用npm scripts替代gulp <i class="fa fa-chevron-right"></i></a></div>
+    
+</div>
+
+
+    
+
+
+<div class="post-comments" id="comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMi8yNy9kb2NrZXIv" data-title="初探Docker" data-url="http://aotu.io/notes/2016/02/27/docker/index.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"aotu"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.id = "duoshuo-script";
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+</div>
+
+
+</article>
+
+</div>
+<div class="sec sec-follow-lite">
+    <div class="container">
+        <div class="sec-heading">
+            <p class="follow-pic"><img src="/img/qrcode.png" alt="关注我们"/></p>
+            <p class="follow-desc">海海人生，无折腾不为乐。</p>
+            <p class="sec-heading-sub follow-acount">
+                <img class="follow-icon" src="/img/logo-circle-120.png" alt="AOTULabs"/> 微信号：AOTULabs
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="sec sec-footer">
+    <div class="container">
+        <footer id="footer" class="sec-heading footer">
+            <ul class="icons">
+                <li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+            </ul>
+            <div class="footer-sec copyright">
+            &copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>
+            Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+            </div>
+            <div class="footer-sec words">
+            "
+            
+            
+            
+            More haste, less speed. 
+            
+            "
+            </div>
+            
+            <div class="footer-sec site-stats" style="display:none">
+                <span id="busuanzi_container_site_pv" class="site-pv">
+                    总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次
+                </span>
+                <span id="busuanzi_container_site_uv" class="site-uv">
+                    总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人
+                </span>
+            </div>
+            
+        </footer>
+    </div>
+</div>
+
+
+    
+    <section id="smSearch" class="slide-search">
+
+<!-- Search -->
+    <section>
+        <form class="search" method="get">
+            <input type="text" name="query" placeholder="搜索" />
+        </form>
+    </section>
+
+<!-- Links -->
+    <section>
+		<h3>搜索结果</h3>
+        <ul class="links" id="searchResults">Loading...</ul>
+    </section>
+
+</section>
+
+<script id="tplSearch" type="text/hogan-tpl">
+    {{#items}}
     <li>
         <a href="{{ url }}" target="_blank">
             <h3>{{ title }}</h3>
@@ -7,4 +343,58 @@
 			{{/desc}}
         </a>
     </li>
-    {{/items}}</script><div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div><script src="/assets/js/dist-2a84b65682.o2.js"></script><script src="/assets/js/dist-bb2f97f6a9.duoshuo.js"></script><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var e=document.createElement("script");e.src="//push.zhanzhang.baidu.com/push.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+    {{/items}}
+</script>
+
+
+    
+	
+	<div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div>
+	
+    
+    <!-- Scripts -->
+<!-- build:js js/dist.o2.js -->
+<script src="/js/lunr.js"></script>
+<script src="/js/debounce.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/xhogan.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+<script src="/assets/fancybox/jquery.fancybox.js"></script>
+<script src="/js/fancybox.js"></script>
+
+<!-- endbuild -->
+
+
+<!-- build:js js/dist.duoshuo.js -->
+<script src="/js/ua-parser.min.js"></script>
+<script src="/js/duoshuo.js"></script>
+<!-- endbuild -->
+
+
+
+<!--busuanzi-->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+</body>
+</html>

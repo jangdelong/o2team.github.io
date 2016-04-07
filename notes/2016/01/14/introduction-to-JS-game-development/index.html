@@ -1,4 +1,336 @@
-<!DOCTYPE html><html lang="zh-cn" class="theme-o2 page-post-detail"><head prefix="og: http://ogp.me/ns#"><meta charset="utf-8"><title>js游戏开发初级入门 | Aotu.io「凹凸实验室」</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="五子棋,游戏,js,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"><link rel="canonical" href="http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/index.html"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="/assets/img/favicon-230x230.png" sizes="230x230"><link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#2f83cd"><meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png"><link rel="stylesheet" href="/assets/css/dist-c41d9f085d.o2.css"><link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css"><link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」"><meta name="description" content="万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！"><meta property="og:type" content="article"><meta property="og:title" content="js游戏开发初级入门"><meta property="og:url" content="http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/index.html"><meta property="og:site_name" content="Aotu.io「凹凸实验室」"><meta property="og:description" content="万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！"><meta property="og:image" content="http://aotu.io/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png"><meta property="og:image" content="http://aotu.io/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/check.jpg"><meta property="og:updated_time" content="2016-03-31T02:31:36.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="js游戏开发初级入门"><meta name="twitter:description" content="万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！"><meta name="twitter:image" content="http://aotu.io/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png"><meta name="twitter:site" content="o2circle"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>var App={root:"/"}</script><body itemscope itemtype="http://schema.org/WebPage"><div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader"><div class="container"><div class="navbar-header"><a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand"><img src="/assets/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"></a><div onclick="" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div></div><div class="navbar-collapse collapse" id="navbar-main"><ul class="nav navbar-nav header-links header-links-main"><li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></ul><ul class="nav navbar-nav navbar-right header-links header-links-extra"><li class="search-wrap"><a class="fa fa-search search-icon" href="#search" title="搜索"></a><form id="search" method="get" class="search-form"><input type="text" name="query" class="search-form-ipt" placeholder="搜索"></form><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a><ul id="theme-list" class="dropdown-menu" aria-labelledby="themes"><li data-v="light"><a href="javascript:;">曙光女神</a><li data-v="dark"><a href="javascript:;">暗影猎手</a></ul></ul></div></div></div><div class="container post-wrap"><article class="post" itemscope itemtype="http://schema.org/Article"><header class="post-header"><div class="post-title"><h2><a href="/notes/2016/01/14/introduction-to-JS-game-development/" itemprop="name">js游戏开发初级入门</a></h2><ul class="post-stats"><li><a href="/tags/js/" class="meta-tag">js</a><li><a href="/tags/游戏/" class="meta-tag">游戏</a><li><a href="/tags/五子棋/" class="meta-tag">五子棋</a><li title="字数"><span class="icon fa-font">5,218</span><li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span><li><a href="/notes/2016/01/14/introduction-to-JS-game-development/#comments" itemprop="discussionUrl" class="lnk-comments"><span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMS8xNC9pbnRyb2R1Y3Rpb24tdG8tSlMtZ2FtZS1kZXZlbG9wbWVudC8=" data-count-type="comments" itemprop="commentsCount">0</span></a></ul><p>凹凸实验室水灵通透软妹子－暖暖，手把手教你用js开发五子棋游戏！</div><div class="post-meta"><time class="published" datetime="2016-01-14T09:20:39.000Z" itempro="datePublished">星期四, 1月14日 2016</time> <a target="_blank" href="https://github.com/Newcandy" class="author"><span class="name">暖暖</span><img src="https://avatars.githubusercontent.com/Newcandy?v=3&s=80" alt="Newcandy"></a></div></header><a href="/notes/2016/01/14/introduction-to-JS-game-development/" class="image featured post-cover"><img src="/assets/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/gobang_cover.jpg" alt="js游戏开发初级入门"></a><div class="post-content" itemprop="articleBody" data-swiftype-index="true"><p>万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！<br><a id="more"></a><h2 id="1-游戏开发方法" class="post-heading"><a href="#1-游戏开发方法" class="headerlink" title="1 游戏开发方法"></a>1 游戏开发方法<a class="post-anchor" href="#1-游戏开发方法" aria-hidden="true"></a></h2><h3 id="1-1-小规模游戏" class="post-heading"><a href="#1-1-小规模游戏" class="headerlink" title="1.1 小规模游戏"></a>1.1 小规模游戏<a class="post-anchor" href="#1-1-小规模游戏" aria-hidden="true"></a></h3><p>小规模游戏一般由一人或两人完成，不需要详细的产品说明等资料，直接进入代码的编写，然后在浏览器中解释并运行。有时候出现错误，重新编辑再回到浏览器解释运行，就是一个简单的编辑-解释-运行的重复工作模式。<h3 id="1-2-大规模游戏" class="post-heading"><a href="#1-2-大规模游戏" class="headerlink" title="1.2 大规模游戏"></a>1.2 大规模游戏<a class="post-anchor" href="#1-2-大规模游戏" aria-hidden="true"></a></h3><p>大规模游戏一般由两人以上完成，一共分为三个阶段：设计阶段、说明阶段、实现阶段。首先是设计阶段：设计什么游戏，游戏的主体用户是谁，游戏的目的等。然后是说明阶段：清楚游戏需要的类和类中需要的方法，分别做一个规划，保证编写代码时思路清晰，以及代码的整洁性。最后是实现阶段，其实就是进入编辑-解释-运行的工作模式。也就是说，大规模游戏比小规模游戏多了两大阶段即设计阶段和说明阶段而已。<h2 id="2-了解游戏规则" class="post-heading"><a href="#2-了解游戏规则" class="headerlink" title="2 了解游戏规则"></a>2 了解游戏规则<a class="post-anchor" href="#2-了解游戏规则" aria-hidden="true"></a></h2><ul><li>对局双方各执一色棋子。<li>空棋盘开局<li>黑先、白后，交替下子，每次只能下一子。<li>棋子下在棋盘的空白点上，棋子下定后，不得向其它点移动，不得从棋盘上拿掉或拿起另落别处。<li>黑方的第一枚棋子可下在棋盘任意交叉点上。</ul><h2 id="3-五子棋游戏的主要方法" class="post-heading"><a href="#3-五子棋游戏的主要方法" class="headerlink" title="3 五子棋游戏的主要方法"></a>3 五子棋游戏的主要方法<a class="post-anchor" href="#3-五子棋游戏的主要方法" aria-hidden="true"></a></h2><h3 id="3-1-画棋盘" class="post-heading"><a href="#3-1-画棋盘" class="headerlink" title="3.1 画棋盘"></a>3.1 画棋盘<a class="post-anchor" href="#3-1-画棋盘" aria-hidden="true"></a></h3><h4 id="3-1-1-画棋盘思路" class="post-heading"><a href="#3-1-1-画棋盘思路" class="headerlink" title="3.1.1 画棋盘思路"></a>3.1.1 画棋盘思路<a class="post-anchor" href="#3-1-1-画棋盘思路" aria-hidden="true"></a></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre><td class="code"><pre><span class="line"><span class="comment">// 确定棋盘大小 15*15 即n = 15</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawGobang</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line"><span class="comment">// 动态生成dom元素</span></span><br><span class="line"><span class="comment">// 通过添加类控制棋盘样式，尤其注意边缘的棋子的样式控制</span></span><br><span class="line">&#125;</span><br></pre></table></figure><h4 id="3-1-2-画棋盘代码" class="post-heading"><a href="#3-1-2-画棋盘代码" class="headerlink" title="3.1.2 画棋盘代码"></a>3.1.2 画棋盘代码<a class="post-anchor" href="#3-1-2-画棋盘代码" aria-hidden="true"></a></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre><td class="code"><pre><span class="line"><span class="comment">// 画棋盘格子</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawGobang</span>(<span class="params">n</span>) </span>&#123;   </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">		</span><br><span class="line">			<span class="keyword">var</span> block = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</span><br><span class="line"></span><br><span class="line">			block.className = <span class="string">"gobang_block"</span>;</span><br><span class="line">			<span class="comment">// 赋予每个格子一个id,方便以后识别并下棋，或可添加html5自定义属性data-*</span></span><br><span class="line">			block.id = <span class="string">"block_"</span>+ i + <span class="string">"_"</span> + j;</span><br><span class="line">			gobang.appendChild(block);</span><br><span class="line">		</span><br><span class="line">			<span class="comment">// 边缘的格子属于特殊情况，需要单独绘制</span></span><br><span class="line">			<span class="keyword">if</span>(i==<span class="number">0</span>)&#123;</span><br><span class="line">				block.className += <span class="string">" top"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(i==n<span class="number">-1</span>)&#123;</span><br><span class="line">				block.className += <span class="string">" bottom"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">0</span>)&#123;</span><br><span class="line">					block.className += <span class="string">" left"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(j==n<span class="number">-1</span>)&#123;</span><br><span class="line">				block.className += <span class="string">" right"</span>;</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></table></figure><h4 id="3-1-2-画棋盘图示" class="post-heading"><a href="#3-1-2-画棋盘图示" class="headerlink" title="3.1.2 画棋盘图示"></a>3.1.2 画棋盘图示<a class="post-anchor" href="#3-1-2-画棋盘图示" aria-hidden="true"></a></h4><p>注意边缘的棋子的样式控制，另外鼠标经过时添加红色虚线提醒。<p class="user_img"><img title="board of gobang" class="gobang_qipan" src="/assets/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png" alt="画棋盘"><h3 id="3-2-画棋子" class="post-heading"><a href="#3-2-画棋子" class="headerlink" title="3.2 画棋子"></a>3.2 画棋子<a class="post-anchor" href="#3-2-画棋子" aria-hidden="true"></a></h3><p>处理函数需要什么操作，只是把棋子画到相对应的棋盘即可吗？<h4 id="3-2-1-事件委托" class="post-heading"><a href="#3-2-1-事件委托" class="headerlink" title="3.2.1 事件委托"></a>3.2.1 事件委托<a class="post-anchor" href="#3-2-1-事件委托" aria-hidden="true"></a></h4><p>画棋子之前需要了解一下事件委托：利用事件冒泡，只制定一个事件处理程序，就可以管理某一类型的所有事件。<br>它的好处在于占用内存少，假设有一个父元素ul，有100个li子元素，如果给100个li子元素都绑定事件，相当耗内存，事件委托的原理就是只需要给父元素绑定事件即可。<br>不过它的使用是有条件的，它要求事件会冒泡，会冒泡的事如click、mousedown、mouseup、keydown、keyup和keypress事件。<p>冒泡的过程大概如下：div -&gt; body -&gt; html(ie5.5-跳过） -&gt; document -&gt; window(ie9,fx,chrome,safari)。<p>因此我不需要给棋盘的每个格子绑定事件，只需要绑定棋盘（格子的父元素）即可。代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">var</span> gobang = <span class="built_in">document</span>.getElementById(<span class="string">"gobang_main"</span>);  <span class="comment">// 获取棋盘</span></span><br><span class="line">EventUtil.addHandler(gobang,<span class="string">"click"</span>,drawPiece);  <span class="comment">// 点击棋盘，进行下棋</span></span><br></pre></table></figure><p><h4 id="3-2-2-事件委托的问题" class="post-heading"><a href="#3-2-2-事件委托的问题" class="headerlink" title="3.2.2 事件委托的问题"></a>3.2.2 事件委托的问题<a class="post-anchor" href="#3-2-2-事件委托的问题" aria-hidden="true"></a></h4><p>由于在父元素中绑定事件，我们知道，事件目标是被单击的单个五子棋格子。因此，需要检测 id属性或其他属性 来决定采取适当的操作。<p>如果不检测是否是我们想要的事件目标，可能导致错误。<br>代码如下,如果targetID不是我们的事件目标，可能i,j的数据则不正确，从而导致访问对应的五子棋格子gobangArr[i][j]出错：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line"><span class="comment">// 格子的id格式为"block_"+ i + "_" + j;</span></span><br><span class="line"><span class="comment">// targetId为当前目标的id,前面加运算符+是为了转换类型</span></span><br><span class="line"><span class="comment">// i和j代表第i行第j列</span></span><br><span class="line">i = +targetId.split(<span class="string">"_"</span>)[<span class="number">1</span>];</span><br><span class="line">j = +targetId.split(<span class="string">"_"</span>)[<span class="number">2</span>];</span><br></pre></table></figure><p><h4 id="3-2-3-已下过的棋盘位置" class="post-heading"><a href="#3-2-3-已下过的棋盘位置" class="headerlink" title="3.2.3 已下过的棋盘位置"></a>3.2.3 已下过的棋盘位置<a class="post-anchor" href="#3-2-3-已下过的棋盘位置" aria-hidden="true"></a></h4><ul><li>画当前棋子，通过添加类 active 和 代表颜色的white或black<li>target.className.indexOf(“active”)&lt;0，意思是当前位置的类若含有active类，则不执行画棋子。<li>误区：通过 棋盘数据gobangArr[i][j]是否为空来判断是否下过棋子。不可通过棋盘数据gobangArr[i][j] 是否为空来判断，因为数组可能存在冗余数据。除非初始化时重置了数组为空。</ul><h4 id="3-2-4-其他" class="post-heading"><a href="#3-2-4-其他" class="headerlink" title="3.2.4 其他"></a>3.2.4 其他<a class="post-anchor" href="#3-2-4-其他" aria-hidden="true"></a></h4><ul><li>一旦下一个棋子就需要判断是否赢了：chessWin(i,j,color);<li>需要切换棋子颜色：color = color==”black”? “white”:”black”;<li>其中一方赢了的话，不可再下棋，必须重新来一局，即移除画棋子的方法。</ul><h3 id="3-3-判断输赢" class="post-heading"><a href="#3-3-判断输赢" class="headerlink" title="3.3 判断输赢"></a>3.3 判断输赢<a class="post-anchor" href="#3-3-判断输赢" aria-hidden="true"></a></h3><h4 id="3-3-1-判断输赢算法" class="post-heading"><a href="#3-3-1-判断输赢算法" class="headerlink" title="3.3.1 判断输赢算法"></a>3.3.1 判断输赢算法<a class="post-anchor" href="#3-3-1-判断输赢算法" aria-hidden="true"></a></h4><p>首先设置count = 1。count的值代表在同一个方向连续在一起的棋子总数，达到5个则该方赢。<br>如水平方向按照如下顺序执行判断，其他方向雷同：<ol><li>按顺序遍历当前位置(i,j)棋子的前四个位置是否含相同颜色的棋子，若相同则count++，同时检测是否count == 5 。<li>一旦不相同退出循环，<li>继续按顺序遍历(i,j)棋子的后四个位置是否含相同颜色的棋子，若相同，count++以及检测是否count == 5 。<br>如下图所示，红色虚线为即将要下的棋子，计算count为1，向左判断使得count最后为3，遇到红色交叉的地方没有黑色棋子，则退出循环；从红色虚线的右边继续判断，最后count为5，因此判断黑棋赢：</ol><p class="user_img"><img title="check who win" class="gobang_check" src="/assets/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/check.jpg" alt="判断输赢算法"><p>代码如下，一共检测四个方向：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">chessWin</span>(<span class="params">i,j,color</span>) </span>&#123;  </span><br><span class="line"><span class="comment">// 垂直方向 </span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line"><span class="comment">// 水平方向</span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line"><span class="comment">// 45°方向</span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line"><span class="comment">// 135°方向 </span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line">&#125;</span><br></pre></table></figure><p><h3 id="3-4-重置游戏" class="post-heading"><a href="#3-4-重置游戏" class="headerlink" title="3.4 重置游戏"></a>3.4 重置游戏<a class="post-anchor" href="#3-4-重置游戏" aria-hidden="true"></a></h3><p>主要是清除棋子以及棋子数组，另外设置默认数据：默认黑棋先下，重置提示语，重新给棋盘绑定方法。一方赢了的话，默认移除画棋子方法的，所以需要重新给棋盘绑定方法。如果理解了文章上面讲述的方法的话，重置游戏是比较简单的，因此不再赘述。<h2 id="4-五子棋测试" class="post-heading"><a href="#4-五子棋测试" class="headerlink" title="4 五子棋测试"></a>4 五子棋测试<a class="post-anchor" href="#4-五子棋测试" aria-hidden="true"></a></h2><ul><li>检测特殊值。如检测棋盘边缘是否可以正常画棋子。<li>测试范围。判断五子棋的四个方向即垂直方向、水平方向、45度方向、135度方向，是否可以判断输赢正确。</ul><h2 id="5-JS事件" class="post-heading"><a href="#5-JS事件" class="headerlink" title="5 JS事件"></a>5 JS事件<a class="post-anchor" href="#5-JS事件" aria-hidden="true"></a></h2><p>最后根据五子棋的主要方法，总结一下js事件。<h3 id="5-1-事件处理程序：响应某个事件的函数" class="post-heading"><a href="#5-1-事件处理程序：响应某个事件的函数" class="headerlink" title="5.1 事件处理程序：响应某个事件的函数"></a>5.1 事件处理程序：响应某个事件的函数<a class="post-anchor" href="#5-1-事件处理程序：响应某个事件的函数" aria-hidden="true"></a></h3><h4 id="5-1-1-html事件处理程序" class="post-heading"><a href="#5-1-1-html事件处理程序" class="headerlink" title="5.1.1  html事件处理程序"></a>5.1.1 html事件处理程序<a class="post-anchor" href="#5-1-1-html事件处理程序" aria-hidden="true"></a></h4><p>即直接在HTML代码中添加事件处理程序。不推荐使用，原因如下：<br>html事件处理程序缺点：时差问题、代码紧密耦合、扩展事件处理程序的作用域链在不同浏览器中导致不同结果。<h4 id="5-1-2-DOM0级事件处理程序" class="post-heading"><a href="#5-1-2-DOM0级事件处理程序" class="headerlink" title="5.1.2  DOM0级事件处理程序"></a>5.1.2 DOM0级事件处理程序<a class="post-anchor" href="#5-1-2-DOM0级事件处理程序" aria-hidden="true"></a></h4><p>类似onclick等事件处理程序属性，通常全部小写。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">"myBtn"</span>);</span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; &#125;;    <span class="comment">// 绑定</span></span><br><span class="line">btn.onclick = <span class="literal">null</span>;  <span class="comment">// 解绑</span></span><br></pre></table></figure><p><h4 id="5-1-3-DOM2级事件处理程序" class="post-heading"><a href="#5-1-3-DOM2级事件处理程序" class="headerlink" title="5.1.3  DOM2级事件处理程序"></a>5.1.3 DOM2级事件处理程序<a class="post-anchor" href="#5-1-3-DOM2级事件处理程序" aria-hidden="true"></a></h4><p>DOM2：可添加多个事件处理程序，按顺序触发。<br>使用方法：<br>绑定函数addEventListener() 与 解绑函数removeEventListener()：参数为事件名（如click)、作为事件处理程序的函数、布尔值。布尔值为true时代表捕获，false代表冒泡阶段调用事件处理程序，一般为false。<br>注意：若第二个参数为匿名函数，即使用removeEventListener()传入相同的匿名函数也无法解绑。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">"click"</span>,myGod,<span class="literal">false</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myGod</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">"oh,my god!"</span>);</span><br><span class="line">&#125;</span><br><span class="line">btn.removeEventListener(<span class="string">"click"</span>,myGod,<span class="literal">false</span>);</span><br></pre></table></figure><h4 id="5-1-4-IE事件处理程序" class="post-heading"><a href="#5-1-4-IE事件处理程序" class="headerlink" title="5.1.4  IE事件处理程序"></a>5.1.4 IE事件处理程序<a class="post-anchor" href="#5-1-4-IE事件处理程序" aria-hidden="true"></a></h4><p>可添加多个事件处理程序，按相反的顺序触发。只有IE和opera支持。<br>在DOM0级中，this为所属元素的作用域内运行；但是在使用attachEvent()方法时，事件处理程序在全局作用域中运行，即this===window！！！<br>使用方法：<br>绑定函数attachEvent() 和 解绑函数detachEvent() : 参数为 事件处理程序名称(如 onclick )与函数。如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre><td class="code"><pre><span class="line">btn.attachEvent(<span class="string">"onclick"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; );</span><br></pre></table></figure><p><h4 id="5-1-5-跨浏览器" class="post-heading"><a href="#5-1-5-跨浏览器" class="headerlink" title="5.1.5  跨浏览器"></a>5.1.5 跨浏览器<a class="post-anchor" href="#5-1-5-跨浏览器" aria-hidden="true"></a></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">var</span> EventUtil = &#123;</span><br><span class="line">    addHandler: <span class="function"><span class="keyword">function</span>(<span class="params">element, type, handler</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (element.addEventListener)&#123;  <span class="comment">// DOM2级</span></span><br><span class="line">            element.addEventListener(type, handler, <span class="literal">false</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent)&#123;  <span class="comment">// IE</span></span><br><span class="line">            element.attachEvent(<span class="string">"on"</span> + type, handler);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;   <span class="comment">// DOM0级</span></span><br><span class="line">            element[<span class="string">"on"</span> + type] = handler;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></table></figure><h3 id="5-2-事件对象event" class="post-heading"><a href="#5-2-事件对象event" class="headerlink" title="5.2 事件对象event"></a>5.2 事件对象event<a class="post-anchor" href="#5-2-事件对象event" aria-hidden="true"></a></h3><ul><li>DOM0级或DOM2级都会传入event对象。<li>ie访问event有几种方式，取决于指定事件处理程序的方法。<br>DOM0：window.event<br>attachEvent()：window.event或event<li>跨浏览器方案如下：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line"><span class="keyword">var</span> EventUtil = &#123;</span><br><span class="line">    getEvent: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> event ? event : <span class="built_in">window</span>.event;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></table></figure></ul><h3 id="5-3-事件目标" class="post-heading"><a href="#5-3-事件目标" class="headerlink" title="5.3 事件目标"></a>5.3 事件目标<a class="post-anchor" href="#5-3-事件目标" aria-hidden="true"></a></h3><ul><li><p>对象this始终等于currentTarget,而target则只包含事件的实际目标。<br>例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    alert(event.currentTarget === <span class="built_in">document</span>.body);   <span class="comment">//true</span></span><br><span class="line">    alert(<span class="keyword">this</span> === <span class="built_in">document</span>.body);                  <span class="comment">//true</span></span><br><span class="line">    alert(event.target === <span class="built_in">document</span>.getElementById(<span class="string">"myBtn"</span>)); <span class="comment">//true</span></span><br><span class="line">&#125;;</span><br></pre></table></figure><li><p>跨浏览器解决方案如下：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre><td class="code"><pre><span class="line"> <span class="keyword">var</span> EventUtil = &#123;</span><br><span class="line">    getTarget: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> event.target || event.srcElement;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></table></figure></ul><h2 id="6-五子棋源码以及参考" class="post-heading"><a href="#6-五子棋源码以及参考" class="headerlink" title="6 五子棋源码以及参考"></a>6 五子棋源码以及参考<a class="post-anchor" href="#6-五子棋源码以及参考" aria-hidden="true"></a></h2><p>在线地址： <a href="http://labs.qiang.it/qqpai/test/wcn/gobang/gobang.html" target="_blank" rel="external">http://labs.qiang.it/qqpai/test/wcn/gobang/gobang.html</a><br>github地址：<a href="https://github.com/Newcandy/gobang" target="_blank" rel="external">https://github.com/Newcandy/gobang</a><br>参考书籍：《Javascript高级程序设计》</div><div class="post-revision"><i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time></div><div class="actions pagination pagination-post"><div class="pagination-post-prev"><a href="/notes/2016/01/16/UFT/" class="button big" title="UFT 需求提报平台回顾"><i class="fa fa-chevron-left"></i> UFT 需求提报平台回顾</a></div><div class="pagination-post-next"><a href="/notes/2016/01/08/2016-01-06-promise/" class="button big" title="Promise 实战">Promise 实战 <i class="fa fa-chevron-right"></i></a></div></div><div class="post-comments" id="comments"><div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMS8xNC9pbnRyb2R1Y3Rpb24tdG8tSlMtZ2FtZS1kZXZlbG9wbWVudC8=" data-title="js游戏开发初级入门" data-url="http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/index.html"></div><script>var duoshuoQuery={short_name:"aotu"};!function(){var t=document.createElement("script");t.id="duoshuo-script",t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//static.duoshuo.com/embed.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script></div></article></div><div class="sec sec-follow-lite"><div class="container"><div class="sec-heading"><p class="follow-pic"><img src="/assets/img/qrcode.png" alt="关注我们"><p class="follow-desc">海海人生，无折腾不为乐。<p class="sec-heading-sub follow-acount"><img class="follow-icon" src="/assets/img/logo-circle-120.png" alt="AOTULabs"> 微信号：AOTULabs</div></div></div><div class="sec sec-footer"><div class="container"><footer id="footer" class="sec-heading footer"><ul class="icons"><li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a><li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a><li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></ul><div class="footer-sec copyright">&copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</div><div class="footer-sec words">" A journey of a thousand miles begins with single step. "</div><div class="footer-sec site-stats" style="display:none"><span id="busuanzi_container_site_pv" class="site-pv">总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次 </span><span id="busuanzi_container_site_uv" class="site-uv">总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人</span></div></footer></div></div><section id="smSearch" class="slide-search"><section><form class="search" method="get"><input type="text" name="query" placeholder="搜索"></form></section><section><h3>搜索结果</h3><ul class="links" id="searchResults">Loading...</ul></section></section><script id="tplSearch" type="text/hogan-tpl">{{#items}}
+<!DOCTYPE html>
+<html lang="zh-cn" class="theme-o2 page-post-detail">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8"/>
+	<title>js游戏开发初级入门 | Aotu.io「凹凸实验室」</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <!-- keywords -->
+<meta name="keywords" content="五子棋,游戏,js,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"/>
+<!-- Canonical links -->
+<link rel="canonical" href="http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/index.html">
+<!-- Alternative links -->
+
+<!-- Icon -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/img/favicon-230x230.png" sizes="230x230">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2f83cd">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<!-- CSS -->
+<!-- build:css css/dist.o2.css -->
+<link rel="stylesheet" href="/css/o2.css">
+<!-- endbuild -->
+
+<link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」">
+<!-- Open Graph -->
+<meta name="description" content="万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js游戏开发初级入门">
+<meta property="og:url" content="http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/index.html">
+<meta property="og:site_name" content="Aotu.io「凹凸实验室」">
+<meta property="og:description" content="万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！">
+<meta property="og:image" content="http://aotu.io/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png">
+<meta property="og:image" content="http://aotu.io/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/check.jpg">
+<meta property="og:updated_time" content="2016-03-31T02:31:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js游戏开发初级入门">
+<meta name="twitter:description" content="万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！">
+<meta name="twitter:image" content="http://aotu.io/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png">
+<meta name="twitter:site" content="o2circle">
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script>
+var App = {
+    root:'/'    
+};
+</script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand">
+                <img src="/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"/>
+            </a>
+            <div onclick="javascript:void(0)" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav header-links header-links-main">
+                <li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a></li><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a></li><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a></li><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a></li><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right header-links header-links-extra">
+                <li class="search-wrap">
+                    <a class="fa fa-search search-icon" href="#search" title="搜索"></a>
+                    <form id="search" method="get" class="search-form">
+                        <input type="text" name="query" class="search-form-ipt" placeholder="搜索" />
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a>
+                    <ul id="theme-list" class="dropdown-menu" aria-labelledby="themes">
+                        <li data-v="light"><a href="javascript:;">曙光女神</a></li>
+                        <li data-v="dark"><a href="javascript:;">暗影猎手</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+	
+<div class="container post-wrap">
+    
+    <!-- Post -->
+<article class="post" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <div class="post-title">
+            <h2><a href="/notes/2016/01/14/introduction-to-JS-game-development/" itemprop="name">js游戏开发初级入门</a></h2>
+            <ul class="post-stats">
+                
+                
+                <li><a href='/tags/js/' class='meta-tag'>js</a></li>
+                
+                <li><a href='/tags/游戏/' class='meta-tag'>游戏</a></li>
+                
+                <li><a href='/tags/五子棋/' class='meta-tag'>五子棋</a></li>
+                 
+                
+                <li title="字数"><span class="icon fa-font">5,218</span></li>
+                
+                <li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span></li>
+                
+                
+                <li>
+                    <a href="/notes/2016/01/14/introduction-to-JS-game-development/#comments" itemprop="discussionUrl" class="lnk-comments">
+                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMS8xNC9pbnRyb2R1Y3Rpb24tdG8tSlMtZ2FtZS1kZXZlbG9wbWVudC8=" data-count-type="comments" itemprop="commentsCount">0</span>
+                    </a>
+                </li>
+                 
+            </ul>
+            
+            <p>凹凸实验室水灵通透软妹子－暖暖，手把手教你用js开发五子棋游戏！</p>
+            
+        </div>
+        <div class="post-meta">
+            <time class="published" datetime="2016-01-14T09:20:39.000Z" itempro="datePublished">星期四, 1月14日 2016</time>
+            <a target="_blank" href="https://github.com/Newcandy" class="author"><span class="name">暖暖</span><img src="https://avatars.githubusercontent.com/Newcandy?v=3&s=80" alt="Newcandy" /></a>
+        </div>
+    </header>
+    <a href="/notes/2016/01/14/introduction-to-JS-game-development/" class="image featured post-cover"><img src="/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/gobang_cover.jpg" alt="js游戏开发初级入门" /></a>
+    <div class="post-content" itemprop="articleBody" data-swiftype-index="true">
+        <p>万事开头难，js一直没有进步？跟着这篇文章来编写五子棋游戏吧！<br><a id="more"></a></p>
+<h2 id="1-游戏开发方法" class="post-heading"><a href="#1-游戏开发方法" class="headerlink" title="1 游戏开发方法"></a>1 游戏开发方法<a class="post-anchor" href="#1-游戏开发方法" aria-hidden="true"></a></h2><h3 id="1-1-小规模游戏" class="post-heading"><a href="#1-1-小规模游戏" class="headerlink" title="1.1 小规模游戏"></a>1.1 小规模游戏<a class="post-anchor" href="#1-1-小规模游戏" aria-hidden="true"></a></h3><p>小规模游戏一般由一人或两人完成，不需要详细的产品说明等资料，直接进入代码的编写，然后在浏览器中解释并运行。有时候出现错误，重新编辑再回到浏览器解释运行，就是一个简单的编辑-解释-运行的重复工作模式。</p>
+<h3 id="1-2-大规模游戏" class="post-heading"><a href="#1-2-大规模游戏" class="headerlink" title="1.2 大规模游戏"></a>1.2 大规模游戏<a class="post-anchor" href="#1-2-大规模游戏" aria-hidden="true"></a></h3><p>大规模游戏一般由两人以上完成，一共分为三个阶段：设计阶段、说明阶段、实现阶段。首先是设计阶段：设计什么游戏，游戏的主体用户是谁，游戏的目的等。然后是说明阶段：清楚游戏需要的类和类中需要的方法，分别做一个规划，保证编写代码时思路清晰，以及代码的整洁性。最后是实现阶段，其实就是进入编辑-解释-运行的工作模式。也就是说，大规模游戏比小规模游戏多了两大阶段即设计阶段和说明阶段而已。</p>
+<h2 id="2-了解游戏规则" class="post-heading"><a href="#2-了解游戏规则" class="headerlink" title="2 了解游戏规则"></a>2 了解游戏规则<a class="post-anchor" href="#2-了解游戏规则" aria-hidden="true"></a></h2><ul>
+<li>对局双方各执一色棋子。</li>
+<li>空棋盘开局</li>
+<li>黑先、白后，交替下子，每次只能下一子。</li>
+<li>棋子下在棋盘的空白点上，棋子下定后，不得向其它点移动，不得从棋盘上拿掉或拿起另落别处。</li>
+<li>黑方的第一枚棋子可下在棋盘任意交叉点上。</li>
+</ul>
+<h2 id="3-五子棋游戏的主要方法" class="post-heading"><a href="#3-五子棋游戏的主要方法" class="headerlink" title="3 五子棋游戏的主要方法"></a>3 五子棋游戏的主要方法<a class="post-anchor" href="#3-五子棋游戏的主要方法" aria-hidden="true"></a></h2><h3 id="3-1-画棋盘" class="post-heading"><a href="#3-1-画棋盘" class="headerlink" title="3.1 画棋盘"></a>3.1 画棋盘<a class="post-anchor" href="#3-1-画棋盘" aria-hidden="true"></a></h3><h4 id="3-1-1-画棋盘思路" class="post-heading"><a href="#3-1-1-画棋盘思路" class="headerlink" title="3.1.1 画棋盘思路"></a>3.1.1 画棋盘思路<a class="post-anchor" href="#3-1-1-画棋盘思路" aria-hidden="true"></a></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 确定棋盘大小 15*15 即n = 15</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawGobang</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line"><span class="comment">// 动态生成dom元素</span></span><br><span class="line"><span class="comment">// 通过添加类控制棋盘样式，尤其注意边缘的棋子的样式控制</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-1-2-画棋盘代码" class="post-heading"><a href="#3-1-2-画棋盘代码" class="headerlink" title="3.1.2 画棋盘代码"></a>3.1.2 画棋盘代码<a class="post-anchor" href="#3-1-2-画棋盘代码" aria-hidden="true"></a></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 画棋盘格子</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawGobang</span>(<span class="params">n</span>) </span>&#123;   </span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">		</span><br><span class="line">			<span class="keyword">var</span> block = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</span><br><span class="line"></span><br><span class="line">			block.className = <span class="string">"gobang_block"</span>;</span><br><span class="line">			<span class="comment">// 赋予每个格子一个id,方便以后识别并下棋，或可添加html5自定义属性data-*</span></span><br><span class="line">			block.id = <span class="string">"block_"</span>+ i + <span class="string">"_"</span> + j;</span><br><span class="line">			gobang.appendChild(block);</span><br><span class="line">		</span><br><span class="line">			<span class="comment">// 边缘的格子属于特殊情况，需要单独绘制</span></span><br><span class="line">			<span class="keyword">if</span>(i==<span class="number">0</span>)&#123;</span><br><span class="line">				block.className += <span class="string">" top"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(i==n<span class="number">-1</span>)&#123;</span><br><span class="line">				block.className += <span class="string">" bottom"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">0</span>)&#123;</span><br><span class="line">					block.className += <span class="string">" left"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(j==n<span class="number">-1</span>)&#123;</span><br><span class="line">				block.className += <span class="string">" right"</span>;</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-1-2-画棋盘图示" class="post-heading"><a href="#3-1-2-画棋盘图示" class="headerlink" title="3.1.2 画棋盘图示"></a>3.1.2 画棋盘图示<a class="post-anchor" href="#3-1-2-画棋盘图示" aria-hidden="true"></a></h4><p>注意边缘的棋子的样式控制，另外鼠标经过时添加红色虚线提醒。</p>
+<p class="user_img"><img title="board of gobang" class="gobang_qipan" src="/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png" alt="画棋盘"></p>
+<h3 id="3-2-画棋子" class="post-heading"><a href="#3-2-画棋子" class="headerlink" title="3.2 画棋子"></a>3.2 画棋子<a class="post-anchor" href="#3-2-画棋子" aria-hidden="true"></a></h3><p>处理函数需要什么操作，只是把棋子画到相对应的棋盘即可吗？</p>
+<h4 id="3-2-1-事件委托" class="post-heading"><a href="#3-2-1-事件委托" class="headerlink" title="3.2.1 事件委托"></a>3.2.1 事件委托<a class="post-anchor" href="#3-2-1-事件委托" aria-hidden="true"></a></h4><p>画棋子之前需要了解一下事件委托：利用事件冒泡，只制定一个事件处理程序，就可以管理某一类型的所有事件。<br>它的好处在于占用内存少，假设有一个父元素ul，有100个li子元素，如果给100个li子元素都绑定事件，相当耗内存，事件委托的原理就是只需要给父元素绑定事件即可。<br>不过它的使用是有条件的，它要求事件会冒泡，会冒泡的事如click、mousedown、mouseup、keydown、keyup和keypress事件。</p>
+<p>冒泡的过程大概如下：div  -&gt; body -&gt; html(ie5.5-跳过） -&gt; document -&gt; window(ie9,fx,chrome,safari)。</p>
+<p>因此我不需要给棋盘的每个格子绑定事件，只需要绑定棋盘（格子的父元素）即可。代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gobang = <span class="built_in">document</span>.getElementById(<span class="string">"gobang_main"</span>);  <span class="comment">// 获取棋盘</span></span><br><span class="line">EventUtil.addHandler(gobang,<span class="string">"click"</span>,drawPiece);  <span class="comment">// 点击棋盘，进行下棋</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="3-2-2-事件委托的问题" class="post-heading"><a href="#3-2-2-事件委托的问题" class="headerlink" title="3.2.2 事件委托的问题"></a>3.2.2 事件委托的问题<a class="post-anchor" href="#3-2-2-事件委托的问题" aria-hidden="true"></a></h4><p>由于在父元素中绑定事件，我们知道，事件目标是被单击的单个五子棋格子。因此，需要检测 id属性或其他属性 来决定采取适当的操作。</p>
+<p>如果不检测是否是我们想要的事件目标，可能导致错误。<br>代码如下,如果targetID不是我们的事件目标，可能i,j的数据则不正确，从而导致访问对应的五子棋格子gobangArr[i][j]出错：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 格子的id格式为"block_"+ i + "_" + j;</span></span><br><span class="line"><span class="comment">// targetId为当前目标的id,前面加运算符+是为了转换类型</span></span><br><span class="line"><span class="comment">// i和j代表第i行第j列</span></span><br><span class="line">i = +targetId.split(<span class="string">"_"</span>)[<span class="number">1</span>];</span><br><span class="line">j = +targetId.split(<span class="string">"_"</span>)[<span class="number">2</span>];</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-2-3-已下过的棋盘位置" class="post-heading"><a href="#3-2-3-已下过的棋盘位置" class="headerlink" title="3.2.3 已下过的棋盘位置"></a>3.2.3 已下过的棋盘位置<a class="post-anchor" href="#3-2-3-已下过的棋盘位置" aria-hidden="true"></a></h4><ul>
+<li>画当前棋子，通过添加类 active 和 代表颜色的white或black</li>
+<li>target.className.indexOf(“active”)&lt;0，意思是当前位置的类若含有active类，则不执行画棋子。</li>
+<li>误区：通过 棋盘数据gobangArr[i][j]是否为空来判断是否下过棋子。不可通过棋盘数据gobangArr[i][j] 是否为空来判断，因为数组可能存在冗余数据。除非初始化时重置了数组为空。</li>
+</ul>
+<h4 id="3-2-4-其他" class="post-heading"><a href="#3-2-4-其他" class="headerlink" title="3.2.4 其他"></a>3.2.4 其他<a class="post-anchor" href="#3-2-4-其他" aria-hidden="true"></a></h4><ul>
+<li>一旦下一个棋子就需要判断是否赢了：chessWin(i,j,color);</li>
+<li>需要切换棋子颜色：color = color==”black”? “white”:”black”;</li>
+<li>其中一方赢了的话，不可再下棋，必须重新来一局，即移除画棋子的方法。</li>
+</ul>
+<h3 id="3-3-判断输赢" class="post-heading"><a href="#3-3-判断输赢" class="headerlink" title="3.3 判断输赢"></a>3.3 判断输赢<a class="post-anchor" href="#3-3-判断输赢" aria-hidden="true"></a></h3><h4 id="3-3-1-判断输赢算法" class="post-heading"><a href="#3-3-1-判断输赢算法" class="headerlink" title="3.3.1 判断输赢算法"></a>3.3.1 判断输赢算法<a class="post-anchor" href="#3-3-1-判断输赢算法" aria-hidden="true"></a></h4><p>首先设置count = 1。count的值代表在同一个方向连续在一起的棋子总数，达到5个则该方赢。<br>如水平方向按照如下顺序执行判断，其他方向雷同：</p>
+<ol>
+<li>按顺序遍历当前位置(i,j)棋子的前四个位置是否含相同颜色的棋子，若相同则count++，同时检测是否count == 5 。</li>
+<li>一旦不相同退出循环，</li>
+<li>继续按顺序遍历(i,j)棋子的后四个位置是否含相同颜色的棋子，若相同，count++以及检测是否count == 5 。<br>如下图所示，红色虚线为即将要下的棋子，计算count为1，向左判断使得count最后为3，遇到红色交叉的地方没有黑色棋子，则退出循环；从红色虚线的右边继续判断，最后count为5，因此判断黑棋赢：</li>
+</ol>
+<p class="user_img"><img title="check who win" class="gobang_check" src="/img/post/wangcainuan/2016-01-14-introduction-to-JS-game-development/check.jpg" alt="判断输赢算法"></p>
+<p>代码如下，一共检测四个方向：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">chessWin</span>(<span class="params">i,j,color</span>) </span>&#123;  </span><br><span class="line"><span class="comment">// 垂直方向 </span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line"><span class="comment">// 水平方向</span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line"><span class="comment">// 45°方向</span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line"><span class="comment">// 135°方向 </span></span><br><span class="line"><span class="comment">// 重置count = 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-4-重置游戏" class="post-heading"><a href="#3-4-重置游戏" class="headerlink" title="3.4 重置游戏"></a>3.4 重置游戏<a class="post-anchor" href="#3-4-重置游戏" aria-hidden="true"></a></h3><p>主要是清除棋子以及棋子数组，另外设置默认数据：默认黑棋先下，重置提示语，重新给棋盘绑定方法。一方赢了的话，默认移除画棋子方法的，所以需要重新给棋盘绑定方法。如果理解了文章上面讲述的方法的话，重置游戏是比较简单的，因此不再赘述。</p>
+<h2 id="4-五子棋测试" class="post-heading"><a href="#4-五子棋测试" class="headerlink" title="4 五子棋测试"></a>4 五子棋测试<a class="post-anchor" href="#4-五子棋测试" aria-hidden="true"></a></h2><ul>
+<li>检测特殊值。如检测棋盘边缘是否可以正常画棋子。</li>
+<li>测试范围。判断五子棋的四个方向即垂直方向、水平方向、45度方向、135度方向，是否可以判断输赢正确。</li>
+</ul>
+<h2 id="5-JS事件" class="post-heading"><a href="#5-JS事件" class="headerlink" title="5 JS事件"></a>5 JS事件<a class="post-anchor" href="#5-JS事件" aria-hidden="true"></a></h2><p>最后根据五子棋的主要方法，总结一下js事件。</p>
+<h3 id="5-1-事件处理程序：响应某个事件的函数" class="post-heading"><a href="#5-1-事件处理程序：响应某个事件的函数" class="headerlink" title="5.1 事件处理程序：响应某个事件的函数"></a>5.1 事件处理程序：响应某个事件的函数<a class="post-anchor" href="#5-1-事件处理程序：响应某个事件的函数" aria-hidden="true"></a></h3><h4 id="5-1-1-html事件处理程序" class="post-heading"><a href="#5-1-1-html事件处理程序" class="headerlink" title="5.1.1  html事件处理程序"></a>5.1.1  html事件处理程序<a class="post-anchor" href="#5-1-1-html事件处理程序" aria-hidden="true"></a></h4><p>即直接在HTML代码中添加事件处理程序。不推荐使用，原因如下：<br>html事件处理程序缺点：时差问题、代码紧密耦合、扩展事件处理程序的作用域链在不同浏览器中导致不同结果。</p>
+<h4 id="5-1-2-DOM0级事件处理程序" class="post-heading"><a href="#5-1-2-DOM0级事件处理程序" class="headerlink" title="5.1.2  DOM0级事件处理程序"></a>5.1.2  DOM0级事件处理程序<a class="post-anchor" href="#5-1-2-DOM0级事件处理程序" aria-hidden="true"></a></h4><p>类似onclick等事件处理程序属性，通常全部小写。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">"myBtn"</span>);</span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; &#125;;    <span class="comment">// 绑定</span></span><br><span class="line">btn.onclick = <span class="literal">null</span>;  <span class="comment">// 解绑</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="5-1-3-DOM2级事件处理程序" class="post-heading"><a href="#5-1-3-DOM2级事件处理程序" class="headerlink" title="5.1.3  DOM2级事件处理程序"></a>5.1.3  DOM2级事件处理程序<a class="post-anchor" href="#5-1-3-DOM2级事件处理程序" aria-hidden="true"></a></h4><p>DOM2：可添加多个事件处理程序，按顺序触发。<br>使用方法：<br> 绑定函数addEventListener() 与 解绑函数removeEventListener()：参数为事件名（如click)、作为事件处理程序的函数、布尔值。布尔值为true时代表捕获，false代表冒泡阶段调用事件处理程序，一般为false。<br> 注意：若第二个参数为匿名函数，即使用removeEventListener()传入相同的匿名函数也无法解绑。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">"click"</span>,myGod,<span class="literal">false</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myGod</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">"oh,my god!"</span>);</span><br><span class="line">&#125;</span><br><span class="line">btn.removeEventListener(<span class="string">"click"</span>,myGod,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="5-1-4-IE事件处理程序" class="post-heading"><a href="#5-1-4-IE事件处理程序" class="headerlink" title="5.1.4  IE事件处理程序"></a>5.1.4  IE事件处理程序<a class="post-anchor" href="#5-1-4-IE事件处理程序" aria-hidden="true"></a></h4><p>可添加多个事件处理程序，按相反的顺序触发。只有IE和opera支持。<br>在DOM0级中，this为所属元素的作用域内运行；但是在使用attachEvent()方法时，事件处理程序在全局作用域中运行，即this===window！！！<br>使用方法：<br>绑定函数attachEvent()  和 解绑函数detachEvent() : 参数为 事件处理程序名称(如 onclick )与函数。如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">btn.attachEvent(<span class="string">"onclick"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; );</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-1-5-跨浏览器" class="post-heading"><a href="#5-1-5-跨浏览器" class="headerlink" title="5.1.5  跨浏览器"></a>5.1.5  跨浏览器<a class="post-anchor" href="#5-1-5-跨浏览器" aria-hidden="true"></a></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> EventUtil = &#123;</span><br><span class="line">    addHandler: <span class="function"><span class="keyword">function</span>(<span class="params">element, type, handler</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (element.addEventListener)&#123;  <span class="comment">// DOM2级</span></span><br><span class="line">            element.addEventListener(type, handler, <span class="literal">false</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent)&#123;  <span class="comment">// IE</span></span><br><span class="line">            element.attachEvent(<span class="string">"on"</span> + type, handler);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;   <span class="comment">// DOM0级</span></span><br><span class="line">            element[<span class="string">"on"</span> + type] = handler;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-2-事件对象event" class="post-heading"><a href="#5-2-事件对象event" class="headerlink" title="5.2 事件对象event"></a>5.2 事件对象event<a class="post-anchor" href="#5-2-事件对象event" aria-hidden="true"></a></h3><ul>
+<li>DOM0级或DOM2级都会传入event对象。</li>
+<li>ie访问event有几种方式，取决于指定事件处理程序的方法。<br>   DOM0：window.event<br>   attachEvent()：window.event或event</li>
+<li>跨浏览器方案如下：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> EventUtil = &#123;</span><br><span class="line">    getEvent: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> event ? event : <span class="built_in">window</span>.event;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="5-3-事件目标" class="post-heading"><a href="#5-3-事件目标" class="headerlink" title="5.3 事件目标"></a>5.3 事件目标<a class="post-anchor" href="#5-3-事件目标" aria-hidden="true"></a></h3><ul>
+<li><p>对象this始终等于currentTarget,而target则只包含事件的实际目标。<br>例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    alert(event.currentTarget === <span class="built_in">document</span>.body);   <span class="comment">//true</span></span><br><span class="line">    alert(<span class="keyword">this</span> === <span class="built_in">document</span>.body);                  <span class="comment">//true</span></span><br><span class="line">    alert(event.target === <span class="built_in">document</span>.getElementById(<span class="string">"myBtn"</span>)); <span class="comment">//true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>跨浏览器解决方案如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> EventUtil = &#123;</span><br><span class="line">    getTarget: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> event.target || event.srcElement;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="6-五子棋源码以及参考" class="post-heading"><a href="#6-五子棋源码以及参考" class="headerlink" title="6 五子棋源码以及参考"></a>6 五子棋源码以及参考<a class="post-anchor" href="#6-五子棋源码以及参考" aria-hidden="true"></a></h2><p>在线地址： <a href="http://labs.qiang.it/qqpai/test/wcn/gobang/gobang.html" target="_blank" rel="external">http://labs.qiang.it/qqpai/test/wcn/gobang/gobang.html</a><br>github地址：<a href="https://github.com/Newcandy/gobang" target="_blank" rel="external">https://github.com/Newcandy/gobang</a><br>参考书籍：《Javascript高级程序设计》</p>
+
+    </div>
+    <div class="post-revision">
+        <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time>
+    </div>
+    
+<div class="actions pagination pagination-post">
+    
+    <div class="pagination-post-prev"><a href="/notes/2016/01/16/UFT/" class="button big" title="UFT 需求提报平台回顾"><i class="fa fa-chevron-left"></i> UFT 需求提报平台回顾</a></div>
+    
+    
+    <div class="pagination-post-next"><a href="/notes/2016/01/08/2016-01-06-promise/" class="button big" title="Promise 实战">Promise 实战 <i class="fa fa-chevron-right"></i></a></div>
+    
+</div>
+
+
+    
+
+
+<div class="post-comments" id="comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMS8xNC9pbnRyb2R1Y3Rpb24tdG8tSlMtZ2FtZS1kZXZlbG9wbWVudC8=" data-title="js游戏开发初级入门" data-url="http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/index.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"aotu"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.id = "duoshuo-script";
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+</div>
+
+
+</article>
+
+</div>
+<div class="sec sec-follow-lite">
+    <div class="container">
+        <div class="sec-heading">
+            <p class="follow-pic"><img src="/img/qrcode.png" alt="关注我们"/></p>
+            <p class="follow-desc">海海人生，无折腾不为乐。</p>
+            <p class="sec-heading-sub follow-acount">
+                <img class="follow-icon" src="/img/logo-circle-120.png" alt="AOTULabs"/> 微信号：AOTULabs
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="sec sec-footer">
+    <div class="container">
+        <footer id="footer" class="sec-heading footer">
+            <ul class="icons">
+                <li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+            </ul>
+            <div class="footer-sec copyright">
+            &copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>
+            Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+            </div>
+            <div class="footer-sec words">
+            "
+            
+            
+            
+            It is never too late to mend. 
+            
+            "
+            </div>
+            
+            <div class="footer-sec site-stats" style="display:none">
+                <span id="busuanzi_container_site_pv" class="site-pv">
+                    总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次
+                </span>
+                <span id="busuanzi_container_site_uv" class="site-uv">
+                    总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人
+                </span>
+            </div>
+            
+        </footer>
+    </div>
+</div>
+
+
+    
+    <section id="smSearch" class="slide-search">
+
+<!-- Search -->
+    <section>
+        <form class="search" method="get">
+            <input type="text" name="query" placeholder="搜索" />
+        </form>
+    </section>
+
+<!-- Links -->
+    <section>
+		<h3>搜索结果</h3>
+        <ul class="links" id="searchResults">Loading...</ul>
+    </section>
+
+</section>
+
+<script id="tplSearch" type="text/hogan-tpl">
+    {{#items}}
     <li>
         <a href="{{ url }}" target="_blank">
             <h3>{{ title }}</h3>
@@ -7,4 +339,58 @@
 			{{/desc}}
         </a>
     </li>
-    {{/items}}</script><div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div><script src="/assets/js/dist-2a84b65682.o2.js"></script><script src="/assets/js/dist-bb2f97f6a9.duoshuo.js"></script><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var e=document.createElement("script");e.src="//push.zhanzhang.baidu.com/push.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+    {{/items}}
+</script>
+
+
+    
+	
+	<div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div>
+	
+    
+    <!-- Scripts -->
+<!-- build:js js/dist.o2.js -->
+<script src="/js/lunr.js"></script>
+<script src="/js/debounce.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/xhogan.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+<script src="/assets/fancybox/jquery.fancybox.js"></script>
+<script src="/js/fancybox.js"></script>
+
+<!-- endbuild -->
+
+
+<!-- build:js js/dist.duoshuo.js -->
+<script src="/js/ua-parser.min.js"></script>
+<script src="/js/duoshuo.js"></script>
+<!-- endbuild -->
+
+
+
+<!--busuanzi-->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+</body>
+</html>

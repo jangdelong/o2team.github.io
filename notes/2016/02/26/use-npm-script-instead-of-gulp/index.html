@@ -1,4 +1,320 @@
-<!DOCTYPE html><html lang="zh-cn" class="theme-o2 page-post-detail"><head prefix="og: http://ogp.me/ns#"><meta charset="utf-8"><title>使用npm scripts替代gulp | Aotu.io「凹凸实验室」</title><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="Git,Fork,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"><link rel="canonical" href="http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/index.html"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="/assets/img/favicon-230x230.png" sizes="230x230"><link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#2f83cd"><meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png"><link rel="stylesheet" href="/assets/css/dist-c41d9f085d.o2.css"><link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css"><link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」"><meta name="description" content="为什么要用npm scripts替代gulp现在前端自动化的配套工具估计都离不开gulp或者是grunt，有一些或许会用上webpack辅助用上最新的ES6语法等；但是不知道大家在使用gulp众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下gulp或者grunt其实都会有以下问题："><meta property="og:type" content="article"><meta property="og:title" content="使用npm scripts替代gulp"><meta property="og:url" content="http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/index.html"><meta property="og:site_name" content="Aotu.io「凹凸实验室」"><meta property="og:description" content="为什么要用npm scripts替代gulp现在前端自动化的配套工具估计都离不开gulp或者是grunt，有一些或许会用上webpack辅助用上最新的ES6语法等；但是不知道大家在使用gulp众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下gulp或者grunt其实都会有以下问题："><meta property="og:image" content="http://aotu.io/img/post/cnt1992/npm-compare-width-gulp.png"><meta property="og:updated_time" content="2016-03-31T02:31:36.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="使用npm scripts替代gulp"><meta name="twitter:description" content="为什么要用npm scripts替代gulp现在前端自动化的配套工具估计都离不开gulp或者是grunt，有一些或许会用上webpack辅助用上最新的ES6语法等；但是不知道大家在使用gulp众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下gulp或者grunt其实都会有以下问题："><meta name="twitter:image" content="http://aotu.io/img/post/cnt1992/npm-compare-width-gulp.png"><meta name="twitter:site" content="o2circle"><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>var App={root:"/"}</script><body itemscope itemtype="http://schema.org/WebPage"><div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader"><div class="container"><div class="navbar-header"><a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand"><img src="/assets/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"></a><div onclick="" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></div></div><div class="navbar-collapse collapse" id="navbar-main"><ul class="nav navbar-nav header-links header-links-main"><li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></ul><ul class="nav navbar-nav navbar-right header-links header-links-extra"><li class="search-wrap"><a class="fa fa-search search-icon" href="#search" title="搜索"></a><form id="search" method="get" class="search-form"><input type="text" name="query" class="search-form-ipt" placeholder="搜索"></form><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a><ul id="theme-list" class="dropdown-menu" aria-labelledby="themes"><li data-v="light"><a href="javascript:;">曙光女神</a><li data-v="dark"><a href="javascript:;">暗影猎手</a></ul></ul></div></div></div><div class="container post-wrap"><article class="post" itemscope itemtype="http://schema.org/Article"><header class="post-header"><div class="post-title"><h2><a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/" itemprop="name">使用npm scripts替代gulp</a></h2><ul class="post-stats"><li><a href="/tags/Fork/" class="meta-tag">Fork</a><li><a href="/tags/Git/" class="meta-tag">Git</a><li title="字数"><span class="icon fa-font">2,852</span><li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span><li><a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/#comments" itemprop="discussionUrl" class="lnk-comments"><span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMi8yNi91c2UtbnBtLXNjcmlwdC1pbnN0ZWFkLW9mLWd1bHAv" data-count-type="comments" itemprop="commentsCount">0</span></a></ul><p>利用npm run高效地实现前端自动化任务</div><div class="post-meta"><time class="published" datetime="2016-02-25T16:06:24.000Z" itempro="datePublished">星期四, 2月25日 2016</time> <a target="_blank" href="https://github.com/cnt1992" class="author"><span class="name">SkyCai</span><img src="https://avatars.githubusercontent.com/cnt1992?v=3&s=80" alt="cnt1992"></a></div></header><a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/" class="image featured post-cover"><img src="/assets/img/post/cnt1992/npm-instead-of-gulp-cover.png" alt="使用npm scripts替代gulp"></a><div class="post-content" itemprop="articleBody" data-swiftype-index="true"><a id="more"></a><h2 id="为什么要用npm-scripts替代gulp" class="post-heading"><a href="#为什么要用npm-scripts替代gulp" class="headerlink" title="为什么要用npm scripts替代gulp"></a>为什么要用<code>npm scripts</code>替代<code>gulp</code><a class="post-anchor" href="#为什么要用npm-scripts替代gulp" aria-hidden="true"></a></h2><p>现在<code>前端自动化</code>的配套工具估计都离不开<code>gulp</code>或者是<code>grunt</code>，有一些或许会用上<code>webpack</code>辅助用上最新的<code>ES6</code>语法等；但是不知道大家在使用<code>gulp</code>众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下<code>gulp</code>或者<code>grunt</code>其实都会有以下问题：<ol><li>依赖于插件作者<li>调试很不方便<li>插件文档说明不连贯</ol><p>而如果直接使用<code>npm scripts</code>完全可以避免这些问题，在我们<code>package.json</code>里面的<code>scripts</code>属性直接定义需要执行的任务，比如<code>npm start</code>和<code>npm test</code>其实就是<code>npm run start</code>和<code>npm run test</code>的缩写，我们可以在<code>scripts</code>里面定义各种需要的任务，举个最简单的例子(清除dist目录)：<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre><td class="code"><pre><span class="line"># 1.用gulp插件来实现</span><br><span class="line">var gulp = require('gulp');</span><br><span class="line">var del  = require('del');</span><br><span class="line">gulp.task('clean', function() &#123;</span><br><span class="line">    del(['./dist/**/*']).then(paths =&gt; &#123;</span><br><span class="line">        console.log('Deleted files and folders:\n', paths.join('\n'));</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"># 2.用npm scripts来实现</span><br><span class="line"># package.json配置</span><br><span class="line">    ...</span><br><span class="line">    "scripts": &#123;</span><br><span class="line">        clean: "rimraf ./dist"</span><br><span class="line">    &#125;,</span><br><span class="line">    "devDependencies": &#123;</span><br><span class="line">        "rimraf": "^2.5.2"</span><br><span class="line">    &#125;</span><br></pre></table></figure><p>从上面示例代码可以看出明显直接用<code>npm scripts</code>实现的同一个功能相对<code>gulp</code>要简单得多，当然这个功能比较简单，如果碰到复杂的一些任务肯定就有反对的声音了。那我们将细细将上面三点来阐述。<h3 id="依赖于插件作者" class="post-heading"><a href="#依赖于插件作者" class="headerlink" title="依赖于插件作者"></a>依赖于插件作者<a class="post-anchor" href="#依赖于插件作者" aria-hidden="true"></a></h3><p>当你需要使用到最新的或者不那么流行的技术时，根本就没有插件给你使用；或者一些插件已经过时了。最新<code>Babel 6</code>已经发布，很多API明显修改了，所以很多<code>gulp</code>插件根本不适用于最新版本。<p>这个时候你就必须等待作者来更新插件，或者你自己去<code>fix</code>这些问题，这会导致你不能及时用上最新版本的工具。相反，当你直接使用<code>npm scripts</code>的时候，你只需要直接找到可以实现的工具即可。这意味着当新版本的<code>Mocha</code>、<code>Babel</code>、<code>Webpack</code>、<code>Browserify</code>发布的时候，你就可以马上用上这些版本。<p>就目前插件数量来说，没有什么可以打败<code>npm</code>包：<p class="user_img"><img title="npm包数量跟gulp对比" class="test_img" src="/assets/img/post/cnt1992/npm-compare-width-gulp.png" alt="Gulp大约有2100个插件，Grunt大约有5400个，而npm提供了227000个包，而且每天以400的速度在增加"><h3 id="调试很不方便" class="post-heading"><a href="#调试很不方便" class="headerlink" title="调试很不方便"></a>调试很不方便<a class="post-anchor" href="#调试很不方便" aria-hidden="true"></a></h3><p>由于<code>gulp</code>增加了一层抽象，所以会有潜在的<code>bug</code>：<ol><li>是否基础工具崩溃了？<li>是否<code>Grunt</code>/<code>Gulp</code>插件崩溃了？<li>是否配置文件出错了？<li>是否用了不稳定的版本？</ol><p>而直接使用<code>npm scripts</code>直接避免了第2点跟第3点，而由于不使用那么多插件，那么包相对较少，第4点也很少会碰到。<h3 id="插件文档说明不连贯" class="post-heading"><a href="#插件文档说明不连贯" class="headerlink" title="插件文档说明不连贯"></a>插件文档说明不连贯<a class="post-anchor" href="#插件文档说明不连贯" aria-hidden="true"></a></h3><p>相比有用过很多插件的人都知道，一些核心的工具文档写得总比包装起来的<code>Gulp</code>插件要清晰得多。举个简单的例子来说，如果我需要用到<code>gulp-eslint</code>插件，那么就可能会不断在<code>gulp-eslint</code>的文档跟<code>ESLint</code>网站切换，必须对比看看两者存在些什么区别。<h2 id="为什么我们总是忽略使用npm-scripts而更青睐于Gulp" class="post-heading"><a href="#为什么我们总是忽略使用npm-scripts而更青睐于Gulp" class="headerlink" title="为什么我们总是忽略使用npm scripts而更青睐于Gulp"></a>为什么我们总是忽略使用<code>npm scripts</code>而更青睐于<code>Gulp</code><a class="post-anchor" href="#为什么我们总是忽略使用npm-scripts而更青睐于Gulp" aria-hidden="true"></a></h2><p><code>Gulp</code>和<code>Grunt</code>之所以这么流行，主要有下面4个点：<ol><li>开发者认为<code>npm scripts</code>需要能写命令行的技能<li>开发者认为<code>npm scripts</code>能处理的能力不足够<li>开发者觉得<code>Gulp</code>的流对于快速构建是很有必要的<li>开发者认为<code>npm scripts</code>不能跨平台运行</ol><h3 id="开发者认为npm-scripts需要能写命令行的技能" class="post-heading"><a href="#开发者认为npm-scripts需要能写命令行的技能" class="headerlink" title="开发者认为npm scripts需要能写命令行的技能"></a>开发者认为<code>npm scripts</code>需要能写命令行的技能<a class="post-anchor" href="#开发者认为npm-scripts需要能写命令行的技能" aria-hidden="true"></a></h3><p>其实你完全不需要精通于<code>Unix</code>或者<code>Windows</code>的命令行脚本，比如你不知道在<code>Unix</code>下面删除一个目录的命令是：<code>rm -rf</code>，这其实没啥问题，你完全可以使用<a href="https://www.npmjs.com/package/rimraf" target="_blank" rel="external">rimraf</a>，同时它也是跨平台的。在这里推荐一个工具包资源网站：<a href="https://libraries.io/" target="_blank" rel="external">libraries.io</a><h3 id="开发者认为npm-scripts能处理的能力不足够" class="post-heading"><a href="#开发者认为npm-scripts能处理的能力不足够" class="headerlink" title="开发者认为npm scripts能处理的能力不足够"></a>开发者认为<code>npm scripts</code>能处理的能力不足够<a class="post-anchor" href="#开发者认为npm-scripts能处理的能力不足够" aria-hidden="true"></a></h3><p><code>npm scripts</code>其实比你想象中的要强大，主要依赖于<a href="https://docs.npmjs.com/misc/scripts#description" target="_blank" rel="external">预处理和后置处理钩子</a>，比如下面例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"npm-scripts-demo"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"npm scripts demo"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"prebuild"</span>: <span class="string">"echo I run before the build script"</span>,</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"cross-env NODE_ENV=production webpack"</span>,</span><br><span class="line">    <span class="string">"postbuild"</span>: <span class="string">"echo I run after the build script"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></table></figure><p>正如上面例子一样，<code>prebuild</code>定义的脚本会比<code>build</code>任务先执行，而<code>postbuild</code>定义的脚本会比<code>build</code>任务后执行，因为相对于<code>build</code>来说，增加了一个前缀<code>pre</code>和<code>post</code>，所以当我执行<code>npm run build</code>的时候会自动地顺序执行<code>prebuild -&gt; build -&gt; postbuild</code>。<p>同时你可以将一个大的任务不断拆分成小的任务，比如：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"npm-scripts-demo"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"npm scripts demo"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"clean"</span>: <span class="string">"rimraf ./dist &amp;&amp; mkdir dist"</span>,</span><br><span class="line">    <span class="string">"prebuild"</span>: <span class="string">"npm run clean"</span>,</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"cross-env NODE_ENV=production webpack"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></table></figure><p>在上面例子中将<code>clean</code>任务抽离出来了，当你执行<code>npm run build</code>的时候，会先自动执行<code>npm run prebuild</code>任务，那就相当于执行了<code>npm run clean</code>任务了，注意上面的<code>&amp;&amp;</code>表示先后顺序执行，区别于<code>&amp;</code>表示同时执行。<h2 id="npm-scripts的一些缺点" class="post-heading"><a href="#npm-scripts的一些缺点" class="headerlink" title="npm scripts的一些缺点"></a><code>npm scripts</code>的一些缺点<a class="post-anchor" href="#npm-scripts的一些缺点" aria-hidden="true"></a></h2><p>不得不承认，用<code>npm scripts</code>来写自动化构建任务还是存在一些不足：不能在JSON文件里面写注释。有一些方法可以弥补这方面的不足：<ol><li>写功能相对小而独立并且命名好的脚本名字<li>脚本跟文档分离（将文档写进READ.md）<li>直接分离脚本写进Makefile等独立的文件</ol><p>推荐使用第一种，脚本名字本来就应该能够直接描述功能。<h2 id="一些参考" class="post-heading"><a href="#一些参考" class="headerlink" title="一些参考"></a>一些参考<a class="post-anchor" href="#一些参考" aria-hidden="true"></a></h2><ul><li><a href="http://substack.net/task_automation_with_npm_run" target="_blank" rel="external">Task automation with npm run</a> – James Holliday<li><a href="https://www.youtube.com/watch?v=0RYETb9YVrk" target="_blank" rel="external">Advanced front-end automation with npm scripts</a> – Kate Hudson<li><a href="http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/" target="_blank" rel="external">How to use npm as a build tool</a> – Kieth Girkel<li><a href="http://app.pluralsight.com/courses/npm-build-tool-introduction" target="_blank" rel="external">Introduction to npm as a Build Tool</a> – Marcus Hammarberg<li><a href="http://gon.to/2015/02/26/gulp-is-awesome-but-do-we-really-need-it/" target="_blank" rel="external">Gulp is awesome, but do we really need it?</a> – Gonto<li><a href="http://code.tutsplus.com/courses/npm-scripts-for-build-tooling" target="_blank" rel="external">NPM Scripts for Build Tooling</a> – Andrew Burgess</ul></div><div class="post-revision"><i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time></div><div class="actions pagination pagination-post"><div class="pagination-post-prev"><a href="/notes/2016/02/27/docker/" class="button big" title="初探Docker"><i class="fa fa-chevron-left"></i> 初探Docker</a></div><div class="pagination-post-next"><a href="/notes/2016/02/24/node-debug-in-production/" class="button big" title="Node 生产环境调试">Node 生产环境调试 <i class="fa fa-chevron-right"></i></a></div></div><div class="post-comments" id="comments"><div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMi8yNi91c2UtbnBtLXNjcmlwdC1pbnN0ZWFkLW9mLWd1bHAv" data-title="使用npm scripts替代gulp" data-url="http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/index.html"></div><script>var duoshuoQuery={short_name:"aotu"};!function(){var t=document.createElement("script");t.id="duoshuo-script",t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//static.duoshuo.com/embed.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script></div></article></div><div class="sec sec-follow-lite"><div class="container"><div class="sec-heading"><p class="follow-pic"><img src="/assets/img/qrcode.png" alt="关注我们"><p class="follow-desc">海海人生，无折腾不为乐。<p class="sec-heading-sub follow-acount"><img class="follow-icon" src="/assets/img/logo-circle-120.png" alt="AOTULabs"> 微信号：AOTULabs</div></div></div><div class="sec sec-footer"><div class="container"><footer id="footer" class="sec-heading footer"><ul class="icons"><li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a><li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a><li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></ul><div class="footer-sec copyright">&copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.</div><div class="footer-sec words">" Nothing is difficult to the man who will try. "</div><div class="footer-sec site-stats" style="display:none"><span id="busuanzi_container_site_pv" class="site-pv">总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次 </span><span id="busuanzi_container_site_uv" class="site-uv">总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人</span></div></footer></div></div><section id="smSearch" class="slide-search"><section><form class="search" method="get"><input type="text" name="query" placeholder="搜索"></form></section><section><h3>搜索结果</h3><ul class="links" id="searchResults">Loading...</ul></section></section><script id="tplSearch" type="text/hogan-tpl">{{#items}}
+<!DOCTYPE html>
+<html lang="zh-cn" class="theme-o2 page-post-detail">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8"/>
+	<title>使用npm scripts替代gulp | Aotu.io「凹凸实验室」</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/> 
+    <!-- keywords -->
+<meta name="keywords" content="Git,Fork,凹凸实验室,Aotu,前端开发,全栈开发,IOS开发,Android开发"/>
+<!-- Canonical links -->
+<link rel="canonical" href="http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/index.html">
+<!-- Alternative links -->
+
+<!-- Icon -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/img/favicon-230x230.png" sizes="230x230">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2f83cd">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<!-- CSS -->
+<!-- build:css css/dist.o2.css -->
+<link rel="stylesheet" href="/css/o2.css">
+<!-- endbuild -->
+
+<link rel="stylesheet" href="/assets/fancybox/jquery.fancybox.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="Aotu.io「凹凸实验室」">
+<!-- Open Graph -->
+<meta name="description" content="为什么要用npm scripts替代gulp现在前端自动化的配套工具估计都离不开gulp或者是grunt，有一些或许会用上webpack辅助用上最新的ES6语法等；但是不知道大家在使用gulp众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下gulp或者grunt其实都会有以下问题：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用npm scripts替代gulp">
+<meta property="og:url" content="http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/index.html">
+<meta property="og:site_name" content="Aotu.io「凹凸实验室」">
+<meta property="og:description" content="为什么要用npm scripts替代gulp现在前端自动化的配套工具估计都离不开gulp或者是grunt，有一些或许会用上webpack辅助用上最新的ES6语法等；但是不知道大家在使用gulp众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下gulp或者grunt其实都会有以下问题：">
+<meta property="og:image" content="http://aotu.io/img/post/cnt1992/npm-compare-width-gulp.png">
+<meta property="og:updated_time" content="2016-03-31T02:31:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用npm scripts替代gulp">
+<meta name="twitter:description" content="为什么要用npm scripts替代gulp现在前端自动化的配套工具估计都离不开gulp或者是grunt，有一些或许会用上webpack辅助用上最新的ES6语法等；但是不知道大家在使用gulp众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下gulp或者grunt其实都会有以下问题：">
+<meta name="twitter:image" content="http://aotu.io/img/post/cnt1992/npm-compare-width-gulp.png">
+<meta name="twitter:site" content="o2circle">
+<!-- Baidu Analytics -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e850b980d029480b092fdd7503c3f8de";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<script>
+var App = {
+    root:'/'    
+};
+</script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="navbar navbar-fixed-top header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/index.html" title="Aotu.io「凹凸实验室」" class="navbar-brand">
+                <img src="/img/logo_186x65.png" alt="Aotu.io「凹凸实验室」"/>
+            </a>
+            <div onclick="javascript:void(0)" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav header-links header-links-main">
+                <li class="main-nav-item"><a href="/index.html" class="main-nav-link">首页</a></li><li class="main-nav-item active"><a href="/notes/" class="main-nav-link">博客</a></li><li class="main-nav-item"><a href="/tags/" class="main-nav-link">标签</a></li><li class="main-nav-item"><a href="http://aotu.io/brand/" class="main-nav-link">品牌</a></li><li class="main-nav-item"><a href="/about/" class="main-nav-link">关于</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right header-links header-links-extra">
+                <li class="search-wrap">
+                    <a class="fa fa-search search-icon" href="#search" title="搜索"></a>
+                    <form id="search" method="get" class="search-form">
+                        <input type="text" name="query" class="search-form-ipt" placeholder="搜索" />
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="themes" aria-expanded="false">主题&nbsp;<span class="caret"></span></a>
+                    <ul id="theme-list" class="dropdown-menu" aria-labelledby="themes">
+                        <li data-v="light"><a href="javascript:;">曙光女神</a></li>
+                        <li data-v="dark"><a href="javascript:;">暗影猎手</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+	
+<div class="container post-wrap">
+    
+    <!-- Post -->
+<article class="post" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <div class="post-title">
+            <h2><a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/" itemprop="name">使用npm scripts替代gulp</a></h2>
+            <ul class="post-stats">
+                
+                
+                <li><a href='/tags/Fork/' class='meta-tag'>Fork</a></li>
+                
+                <li><a href='/tags/Git/' class='meta-tag'>Git</a></li>
+                 
+                
+                <li title="字数"><span class="icon fa-font">2,852</span></li>
+                
+                <li id="busuanzi_container_page_pv" title="热度"><span class="icon fa-eye" id="busuanzi_value_page_pv"></span></li>
+                
+                
+                <li>
+                    <a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/#comments" itemprop="discussionUrl" class="lnk-comments">
+                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="bm90ZXMvMjAxNi8wMi8yNi91c2UtbnBtLXNjcmlwdC1pbnN0ZWFkLW9mLWd1bHAv" data-count-type="comments" itemprop="commentsCount">0</span>
+                    </a>
+                </li>
+                 
+            </ul>
+            
+            <p>利用npm run高效地实现前端自动化任务</p>
+            
+        </div>
+        <div class="post-meta">
+            <time class="published" datetime="2016-02-25T16:06:24.000Z" itempro="datePublished">星期四, 2月25日 2016</time>
+            <a target="_blank" href="https://github.com/cnt1992" class="author"><span class="name">SkyCai</span><img src="https://avatars.githubusercontent.com/cnt1992?v=3&s=80" alt="cnt1992" /></a>
+        </div>
+    </header>
+    <a href="/notes/2016/02/26/use-npm-script-instead-of-gulp/" class="image featured post-cover"><img src="/img/post/cnt1992/npm-instead-of-gulp-cover.png" alt="使用npm scripts替代gulp" /></a>
+    <div class="post-content" itemprop="articleBody" data-swiftype-index="true">
+        <a id="more"></a>
+<h2 id="为什么要用npm-scripts替代gulp" class="post-heading"><a href="#为什么要用npm-scripts替代gulp" class="headerlink" title="为什么要用npm scripts替代gulp"></a>为什么要用<code>npm scripts</code>替代<code>gulp</code><a class="post-anchor" href="#为什么要用npm-scripts替代gulp" aria-hidden="true"></a></h2><p>现在<code>前端自动化</code>的配套工具估计都离不开<code>gulp</code>或者是<code>grunt</code>，有一些或许会用上<code>webpack</code>辅助用上最新的<code>ES6</code>语法等；但是不知道大家在使用<code>gulp</code>众多插件的时候有没有碰到过一些问题，比如：有一些插件你仅仅需要用到其中一点点的API、插件更新速度非常慢、有一些插件碰到bug的时候调试起来非常麻烦等。所以总结一下<code>gulp</code>或者<code>grunt</code>其实都会有以下问题：</p>
+<ol>
+<li>依赖于插件作者</li>
+<li>调试很不方便</li>
+<li>插件文档说明不连贯</li>
+</ol>
+<p>而如果直接使用<code>npm scripts</code>完全可以避免这些问题，在我们<code>package.json</code>里面的<code>scripts</code>属性直接定义需要执行的任务，比如<code>npm start</code>和<code>npm test</code>其实就是<code>npm run start</code>和<code>npm run test</code>的缩写，我们可以在<code>scripts</code>里面定义各种需要的任务，举个最简单的例子(清除dist目录)：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 1.用gulp插件来实现</span><br><span class="line">var gulp = require('gulp');</span><br><span class="line">var del  = require('del');</span><br><span class="line">gulp.task('clean', function() &#123;</span><br><span class="line">    del(['./dist/**/*']).then(paths =&gt; &#123;</span><br><span class="line">        console.log('Deleted files and folders:\n', paths.join('\n'));</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"># 2.用npm scripts来实现</span><br><span class="line"># package.json配置</span><br><span class="line">    ...</span><br><span class="line">    "scripts": &#123;</span><br><span class="line">        clean: "rimraf ./dist"</span><br><span class="line">    &#125;,</span><br><span class="line">    "devDependencies": &#123;</span><br><span class="line">        "rimraf": "^2.5.2"</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>从上面示例代码可以看出明显直接用<code>npm scripts</code>实现的同一个功能相对<code>gulp</code>要简单得多，当然这个功能比较简单，如果碰到复杂的一些任务肯定就有反对的声音了。那我们将细细将上面三点来阐述。</p>
+<h3 id="依赖于插件作者" class="post-heading"><a href="#依赖于插件作者" class="headerlink" title="依赖于插件作者"></a>依赖于插件作者<a class="post-anchor" href="#依赖于插件作者" aria-hidden="true"></a></h3><p>当你需要使用到最新的或者不那么流行的技术时，根本就没有插件给你使用；或者一些插件已经过时了。最新<code>Babel 6</code>已经发布，很多API明显修改了，所以很多<code>gulp</code>插件根本不适用于最新版本。</p>
+<p>这个时候你就必须等待作者来更新插件，或者你自己去<code>fix</code>这些问题，这会导致你不能及时用上最新版本的工具。相反，当你直接使用<code>npm scripts</code>的时候，你只需要直接找到可以实现的工具即可。这意味着当新版本的<code>Mocha</code>、<code>Babel</code>、<code>Webpack</code>、<code>Browserify</code>发布的时候，你就可以马上用上这些版本。</p>
+<p>就目前插件数量来说，没有什么可以打败<code>npm</code>包：</p>
+<p class="user_img"><img title="npm包数量跟gulp对比" class="test_img" src="/img/post/cnt1992/npm-compare-width-gulp.png" alt="Gulp大约有2100个插件，Grunt大约有5400个，而npm提供了227000个包，而且每天以400的速度在增加"></p>
+<h3 id="调试很不方便" class="post-heading"><a href="#调试很不方便" class="headerlink" title="调试很不方便"></a>调试很不方便<a class="post-anchor" href="#调试很不方便" aria-hidden="true"></a></h3><p>由于<code>gulp</code>增加了一层抽象，所以会有潜在的<code>bug</code>：</p>
+<ol>
+<li>是否基础工具崩溃了？</li>
+<li>是否<code>Grunt</code>/<code>Gulp</code>插件崩溃了？</li>
+<li>是否配置文件出错了？</li>
+<li>是否用了不稳定的版本？</li>
+</ol>
+<p>而直接使用<code>npm scripts</code>直接避免了第2点跟第3点，而由于不使用那么多插件，那么包相对较少，第4点也很少会碰到。</p>
+<h3 id="插件文档说明不连贯" class="post-heading"><a href="#插件文档说明不连贯" class="headerlink" title="插件文档说明不连贯"></a>插件文档说明不连贯<a class="post-anchor" href="#插件文档说明不连贯" aria-hidden="true"></a></h3><p>相比有用过很多插件的人都知道，一些核心的工具文档写得总比包装起来的<code>Gulp</code>插件要清晰得多。举个简单的例子来说，如果我需要用到<code>gulp-eslint</code>插件，那么就可能会不断在<code>gulp-eslint</code>的文档跟<code>ESLint</code>网站切换，必须对比看看两者存在些什么区别。</p>
+<h2 id="为什么我们总是忽略使用npm-scripts而更青睐于Gulp" class="post-heading"><a href="#为什么我们总是忽略使用npm-scripts而更青睐于Gulp" class="headerlink" title="为什么我们总是忽略使用npm scripts而更青睐于Gulp"></a>为什么我们总是忽略使用<code>npm scripts</code>而更青睐于<code>Gulp</code><a class="post-anchor" href="#为什么我们总是忽略使用npm-scripts而更青睐于Gulp" aria-hidden="true"></a></h2><p><code>Gulp</code>和<code>Grunt</code>之所以这么流行，主要有下面4个点：</p>
+<ol>
+<li>开发者认为<code>npm scripts</code>需要能写命令行的技能</li>
+<li>开发者认为<code>npm scripts</code>能处理的能力不足够</li>
+<li>开发者觉得<code>Gulp</code>的流对于快速构建是很有必要的</li>
+<li>开发者认为<code>npm scripts</code>不能跨平台运行</li>
+</ol>
+<h3 id="开发者认为npm-scripts需要能写命令行的技能" class="post-heading"><a href="#开发者认为npm-scripts需要能写命令行的技能" class="headerlink" title="开发者认为npm scripts需要能写命令行的技能"></a>开发者认为<code>npm scripts</code>需要能写命令行的技能<a class="post-anchor" href="#开发者认为npm-scripts需要能写命令行的技能" aria-hidden="true"></a></h3><p>其实你完全不需要精通于<code>Unix</code>或者<code>Windows</code>的命令行脚本，比如你不知道在<code>Unix</code>下面删除一个目录的命令是：<code>rm -rf</code>，这其实没啥问题，你完全可以使用<a href="https://www.npmjs.com/package/rimraf" target="_blank" rel="external">rimraf</a>，同时它也是跨平台的。在这里推荐一个工具包资源网站：<a href="https://libraries.io/" target="_blank" rel="external">libraries.io</a></p>
+<h3 id="开发者认为npm-scripts能处理的能力不足够" class="post-heading"><a href="#开发者认为npm-scripts能处理的能力不足够" class="headerlink" title="开发者认为npm scripts能处理的能力不足够"></a>开发者认为<code>npm scripts</code>能处理的能力不足够<a class="post-anchor" href="#开发者认为npm-scripts能处理的能力不足够" aria-hidden="true"></a></h3><p><code>npm scripts</code>其实比你想象中的要强大，主要依赖于<a href="https://docs.npmjs.com/misc/scripts#description" target="_blank" rel="external">预处理和后置处理钩子</a>，比如下面例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"npm-scripts-demo"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"npm scripts demo"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"prebuild"</span>: <span class="string">"echo I run before the build script"</span>,</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"cross-env NODE_ENV=production webpack"</span>,</span><br><span class="line">    <span class="string">"postbuild"</span>: <span class="string">"echo I run after the build script"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>正如上面例子一样，<code>prebuild</code>定义的脚本会比<code>build</code>任务先执行，而<code>postbuild</code>定义的脚本会比<code>build</code>任务后执行，因为相对于<code>build</code>来说，增加了一个前缀<code>pre</code>和<code>post</code>，所以当我执行<code>npm run build</code>的时候会自动地顺序执行<code>prebuild -&gt; build -&gt; postbuild</code>。</p>
+<p>同时你可以将一个大的任务不断拆分成小的任务，比如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"npm-scripts-demo"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"npm scripts demo"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"clean"</span>: <span class="string">"rimraf ./dist &amp;&amp; mkdir dist"</span>,</span><br><span class="line">    <span class="string">"prebuild"</span>: <span class="string">"npm run clean"</span>,</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"cross-env NODE_ENV=production webpack"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上面例子中将<code>clean</code>任务抽离出来了，当你执行<code>npm run build</code>的时候，会先自动执行<code>npm run prebuild</code>任务，那就相当于执行了<code>npm run clean</code>任务了，注意上面的<code>&amp;&amp;</code>表示先后顺序执行，区别于<code>&amp;</code>表示同时执行。</p>
+<h2 id="npm-scripts的一些缺点" class="post-heading"><a href="#npm-scripts的一些缺点" class="headerlink" title="npm scripts的一些缺点"></a><code>npm scripts</code>的一些缺点<a class="post-anchor" href="#npm-scripts的一些缺点" aria-hidden="true"></a></h2><p>不得不承认，用<code>npm scripts</code>来写自动化构建任务还是存在一些不足：不能在JSON文件里面写注释。有一些方法可以弥补这方面的不足：</p>
+<ol>
+<li>写功能相对小而独立并且命名好的脚本名字</li>
+<li>脚本跟文档分离（将文档写进READ.md）</li>
+<li>直接分离脚本写进Makefile等独立的文件</li>
+</ol>
+<p>推荐使用第一种，脚本名字本来就应该能够直接描述功能。</p>
+<h2 id="一些参考" class="post-heading"><a href="#一些参考" class="headerlink" title="一些参考"></a>一些参考<a class="post-anchor" href="#一些参考" aria-hidden="true"></a></h2><ul>
+<li><a href="http://substack.net/task_automation_with_npm_run" target="_blank" rel="external">Task automation with npm run</a> – James Holliday</li>
+<li><a href="https://www.youtube.com/watch?v=0RYETb9YVrk" target="_blank" rel="external">Advanced front-end automation with npm scripts</a> – Kate Hudson</li>
+<li><a href="http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/" target="_blank" rel="external">How to use npm as a build tool</a> – Kieth Girkel</li>
+<li><a href="http://app.pluralsight.com/courses/npm-build-tool-introduction" target="_blank" rel="external">Introduction to npm as a Build Tool</a> – Marcus Hammarberg</li>
+<li><a href="http://gon.to/2015/02/26/gulp-is-awesome-but-do-we-really-need-it/" target="_blank" rel="external">Gulp is awesome, but do we really need it?</a> – Gonto</li>
+<li><a href="http://code.tutsplus.com/courses/npm-scripts-for-build-tooling" target="_blank" rel="external">NPM Scripts for Build Tooling</a> – Andrew Burgess</li>
+</ul>
+
+    </div>
+    <div class="post-revision">
+        <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="2016-03-31T02:31:36.000Z" itemprop="dateModified">上次更新：星期四, 3月31日 2016 02:31:36</time>
+    </div>
+    
+<div class="actions pagination pagination-post">
+    
+    <div class="pagination-post-prev"><a href="/notes/2016/02/27/docker/" class="button big" title="初探Docker"><i class="fa fa-chevron-left"></i> 初探Docker</a></div>
+    
+    
+    <div class="pagination-post-next"><a href="/notes/2016/02/24/node-debug-in-production/" class="button big" title="Node 生产环境调试">Node 生产环境调试 <i class="fa fa-chevron-right"></i></a></div>
+    
+</div>
+
+
+    
+
+
+<div class="post-comments" id="comments">
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="bm90ZXMvMjAxNi8wMi8yNi91c2UtbnBtLXNjcmlwdC1pbnN0ZWFkLW9mLWd1bHAv" data-title="使用npm scripts替代gulp" data-url="http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/index.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"aotu"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.id = "duoshuo-script";
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+</div>
+
+
+</article>
+
+</div>
+<div class="sec sec-follow-lite">
+    <div class="container">
+        <div class="sec-heading">
+            <p class="follow-pic"><img src="/img/qrcode.png" alt="关注我们"/></p>
+            <p class="follow-desc">海海人生，无折腾不为乐。</p>
+            <p class="sec-heading-sub follow-acount">
+                <img class="follow-icon" src="/img/logo-circle-120.png" alt="AOTULabs"/> 微信号：AOTULabs
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="sec sec-footer">
+    <div class="container">
+        <footer id="footer" class="sec-heading footer">
+            <ul class="icons">
+                <li><a href="https://twitter.com/o2circle" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/atom.xml" class="footer-link fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="https://github.com/o2team/o2team.github.io" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+            </ul>
+            <div class="footer-sec copyright">
+            &copy; 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>
+            Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+            </div>
+            <div class="footer-sec words">
+            "
+            
+            
+            
+            Nothing is difficult to the man who will try. 
+            
+            "
+            </div>
+            
+            <div class="footer-sec site-stats" style="display:none">
+                <span id="busuanzi_container_site_pv" class="site-pv">
+                    总访问量: <span id="busuanzi_value_site_pv" class="site-pv-num"></span> 次
+                </span>
+                <span id="busuanzi_container_site_uv" class="site-uv">
+                    总访客数: <span id="busuanzi_value_site_uv" class="site-uv-num"></span> 人
+                </span>
+            </div>
+            
+        </footer>
+    </div>
+</div>
+
+
+    
+    <section id="smSearch" class="slide-search">
+
+<!-- Search -->
+    <section>
+        <form class="search" method="get">
+            <input type="text" name="query" placeholder="搜索" />
+        </form>
+    </section>
+
+<!-- Links -->
+    <section>
+		<h3>搜索结果</h3>
+        <ul class="links" id="searchResults">Loading...</ul>
+    </section>
+
+</section>
+
+<script id="tplSearch" type="text/hogan-tpl">
+    {{#items}}
     <li>
         <a href="{{ url }}" target="_blank">
             <h3>{{ title }}</h3>
@@ -7,4 +323,58 @@
 			{{/desc}}
         </a>
     </li>
-    {{/items}}</script><div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div><script src="/assets/js/dist-2a84b65682.o2.js"></script><script src="/assets/js/dist-bb2f97f6a9.duoshuo.js"></script><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var e=document.createElement("script");e.src="//push.zhanzhang.baidu.com/push.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+    {{/items}}
+</script>
+
+
+    
+	
+	<div class="back-to-top" id="backTop"><i class="fa fa-long-arrow-up"></i></div>
+	
+    
+    <!-- Scripts -->
+<!-- build:js js/dist.o2.js -->
+<script src="/js/lunr.js"></script>
+<script src="/js/debounce.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/xhogan.js"></script>
+<script src="/js/hammer.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+<script src="/assets/fancybox/jquery.fancybox.js"></script>
+<script src="/js/fancybox.js"></script>
+
+<!-- endbuild -->
+
+
+<!-- build:js js/dist.duoshuo.js -->
+<script src="/js/ua-parser.min.js"></script>
+<script src="/js/duoshuo.js"></script>
+<!-- endbuild -->
+
+
+
+<!--busuanzi-->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+    
+</body>
+</html>
