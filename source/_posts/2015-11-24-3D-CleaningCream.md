@@ -1,4 +1,4 @@
-subtitle: 看官别走啊，这真不是软文。
+subtitle: 介绍了如何在浏览器中展示3D物件
 title: 使用ThreeJS在浏览器中展示3D物件
 cover: "Littly/title.png"
 date: 2015-11-24 13:00:35

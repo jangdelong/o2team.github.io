@@ -1,5 +1,5 @@
 title: 某超长文档的探索之路
-subtitle: 加量不加价~ 比字数谁都赢不了我!
+subtitle: 从实际项目出发, 浅谈一些体会
 date: 2016-03-15 16:18:00
 cover: "Littly/2016-03-15/title.png"
 tags: 
