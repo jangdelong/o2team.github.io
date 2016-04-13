@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/04/07/node-excel/</loc>
+    <lastmod>2016-04-07T06:05:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Node读写Excel文件探究实践</title>
+        <pubTime>2016-04-06T18:32:18.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+        <tag>excel</tag>
+         
+        <tag>JS-XLSX</tag>
+         
+        <tag>Node-Excel-Export</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/31/readable/</loc>
+    <lastmod>2016-04-06T09:16:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>提升代码的可读性系列(一)--基础篇</title>
+        <pubTime>2016-03-31T13:30:12.000Z</pubTime>
+        
+        <tag>编码风格</tag>
+         
+        <tag>变量</tag>
+         
+        <tag>UI松耦合</tag>
+         
+        <tag>错误处理</tag>
+         
+        <tag>创建对象</tag>
+         
+        <tag>可读性</tag>
+         
+        <tag>可维护性</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/30/cornerRadius-in-Storyboard/</loc>
+    <lastmod>2016-04-01T06:44:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何优雅地在Storyboard中设置圆角</title>
+        <pubTime>2016-03-29T16:56:03.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>Swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://aotu.io/cates/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/04/css3-animation/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>CSS3动画实践</title>
+        <pubTime>2016-01-04T15:58:00.000Z</pubTime>
+        
+        <tag>CSS3</tag>
+         
+        <tag>animation</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/10/21/z-index-and-translate3d/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>探究transform动画元素的z-index</title>
+        <pubTime>2015-10-21T00:24:35.000Z</pubTime>
+        
+        <tag>translate3d</tag>
+         
+        <tag>zindex</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/08/css-stack-order/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>css层叠顺序探究</title>
+        <pubTime>2015-11-08T11:44:25.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/02/flash-canvas/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用Adobe FLASH CC制作Canvas动画</title>
+        <pubTime>2015-11-01T18:44:25.000Z</pubTime>
+        
+        <tag>Flash</tag>
+         
+        <tag>Canvas</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/06/webp-responsive-image/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Service Workers：采用WebP动态响应图片</title>
+        <pubTime>2015-11-05T18:44:25.000Z</pubTime>
+        
+        <tag>WebP</tag>
+         
+        <tag>Fork</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/11/phantomJs-crawler/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于phantomJs的网络爬虫</title>
+        <pubTime>2015-11-11T09:59:33.000Z</pubTime>
+        
+        <tag>PhantomJS</tag>
+         
+        <tag>Crawler</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/17/Git-Commands/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git常用操作总结</title>
+        <pubTime>2015-11-17T12:44:25.000Z</pubTime>
+        
+        <tag>Fork</tag>
+         
+        <tag>Git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>以电影之眼看CSS3动画（一）</title>
+        <pubTime>2015-11-22T17:27:00.000Z</pubTime>
+        
+        <tag>CSS3</tag>
+         
+        <tag>Animation</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/20/svg-I-know/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>SVG I Know</title>
+        <pubTime>2015-11-20T11:30:45.000Z</pubTime>
+        
+        <tag>svg</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/16/101-percent/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>101%还原</title>
+        <pubTime>2015-11-15T21:39:14.000Z</pubTime>
+        
+        <tag>设计理念还原</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_2/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>以电影之眼看CSS3动画（二）</title>
+        <pubTime>2015-11-22T17:27:00.000Z</pubTime>
+        
+        <tag>CSS3</tag>
+         
+        <tag>Animation</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/24/project-summary/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>精致化页面重构</title>
+        <pubTime>2015-11-23T20:23:44.000Z</pubTime>
+        
+        <tag>summary</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/12/09/an-introduction-to-sass-maps/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>【译】介绍Sass Maps：用法跟例子</title>
+        <pubTime>2015-12-09T09:54:16.000Z</pubTime>
+        
+        <tag>sass</tag>
+         
+        <tag>sass maps</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/11/24/3D-CleaningCream/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用ThreeJS在浏览器中展示3D物件</title>
+        <pubTime>2015-11-24T13:00:35.000Z</pubTime>
+        
+        <tag>three.js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/12/04/edgeAnimate/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Adobe edge animate制作HTML5动画</title>
+        <pubTime>2015-12-03T22:05:18.000Z</pubTime>
+        
+        <tag>edge animate</tag>
+         
+        <tag>html5</tag>
+         
+        <tag>animate</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/12/29/ae/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>初识Adobe After Effects效果制作</title>
+        <pubTime>2015-12-28T22:05:18.000Z</pubTime>
+        
+        <tag>Adobe After Effects</tag>
+         
+        <tag>AE</tag>
+         
+        <tag>AE movie</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/12/18/etymology-of-foobar/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>What Does the Foo Mean</title>
+        <pubTime>2015-12-17T21:22:23.000Z</pubTime>
+        
+        <tag>Foo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/12/23/building-command-line-tools-with-node-js/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>【译】使用Node.js创建命令行脚本工具</title>
+        <pubTime>2015-12-23T13:19:07.000Z</pubTime>
+        
+        <tag>Node.js</tag>
+         
+        <tag>command line tools</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/12/23/new-safari-9/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Safari 9.0的新特性</title>
+        <pubTime>2015-12-22T21:42:19.000Z</pubTime>
+        
+        <tag>Safari 9.0</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>OS X</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/07/auto-deploy-website-by-webhooks-of-github/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用Github的webhooks进行网站自动化部署</title>
+        <pubTime>2016-01-06T17:05:05.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>webhooks</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/02/3D-panorama/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用ThreeJS在浏览器中展示全景图</title>
+        <pubTime>2016-01-01T23:06:45.000Z</pubTime>
+        
+        <tag>three.js</tag>
+         
+        <tag>panorama</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/08/2016-01-06-promise/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Promise 实战</title>
+        <pubTime>2016-01-07T17:05:05.000Z</pubTime>
+        
+        <tag>ES6</tag>
+         
+        <tag>Promise</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="http://aotu.io/cates/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/10/16/vim-list/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的vim二三事</title>
+        <pubTime>2015-10-16T10:24:35.000Z</pubTime>
+        
+        <tag>Vim</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/07/debug-webapp-with-chrome-devtools/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用Chrome开发工具优化Web应用</title>
+        <pubTime>2016-01-07T00:00:00.000Z</pubTime>
+        
+        <tag>chrome</tag>
+         
+        <tag>DevTool</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何创建私有 CocoaPods 仓库</title>
+        <pubTime>2016-01-26T11:35:15.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>CocoaPods</tag>
+         
+        <tag>Swift</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/16/UFT/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>UFT 需求提报平台回顾</title>
+        <pubTime>2016-01-15T16:44:00.000Z</pubTime>
+        
+        <tag>uft</tag>
+         
+        <tag>angular</tag>
+         
+        <tag>kendo</tag>
+         
+        <tag>node-mysql</tag>
+         
+        <tag>express</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>js游戏开发初级入门</title>
+        <pubTime>2016-01-14T09:20:39.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>游戏</tag>
+         
+        <tag>五子棋</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/02/19/ngrok/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>手把手教你搭建ngrok服务－轻松外网调试本机站点</title>
+        <pubTime>2016-02-18T17:55:35.000Z</pubTime>
+        
+        <tag>ngrok</tag>
+         
+        <tag>反向代理</tag>
+         
+        <tag>调试</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/28/3xx-of-http-status/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>你所知道的3xx状态码</title>
+        <pubTime>2016-01-27T20:20:00.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+        <tag>重定向</tag>
+         
+        <tag>缓存</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/01/27/how-to-make-cocoapods/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何制作cocoaPods依赖库</title>
+        <pubTime>2016-01-26T19:40:49.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>CocoaPods</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/02/24/node-debug-in-production/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Node 生产环境调试</title>
+        <pubTime>2016-02-24T12:25:35.000Z</pubTime>
+        
+        <tag>调试</tag>
+         
+        <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/01/createjs-get-started/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>createjs开发入门</title>
+        <pubTime>2016-02-29T20:10:15.000Z</pubTime>
+        
+        <tag>createjs</tag>
+         
+        <tag>tweenjs</tag>
+         
+        <tag>zoe</tag>
+         
+        <tag>preloadjs</tag>
+         
+        <tag>soundjs</tag>
+         
+        <tag>easeljs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/04/can-we-use-base64-in-h5-webapps/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>图片资源Base64化在H5页面里有用武之地吗？</title>
+        <pubTime>2016-03-03T17:45:03.000Z</pubTime>
+        
+        <tag>base64</tag>
+         
+        <tag>h5</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/02/27/docker/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>初探Docker</title>
+        <pubTime>2016-02-26T17:55:35.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+        <tag>环境</tag>
+         
+        <tag>部署</tag>
+         
+        <tag>docker hub</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/02/26/use-npm-script-instead-of-gulp/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用npm scripts替代gulp</title>
+        <pubTime>2016-02-25T16:06:24.000Z</pubTime>
+        
+        <tag>Fork</tag>
+         
+        <tag>Git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/17/http2-char/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端开发与 HTTP/2 的羁绊——安利篇</title>
+        <pubTime>2016-03-16T16:54:00.000Z</pubTime>
+        
+        <tag>HTTP/2</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/16/optimization/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端优化不完全指南</title>
+        <pubTime>2016-03-16T15:26:12.000Z</pubTime>
+        
+        <tag>工作效率</tag>
+         
+        <tag>速度性能</tag>
+         
+        <tag>安全性</tag>
+         
+        <tag>响应式</tag>
+         
+        <tag>兼容性</tag>
+         
+        <tag>搜索SEO</tag>
+         
+        <tag>信息无障碍</tag>
+         
+        <tag>前端优化</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/16/jcloud-sum/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>某超长文档的探索之路</title>
+        <pubTime>2016-03-15T16:18:00.000Z</pubTime>
+        
+        <tag>jcloud</tag>
+         
+        <tag>sum</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>让图片加载这件事儿变得更美好</title>
+        <pubTime>2016-03-08T17:38:02.000Z</pubTime>
+        
+        <tag>Images</tag>
+         
+        <tag>Load</tag>
+         
+        <tag>optimize</tag>
+         
+        <tag>Mobile</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/10/08/aotu-blog-v1/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>凹凸实验室博客V1.0.0发布</title>
+        <pubTime>2015-10-08T00:24:35.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/10/26/zepto-cors/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>前方有坑，请绕道——Zepto 中使用 CORS</title>
+        <pubTime>2015-10-26T12:24:22.000Z</pubTime>
+        
+        <tag>Zepto</tag>
+         
+        <tag>CORS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aotu.io/notes/2015/10/13/start-postcss/</loc>
+    <lastmod>2016-03-31T02:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>PostCSS快速入门使用</title>
+        <pubTime>2015-10-13T09:34:25.000Z</pubTime>
+        
+        <tag>PostCSS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+</urlset>
