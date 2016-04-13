@@ -1,6 +1,6 @@
 title: 前端优化实践总结
 subtitle: 结合项目总结优化过程中如何寻找优化点以及收益比较大的常见方法，希望可以对遇到相似问题的同学有帮助，前端大神可轻轻淡笑而过。
-cover: mihanX/jcloud-opt/banner.png
+cover: mihanX/jcloud-opt/banner3.png
 tags:
   - 项目总结
   - 页面优化
