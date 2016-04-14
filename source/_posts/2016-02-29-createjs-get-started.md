@@ -1,5 +1,5 @@
 title: createjs开发入门
-subtitle: 通过实例浅析createjs
+subtitle: 通过实例浅析createjs各个套件的使用方法
 cover: youing/20160229/createjs-get-started-cover.jpg
 tags:
   - createjs
