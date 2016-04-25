@@ -6,10 +6,8 @@
 
   记得将你们在github的头像更新到最帅，将你github的用户名在文章内头部填好即可！
 
-2. [hexo-wordcount](https://npmjs.org/package/hexo-wordcount) 显示博文字数
-3. [不蒜子](http://ibruce.info/2015/04/04/busuanzi/) 统计博文的pv
-4. 每日一句英文警句
-5. [多说](http://duoshuo.com)评论
+2. [不蒜子](http://ibruce.info/2015/04/04/busuanzi/) 统计博文的pv
+3. [多说](http://duoshuo.com)评论
 
 ## 使用指引
 

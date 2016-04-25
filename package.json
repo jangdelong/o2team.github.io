@@ -27,7 +27,7 @@
     "hexo-util": "^0.2.1",
     "hexo-wordcount": "0.0.3",
     "lodash": "^3.10.1",
-    "lunr": "git+ssh://git@github.com/codepiano/lunr.js.git"
+    "lunr": "github:codepiano/lunr.js.git"
   },
   "devDependencies": {
     "cssnano": "^3.3.1",
