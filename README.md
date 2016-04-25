@@ -22,24 +22,11 @@
     ```
     git clone git@github.com:o2team/o2team.github.io.git o2team
     ```
+    原来已拉过旧版代码，可切换至v2分支再拉取
 
-3. 初始化子模块(submodules)
-
-    ```
-    cd o2team
-    git submodule init
-    git submodule update
-    
-    # 切换至themes/o2目录，签出master分支
-    cd ../themes/o2
-    git checkout master
-    ```
-
-4. 安装nodejs包
+4. 安装npm包
 
     ```
-    # 切换回根目录下
-    cd ../../
     npm install
     ```
 
