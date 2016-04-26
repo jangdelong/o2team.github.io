@@ -1,6 +1,6 @@
 title: "Git常用操作总结"
 subtitle: "理解Git的内部原理，分清楚工作区、暂存区、版本库，还有就是理解Git跟踪并管理的是修改，而非文件。"
-cover: mamboer/git-flow.jpg
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/mamboer/git-flow.jpg
 date: 2015-11-17 12:44:25
 categories: Web开发
 tags:
@@ -24,7 +24,7 @@ author:
 ### 提交
 git tracked的是修改，而不是文件
 
-![git-track](/img/post/mamboer/git-trees.jpg)
+![git-track](http://7xt3gj.com1.z0.glb.clouddn.com/mamboer/git-trees.jpg)
 
     #将“当前修改”移动到暂存区(stage)
     $ git add somfile.txt
@@ -72,7 +72,7 @@ git tracked的是修改，而不是文件
 
 ### 分支操作
 
-![about-merge](/img/post/mamboer/git-merge.png)
+![about-merge](http://7xt3gj.com1.z0.glb.clouddn.com/mamboer/git-merge.png)
 
     # 查看当前分支
     $ git branch

@@ -1,7 +1,7 @@
 title: css层叠顺序探究
 subtitle: A stacking context is formed, anywhere in the document, by any element which is either
 date: 2015-11-08 11:44:25
-cover: "Yettyzyt/cover.png"
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/cover.png
 categories: Web开发
 tags:
   - CSS
@@ -44,14 +44,14 @@ div{border: 1px #000 dashed;height:200px;width:300px;text-align: center;}
 ----------
 
 *eg.1-1：常规流中非定位非行内元素的层叠情况*
-{% pimg Yettyzyt/1-1-normal-order.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/1-1-normal-order.png %}
 
 **结论： 常规流中非定位非行内的元素根据html顺序，按照“后来居上”的规则层叠。**
 
 ----------
 
 *eg.1-2：定位元素／行内元素／浮动元素之间的层叠关系*
-{% pimg Yettyzyt/1-2-change-order.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/1-2-change-order.png %}
 
 **结论： 层叠顺序如下（高➡低）：
 z-index为auto的定位元素；
@@ -87,14 +87,14 @@ div{border: 1px #000 dashed;height:200px;width:300px;text-align: center;}
 ----------
 
 *eg.2-1: 5个定位元素在未设置z-index时的层叠情况*
-{% pimg Yettyzyt/2-1-normal-order.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/2-1-normal-order.png %}
 
 **结论： z-index为auto的定位元素根据html顺序，按照“后来居上”的规则层叠。**
 
 ----------
 
 *eg.2-2: 5个定位元素设置不同z-index时的层叠情况*
-{% pimg Yettyzyt/2-2-change-order.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/2-2-change-order.png %}
 
 **结论：
 定位元素的层叠级别由z-index的值决定，z-index为auto则其层叠级别为0（注意：只是层级为0，其z-index值仍为auto）；
@@ -114,7 +114,7 @@ div{border: 1px #000 dashed;height:200px;width:300px;text-align: center;}
 >—[W3C][2]
 
 规范中的描述比较乏味，可结合[w3help][3]中的一张图片进行理解：
-> {% pimg Yettyzyt/3-1-summay-order.png %}
+> {% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/3-1-summay-order.png %}
 
 ## 4. 层叠上下文（stacking context）
 看完上述的例子，对于层叠顺序应该大致了解了。但突然冒出一个“层叠上下文”，这又是个什么鬼？
@@ -151,7 +151,7 @@ div{border: 1px #000 dashed;height:200px;width:400px;text-align: center;}
 .div1_1{background-color: #FC9D99;margin:100px 0 0 50px;width: 300px;}
 .div2{background-color: #F9CCAD;line-height: 300px;}
 ```
-{% pimg Yettyzyt/4-1-normal-order.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/4-1-normal-order.png %}
 分析上述例子：
 - **前提：**div1、div1_1、div2都是定位元素；div1、div2都没有设置z-index值。
 - **假设：**div1与div2创建了层叠上下文。不同层叠上下文之间是相对独立的，div1_1属于div1所创建的层叠上下文，与div2所创建的层叠上下文无关；根据“后来居上”原则，则div2应该在div1及其子元素div1_1之上。
@@ -164,7 +164,7 @@ div{border: 1px #000 dashed;height:200px;width:400px;text-align: center;}
 
 **IE中的BUG：**
 *在IE6-7浏览器中测试eg.4-1：*
-{% pimg Yettyzyt/4-2-ie-bug.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/4-2-ie-bug.png %}
 
 **结论： ie6-7中，z-index为auto的定位元素也会创建新的层叠上下文。**
 #### 4.2.2 css3
@@ -197,7 +197,7 @@ div{border: 1px #000 dashed;height:200px;width:400px;text-align: center;}
 ----------
 
 *eg.4-2：opacity创建新的层叠上下文*
-{% pimg Yettyzyt/4-3-opacity-order.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Yettyzyt/4-3-opacity-order.png %}
 分析：
 >If an element with opacity less than 1 is not positioned, implementations must paint the layer it creates, within its parent stacking context, at the same stacking order that would be used if it were a positioned element with ‘z-index: 0’ and ‘opacity: 1’. 
 >If an element with opacity less than 1 is positioned, the ‘z-index’ property applies as described in [CSS21], except that ‘auto’ is treated as ‘0’ since a new stacking context is always created.

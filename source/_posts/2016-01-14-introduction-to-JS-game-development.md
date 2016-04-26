@@ -1,6 +1,6 @@
 title: js游戏开发初级入门
 subtitle: 凹凸实验室水灵通透软妹子－暖暖，手把手教你用js开发五子棋游戏！
-cover: wangcainuan/2016-01-14-introduction-to-JS-game-development/gobang_cover.jpg
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/wangcainuan/2016-01-14-introduction-to-JS-game-development/gobang_cover.jpg
 categories: Web开发
 tags:
   - js
@@ -84,7 +84,7 @@ function drawGobang(n) {
 #### 3.1.2 画棋盘图示
 注意边缘的棋子的样式控制，另外鼠标经过时添加红色虚线提醒。
 
-{% pimg wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png "画棋盘" '{"title":"board of gobang","class":"gobang_qipan"}' %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/wangcainuan/2016-01-14-introduction-to-JS-game-development/board.png "画棋盘" '{"title":"board of gobang","class":"gobang_qipan"}' %}
 
 ### 3.2 画棋子
 处理函数需要什么操作，只是把棋子画到相对应的棋盘即可吗？
@@ -138,7 +138,7 @@ j = +targetId.split("_")[2];
 3. 继续按顺序遍历(i,j)棋子的后四个位置是否含相同颜色的棋子，若相同，count++以及检测是否count == 5 。
 如下图所示，红色虚线为即将要下的棋子，计算count为1，向左判断使得count最后为3，遇到红色交叉的地方没有黑色棋子，则退出循环；从红色虚线的右边继续判断，最后count为5，因此判断黑棋赢：
 
-{% pimg wangcainuan/2016-01-14-introduction-to-JS-game-development/check.jpg "判断输赢算法" '{"title":"check who win","class":"gobang_check"}' %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/wangcainuan/2016-01-14-introduction-to-JS-game-development/check.jpg "判断输赢算法" '{"title":"check who win","class":"gobang_check"}' %}
 
 代码如下，一共检测四个方向：
 ```javascript

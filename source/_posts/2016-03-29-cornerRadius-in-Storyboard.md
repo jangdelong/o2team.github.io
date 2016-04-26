@@ -1,6 +1,6 @@
 title: 如何优雅地在Storyboard中设置圆角
 subtitle: 在Storyboard中设置圆角的正确打开方式~
-cover: MarkLin/cornerRadius/CornerRadius.png
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/cornerRadius/CornerRadius.png
 categories: iOS
 tags:
   - iOS

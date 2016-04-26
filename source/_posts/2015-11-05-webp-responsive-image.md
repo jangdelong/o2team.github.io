@@ -5,7 +5,7 @@ categories: 性能优化
 tags:
   - WebP
   - Fork
-cover: wengeek/responsive-image.png
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/wengeek/responsive-image.png
 author:
   nick: WEN
   github_name: wengeek

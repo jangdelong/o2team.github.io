@@ -1,6 +1,6 @@
 title: 如何创建私有 CocoaPods 仓库
 subtitle: 本文介绍如何创建私有的 CocoaPods 仓库
-cover: MarkLin/privateCocoaPods/PrivateCocoaPods.png
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/PrivateCocoaPods.png
 categories: 移动开发
 tags:
   - iOS
@@ -29,14 +29,14 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 
 <!-- more -->
 
-{% pimg MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-1cocoapodsMasterRepo.png %}
 
 可以看到上图， **.cocoapods** 目录下的 **repos** 其实是 **repository** （仓库）的缩写。 **repos** 中存放的时仓库的集合。这里的 **master** 就是 **CocoaPods** 官方建立的仓库，也就是我们所谓的公共库。
 
 **specs** 目录下存放的就是所有提交到 **CocoaPods** 的开源库的 **podspec** 文件的集合。
 其结构如下图所示：
 
-{% pimg MarkLin/privateCocoaPods/1-2repoSpecs.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-2repoSpecs.png %}
 
 其组成方式：
 
@@ -52,7 +52,7 @@ specName -- version -- specName.podspec
 
 在你的 git 服务器上创建一个 **repo**。这里你可以在 **github** 或者你自己的 git 服务器上实现。公司内部使用的话这里推荐大家使用私有的仓库,但是 **github** 的私有仓库是要收费的 **$7/month** （壕请无视 - -！）。大部分公司都是有自己的git服务器，不过一般只能在公司内网使用，或者可以选择[Gitlab](https://gitlab.com),[Coding](https://coding.net), [Bitbucket](https://bitbucket.org/)任意一种。我们以在 **github** 上创建为例：
 
-{% pimg MarkLin/privateCocoaPods/1-3createGithub.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-3createGithub.png %}
 
 如图所示，我们在 **github** 上创建一个空的仓库，命名为 **O2Specs** ，这个仓库是用来存放我们自己所有的私有库的 **spec** 文件，就如同官方的 [**https://github.com/CocoaPods/Specs**](https://github.com/CocoaPods/Specs) 是用来存放所有官方的 **specs** 文件一样。
 
@@ -71,7 +71,7 @@ pod repo add O2Specs https://github.com/marklin2012/O2Specs.git
 
  这里用的是 **https** 地址，当然你也可以用 **git** 地址，不过这样有可能失败。如果失败，很大因素是你 **github** 的 **ssh** 在本地没有配置好，配置方法可以看这里：[**Generating SSH keys**](https://help.github.com/articles/generating-ssh-keys/)，成功后可以看得到 **.cocoapods** 目录如下图所示：
 
-{% pimg MarkLin/privateCocoaPods/1-4o2specsRepos.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-4o2specsRepos.png %}
 
 至此，我们已经在本地得到我们自己的私有仓库 **O2Specs** ，这是一个空的仓库。
 
@@ -81,7 +81,7 @@ pod repo add O2Specs https://github.com/marklin2012/O2Specs.git
 
 让我们进入到上面 clone 的示例工程目录中（或者你自己搭建的依赖库目录中）：
 
-{% pimg MarkLin/privateCocoaPods/1-5O2ViewDoc.jpeg %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-5O2ViewDoc.jpeg %}
 
 打开工程的 **podspec** 文件：
 
@@ -180,11 +180,11 @@ To https://github.com/marklin2012/O2Specs.git
 
 再进入到 **.cocoapods** 的目录中，可以看到已经发生了变化：
 
-{% pimg MarkLin/privateCocoaPods/1-6O2SpecsRepoO2View.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-6O2SpecsRepoO2View.png %}
 
 同时，我们还发现 **O2Specs** 的 **github** 仓库也已经发生了变化：
 
-{% pimg MarkLin/privateCocoaPods/1-7O2SpecPushed.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-7O2SpecPushed.png %}
 
 按照平时使用 **CocoaPods** 的习惯，我们添加依赖库之前会先搜索一下库，让我们执行一下命令：
 
@@ -274,7 +274,7 @@ git push origin master
 ```
 这样我们就得到了一个稳定的 **release** 版本 **0.0.1**：
 
-{% pimg MarkLin/privateCocoaPods/1-8githubTags.png %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/MarkLin/privateCocoaPods/1-8githubTags.png %}
 
 > 这里我用的版本号是 **0.0.1** 基于研发版本，关于版本号的一些规范可以参考：[语义化版本 2.0.0](http://semver.org/lang/zh-CN/)
 

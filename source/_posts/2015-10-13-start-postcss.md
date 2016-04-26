@@ -1,7 +1,7 @@
 title: PostCSS快速入门使用
 subtitle: "PostCSS 是一套利用JS插件实现的用来改变CSS的工具.这些插件能够支持变量和混合语法，转换未来CSS语法，内联图片，还有更多"
 date: 2015-10-13 09:34:25
-cover: cnt1992/postcss.jpg
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/postcss.jpg
 tags: Web开发
 author:
   nick: Sky
@@ -203,7 +203,7 @@ element {
 
 在PostCSS官方推特上看到，由JavaScript编写的PostCSS比C++编写的libsass还要快3倍，下面来自官方推特的截图:
 
-{% pimg cnt1992/postcss.png "PostCSS性能对比图" '{"title":"PostCSS性能对比图","class":"test_img"}' %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/postcss.png "PostCSS性能对比图" '{"title":"PostCSS性能对比图","class":"test_img"}' %}
 
 
 如果你对上面的性能截图有疑问，可以亲自来[这里](https://github.com/postcss/benchmark)测试看看。

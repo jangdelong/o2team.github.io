@@ -1,6 +1,6 @@
 title: 【译】使用Node.js创建命令行脚本工具
 subtitle: 通过本文将一步步带领你利用Node.js来创建命令行脚本工具
-cover: cnt1992/command-line-tools.jpg
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/command-line-tools.jpg
 categories: Node.js
 tags:
   - Node.js
@@ -33,7 +33,7 @@ date: 2015-12-23 13:19:07
 
 这是我们的最终目标成果：
 
-{% pimg cnt1992/snippet-usage.gif "snippet用法" '{"title":"snippet用法","class":"test_img"}' %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/snippet-usage.gif "snippet用法" '{"title":"snippet用法","class":"test_img"}' %}
 
 ## 封装 shell 命令
 
@@ -325,7 +325,7 @@ $ npm install --save chalk
 
 让我们旋转一下（这里我使用了截图，以便你能看到极好的颜色）。
 
-{% pimg cnt1992/terminal-colors.png "彩色化输出截图" '{"title":"彩色化输出截图","class":"test_img"}' %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/terminal-colors.png "彩色化输出截图" '{"title":"彩色化输出截图","class":"test_img"}' %}
 
 
 ## 渲染 `ACSII` 进度条
@@ -375,7 +375,7 @@ $ npm install --save progress
 
 下面是一个比较快的网速下上传大约6MB的文件的截图：
 
-{% pimg cnt1992/progress-bar.gif "上传文件进度条" '{"title":"上传文件进度条","class":"test_img"}' %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/progress-bar.gif "上传文件进度条" '{"title":"上传文件进度条","class":"test_img"}' %}
 
 很棒！用户现在就能够看到他们上传的进度并且知道什么时候上传完成。
 

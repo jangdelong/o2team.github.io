@@ -1,7 +1,7 @@
 title: What Does the Foo Mean
 subtitle: "以前在不少编程书里经常看到 “foo”、“bar” 这对 couple，一直不知道他们的具体含义，于是默默去 google 搜了一下，发现结果还挺有意思"
 date: 2015-12-17 21:22:23
-cover: "mihanX/foo-banner.png"
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/mihanX/foo-banner.png
 categories: 其它
 tags: 
 - Foo
@@ -64,7 +64,7 @@ Wiki 对 “Foobar” 一词的定义是这样的：
 
 *Foo* 在文献 《Internet Engineering Task Force (IETF) [RFC 3092](https://tools.ietf.org/html/rfc3092)》里有定义（文献标题为 Etymology of "Foo"），文献给出了 *foo* 最早的使用记录，就是出现在 20 世纪 30 年代由美国 *Bill Holman* 创作的连载漫画 *Smokey Stover*，*foo* 被用作没有具体含义的词，如下图的 “foomobile”：
 
-![image](/img/post/mihanX/foo-img-1.jpg)
+![image](http://7xt3gj.com1.z0.glb.clouddn.com/mihanX/foo-img-1.jpg)
 
 *(Smokey Stover driving a "foomobile")*
 

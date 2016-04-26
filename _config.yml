@@ -80,6 +80,7 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: o2_v2
 
+
 # Feeds
 ## https://www.npmjs.com/package/hexo-generator-feed
 feed:

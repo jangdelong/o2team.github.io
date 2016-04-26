@@ -1,6 +1,6 @@
 title: 使用Chrome开发工具优化Web应用
 subtitle: 本文主要介绍如何使用Chrome开发工具的Timeline功能来监控Web应用的性能，找出问题，并由此延伸出一些优化Web应用性能的思路。
-cover: Simbachen/cover.jpg
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/cover.jpg
 categories: 性能优化
 tags:
   - chrome
@@ -17,7 +17,7 @@ date: 2016-01-07
 Chrome开发工具的Timeline面板监控了web应用运行时所有活动情况，不过它的功能很多，对于英文不好的童鞋，有点无从下手，下面直接上手来使用。
 
 ## 首先，审查一个页面，切换到Timeline面板。
-{% pimg Simbachen/panel.png [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/panel.png [Timeline面板] %}
 
 图中红框标出的部分是功能栏：从45到47版本，Timeline工具连续都有更新，当前截图的版本号是47.0；
 
@@ -30,13 +30,13 @@ Chrome开发工具的Timeline面板监控了web应用运行时所有活动情况
 
 ## 接下来记录一段时间线状态。
 
-{% pimg Simbachen/frames.png [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/frames.png [Timeline面板] %}
 图中没被标出的部分是整个监控过程中的数据概览；红框标出的部分有两栏，上面是选中的时间段内每一帧的情况，下面是内存占用的变化。
 
 浏览器渲染的速率达到60帧/秒，那么每一帧只有1000ms / 60 = 16.67ms的时间来响应，其中浏览器在每一帧还要做一些额外的事情，因为我们要保证每一帧的CPU time在12ms左右。
 
 有红色三角形角标标出的表示当前帧消耗过多时间
-{% pimg Simbachen/frames01.png [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/frames01.png [Timeline面板] %}
 
 点击选中一帧可以看到当前帧的详细情况，图中显示，当前帧的渲染消耗了30.8ms，可能会造成卡顿。
 饼图中可能会有五个颜色：
@@ -56,12 +56,12 @@ Chrome开发工具的Timeline面板监控了web应用运行时所有活动情况
 
 
 ## 分析一个问题帧
-{% pimg Simbachen/frames02.png [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/frames02.png [Timeline面板] %}
 
 这一帧比较极端，从图上看就是紫色部分花费掉了大量时间，我们就可以从这里入手来优化代码，在此之前先得了解一下浏览器绘制帧的整个过程。实际导致绘制帧卡顿可能是其中任何一个环节。
 
 
-{% pimg Simbachen/frame-full.jpg [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/frame-full.jpg [Timeline面板] %}
 
 >* Javascript： 除了使用Javascrit来实现视觉变化，还有CSS Animations、 Transitions。
 * Style： 根据CSS选择器，对每个DOM元素匹配对应的CSS样式。
@@ -84,15 +84,15 @@ Chrome开发工具的Timeline面板监控了web应用运行时所有活动情况
 
 ## 点击切换视图模式，找到问题所在。
 
-{% pimg Simbachen/frames03.png [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/frames03.png [Timeline面板] %}
 
 这是一个知名线上网站的首页，这里发生了滚屏触发加载内容，导致DOM结构变化，引发了大量内容的重绘和渲染，并且页面旧的内容没有回收，节点较多，明显的感觉到滚屏的时候有卡顿感。对于这个应用按照上述的思路来优化，在优化的过程中，我们也许会遇到下面这个问题。
 
-{% pimg Simbachen/frames04.png [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/frames04.png [Timeline面板] %}
 
 这是另一个demo页面，有数千个节点组成，用以模拟无限懒加载数据的情况，其中只有一个节点上应用了循环的css3动画。其它的都不会改变。为了将有动画的节点独立到一个单独的渲染层中，我对它应用了translateZ(0)。本以为大功告成，结果在滚屏的时候发现非常卡顿。于是就有了上图，平均每帧的渲染都消耗掉了200ms左右，从Timeline监控数据中可以看到，其中Composite Layers这个过程耗费了大量时间。那么直接查看layer状态：
 
-{% pimg Simbachen/frames05.png [Timeline面板] %}
+{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Simbachen/frames05.png [Timeline面板] %}
 
 再看官方文档的提示：由于每个渲染层的纹理都需要上传到GPU处理，过多的渲染层来带的开销而对页面渲染性能产生的影响，甚至远远超过了它在性能改善上带来的好处。
 
