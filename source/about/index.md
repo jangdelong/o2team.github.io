@@ -1,4 +1,4 @@
-title: 关于凹凸实验室
+title: 关于凹凸
 type: about
 layout: about
 ---
