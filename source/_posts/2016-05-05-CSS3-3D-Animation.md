@@ -34,7 +34,29 @@ date: 2016-05-05 20:17:20
 
 我们先抛开这个概念，尝试使用刚才说到的知识点进行翻牌（咦）效果的尝试，聪明的你一定分分钟码出来：
 
-![翻牌实现代码](http://7xt3gj.com1.z0.glb.clouddn.com/FiZ1K2WdN3N-0spgzCSYoQdOk2aa)
+```html
+<div id="card">
+	<!-- 卡牌正面 -->
+	<figure class="front">1</figure>
+	<!-- 卡牌反面 -->
+	<figure class="back">2</figure>
+</div>
+```
+
+```css
+#card .front {
+	background: red;
+}
+#card .back {
+	background: blue;
+	transform: rotateY( 180deg );
+}
+
+/* 翻牌动作 */
+#card.flipped {
+	transform: rotateY( 180deg );
+}
+```
 
 但是放浏览器一看，这不对呀，为什么用3D的代码写出了2D的效果。
 
@@ -52,7 +74,7 @@ CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的
 
 ![perspective(graphic)](http://7xt3gj.com1.z0.glb.clouddn.com/FrPCDSbOxepqWV8JrDRIzamARiP9)
 
-> （图片来源：[维基百科](https://en.wikipedia.org/wiki/Perspective_(graphical))）
+*（图片来源：[维基百科](https://en.wikipedia.org/wiki/Perspective_%28graphical%29)）*
 
 如果还是不懂，还有一个办法，就是在浏览器中边调整perspective数值边观察3D效果。
 
@@ -62,7 +84,7 @@ CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的
 
 ![perspective-children01](http://7xt3gj.com1.z0.glb.clouddn.com/FnvhLwboKDByIz9skLKAifm-TbVZ)
 
-> （图片来源：[Intro to CSS 3D transforms - Perspective](https://desandro.github.io/3dtransforms/docs/perspective.html)）
+*（图片来源：[Intro to CSS 3D transforms - Perspective](https://desandro.github.io/3dtransforms/docs/perspective.html)）*
 
 左图与右图的元素均绕Y轴旋转了45度，但差别很明显，右图更容易让人想到一个画面中集体开启的窗户。左图的问题就在于，每个元素的消失点各自为政，都在元素的中心点位置，而右图的消失点则统一在实线方框的中心位置。实现方法就是将元素的perspetive设置转移至元素父容器上。
 
@@ -74,7 +96,7 @@ CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的
 
 ![你所期待的正方体，浏览器给你的“正方体”](http://7xt3gj.com1.z0.glb.clouddn.com/Fp3RHvtFL4VVmPE09kkdVPALrgcP)
 
-> 现实总是乳齿残酷
+*现实总是乳齿残酷*
 
 有了perspetive属性，我们顶多是一群会在纸上画素描的家伙，要想徒手造模型，还是太嫩。就拿刚才的翻牌效果来说，如果你翻滚card父容器，无论怎么翻，能看到的只有正面的卡片，因为现在的体系就是一张素描绘画，你拿着再逼真的素描画翻到背面，也是看不到真实物体的背面的对吧。超越平面3D的关隘就在于transform-style: preserve-3d的属性设置，默认值为flat，即“素描作品”。这个属性的设置旨在告诉子元素需要遵循怎样的空间体系规则。这个属性不能继承，因此只要有子元素需要设置空间体系规则，就得在父元素声明这个属性。
 
@@ -90,7 +112,7 @@ CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的
 
 ![带阴影的翻书demo](http://7xt3gj.com1.z0.glb.clouddn.com/FnW5R4z2f1Ho3BobCx_yC1uH3PNe)
 
-（[猛戳查看demo](http://lyxuncle.github.io/pageturning/demo/demo2.html)）
+*（[猛戳查看demo](http://lyxuncle.github.io/pageturning/demo/demo2.html)）*
 
 ## 3D动画之Hard Level：立体书
 
@@ -98,7 +120,7 @@ CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的
 
 ![A Guided Tour of THE MEL BIRNKRANT COLLECTION](http://7xt3gj.com1.z0.glb.clouddn.com/FkhE7EbeXLorH_KIyPT6p5BMW9BJ)
 
-（图片来源：[A Guided Tour of THE MEL BIRNKRANT COLLECTION](http://melbirnkrant.com/collection/page48.html)）
+*（图片来源：[A Guided Tour of THE MEL BIRNKRANT COLLECTION](http://melbirnkrant.com/collection/page48.html)）*
 
 要用CSS3实现这种效果，想想还有点小激动。
 
@@ -112,7 +134,7 @@ CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的
 
 ![Mozzilla的小demo](http://7xt3gj.com1.z0.glb.clouddn.com/Fu3qwoFnTKfxqsvE_p3MX_1Vsrl7)
 
-([Mozzilla的小demo](http://www.html5tricks.com/demo/css3-3d-book/index.html)）
+*（[Mozzilla的小demo](http://www.html5tricks.com/demo/css3-3d-book/index.html)）*
 
 小编曾做过一个丧心病狂的立体书触屏页，由于立体书左右两页互相关联的特性，翻牌的方式不太适合用在这里，这里使用的是另一种较为麻烦的方式——不像翻牌方式中的前后两页捆绑，这里的书页左右两页属于一个3D体系，通过translateZ值的变换控制层级关系，因为在3D体系里，z-index已被抛弃。
 
@@ -134,14 +156,13 @@ CSS3中的perspetive在这样一个体系里就代表着元素与观者之间的
 
 ## 参考资料：
 
-[Intro to CSS3 3D transforms](https://desandro.github.io/3dtransforms/) by David DeSandro ——详尽又新鲜的3D Transformers手册，包含许多一看就懂的小Demo，妈妈再也不用担心我的3D了。
+[Intro to CSS3 3D transforms](https://desandro.github.io/3dtransforms/) by David DeSandro *——详尽又新鲜的3D Transformers手册，包含许多一看就懂的小Demo，妈妈再也不用担心我的3D了。*
 
-[Perspective (graphical)](https://en.wikipedia.org/wiki/Perspective_(graphical))
-——对透视学还一知半解的可以看看维基的详细说明。
+[Perspective (graphical)](https://en.wikipedia.org/wiki/Perspective_%28graphical%29)*——对透视学还一知半解的可以看看维基的详细说明。*
 
-[Unfolding the Box Model: Exploring CSS 3D Transforms](http://rupl.github.io/unfold/) by Chris Ruppel ——非常赞的3D Transforms介绍，从2D到3D过渡，启动联想学习法，一看就明白，就怕你不看。
+[Unfolding the Box Model: Exploring CSS 3D Transforms](http://rupl.github.io/unfold/) by Chris Ruppel *——非常赞的3D Transforms介绍，从2D到3D过渡，启动联想学习法，一看就明白，就怕你不看。*
 
-[CSS硬件加速的好与坏](http://efe.baidu.com/blog/hardware-accelerated-css-the-nice-vs-the-naughty/)——很多事情都不是一两句能讲清楚的，但是只要深入了解原理，一两句都不用讲就清楚了。
+[CSS硬件加速的好与坏](http://efe.baidu.com/blog/hardware-accelerated-css-the-nice-vs-the-naughty/)*——很多事情都不是一两句能讲清楚的，但是只要深入了解原理，一两句都不用讲就清楚了。*
 
 ------------------------------------------
 
