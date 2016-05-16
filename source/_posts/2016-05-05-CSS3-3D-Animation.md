@@ -1,6 +1,6 @@
 title: CSS3动画之3D动画
 subtitle: CSS3动画开发指南第三弹
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/Flp_hXOIGcrDdf-X2zLfak5gtnRd
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/FrYNVc2GU23S0lHWu4xwzQtd7PR5
 tags:
   - CSS3
   - 动画
