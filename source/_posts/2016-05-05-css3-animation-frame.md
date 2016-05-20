@@ -1,6 +1,6 @@
 title: CSS3动画之逐帧动画
-subtitle: 为什么帧数总是算不明白？<br>为什么动画总会有抖动？<br>捋清steps函数～<br>手把手教你做逐帧动画！
-date: 2016-05-16 16:54:00
+subtitle: CSS3动画开发指南第二弹
+date: 2016-05-05 16:54:00
 cover: Yettyzyt/css3-animation-frame/840.png
 categories: Web开发
 tags:

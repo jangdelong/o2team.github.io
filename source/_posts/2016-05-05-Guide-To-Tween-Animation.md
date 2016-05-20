@@ -1,5 +1,5 @@
 title: CSS3动画之补间动画
-subtitle: 想要动画生动自然吗？想要动画不卡顿吗？不需要998，不需要668，只要点进来，你就可以get到这些技巧。
+subtitle: CSS3动画开发指南第一弹
 cover: Tingglelaoo/20160506/TweenAnimation_cover.png
 tags:
   - CSS3
@@ -8,7 +8,7 @@ tags:
 author:
   nick: Tingglelaoo
   github_name: Tingglelaoo
-date: 2016-05-06 11:03:09
+date: 2016-05-05 11:03:09
 ---
 <!-- more -->
 
