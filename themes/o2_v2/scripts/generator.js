@@ -8,14 +8,13 @@ var publicDir   = hexo.public_dir;
 var sourceDir   = hexo.source_dir;
 var route       = hexo.route;
 var lunr        = require('lunr');
-
+var reg         = /^http:s?\/\//;
 
 
 
 function getCoverPath (path) {
-    if(path.indexOf('http://') === 0 || path.indexOf('https://') === 0) return path;
-    path =  '/img/post/' + path;
-    return path;
+    if (reg.test(path)) { return path; }
+    return '/img/post/' + path;
 }
 
 //生成lunrjs搜索数据
@@ -80,6 +79,7 @@ hexo.extend.generator.register('searchData', function(locals){
         }) 
     }
 });
+
 
 
 hexo.extend.generator.register('postData', function(locals){

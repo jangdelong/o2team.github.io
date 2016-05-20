@@ -42,13 +42,18 @@
 
         render: function() {
             var filteredData = this.filteredData,
-                html;
+                html,
+                reg = /^http:s?\/\//;
 
             if (!filteredData.length) {
                 html = "抱歉，您要的内容似乎没有哦，不如换个关键字试试吧。";
             } else {
                 html = this.tpl.render({data: this.filteredData, coversrc: function(){
-                    return (location.hostname == 'aotu.io' ? '/assets/': '') + this.cover;
+                    var cover = this.cover;
+                    if (reg.test(cover)) {
+                        return cover;
+                    }
+                    return (location.hostname == 'aotu.io' ? '/assets/': '') + cover;
                 }});
             }
             this.$contaner.append(html);
