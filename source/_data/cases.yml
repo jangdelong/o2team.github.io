@@ -17,19 +17,6 @@
 #   tags:
 #     - mac
 #     - guide
-# - name: 前端代码规范
-#   desc: 凹凸实验室整理的前端开发规范，与最新前端技术同步修正.
-#   link: https://github.com/o2team/guide
-#   preview: http://aotu.io/guide
-#   logo: /img/home/guide.png
-#   bgc: 6190e8
-#   tags:
-#     - guide
-#     - frontend
-#     - specification
-#     - 前端规范
-#     - JS编码规范
-#     - CSS编码规范
 # - name: 邮件签名生成器
 #   desc: 一款使用expressjs和nodejs开发的邮件签名生成器，开源且适用于所有行业。
 #   link: https://github.com/o2team/sign
@@ -43,10 +30,7 @@
   name: 拇指期刊
   desc: 由凹凸实验室3个美少女精心整理的HTML5案例期刊，每个案例附带创意、技术分析，开阔你的专业视界。
   link: https://github.com/o2team/cases
-  preview: http://aotu.io/cases/mobi/maga.html
-  logo: /img/home/h5.jpg
-  qrcode: /img/home/h5-qrcode.png
-  bgc: 6190e8
+  preview: http://cases.aotu.io/mobi/maga.html
   tags:
     - 期刊
     - HTML5
@@ -54,9 +38,24 @@
   name: Athena
   desc: 不仅仅是前端自动化流程构建工具，Athena还可以将构建流程数据化、可视化。
   link: https://github.com/o2team/athena
-  preview: http://aotu.io/athena
-  logo: http://aotu.io/athena/logo.png
-  bgc: efdb4f
+  preview: http://athena.aotu.io/
   tags:
     - ATHENA
     - 前端自动化
+- name: 前端代码规范
+  desc: 凹凸实验室整理的前端开发规范，与最新前端技术同步修正。
+  link: https://github.com/o2team/guide
+  preview: http://guide.aotu.io/
+  tags:
+    - guide
+    - frontend
+    - specification
+    - 前端规范
+    - JS编码规范
+    - CSS编码规范
+- name: HaloJS
+  desc: 一个敏捷易用的移动端组件库。
+  link: https://github.com/o2team/halojs
+  preview: http://halojs.aotu.io/
+  tags:
+    - 移动端组件库

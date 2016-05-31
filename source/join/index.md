@@ -1,4 +1,4 @@
-title: 加入凹凸实验室
+title: 加入我们
 type: join
 layout: join
 ---

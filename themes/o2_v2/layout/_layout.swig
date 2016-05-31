@@ -2,7 +2,7 @@
 <html class="theme-o2">
 <head>
     <meta charset="utf-8"/>
-    <title>{% block title %}{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}{% endblock %}</title>
+    <title>{% block title %}{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}「{{ config.subtitle }}」{% endblock %}</title>
     {{partial('_partial/common/head')}}
 </head>
 <body class="{% block page_class %}{% endblock %}">

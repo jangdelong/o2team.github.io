@@ -1,6 +1,7 @@
 <!-- Post -->
 <article class="post">
     <header class="post-hd">
+        {{seachData()}}
         <h2 class="post-tit">{{ post.title }}</h2>
         <div class="post-meta">
             by <a target="_blank" href="https://github.com/{{ author.github_name }}" class="post-author">{{ author.nick|default(author.github_name) }}</a> on <span>{{ date(post.date) }}</span>
