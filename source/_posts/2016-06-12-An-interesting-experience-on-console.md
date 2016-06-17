@@ -1,6 +1,6 @@
 title: 关于console的一次趣味体验
 subtitle: 打开console控制台,你有一份前端情怀在这里~~
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/Fj2a3Oyhp7XPngWAmDWeLNzR8StV
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/FgNOBF_blYtZRRQffkckjQeyf_W3
 tags:
   - console
   - 占位符
@@ -69,7 +69,7 @@ console.log('%o',document.body.firstElementChild)
 console.log('%O',document.body.firstElementChild)
 ```
 
-随意打开的一个页面测试，firefox总是查看可展开的DOM节点，即行为是%o；IE不支持%o和%O ；chrome显示正常，截图如下
+随意打开的一个页面测试，firefox总是可以查看可展开的DOM节点，即行为是%o；IE不支持%o和%O ；chrome显示正常，截图如下
 
 ![%o和%O的区别](http://7xt3gj.com1.z0.glb.clouddn.com/FmUiB4a7VIQWgYfMsP9DZWlaR-KL)
 
