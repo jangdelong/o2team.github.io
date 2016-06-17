@@ -1,11 +1,12 @@
 title: 探究WebP一些事儿
 subtitle: WebP图片格式是提升用户体验的一大利器，本文通过探究WebP的一些细节来说明WebP能够给我们带来的提升。
 cover: wengeek/webp_cover.png
+categories: 性能优化
 tags:
   - WebP
   - 图片
 author:
-  nick: wen
+  nick: WEN
   github_name: wengeek
 date: 2016-06-13 10:43:31
 ---
