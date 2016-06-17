@@ -1,12 +1,12 @@
 title: 探究WebP一些事儿
-subtitle: 用来一句话描述文章
+subtitle: WebP图片格式是提升用户体验的一大利器，本文通过探究WebP的一些细节来说明WebP能够给我们带来的提升。
 cover: wengeek/webp_cover.png
 tags:
-  - Git
-  - Fork
+  - WebP
+  - 图片
 author:
-  nick: 凹凸实验室
-  github_name: o2team
+  nick: wen
+  github_name: wengeek
 date: 2016-06-13 10:43:31
 ---
 
@@ -215,4 +215,4 @@ Safari打开如下：
 
 ### 总结
 
-很明显，WebP格式是提升优化用户体验的又一利器，虽然浏览器对WebP的支持仍有很多需要改进的地方，但是通过是使用一些工具和技术，能够体会到WebP的好处，使得页面加载速度更快，同时节省了带宽。
+很明显，WebP格式是提升用户体验的又一利器，虽然浏览器对WebP的支持仍有很多需要改进的地方，但是通过是使用一些工具和技术，能够体会到WebP的好处，使得页面加载速度更快，同时节省了带宽。
