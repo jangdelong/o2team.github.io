@@ -1,6 +1,6 @@
 title: 探究WebP一些事儿
 subtitle: WebP图片格式是提升用户体验的一大利器，本文通过探究WebP的一些细节来说明WebP能够给我们带来的提升。
-cover: wengeek/webp_cover.png
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/FufVMQ_IV5Z_fGJa12AHNgs63sR2
 categories: 性能优化
 tags:
   - WebP
@@ -31,11 +31,11 @@ WebP是一种支持有损压缩和无损压缩的图片文件格式，根据Goog
 
 #### WebP兼容性
 
-![](http://ww3.sinaimg.cn/large/7210ff3fgw1f4moizgagsj21kw0gidjw.jpg)
+![](http://7xt3gj.com1.z0.glb.clouddn.com/FmUIiSK5GnaMRnywosGR2wARtOhx)
 
 WebP目前支持桌面上的Chrome和Opera浏览器，手机支持仅限于原生的Android浏览器、Android系统上的Chrome浏览器、Opera Mini浏览器。
 
-![](http://ww4.sinaimg.cn/large/7210ff3fgw1f4sv9ael9fj20hn094mxj.jpg)
+![](http://7xt3gj.com1.z0.glb.clouddn.com/FimDJyH6sC_n3qQeNQiVMHmBF831)
 
 根据对目前浏览器占比与WebP的兼容性分析，如果采用WebP图片，大约有42%的用户可以直接体验到。
 
@@ -81,7 +81,7 @@ dwebp in_file [options] [-o out_file]
 
 下面我们以一张图片为例，分别用不同质量进行压缩。
 
-![](http://ww3.sinaimg.cn/large/7210ff3fgw1f4mnw5srrdj21kk0gmdkp.jpg)
+![](http://7xt3gj.com1.z0.glb.clouddn.com/FsK4nvnPq8-LKmgUMAyQpPVzX0Wk)
 
 WebP图片相比于JPG，拥有：
 
@@ -102,11 +102,11 @@ WebP图片相比于JPG，拥有：
 
 下面通过同样质量的WebP与JPG图片加载的速度进行[测试](http://labs.qiang.it/wen/webp/test.html)。测试的JPG和WebP图片大小如下：
 
-![](http://ww2.sinaimg.cn/large/7210ff3fgw1f4mn88vz64j217a07zdhx.jpg)
+![](http://7xt3gj.com1.z0.glb.clouddn.com/Fng21Plg7-00b3HKFe48nLIgP_fn)
 
 测试数据折线图如下：
 
-![](http://ww3.sinaimg.cn/large/7210ff3fgw1f4mndq15o5j20vg0jkdib.jpg)
+![](http://7xt3gj.com1.z0.glb.clouddn.com/FrvS4mf268RBStCsJSt-gbXuINrz)
 
 从折线图可以看到，WebP虽然会增加额外的解码时间，但由于减少了文件体积，缩短了加载的时间，页面的渲染速度加快了。同时，随着图片数量的增多，WebP页面加载的速度相对JPG页面增快了。所以，使用WebP基本没有技术阻碍，还能带来性能提升以及带宽节省。
 
@@ -142,7 +142,7 @@ function check_webp_feature(feature, callback) {
 
 采用JavaScript能力检测的方式来加载WebP图片，通常的做法是通过图片懒加载的方式来完成。主要流程如下：
 
-![](http://ww2.sinaimg.cn/large/7210ff3fgw1f4nl9jpuj2j20g60jlt9j.jpg)
+![](http://7xt3gj.com1.z0.glb.clouddn.com/Fslo9RsJ9z99hptjl5aRIkFVrGU5)
 
 页面加载会很快，无需等待图片加载。之后，javascript代码会动态地更新图片标签，根据浏览器支持WebP格式与否，动态生成WebP图像或JPG图像链接。
 
@@ -173,7 +173,7 @@ pagespeed EnableFilters convert_png_to_jpeg,convert_jpeg_to_webp;
 <!doctype html>
 <html>
   <head>
-	 <title>pagespeed</title>
+    <title>pagespeed</title>
   </head>
   <body>
     <img src="./574ceeb8N73b24dc2.jpg" />
