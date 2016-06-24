@@ -1,6 +1,6 @@
 title: 让console充满情怀
 subtitle: 打开console控制台,你有一份前端情怀在这里~~
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/FgefxlHw9SjFb89U2-lL46-9hyh6
+cover: http://7xt3gj.com1.z0.glb.clouddn.com/FnEwdP2101g1g18tK1lUbxA9fW23
 tags:
   - console
   - 占位符
