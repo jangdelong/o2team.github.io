@@ -50,7 +50,7 @@ hexo.extend.helper.register('page_anchor', function(str){
 
 hexo.extend.helper.register('post_img', function(path){
     // console.log(path)
-    if(path.indexOf('http://') === 0 || path.indexOf('https://') === 0) return path;
+    if(path.indexOf('http://') === 0 || path.indexOf('https://') === 0 || path.indexOf('//') ===0) return path;
     path = this.url_for((hexo.theme.config.post.img_dir || postImgDir) + path);
     return path;
 });
