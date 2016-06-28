@@ -1,6 +1,6 @@
 title: 让console充满情怀
 subtitle: 打开console控制台,你有一份前端情怀在这里~~
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/FiLwh8e3l--mGdsJNw3Bm-Z8o_JF
+cover: //img.aotu.io/FiLwh8e3l--mGdsJNw3Bm-Z8o_JF
 tags:
   - console
   - 占位符
@@ -8,7 +8,7 @@ tags:
 author:
   nick: 暖暖
   github_name: Newcandy
-date: 2016-06-12 15:51:18
+date: 2016-06-22 15:51:18
 ---
 
 一般情况下只是用console 控制台输出简单的文字信息，但是当console遇到了前端的情怀，故事就不是这么发展的了~
@@ -29,10 +29,10 @@ console.log(object [, object, …])
 一打开天猫、知乎的页面console，招聘信息就袭来啦！
 
 天猫招聘：
-![天猫招聘](http://7xt3gj.com1.z0.glb.clouddn.com/FpfNmVjqEJUN7rCqfdnj3vquPx--)
+![天猫招聘](//img.aotu.io/FpfNmVjqEJUN7rCqfdnj3vquPx--)
 
 知乎招聘：
-![知乎招聘](http://7xt3gj.com1.z0.glb.clouddn.com/Fvyb5hkp0hBX79XvRc2IUNVJjddo)
+![知乎招聘](//img.aotu.io/Fvyb5hkp0hBX79XvRc2IUNVJjddo)
 
 小女子就好奇了，怎么做的呢，可以更酷炫一点吗？
 
@@ -56,7 +56,7 @@ console.log("%c Look %o and %O , it %s and %d ","color: #6190e8;",{AA: "WCN",BB:
 
 截图如下：
 
-![占位符](http://7xt3gj.com1.z0.glb.clouddn.com/Fu_fT1Dl20to5hXQZ3hxeFP6Bxk9)
+![占位符](//img.aotu.io/Fu_fT1Dl20to5hXQZ3hxeFP6Bxk9)
 
 %o和%O在普通对象上的表现是一样的，但是在DOM上就有区别了：
 
@@ -71,7 +71,7 @@ console.log('%O',document.body.firstElementChild)
 
 随意打开的一个页面测试，firefox总是可以查看可展开的DOM节点，即行为是%o；IE不支持%o和%O ；chrome显示正常，截图如下
 
-![%o和%O的区别](http://7xt3gj.com1.z0.glb.clouddn.com/FmUiB4a7VIQWgYfMsP9DZWlaR-KL)
+![%o和%O的区别](//img.aotu.io/FmUiB4a7VIQWgYfMsP9DZWlaR-KL)
 
 使用%c占位符时，对应的后面的参数必须是CSS语句，用来对输出内容进行CSS渲染。于是，利用%c配合CSS可以做出吊炸天的效果，比如背景色、字体颜色渐变、字体3D效果、图片等，情况允许再用颜文字、emoji卖个萌，萌萌哒~
 
@@ -83,7 +83,7 @@ console.log("%c    ","background: url(http://aotu.io/assets/img/o2logo.png) no-r
 
 firebug截图如下：
 
-![图片](http://7xt3gj.com1.z0.glb.clouddn.com/FkqNNsDYs83oS2vgJNectandSuUI)
+![图片](//img.aotu.io/FkqNNsDYs83oS2vgJNectandSuUI)
 
 不过要注意了：
 * console不能定义img，因此用背景图片代替。
@@ -95,7 +95,7 @@ firebug截图如下：
 
 firebug截图如下：
 
-![凹凸实验室招聘](http://7xt3gj.com1.z0.glb.clouddn.com/FriQlRjoEvbtEKmfRZWASrUfloej)
+![凹凸实验室招聘](//img.aotu.io/FriQlRjoEvbtEKmfRZWASrUfloej)
 
 点击 [此处](http://labs.qiang.it/qqpai/test/wcn/console/console.html) 可查看例子啦~~
 
@@ -111,7 +111,7 @@ console.log("%c\n                                           :J:    \n           
 
 没错了，效果是长这样子的：
 
-![JOY](http://7xt3gj.com1.z0.glb.clouddn.com/Fp9tde_TaaPqxthmzlGhXkU1NLCn)
+![JOY](//img.aotu.io/Fp9tde_TaaPqxthmzlGhXkU1NLCn)
 
 你不会天真地认为，我是手打这个京东狗出来的吧？！
 
@@ -121,13 +121,14 @@ console.log("%c\n                                           :J:    \n           
 
 * 在线工具[picascii](http://picascii.com/)
 
-* 在线工具[img2txt](http://www.degraeve.com/img2txt.php)。
+* 在线工具[img2txt](http://www.degraeve.com/img2txt.php)
 
 * ASCII Generator功能比较齐全，不过需要下载使用噢~ 下载参考地址：[ASCII Generator Portable(将图片转为字符画) v2.0下载](http://pan.baidu.com/share/link?shareid=3161588673&uk=3509597415)
 
+
 ASCII Generator使用方法如下：
 
-1. 首先载入图片，然后调节大小、字体、亮度对比度、抖动程度，直到自己满意后，将其复制出来：![joy and ascii gen](http://7xt3gj.com1.z0.glb.clouddn.com/FpT2xLD8nYAoIP7Lq-8sBusUPBfJ)
+1. 首先载入图片，然后调节大小、字体、亮度对比度、抖动程度，直到自己满意后，将其复制出来： ![joy and ascii gen](//img.aotu.io/FpT2xLD8nYAoIP7Lq-8sBusUPBfJ)
 
 2. 复制到sublime中，将每行开头的换行删除，且替换成\n。最后只有一行代码，即保证没有换行。
 

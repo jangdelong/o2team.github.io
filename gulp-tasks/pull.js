@@ -8,7 +8,7 @@ module.exports = function(){
 		cfg = this.opts.cfg,
 		$ = this.opts.$;
 
-    cd('themes/o2/');
+    cd('themes/lattice/');
     exec('git pull origin master');
     cd('../../');
     exec('git pull');
