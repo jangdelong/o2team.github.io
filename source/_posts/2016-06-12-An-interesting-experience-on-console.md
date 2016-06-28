@@ -114,17 +114,20 @@ console.log("%c\n                                           :J:    \n           
 ![JOY](http://7xt3gj.com1.z0.glb.clouddn.com/Fp9tde_TaaPqxthmzlGhXkU1NLCn)
 
 你不会天真地认为，我是手打这个京东狗出来的吧？！
+
 不不不，有神器相助！
+
 这里推荐三个ASCII字符画制作工具：
 
-* 在线工具：[picascii](http://picascii.com/)、[img2txt](http://www.degraeve.com/img2txt.php)。
+* 在线工具[picascii](http://picascii.com/)
 
-* ASCII Generator功能比较齐全，不过需要下载使用噢~~ 下载参考地址：[ASCII Generator Portable(将图片转为字符画) v2.0下载](http://pan.baidu.com/share/link?shareid=3161588673&uk=3509597415)
+* 在线工具[img2txt](http://www.degraeve.com/img2txt.php)。
+
+* ASCII Generator功能比较齐全，不过需要下载使用噢~ 下载参考地址：[ASCII Generator Portable(将图片转为字符画) v2.0下载](http://pan.baidu.com/share/link?shareid=3161588673&uk=3509597415)
 
 ASCII Generator使用方法如下：
 
-1. 首先载入图片，然后调节大小、字体、亮度对比度、抖动程度，直到自己满意后，将其复制出来： ![joy and ascii gen](http://7xt3gj.com1.z0.glb.clouddn.com/FpT2xLD8nYAoIP7Lq-8sBusUPBfJ)
-
+1. 首先载入图片，然后调节大小、字体、亮度对比度、抖动程度，直到自己满意后，将其复制出来：![joy and ascii gen](http://7xt3gj.com1.z0.glb.clouddn.com/FpT2xLD8nYAoIP7Lq-8sBusUPBfJ)
 
 2. 复制到sublime中，将每行开头的换行删除，且替换成\n。最后只有一行代码，即保证没有换行。
 
@@ -145,7 +148,10 @@ ASCII Generator使用方法如下：
 ## 5. 参考链接：
 
 [Diagnose and Log to Console | Web Tools - Google Developers](https://developers.google.com/web/tools/chrome-devtools/debug/console/console-write#string-substitution-and-formatting)
+
 [Console API Reference - Google Chrome](https://developer.chrome.com/devtools/docs/console-api)
+
 [Javascript生成字符画](http://7demo.github.io/Javascript%E7%94%9F%E6%88%90%E5%AD%97%E7%AC%A6-%E5%B7%A5%E5%85%B7%E7%AF%87/)
+
 [Can I use console ](http://caniuse.com/#search=console)
 
