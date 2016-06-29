@@ -1,6 +1,6 @@
 title: 使用npm scripts替代gulp
 subtitle: 利用npm run高效地实现前端自动化任务
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/npm-instead-of-gulp-cover.png
+cover: //img.aotu.io/cnt1992/npm-instead-of-gulp-cover.png
 categories: Node.js
 tags:
   - Git
@@ -54,7 +54,7 @@ gulp.task('clean', function() {
 
 就目前插件数量来说，没有什么可以打败`npm`包：
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/npm-compare-width-gulp.png "Gulp大约有2100个插件，Grunt大约有5400个，而npm提供了227000个包，而且每天以400的速度在增加" '{"title":"npm包数量跟gulp对比","class":"test_img"}' %}
+![img](//img.aotu.io/cnt1992/npm-compare-width-gulp.png)
 
 ### 调试很不方便
 
