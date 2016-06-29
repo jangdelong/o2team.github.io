@@ -1,6 +1,6 @@
 title: CSS3动画之补间动画
 subtitle: CSS3动画开发指南第一弹
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/TweenAnimation_cover.png
+cover: //img.aotu.io/Tingglelaoo/20160506/TweenAnimation_cover.png
 categories: Web开发
 tags:
   - CSS3
@@ -46,11 +46,11 @@ transition的优点在于简单易用，但是它有几个很大的局限。
 囿于这样的局限，在触屏页面中很少见到Transition动画的身影，但是并不意味着没有，譬如翻页动画的实现可以利用Javascript脚本配合transition与transform属性来实现。
 > 案例截图来源于[《京东：2015JDC燃爆事件》](<http://wqs.jd.com/promote//2015/paper/index.html>)
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/1.gif [《京东：2015JDC燃爆事件》截图] '{"title":"《京东：2015JDC燃爆事件》截图","style":"display:block;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/1.gif [《京东：2015JDC燃爆事件》截图] '{"title":"《京东：2015JDC燃爆事件》截图","style":"display:block;margin: 0 auto;"}' %}
 
 >对应的 Chrome Dev Tool 代码调试截图
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/2.png [《京东：2015JDC燃爆事件》Chrome Dev Tool 代码调试截图] '{"title":"《京东：2015JDC燃爆事件》Chrome Dev Tool 代码调试截图","style":"display:block;max-width:640px;margin:0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/2.png [《京东：2015JDC燃爆事件》Chrome Dev Tool 代码调试截图] '{"title":"《京东：2015JDC燃爆事件》Chrome Dev Tool 代码调试截图","style":"display:block;max-width:640px;margin:0 auto;"}' %}
 
 
 所以，利用CSS3实现动画的重头戏都在于**Animation**的运用。
@@ -62,7 +62,7 @@ transition的优点在于简单易用，但是它有几个很大的局限。
 
  > 动画属性分解表示例，来源于[《常见动效制作手法》](<http://isux.tencent.com/h5active.html>)
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/3.png [《动画属性分解表示例》] '{"title":"《动画属性分解表示例》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/3.png [《动画属性分解表示例》] '{"title":"《动画属性分解表示例》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
 
 
 
@@ -70,7 +70,7 @@ transition的优点在于简单易用，但是它有几个很大的局限。
 
 > 动画时间轴，来源于[《CSS3动画实践》](<http://aotu.io/notes/2016/01/04/css3-animation/>)
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/4.png [《动画时间轴示例》] '{"title":"《动画时间轴示例》","style":"display:block;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/4.png [《动画时间轴示例》] '{"title":"《动画时间轴示例》","style":"display:block;margin: 0 auto;"}' %}
 
 
 
@@ -82,8 +82,8 @@ transition的优点在于简单易用，但是它有几个很大的局限。
 在一些优秀的触屏页面案例里，可以追寻到它的踪迹。
 > 案例截图来源于《腾讯：微众银行》中的摩托车[demo](<http://www.sunnyzhen.com/course/demo/motorcycle/index.html?from=message&isappinstalled=0>)
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/5.gif [《腾讯：微众银行》截图] '{"title":"《腾讯：微众银行》截图","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/5.png [《腾讯：微众银行》截图] '{"title":"《腾讯：微众银行》截图","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/5.gif [《腾讯：微众银行》截图] '{"title":"《腾讯：微众银行》截图","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/5.png [《腾讯：微众银行》截图] '{"title":"《腾讯：微众银行》截图","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
 
 作者对轮子和摩托车的处理就体现出“挤压和拉伸”的法则，带出颠簸的现实感。
 
@@ -95,13 +95,13 @@ transition的优点在于简单易用，但是它有几个很大的局限。
 
 > 案例截图来源于[《拍拍小店全新上线》](http://jdc.jd.com/fd/pp/weixiaodian_welcome/index.html)
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/6.gif [《拍拍小店全新上线》截图1] '{"title":"《拍拍小店全新上线》截图1","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/6.png [《拍拍小店全新上线》截图1] '{"title":"《拍拍小店全新上线》截图1","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/6.gif [《拍拍小店全新上线》截图1] '{"title":"《拍拍小店全新上线》截图1","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/6.png [《拍拍小店全新上线》截图1] '{"title":"《拍拍小店全新上线》截图1","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
 
 盒子的打开过程就带有一个往上展开预备动作(ANTICIPATION)，并且展开撒开的碎彩纸带有慢出(SLOW OUT)的效果，拍拍小店的logo弹出符合弧形(ARCS)的运动轨迹。
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/7.gif [《拍拍小店全新上线》截图2] '{"title":"《拍拍小店全新上线》截图2","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/7.png [《拍拍小店全新上线》截图2] '{"title":"《拍拍小店全新上线》截图2","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/7.gif [《拍拍小店全新上线》截图2] '{"title":"《拍拍小店全新上线》截图2","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/7.png [《拍拍小店全新上线》截图2] '{"title":"《拍拍小店全新上线》截图2","style":"display:block;max-width:320px;margin: 0 auto;"}' %}
 
 除此之外弧形运动轨迹最为明显的地方就是页面切换的过程。
 
@@ -121,16 +121,16 @@ Google在有关动画性能渲染优化的文章[《动画 | Web Fundamentals - 
 
 页面渲染的一般过程为JS > CSS > 计算样式 > 布局 > 绘制 > 渲染层合并。
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/8.png [《页面渲染的一般过程》] '{"title":"《页面渲染的一般过程》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/8.png [《页面渲染的一般过程》] '{"title":"《页面渲染的一般过程》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
 
 其中，**Layout(重排)和Paint(重绘)是整个环节中最为耗时的两环**，所以我们尽量避免着这两个环节。从性能方面考虑，最理想的渲染流水线是没有布局和绘制环节的，只需要做渲染层的合并即可。
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/9.png [《页面渲染的一般过程》] '{"title":"《页面渲染的一般过程》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/9.png [《页面渲染的一般过程》] '{"title":"《页面渲染的一般过程》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
 
 那怎么知道哪些CSS属性的改变是会影响这两个环节的呢？诺，下面就是各CSS属性与其影响的环节。
 > 截图来源于[CSS Triggers](http://csstriggers.com/)，更为详细地翻墙去拿吧
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/10.png [《各种CSS属性影响的渲染环节》] '{"title":"《各种CSS属性影响的渲染环节》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/10.png [《各种CSS属性影响的渲染环节》] '{"title":"《各种CSS属性影响的渲染环节》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
 
 在实际的应用里，最为简单的一个注意点就是，触发动画的开始不要用diaplay:none属性值，因为它会引起Layout、Paint环节，通过切换类名就已经是一种很好的办法。
 
@@ -154,7 +154,7 @@ Google在有关动画性能渲染优化的文章[《动画 | Web Fundamentals - 
 
 > 总结来源于@登平登平的[《H5动画60fps之路》](http://weibo.com/p/1001603865643593165786)
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/Tingglelaoo/20160506/12.png [《H5动画60fps之路》] '{"title":"《H5动画60fps之路》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
+{% pimg //img.aotu.io/Tingglelaoo/20160506/12.png [《H5动画60fps之路》] '{"title":"《H5动画60fps之路》","style":"display:block;max-width:640px;margin: 0 auto;"}' %}
 
 最后总结下要点就是
 - 事先做好规划

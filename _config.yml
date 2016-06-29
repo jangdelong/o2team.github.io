@@ -15,7 +15,7 @@ timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://aotu.io
+url: https://aotu.io
 root: /
 permalink: notes/:year/:month/:day/:title/
 permalink_defaults:
@@ -78,7 +78,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: o2_v2
+theme: lattice
 
 
 # Feeds
