@@ -1,6 +1,6 @@
 title: 使用Github的webhooks进行网站自动化部署
 subtitle: 本文介绍Github的高级功能webhooks，并通过实例帮助我们如何使用它进行网站的自动化部署
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/webhooks-cover.jpg
+cover: //img.aotu.io/cnt1992/webhooks-cover.jpg
 date: 2016-01-06 17:05:05
 categories: Web开发
 tags:
@@ -167,7 +167,7 @@ OK，到这里整个服务已经搭建完成，下一步就只需要配置`Githu
 
 我们可以在我们的`Github`上面最右边有一个`Settings`的Tab，找到`Webhooks & services`，如下图：
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/webhooks.png "Github Webhooks截图" '{"title":"Github Webhooks截图","class":"test_img"}' %}
+![Github Webhooks](//img.aotu.io/cnt1992/webhooks.png)
 
 然后点击新建，输入`Payload URL`跟`Secret`，确定即可。
 
@@ -175,11 +175,11 @@ OK，到这里整个服务已经搭建完成，下一步就只需要配置`Githu
 
 绑定成功之后，我们可以试试提交一下代码，然后来到`Github`看看是否自动触发了接口，如下图：
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/webhooks-show.png "Github Webhooks接口触发" '{"title":"Github Webhooks接口触发","class":"test_img"}' %}
+![Github Webhooks接口触发](//img.aotu.io/cnt1992/webhooks-show.png)
 
 然后随便选择一个点击一下，可以看到`200`的响应：
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/webhook-success.png "Github Webhooks接口触发" '{"title":"Github Webhooks接口触发","class":"test_img"}' %}
+![Github Webhooks接口触发](//img.aotu.io/cnt1992/webhook-success.png)
 
 ## 小结
 
