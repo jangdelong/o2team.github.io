@@ -1,6 +1,6 @@
 title: Adobe Spark试用手记
 subtitle: "5月，夏，初夏。一个不起眼的日子，起眼的是一家公司，一款产品，它叫Adobe，它叫Spark。没有人知道Adobe究竟有没有发布过多终端产品，真正意义的多终端产品，它俨然动手了，就在一周之前，干脆利落，不带一丝迟疑。"
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/FmSA1_Z0xxMrGrTJ0p8VVignufIZ
+cover: //img.aotu.io/FmSA1_Z0xxMrGrTJ0p8VVignufIZ
 categories: 其他
 date: 2016-05-27 10:24:35
 tags:
@@ -21,7 +21,7 @@ author:
 
 ## Spark究竟是什么？
 
-![Spark](http://7xt3gj.com1.z0.glb.clouddn.com/FqP4YgiLCxNkUHnviioVU9SkcHHw)
+![Spark](//img.aotu.io/FqP4YgiLCxNkUHnviioVU9SkcHHw)
 
 Spark也许是Adobe真正意义上的第一款多终端产品。
 
@@ -29,7 +29,7 @@ Spark也许是Adobe真正意义上的第一款多终端产品。
 
 更多关于Spark的介绍，可以查看官方落地页（移动端扫描二维码，PC端点击二维码）。
 
-<a href="https://spark.adobe.com/about" target="_blank"><img src="http://7xt3gj.com1.z0.glb.clouddn.com/FrSDJWzXbL9xgr7LqGYP6updg8Gg" alt="spark-qrcode"/></a>
+<a href="https://spark.adobe.com/about" target="_blank"><img src="//img.aotu.io/FrSDJWzXbL9xgr7LqGYP6updg8Gg" alt="spark-qrcode"/></a>
 
 鉴于Spark的IOS客户端目前只有Spark Page能够在国内下载使用，我们这次试用围绕它的Web应用（[spark.adobe.com](https://spark.adobe.com)）进行，另依据大数据统计的文章篇幅长度建议，本次试用仅针对其中的一个功能-Spark Post。
 
@@ -44,7 +44,7 @@ Spark自然也不例外，看看它首页的Slogan：『分分钟将你的想法
 
 没有FQ经验的童鞋仍可以注册adobe账号来试用Spark。
 
-![login](http://7xt3gj.com1.z0.glb.clouddn.com/FhsWurne9iDpJsQlKWnTooErnYjU)
+![login](//img.aotu.io/FhsWurne9iDpJsQlKWnTooErnYjU)
     
 ## Post - 傻瓜式海报制作
 
@@ -58,7 +58,7 @@ Web版的Spark Post操作界面如下面的图示，非常简洁大气上档次�
 
 可以快速制作适用于第三方社交平台的海报图片，instagram（默认）、facebook、twitter、pinterest。。。应用尽有。如果它开源，我倒愿意卖鹅厂一个人情把微信的900x500以及200x200两个公众号图片尺寸加进去。
 
-![resize](http://7xt3gj.com1.z0.glb.clouddn.com/FvC8qru2nkqO9ubs4C_vqRoYoCmB)
+![resize](//img.aotu.io/FvC8qru2nkqO9ubs4C_vqRoYoCmB)
 
 ### Theme - 实用的模板
 
@@ -68,19 +68,19 @@ Web版的Spark Post操作界面如下面的图示，非常简洁大气上档次�
 
 Spark Post的色板功能算是同类软件中的首创。也许因为我还算年轻貌美经验眼光不够粗大，至今在美图、批图等国产软件里面还没有碰到过。利用模板，只给用户解决了基本的元素构图需求，对于缺乏设计审美基础的人来说，元素间的颜色搭配也是一大难题，而Spark Post恰好迎难而解之！
 
-![palette](http://7xt3gj.com1.z0.glb.clouddn.com/FngbRyjZyMRh3x5Cqk9Xn_IbWgvG)
+![palette](//img.aotu.io/FngbRyjZyMRh3x5Cqk9Xn_IbWgvG)
 
 ### Photo - 8个精选滤镜
 
 Post只提供了8个滤镜效果，少但是减少用户犹豫抉择的时间，个人感觉比Instagram的滤镜有特点，大部分滤镜效果偏向浓郁的大海报感觉。
 
-![photo](http://7xt3gj.com1.z0.glb.clouddn.com/FihxHbyNFaxO3_BjP6dy21OrygPs)
+![photo](//img.aotu.io/FihxHbyNFaxO3_BjP6dy21OrygPs)
 
 ### Text - 字体颜色智能推荐
 
 Post能根据背景图色板智能推荐文字的配色。这个功能已经完爆许多同类应用了吧~
 
-![text](http://7xt3gj.com1.z0.glb.clouddn.com/Fnxt7wbqwJZTU5raR_B2-V9yXxJ5)
+![text](//img.aotu.io/Fnxt7wbqwJZTU5raR_B2-V9yXxJ5)
 
 总的来说，Post的使用体验感觉灰常顺畅良好，简单的英文海报制作基本上可以不用找视觉设计师了哎。遗憾的是目前不支持自定义中文字体，也没有打通微信、手Q等社交渠道，本大大猜测国内同行应该很快会有对应的中文高仿版出现了吧。
 有一个问题留给大家讨论，如果你是产品经理，Post该如何加入怎样的盈利手段？欢迎留言YY。

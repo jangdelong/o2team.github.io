@@ -34,7 +34,7 @@ hexo.extend.tag.register('pimg', function(args,content){
         console.log('scripts.helpers.pimg', e);
         imgAttr = {};
     }
-    imgAttr.src = reg.test(imageName) ? imageName : hexo.config.root + (themeConfig.post.img_dir||postImgDir) + imageName;
+    imgAttr.src = (reg.test(imageName) || imageName.indexOf('//') === 0) ? imageName : hexo.config.root + (themeConfig.post.img_dir||postImgDir) + imageName;
     imgAttr.alt = imgAttr.alt || altText;
 
     // spaces proccess
