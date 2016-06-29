@@ -4,7 +4,7 @@ date: 2015-11-05 18:44:25
 categories: 性能优化
 tags:
   - WebP
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/wengeek/responsive-image.png
+cover: //img.aotu.io/wengeek/responsive-image.png
 author:
   nick: WEN
   github_name: wengeek
