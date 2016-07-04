@@ -1,5 +1,5 @@
 title: 神奇的Shadow DOM
-subtitle: Shadow DOM可以帮到你什么，好奇就看过来~
+subtitle: Shadow DOM可以做什么，好奇就看过来！
 cover: http://7xt3gj.com1.z0.glb.clouddn.com/FgHV3-D9eRTz1L6CNQht0jo6a4lt
 tags:
   - Git
@@ -10,11 +10,7 @@ author:
 date: 2016-06-24 10:39:04
 ---
 <!-- more -->
-不知道你有没有遇到这种情形：某个网页功能用不了了！回想可能性，刚刚安装了某某chrome插件。
-
-什么鬼，插件会影响页面？！正所谓己所不欲勿施于人，日后希望你做的某某chrome插件不会干扰到别人的网站啊。
-
-嗯，Shadow DOM可以帮到你。
+你有好奇过这个问题吗，为什么只用video标签包裹着source标签，就可以完成一系列视频功能：播放/暂停按钮、进度条、视频时间显示、音量控制等等？既然 DOM 源码这么干净，你有想过实现这些组件的代码是从哪儿来的吗？
 
 ## 1. 简介
 
