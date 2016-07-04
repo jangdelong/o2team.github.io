@@ -1,7 +1,7 @@
 title: 你所知道的3xx状态码
 subtitle: 介绍了3xx系列状态码，以及缓存、网页劫持一些列相关的知识。
 date: 2016-01-27 20:20:00
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/wengeek/3xx_cover.png
+cover: //img.aotu.io/wengeek/3xx_cover.png
 categories: Web开发
 tags:
   - http
@@ -52,7 +52,7 @@ author:
 
 在一条HTTP GET请求中，大致是如下的一个过程
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/wengeek/cache.png %}
+![http](//img.aotu.io/wengeek/cache.png)
 
 在查看本地副本是否过期时，通过检查Cache-Control或者Expires首部即可获知。HTTP通过Cache-Control首部和Expires首部向每个文档附加了一个“过期日期”，在缓存文档过期之前，缓存可以以任何频率使用这些副本，而无需与服务器联系。
 
@@ -84,7 +84,7 @@ HTTP条件方法可以高效地实现再验证。通过If-Modified-Since或者If
 
 除非是一个HEAD请求，否则307响应的实体中应当包含指向新的URL的超链接及简短说明。因为部分浏览器不能识别307响应，添加URL超链接以便不能处理307状态码的用户有能力在新URL中发起重定向请求，也就是说，把重定向的页面展示给用户，让用户去点重定向URL链接。
 
-{% pimg http://7xt3gj.com1.z0.glb.clouddn.com/wengeek/307.png %}
+![307](//img.aotu.io/wengeek/307.png)
 
 我们可以看到Chrome对于hsts列表的域名，采用了307进行重定向。
 

@@ -1,6 +1,6 @@
 title: 【译】介绍Sass Maps：用法跟例子
 subtitle: 本文介绍如何利用Sass Maps简化我们的代码，翻译水平有限，敬请指正。
-cover: http://7xt3gj.com1.z0.glb.clouddn.com/cnt1992/sass-maps-cover.jpg
+cover: //img.aotu.io/cnt1992/sass-maps-cover.jpg
 categories: Web开发
 tags:
   - sass
