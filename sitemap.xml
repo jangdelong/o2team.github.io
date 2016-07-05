@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aotu.io/notes/2016/07/03/HiFSD-second/</loc>
+    
+    <lastmod>2016-07-05T09:28:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://aotu.io/notes/2016/07/05/fe-workflow/</loc>
+    
+    <lastmod>2016-07-05T09:28:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://aotu.io/notes/2016/06/24/Shadow-DOM/</loc>
+    
+    <lastmod>2016-07-05T09:28:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://aotu.io/notes/2016/02/19/ngrok/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
@@ -9,35 +30,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2015/10/08/aotu-blog-v1/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aotu.io/notes/2015/10/21/z-index-and-translate3d/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aotu.io/notes/2015/10/13/start-postcss/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://aotu.io/notes/2015/10/26/zepto-cors/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aotu.io/notes/2015/11/08/css-stack-order/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -58,7 +51,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2015/11/11/phantomJs-crawler/</loc>
+    <loc>https://aotu.io/notes/2015/11/08/css-stack-order/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -72,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2015/11/20/svg-I-know/</loc>
+    <loc>https://aotu.io/notes/2015/11/11/phantomJs-crawler/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -80,6 +73,13 @@
   
   <url>
     <loc>https://aotu.io/notes/2015/11/16/101-percent/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://aotu.io/notes/2015/11/20/svg-I-know/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -135,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://aotu.io/notes/2016/01/02/3D-panorama/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://aotu.io/notes/2015/12/23/new-safari-9/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
@@ -149,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/01/07/auto-deploy-website-by-webhooks-of-github/</loc>
+    <loc>https://aotu.io/notes/2015/12/23/building-command-line-tools-with-node-js/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -163,14 +170,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/01/02/3D-panorama/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aotu.io/notes/2016/01/07/debug-webapp-with-chrome-devtools/</loc>
+    <loc>https://aotu.io/notes/2016/01/07/auto-deploy-website-by-webhooks-of-github/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -184,21 +184,14 @@
   </url>
   
   <url>
+    <loc>https://aotu.io/notes/2016/01/07/debug-webapp-with-chrome-devtools/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://aotu.io/notes/2016/01/14/introduction-to-JS-game-development/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aotu.io/notes/2016/01/28/3xx-of-http-status/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -212,7 +205,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/02/24/node-debug-in-production/</loc>
+    <loc>https://aotu.io/notes/2016/01/26/Private-CocoaPods-Specs-Repo/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -226,7 +219,21 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2015/10/16/vim-list/</loc>
+    <loc>https://aotu.io/notes/2016/01/28/3xx-of-http-status/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://aotu.io/notes/2016/02/24/node-debug-in-production/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://aotu.io/notes/2015/10/13/start-postcss/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -254,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/</loc>
+    <loc>https://aotu.io/notes/2016/03/04/can-we-use-base64-in-h5-webapps/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/03/04/can-we-use-base64-in-h5-webapps/</loc>
+    <loc>https://aotu.io/notes/2016/03/09/img-loading-optimization-in-mobile/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -282,20 +289,6 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/03/31/readable/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://aotu.io/notes/2016/04/07/node-excel/</loc>
-    
-    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://aotu.io/notes/2016/03/30/cornerRadius-in-Storyboard/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
@@ -310,7 +303,14 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/04/15/2016-04-14-js-reduce/</loc>
+    <loc>https://aotu.io/notes/2016/03/31/readable/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://aotu.io/notes/2016/04/07/node-excel/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -331,6 +331,13 @@
   </url>
   
   <url>
+    <loc>https://aotu.io/notes/2016/04/15/2016-04-14-js-reduce/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://aotu.io/notes/2016/04/15/2016-04-14-math-random/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
@@ -345,7 +352,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/05/06/Guide-To-Tween-Animation/</loc>
+    <loc>https://aotu.io/notes/2016/04/28/SPM/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -359,7 +366,14 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/04/28/SPM/</loc>
+    <loc>https://aotu.io/notes/2016/05/06/Guide-To-Tween-Animation/</loc>
+    
+    <lastmod>2016-07-04T08:04:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://aotu.io/notes/2016/05/17/css3-animation-frame/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -373,7 +387,7 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/05/17/css3-animation-frame/</loc>
+    <loc>https://aotu.io/notes/2016/06/14/http2/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -394,21 +408,21 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/06/14/http2/</loc>
+    <loc>https://aotu.io/notes/2015/10/08/aotu-blog-v1/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2016/06/24/Shadow-DOM/</loc>
+    <loc>https://aotu.io/notes/2015/10/16/vim-list/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aotu.io/notes/2015/12/23/building-command-line-tools-with-node-js/</loc>
+    <loc>https://aotu.io/notes/2015/10/21/z-index-and-translate3d/</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
@@ -436,14 +450,14 @@
   </url>
   
   <url>
-    <loc>https://aotu.io/search/index.html</loc>
+    <loc>https://aotu.io/join/index.html</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://aotu.io/join/index.html</loc>
+    <loc>https://aotu.io/search/index.html</loc>
     
     <lastmod>2016-07-04T08:04:23.000Z</lastmod>
     
