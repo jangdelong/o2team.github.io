@@ -21,15 +21,15 @@ var gulp    = require('gulp'),
 		imgs: 'public/img',
 		css: 'public/css',
 		js: 'public/js',
-        temp: 'temp',
-        hidden: '.o2',
+    temp: 'temp',
+    hidden: '.o2',
 		assetsDir:'public/assets'
 	};
 
 require('gulp-task-loader')({
 	$: $,
 	cfg: cfg,
-    htmlMinifierOptions: htmlMinifierOptions,
+  htmlMinifierOptions: htmlMinifierOptions,
 	dirs: dirs
 });
 
