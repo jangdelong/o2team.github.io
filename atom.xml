@@ -183,8 +183,8 @@
   
   <entry>
     <title>第二界HiFSD分享会PPT讲义下载分享</title>
-    <link href="https://aotu.io/notes/2016/07/03/HiFSD-second/"/>
-    <id>https://aotu.io/notes/2016/07/03/HiFSD-second/</id>
+    <link href="https://aotu.io/notes/2016/07/03/HIFSD2-Summary/"/>
+    <id>https://aotu.io/notes/2016/07/03/HIFSD2-Summary/</id>
     <published>2016-07-03T00:24:35.000Z</published>
     <updated>2016-07-05T09:28:06.000Z</updated>
     
@@ -3279,9 +3279,9 @@
       <category term="Node.js" scheme="https://aotu.io/cates/Node-js/"/>
     
     
-      <category term="node" scheme="https://aotu.io/tags/node/"/>
-    
       <category term="调试" scheme="https://aotu.io/tags/%E8%B0%83%E8%AF%95/"/>
+    
+      <category term="node" scheme="https://aotu.io/tags/node/"/>
     
   </entry>
   
@@ -3392,11 +3392,11 @@
       <category term="Web开发" scheme="https://aotu.io/cates/Web%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="调试" scheme="https://aotu.io/tags/%E8%B0%83%E8%AF%95/"/>
-    
       <category term="ngrok" scheme="https://aotu.io/tags/ngrok/"/>
     
       <category term="反向代理" scheme="https://aotu.io/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/"/>
+    
+      <category term="调试" scheme="https://aotu.io/tags/%E8%B0%83%E8%AF%95/"/>
     
   </entry>
   
@@ -5307,69 +5307,6 @@ nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
   </entry>
   
   <entry>
-    <title>以电影之眼看CSS3动画（一）</title>
-    <link href="https://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/"/>
-    <id>https://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/</id>
-    <published>2015-11-22T17:27:00.000Z</published>
-    <updated>2016-07-04T08:04:23.000Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;注：此文非干货聚集地，来找干货的对不住了。    
-注注：又多又大的图预警！！！
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;http://isux.tencent.com/css3/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS3动画&lt;/a&gt;的变形基础（transform）包含4种变形方式（translate、rotate、scale、skew），同时还可设置2D、3D、变形原点（transform-origin）、透视（perspective）、透视原点（perspective-origin）等等特性；动画时间频率包含9种基本模式（ease、linear、ease-in、ease-out、ease-in-out、step-start、step-end、steps），甚至还可以使用cubic-bezier写出任何你想要的模式；再加上动画持续时间（animation-duration）等设定，各种排列组合，CSS3动画简直拥有了整个世界！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-1_trandition_animation.png&quot; alt=&quot;trandition_animation&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;图片来源《动画的时间掌握》&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;根据&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%8A%A8%E7%94%BB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;维基&lt;/a&gt;的释义，动画是指由许多帧静止的画面，以一定的速度（如每秒16张）连续播放时，肉眼因视觉残象产生错觉，而误以为画面活动的作品（gif图片正是运用这种原理）。因此最初的动画是通过几张快速翻动的连续画面制作而成，而后经历了电影摄影技术的出现、电脑科技的进步，逐渐转向数字化。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-2_bouncing_ball.gif&quot; alt=&quot;bouncing_ball&quot;&gt;&lt;br&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-3_boucing_ball_frames.png&quot; alt=&quot;boucing_ball_frames&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将gif拖入PS之后打开时间轴窗口即可看到每一帧的画面&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;无论是2D还是3D动画，关键帧，正如其名，是动画制作中最关键的部分，同时也是最难把握的部分。曾经有位设计师告诉我，在大学的第一节flash课的课后作业，老师要求大家上交一份小球动画，包含气球、石头球与皮球，并告诉大家，以相同的外观表现出不同的质感是在考验你对关键帧的悟性，而这一个作业就能体现你是否适合学习动画。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-4_quality_of_ball.png&quot; alt=&quot;quality_of_ball&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A 需要很大的力才能使一个炮弹移动。一旦它移动了，同样需要很大的力才能阻挡它前进。B 一只汽球只需要很小的力去移动它，但空气阻力使它很快停止动作。这两个例子都画了动作分格线，可以看出在银幕上表现物体的轻重，取决于对它们动作的时间掌握。（图片来源：《动画的时间掌握》）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在&lt;a href=&quot;http://cghappening.blogspot.com/2011/02/blog-post_23.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《動畫製作流程介紹》&lt;/a&gt;提供的视频中可以看到关键帧在动画制作中所起的地基般的作用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-5_story_board_of_Monster_Inc.gif&quot; alt=&quot;story_board_of_Monster_Inc&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;画面上方的手绘图即为[怪物公司]的关键帧&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;与关键帧紧密关联的即为时间轴（或摄制表），时间轴是补齐中间帧不可或缺的一项，在传统动画制作中，导演就是通过制定时间轴来掌控整部动画的节奏。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-6_continuity.jpg&quot; alt=&quot;continuity&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;摄制表（图片来源：《动画的时间掌握》）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在CSS3中，@keyframes正是动画的关键帧容器。@keyframes中包含的包括transform在内的元素形态设定构成了关键帧的画面。@keyframes中的百分比即为时间轴的体现。中间帧则由浏览器自动完成（就像flash中的补全动画）。&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.people&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;animation&lt;/span&gt;:people linear &lt;span class=&quot;number&quot;&gt;1.5s&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;keyframes&lt;/span&gt; people&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	0%, 95%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	100%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-7_css3_animation_2.png&quot; alt=&quot;css3_animation&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一个简单的动画关键帧示例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;现在我们知道了CSS3动画的结构与传统动画之间的关系，重点来了， CSS3动画可以做出一部动画电影吗？欲知详情，且听下回分解。&lt;/p&gt;
-&lt;h2 id=&quot;参考资料：&quot;&gt;&lt;a href=&quot;#参考资料：&quot; class=&quot;headerlink&quot; title=&quot;参考资料：&quot;&gt;&lt;/a&gt;参考资料：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.cn/%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1-%E5%93%88%E7%BD%97%E5%BE%B7%E2%80%A2%E5%A8%81%E7%89%B9%E5%85%8B/dp/B0094N5III/ref=sr_1_1?ie=UTF8&amp;amp;qid=1420369719&amp;amp;sr=8-1&amp;amp;keywords=%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《动画的时间掌握（修订版）》&lt;/a&gt;[英]哈罗德•威特克；[英]约翰•哈拉斯；[美]汤姆•赛图&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;注：此文非
-    
-    </summary>
-    
-      <category term="Web开发" scheme="https://aotu.io/cates/Web%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="CSS3" scheme="https://aotu.io/tags/CSS3/"/>
-    
-      <category term="Animation" scheme="https://aotu.io/tags/Animation/"/>
-    
-  </entry>
-  
-  <entry>
     <title>以电影之眼看CSS3动画（二）</title>
     <link href="https://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_2/"/>
     <id>https://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_2/</id>
@@ -5473,6 +5410,69 @@ nav h1, nav h2, nav h3, nav h4, nav h5, nav h6 {
     <summary type="html">
     
       &lt;h1 id=&quot;以电影之眼看CSS3动画（二）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（二）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（二）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（二）&lt;/h1&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;注：此文非
+    
+    </summary>
+    
+      <category term="Web开发" scheme="https://aotu.io/cates/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="CSS3" scheme="https://aotu.io/tags/CSS3/"/>
+    
+      <category term="Animation" scheme="https://aotu.io/tags/Animation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>以电影之眼看CSS3动画（一）</title>
+    <link href="https://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/"/>
+    <id>https://aotu.io/notes/2015/11/23/css3-animation-to-movie-part_1/</id>
+    <published>2015-11-22T17:27:00.000Z</published>
+    <updated>2016-07-04T08:04:23.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;注：此文非干货聚集地，来找干货的对不住了。    
+注注：又多又大的图预警！！！
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;http://isux.tencent.com/css3/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSS3动画&lt;/a&gt;的变形基础（transform）包含4种变形方式（translate、rotate、scale、skew），同时还可设置2D、3D、变形原点（transform-origin）、透视（perspective）、透视原点（perspective-origin）等等特性；动画时间频率包含9种基本模式（ease、linear、ease-in、ease-out、ease-in-out、step-start、step-end、steps），甚至还可以使用cubic-bezier写出任何你想要的模式；再加上动画持续时间（animation-duration）等设定，各种排列组合，CSS3动画简直拥有了整个世界！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-1_trandition_animation.png&quot; alt=&quot;trandition_animation&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;图片来源《动画的时间掌握》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根据&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%8A%A8%E7%94%BB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;维基&lt;/a&gt;的释义，动画是指由许多帧静止的画面，以一定的速度（如每秒16张）连续播放时，肉眼因视觉残象产生错觉，而误以为画面活动的作品（gif图片正是运用这种原理）。因此最初的动画是通过几张快速翻动的连续画面制作而成，而后经历了电影摄影技术的出现、电脑科技的进步，逐渐转向数字化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-2_bouncing_ball.gif&quot; alt=&quot;bouncing_ball&quot;&gt;&lt;br&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-3_boucing_ball_frames.png&quot; alt=&quot;boucing_ball_frames&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将gif拖入PS之后打开时间轴窗口即可看到每一帧的画面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无论是2D还是3D动画，关键帧，正如其名，是动画制作中最关键的部分，同时也是最难把握的部分。曾经有位设计师告诉我，在大学的第一节flash课的课后作业，老师要求大家上交一份小球动画，包含气球、石头球与皮球，并告诉大家，以相同的外观表现出不同的质感是在考验你对关键帧的悟性，而这一个作业就能体现你是否适合学习动画。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/post/lyxuncle/1-4_quality_of_ball.png&quot; alt=&quot;quality_of_ball&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A 需要很大的力才能使一个炮弹移动。一旦它移动了，同样需要很大的力才能阻挡它前进。B 一只汽球只需要很小的力去移动它，但空气阻力使它很快停止动作。这两个例子都画了动作分格线，可以看出在银幕上表现物体的轻重，取决于对它们动作的时间掌握。（图片来源：《动画的时间掌握》）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在&lt;a href=&quot;http://cghappening.blogspot.com/2011/02/blog-post_23.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《動畫製作流程介紹》&lt;/a&gt;提供的视频中可以看到关键帧在动画制作中所起的地基般的作用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-5_story_board_of_Monster_Inc.gif&quot; alt=&quot;story_board_of_Monster_Inc&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;画面上方的手绘图即为[怪物公司]的关键帧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与关键帧紧密关联的即为时间轴（或摄制表），时间轴是补齐中间帧不可或缺的一项，在传统动画制作中，导演就是通过制定时间轴来掌控整部动画的节奏。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-6_continuity.jpg&quot; alt=&quot;continuity&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;摄制表（图片来源：《动画的时间掌握》）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在CSS3中，@keyframes正是动画的关键帧容器。@keyframes中包含的包括transform在内的元素形态设定构成了关键帧的画面。@keyframes中的百分比即为时间轴的体现。中间帧则由浏览器自动完成（就像flash中的补全动画）。&lt;/p&gt;
+&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.people&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;animation&lt;/span&gt;:people linear &lt;span class=&quot;number&quot;&gt;1.5s&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;keyframes&lt;/span&gt; people&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	0%, 95%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	100%&amp;#123;&lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;//img.aotu.io/lyxuncle/1-7_css3_animation_2.png&quot; alt=&quot;css3_animation&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个简单的动画关键帧示例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在我们知道了CSS3动画的结构与传统动画之间的关系，重点来了， CSS3动画可以做出一部动画电影吗？欲知详情，且听下回分解。&lt;/p&gt;
+&lt;h2 id=&quot;参考资料：&quot;&gt;&lt;a href=&quot;#参考资料：&quot; class=&quot;headerlink&quot; title=&quot;参考资料：&quot;&gt;&lt;/a&gt;参考资料：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.amazon.cn/%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1-%E5%93%88%E7%BD%97%E5%BE%B7%E2%80%A2%E5%A8%81%E7%89%B9%E5%85%8B/dp/B0094N5III/ref=sr_1_1?ie=UTF8&amp;amp;qid=1420369719&amp;amp;sr=8-1&amp;amp;keywords=%E5%8A%A8%E7%94%BB%E7%9A%84%E6%97%B6%E9%97%B4%E6%8E%8C%E6%8F%A1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《动画的时间掌握（修订版）》&lt;/a&gt;[英]哈罗德•威特克；[英]约翰•哈拉斯；[美]汤姆•赛图&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;a href=&quot;#以电影之眼看CSS3动画（一）&quot; class=&quot;headerlink&quot; title=&quot;以电影之眼看CSS3动画（一）&quot;&gt;&lt;/a&gt;以电影之眼看CSS3动画（一）&lt;/h1&gt;&lt;hr&gt;
 &lt;pre&gt;&lt;code&gt;注：此文非
     
     </summary>
